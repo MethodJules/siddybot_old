@@ -1,0 +1,279 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - Hello!
+    - Hi!
+    - Hey!
+    - Whats up?
+    - Heya
+    - Howdy
+
+- intent: goodybye
+  examples: |
+    - Goodbye
+    - Bye
+    - See ya
+    - See you
+    - Bye bye
+    - Hey there
+    - See you later
+    - Ciao
+
+- intent: thanks
+  examples: |
+    - Thanks
+    - Thank you
+    - Thanks a lot
+
+- intent: agree
+  examples: |
+    - yes
+    - oh yeah
+    - yep
+    - of course
+
+- intent: denied
+  examples: |
+    - No
+    - Never
+    - Nope
+    - Not at all
+    - Not a chance
+
+- intent: accept
+  examples: |
+    - Ok
+    - Check
+
+- intent: confirm
+  examples: |
+    - I understand
+
+- intent: website_information
+  examples: |
+    - What is this site about?
+    - what is this for a page?
+    - what is jigsaw about?
+    - what is jigsaw?
+    - what can i do here?
+    - Jigsaw?
+    - Where am i?
+
+- intent: add_person
+  examples: |
+    - How can i add a person to the list?
+    - can i add a person?
+    - i am missing a person
+    - i want to add a person
+    - show me how to add a person to the list
+    - there is a person missing from the list
+    - Someone is missing
+    - are all persons on the list?
+
+- intent: use_map
+  examples: |
+    - How can i use the maps?
+    - what can i do with the maps?
+    - What do the maps show me?
+    - maps?
+    - can you explain me the maps?
+    - What information can I find in the maps?
+    - explain the maps
+
+- intent: choose_map
+  examples: |
+    - [ Activity ] ( maptype ) map
+    - I want information about the [ activity ] ( maptype ) map
+    - can you tell me how to use the [ activity ] ( maptype ) map
+    - the [ activity ] ( maptype ) map please
+    - tell me something about the [ activity ] ( maptype ) map
+    - [ persons residence ] ( maptype ) map
+    - Explain the [ persons residence ] ( maptype ) map to me
+    - What is the [ persons residence ] ( maptype ) map about?
+    - Can you tell me something about the [ social education ] ( maptype ) map?
+    - [ social education ] ( maptype ) map
+    - tell me about the [ social education ] ( maptype ) map
+
+- intent: use_custom_search
+  examples: |
+    - How can i use the custom search function?
+    - Is there a custom search?
+    - Can I filter my search results
+    - how can I specify my search
+    - I did not find what I was looking for
+    - is there more than the default search
+    - how can i get more or less results?
+
+- intent: found_error
+  examples: |
+    - there is an error on the website
+    - I found an error
+    - What can i do, if i find an error?
+    - where can i report an error?
+    - is not that a mistake?
+    - you have errors on your site
+
+- intent: show_involved_persons
+  examples: |
+    - Who works on this project?
+    - who has collected all this information?
+    - which persons work on this project?
+    - which people are involved in this project?
+    - Show me the people involved in the project
+    - Is there a list of people involved in this project?
+    - Which people are responsible for progress of this project?
+    - who is involved in this website?
+
+- intent: show_list_of_facilities_and_schools
+  examples: |
+    - What institutions or schools of social work existed back then?
+    - Is there a list of facilities and schools?
+    - is there a list of facilities
+    - list of social education schools
+    - what institutions are known
+    - There is an overview of facilities and schools?
+    - Can you show me all the schools?
+
+- intent: show_source_of_information
+  examples: |
+    - What is the source of all the information?
+    - Where does the information come from?
+    - What are the sources of information?
+    - where can I see the sources?
+    - source disclosures
+    - from which sources the information is composed?
+
+- intent: offer_support
+  examples: |
+    - How can I support this website?
+    - i want to support this site
+    - can i support you?
+    - do you need help?"
+    - is it possible to support you?
+    - Can I help you?
+
+- intent: contact_method
+  examples: |
+    - Can the contact be made by [ email ] ( contacttype ) only?",
+    - How can i contact you?
+    - is there more than the [ email ] ( contacttype ) to get in contact?
+    - Is there a [ contact formular ] ( contacttype ) to get in contact?
+    - how can i get in touch with you?
+    - can i write you an [ email ] ( contacttype )?
+    - can i contact other people?
+
+- intent: requirements_site_to_author
+  examples: |
+    - What requirements are placed on the authors by the side?
+    - what duty is imposed on the authors
+    - what do authors have to adhere to?
+    - There are restrictions for authors
+    - content requirements for authors?
+
+- intent: who_is_possible_user
+  examples: |
+    - And who gets access to the page?
+    - who will get access to this website?
+    - what kind of people are going to use this site?
+    - what are the possible users of  jigsaw?
+    - who will use jigsaw?
+    - what is the target group of Jigsaw?
+    - Should a certain target group be addressed with this page?
+
+- intent: ask_for_access_types
+  examples: |
+    - Are there different types of access to this site?
+    - What sorts of access types are there?
+    - Do different people get different types of access?
+    - Are there different types of access? For example, for students?
+    - Can I get another access as a lecturer or research institute or are they all standardized?
+
+- intent: ask_duty_verify_as_author
+  examples: |
+    - Do i have to verify me as an author?
+    - do I have to verify myself?
+    - Is there a duty to verify?
+    - Can I set content without being verified?
+    - is the verification required?
+
+- intent: ask_voluntary_verify_as_author
+  examples: |
+    - Can i verify myself if i want to?
+    - i want to verify myself as an author.
+    - is there a way to verify myself?
+    - can i verify myself?
+
+- intent: people_expand_website
+  examples: |
+    - Are there any people activly expanding the site?
+    - will the website continue to be expanded?
+    - who expands the website?
+    - who is responsible for the expansion of the website
+
+- intent: requirements_author_to_site
+  examples: |
+    - What is the claim of the authors?
+    - what do the authors insist on?
+    - what about copyright
+    - on what rights can authors call themselves?
+    - are the rights of the authors respected?
+    - Rights for authors
+
+- intent: show_involved_universities
+  examples: |
+    - Which universities are involved in this project?
+    - involved universities?
+    - is there a list of universities that are resonsible for jigsaw?
+    - which persons of which universities are involved in the project?
+
+- intent: ask_for_data_check
+  examples: |
+    - How are the data checked?
+    - Will the content be checked before it gets published?
+    - content check?
+    - can i upload anything i want?
+    - will anything directly be published?
+
+- intent: data_check_time
+  examples: |
+    - how long will it take to check my data?
+
+- intent: get_information
+  examples: |
+    - How can I get information?
+    - How can I get information about people in your list?
+    - Can you show me, how I can get some information?
+
+
+- synonym: person
+  examples: |
+    - people
+    - persons
+
+- synonym: domiciles_of_person
+  examples: |
+    - domicil
+    - domicils
+
+- synonym: birth day
+  examples: |
+    - birthday
+
+- intent: query_knowledge_base
+  examples: |
+    - list some [people]{"entity": "object_type", "value": "person"}
+    - show me some [people]{"entity": "object_type", "value": "person"} in your list
+    - Show me all your [people]{"entity": "object_type", "value": "person"} in your list
+    - Which [domicile]{"entity": "attribute", "value": "domicile"} had [Esther Apfelberg](name)?
+    - Show me some [domicile]{"entity": "attribute", "value": "domicile"} of the [first one]{"entity": "mention", "value": "1"}
+    - Show me some [people]{"entity": "object_type", "value": "person"}
+    - When was the [birth day]{"entity": "attribute", "value": "date_of_birth"} of [Esther Apfelberg](name)?
+    - What was the [hebrew name]{"entity": "attribute", "value": "hebrew_name"} of [Esther Apfelberg](name)?
+    - What was the [hebrew name]{"entity": "attribute", "value": "hebrew_name"} of the [first one]{"entity": "mention", "value": "1"}?
+    - When was the [birth day]{"entity": "attribute", "value": "date_of_birth"} of the [first one]{"entity": "mention", "value": "1"}?
+    - Can you tell me the [hebrew name]{"entity": "attribute", "value": "hebrew_name"} of the [second](mention) person?
+    - Tell me [something]{"entity": "attribute", "value": "biographie"} about [Esther Apfelberg](name)
+    - Tell me [something]{"entity": "attribute", "value": "biographie"} about [second](mention) person
+    - Can you tell me [more]{"entity": "attribute", "value": "biographie"} about the person?

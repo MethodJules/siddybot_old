@@ -1,0 +1,355 @@
+version: "2.0"
+
+intents:
+  - greet
+  - thanks
+  - goodbye
+  - website_information
+  - add_person
+  - denied
+  - agree
+  - accept
+  - confirm
+  - save_created_person
+  - use_map
+  - choose_map
+  - use_custom_search
+  - found_error
+  - show_involved_persons
+  - show_list_of_facilities_and_schools
+  - show_source_of_information
+  - offer_support
+  - contact_method
+  - who_is_possible_user
+  - ask_for_access_types
+  - ask_for_acces_types_for_facilities
+  - ask_duty_verify_as_author
+  - ask_voluntary_verify_as_author
+  - people_expand_website
+  - requirements_author_to_site
+  - show_involved_universities
+  - ask_for_data_check
+  - data_check_time
+  - query_knowledge_base
+  - get_information
+  - decide
+  
+entities:
+  - maptype
+  - contacttype
+  - object_type
+  - attribute
+  - mention
+  - name
+  - person
+  - domicile
+
+slots:
+  maptype:
+    type: categorical
+    values: 
+      - activity
+      - persons residence
+      - social education
+  contacttype:
+    type: categorical
+    values:
+      - email
+      - contact formular
+  object_type:
+    type: text
+    influence_conversation: false
+  mention:
+    type: text
+    influence_conversation: false
+  attribute:
+    type: text
+    influence_conversation: false
+  name:
+    type: text
+    influence_conversation: false
+  person:
+    type: text
+    influence_conversation: false
+  domicile:
+    type: text
+    influence_conversation: false
+
+actions:
+  - utter_greet
+  - utter_goodbye
+  - utter_website_information
+  - utter_answer_thanks
+  - utter_add_person_check_account
+  - utter_user_account_menu
+  - utter_create_account
+  - utter_confirm_creation
+  - utter_please_login
+  - utter_add_person
+  - utter_add_person_name
+  - utter_add_person_biography
+  - utter_add_person_family
+  - utter_add_person_chronic
+  - utter_add_person_network
+  - utter_add_person_domicil
+  - utter_add_person_bibliography
+  - utter_add_person_picture
+  - utter_add_person_data
+  - utter_show_person_preview
+  - utter_view_created_person
+  - utter_introduce_maps
+  - utter_ask_for_maptype
+  - utter_explain_activity_map
+  - utter_explain_map_functions
+  - utter_explain_tooltip
+  - utter_ask_for_more_map_information
+  - utter_explain_persons_residence_map
+  - utter_explain_persons_residence_map_search
+  - utter_explain_social_education_map
+  - utter_default_search
+  - utter_enter_custom_search_function
+  - utter_choose_custom_search_topic
+  - utter_explain_custom_search_keywords
+  - utter_explain_custom_search_types
+  - utter_explain_custom_search_language
+  - utter_get_custom_search_results
+  - utter_report_error
+  - utter_locate_contact_form
+  - utter_explain_report_error
+  - utter_show_contact_form_preview
+  - utter_send_report_error
+  - utter_show_involved_persons
+  - utter_refer_to_glossary
+  - utter_explain_source_of_information
+  - utter_refer_to_research_project
+  - utter_contact_for_support
+  - utter_explain_contact
+  - utter_requirements_for_authors
+  - utter_possible_user
+  - utter_access_types
+  - utter_verify_duty_deny
+  - utter_verify_voluntary
+  - requirements_for_site
+  - utter_show_involved_universities
+  - utter_explain_data_check
+  - utter_data_check_time
+  - utter_requirements_for_site
+  - action_ask_howcanhelp
+  - action_on_it
+  - action_ask_cuisine
+  - action_ask_numpeople
+  - action_ack_dosearch
+  - action_hello_world
+  - action_query_knowledge_base
+  - utter_attribute_to_person
+  - utter_ask_peoplelist
+  - utter_know_people
+  - utter_attribute
+  - utter_ask_for_attribute_for_person
+  - utter_ask_for_attributes_peoplelist
+  - utter_specific_person 
+  
+responses:
+  utter_greet:
+  - text: "Welcome, how can i help you?"
+  
+  utter_goodbye:
+  - text: "Goodbye."
+  
+  utter_website_information:
+  - text: "Jigsaw, is a research and contributor website for researchers and individuals interested in the biographies of Jewish social workers."
+  
+  utter_answer_thanks:
+  - text: "You are welcome."
+  
+  utter_add_person_check_account:
+  - text: "If you have an account, you have the option to add a person. Do you have an account?"
+  
+  utter_user_account_menu:
+  - text: "Please create an acoount in the User Account Menu. Did you found the Menu?"
+  
+  utter_create_account:
+  - text: "Great. Please type in an email address and username. If you like, add a photo of yourself. If you like other users to contact you, check the control box."
+  
+  utter_confirm_creation:
+  - text: "Did you successfully create your account?"
+  
+  utter_please_login:
+  - text: "Great. Please login in to your account."
+  
+  utter_add_person:
+  - text: "Now you can see and click the link [ Add person ] ( http://www.jigsaw-navi.net/ )at the main page."
+  
+  utter_add_person_name:
+  - text: "Now you can add a person by fill in the blanks for the name and optional the Hebrew name."
+  
+  utter_add_person_biography:
+  - text: "If you want, you can write a biography about the person."
+  
+  utter_add_person_family:
+  - text: "Maybe you want to add something about the family, age or year of the migration of the person?"
+  
+  utter_add_person_chronic:
+  - text: "Now you could create a new or link an existing chronic to the person."
+  
+  utter_add_person_network:
+  - text: "If you know something about netwoks concerning this person, you can add it now."
+  
+  utter_add_person_domicil:
+  - text: "If you want to add an new or link an existing domicil, you can do it in the section Domicils."
+  
+  utter_add_person_bibliography:
+  - text: "Now you can add bibliographies, archival materials or other sources of information."
+  
+  utter_add_person_picture:
+  - text: "Now you have the possibility to add a picture but please mind the restrictions."
+  
+  utter_add_person_data:
+  - text: "At the end you can add some additional data but please mind the restrictions."
+  
+  utter_show_person_preview:
+  - text: "Now you can preview your created person. If you are fine with your entries you can hit the save button."
+  
+  utter_view_created_person:
+  - text: "If you want to, you can now go to the persons list and check if your person is now on the list."
+  
+  utter_introduce_maps:
+  - text: "Jigsaw offers three different maps. The Activity Map, the Persons Residence Map and the Social Work Education Map."
+  
+  utter_ask_for_maptype:
+  - text: "Which  map would you like to choose?"
+  
+  utter_explain_activity_map:
+  - text: "Each pin on this maps stands for one person. Holding the cursor over a pin, opens a tooltip with more information about the person."
+  
+  utter_explain_map_functions:
+  - text: "You can adjust the zoom with [+] and [-] and view the map in fullscreen with [ ]."
+  
+  utter_explain_tooltip:
+  - text: "Clicking on a pin, opens a new tooltip with links to more information."
+  
+  utter_ask_for_more_map_information:
+  - text: "Do you want more information to other maps?"
+  
+  utter_explain_persons_residence_map:
+  - text: "Each pin on this maps stands for one person. Holding the cursor over a pin, opens a tooltip with more information about the persons residences."
+  
+  utter_explain_persons_residence_map_search:
+  - text: "Type in a name into the search bar, and only pins regarding this person are shown."
+  
+  utter_explain_social_education_map:
+  - text: "Each pin here stands for a person, her education the concering place."
+  
+  utter_default_search:
+  - text: "Please use the Quick Search on the main page first. All search results depending on your entires are listet here."
+  
+  utter_enter_custom_search_function:
+  - text: "If you did not found what you were looking for, you can now click on Advanced Search."
+  
+  utter_choose_custom_search_topic:
+  - text: "Here you can choose, wether to search for content or persons."
+  
+  utter_explain_custom_search_keywords:
+  - text: "First you can specify which keywords should be included in the input."
+  
+  utter_explain_custom_search_types:
+  - text: "Now you can choose the type of specific document you are looking for."
+  
+  utter_explain_custom_search_language:
+  - text: "Last, you can choose in which language your content should be."
+  
+  utter_get_custom_search_results:
+  - text: "After that define, you can click on Advanced Search to see your ne results."
+
+  utter_report_error:
+  - text: "If you found an error, please let us know where."
+  
+  utter_locate_contact_form:
+  - text: "Please use the contact formular on the bottom of the main page."
+  
+  utter_explain_report_error:
+  - text: "Fill in the *-marked blanks. Type in error for subject, and leave a detailed message down below."
+
+  utter_show_contact_form_preview:
+  - text: "If you want, you can preview your message."
+  
+  utter_send_report_error:
+  - text: "Now you can click on Send Message to let us know where the error appears and we will fix it if necessary."
+  
+  utter_show_involved_persons:
+  - text: "If you look at the Research Project section on the main page, you can see a list of person which are working on these projects."
+  
+  utter_refer_to_glossary:
+  - text: "For a complete overview of institutions and schools, visit the glossary. You can find it in the menu bar at the top right."
+  
+  utter_explain_source_of_information:
+  - text: "All these information are the result of many hours in archives."
+  
+  utter_refer_to_research_project:
+  - text: "If you want, you can read more about it on the main page under the section Research Project."
+  
+  utter_conctact_for_support:
+  - text: "If you want to support the site organisationally, please contact the responsible person. You will find them in the imprint."
+  
+  utter_explain_contact:
+  - text: "You can write an email directly or use the contact formular."
+  
+  utter_requirements_for_authors:
+  - text: "The authors should only post content that is correct, comprehensible and legally harmless." 
+  
+  utter_possible_user:
+  - text: "Anyone who wants to get involved in this project can gain access. In fact, anyone interested in researching or creating content in this field is either interested."
+  
+  utter_access_types:
+  - text: "It is not intended to offer different types of access for users."
+  
+  utter_verify_duty_deny:
+  - text: "You do not have to verify, except with your email address."
+  
+  utter_verify_voluntary:
+  - text: "Please contact the person responsible for the site."
+  
+  utter_requirements_for_site:
+  - text: "Of course, the authors claim that your rights are protected in terms of copyright."
+  
+  utter_show_involved_universities:
+  - text: "Here I also refer back to the start page. Under the heading Research Project you can see that the Hebrew University of Jerusalem, the University of Trier and the Alice Salomon Hochschule Berlin are involved in this project."
+  
+  utter_data_check:
+  - text: "The content will be checked for accuracy, completeness and adherence to the liability committee by administrators or collaborators prior to publication and will then be published."
+  
+  utter_data_check_time:
+  - text: "That should not take more than a few hours."    
+
+  utter_ask_rephrase:
+  - text: "Sorry, I'm not sure I understand. Could you rephrase it?"
+  - text: "Could you please rephrase your message? I didn't quite get that."
+
+  utter_know_people:
+  - text: "Do you know some people on our website?"
+  - text: "Do you search for sepcific people?"
+
+  utter_specific_person:
+  - text: "Do you search for a specific person?"
+
+  utter_attribute_to_person:
+  - text: "Do you want to hear specific information about people?"
+
+  utter_ask_peoplelist:
+  - text: "You can ask 'List some people' or 'Show me some people'"
+
+  utter_attribute:
+  - text: "For a person we saved these attributes: Title, Name, birth day and place, death day and place, hebrew name, domicile, ..."
+
+  utter_ask_for_attribute_for_person:
+  - text: "You can ask something like: 'What was the hebrew name of Esther Apfelberg?'"
+
+  utter_ask_for_attributes_peoplelist:
+  - text: "When you have a list with people you can ask something like: 'When was the birth day of the first one?'"
+
+  utter_contact_for_support:
+  - text: "For support you can contact Max Mustermann"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

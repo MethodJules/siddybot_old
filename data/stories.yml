@@ -1,0 +1,271 @@
+version: "2.0"
+
+stories:
+
+- story: action
+  steps:
+  - intent: query_knowledge_base
+  - action: action_query_knowledge_base
+
+#-  story: information about people
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: information_about_people
+#   - action: utter_how_user_can_ask
+#   - intent: query_knowledge_base
+#   - action: action_query_knowledge_base
+
+- story: information
+  steps:
+   - intent: greet
+   - action: utter_greet
+   - intent: get_information
+   - action: utter_know_people
+   - intent: agree
+   - action: utter_specific_person
+   - intent: agree
+   - action: utter_attribute
+   - action: utter_ask_for_attribute_for_person
+   - intent: query_knowledge_base
+   - action: action_query_knowledge_base
+
+- story: list saved people 
+  steps:
+   - intent: greet
+   - action: utter_greet
+   - intent: get_information
+   - action: utter_know_people
+   - intent: denied
+   - action: utter_ask_peoplelist
+   - action: utter_ask_for_attributes_peoplelist
+   - intent: query_knowledge_base
+   - action: action_query_knowledge_base
+   
+- story: website information
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: website_information
+  - action: utter_website_information
+  - intent: thanks
+  - action: utter_answer_thanks
+
+- story: add missing person + create account
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: add_person
+  - action: utter_add_person_check_account
+  - intent:  denied
+  - action: utter_user_account_menu
+  - intent:  agree
+  - action: utter_create_account
+  - intent:  accept
+  - action: utter_confirm_creation
+  - intent:  agree
+  - action: utter_please_login
+  - intent:  confirm
+  - action: utter_add_person
+  - intent:  confirm
+  - action: utter_add_person_name
+  - intent:  accept
+  - action: utter_add_person_biography
+  - intent:  accept
+  - action: utter_add_person_family
+  - intent:  accept
+  - action: utter_add_person_chronic
+  - intent:  accept
+  - action: utter_add_person_network
+  - intent:  accept
+  - action: utter_add_person_domicil
+  - intent:  accept
+  - action: utter_add_person_bibliography
+  - intent:  accept
+  - action: utter_add_person_picture
+  - intent:  accept
+  - action: utter_add_person_data
+  - intent:  accept   
+  - action: utter_show_person_preview
+  - intent:  save_created_person
+  - action:  utter_view_created_person
+  - intent:  thanks
+  - action: utter_answer_thanks
+
+- story: use maps
+  steps:
+  - intent:  greet
+  - action: utter_greet
+  - intent:  use_map
+  - action: utter_introduce_maps
+  - action: utter_ask_for_maptype
+  - intent:  choose_map
+    entities:
+    - maptype: "activity map"
+  - action: utter_explain_activity_map
+  - action: utter_explain_map_functions
+  - intent:  accept
+  - action: utter_explain_tooltip
+  - intent:  accept
+  - action: utter_ask_for_more_map_information
+  - intent:  choose_map
+    entities:
+    - maptype: "persons_residence_map"
+  - action: utter_explain_persons_residence_map
+  - action: utter_explain_tooltip
+  - action: utter_explain_persons_residence_map_search
+  - intent:  thanks
+  - action: utter_ask_for_more_map_information
+  - intent:  choose_map
+    entities:
+    - maptype: "social_education_map"
+  - action: utter_explain_social_education_map
+  - action: utter_explain_tooltip
+  - intent:  thanks
+  - action: utter_answer_thanks
+   
+- story: use the custom search for content
+  steps:
+  - intent:  greet
+  - action: utter_greet
+  - intent:  use_custom_search_function
+  - action: utter_default_search
+  - action: utter_enter_custom_search_function
+  - intent:  accept
+  - action: utter_choose_custom_search_topic
+  - intent:  choose_custom_search
+    entities:
+    - searchtype: "content"
+  - action: utter_explain_custom_search_keywords
+  - intent:  accept
+  - action: utter_explain_custom_search_types
+  - intent:  accept
+  - action: utter_explain_custom_search_language
+  - intent:  accept
+  - action: utter_get_custom_search_results
+  - intent:  thanks.
+  - action: utter_answer_thanks
+   
+- story: report error
+  steps:
+  - intent:  greet
+  - action: utter_greet
+  - intent:  found_error
+  - action: utter_report_error
+  - action: utter_locate_contact_form
+  - intent:  accept
+  - action: utter_explain_report_error
+  - intent:  accept
+  - action: utter_show_contact_form_preview
+  - intent:  accept
+  - action: utter_send_report_error
+  - intent:  thanks
+  - action: utter_answer_thanks
+  
+- story: involved person
+  steps:
+  - intent:  greet
+  - action: utter_greet
+  - intent:  show_involved_persons
+  - action: utter_show_involved_persons
+  - intent:  thanks
+  - action: utter_answer_thanks
+
+- story: show facilities + schools of social work
+  steps:
+  - intent:  greet
+  - action: utter_greet
+  - intent:  show_list_of_facilities_and_schools
+  - action: utter_refer_to_glossary
+  - intent: thanks
+  - action: utter_answer_thanks
+ 
+- story: source of information
+  steps:
+  - intent:  greet
+  - action: utter_greet
+  - intent:  show_source_of_information
+  - action: utter_explain_source_of_information
+  - action: utter_refer_to_research_project
+  - intent:  thanks
+  - action: utter_answer_thanks
+   
+- story: offer support
+  steps:
+  - intent:  greet
+  - action: utter_greet
+  - intent:  offer_support
+  - action: utter_contact_for_support
+  - intent:  contact_method
+    entities:
+    - contact_type: "email"
+  - action: utter_explain_contact
+  - action: utter_locate_contact_form
+  - intent:  thanks
+  - action: utter_answer_thanks
+
+- story: request site to author
+  steps:
+  - intent:  greet
+  - action: utter_greet
+  - intent:  requirements_site_to_author
+  - action: utter_requirements_for_authors
+  - intent:  who_is_possible_user
+  - action: utter_possible_user
+  - intent:  ask_for_access_types
+  - action: utter_access_types
+  - intent:  ask_for_access_type_for_facilities
+  - action: utter_access_types
+  - intent:  thanks
+  - action: utter_answer_thanks
+
+- story: verification as author
+  steps:
+  - intent:  greet
+  - action: utter_greet
+  - intent:  ask_duty_verify_as_author
+  - action: utter_verify_duty_deny
+  - intent:  ask_voluntary_verify_as_author
+  - action: utter_verify_voluntary
+  - intent:  thanks
+  - action: utter_answer_thanks
+
+- story: expand website
+  steps:
+  - intent:  greet
+  - action: utter_greet
+  - intent:  peaople_expand_website
+  - action: utter_show_involved_persons
+  - intent:  thanks
+  - action: utter_answer_thanks
+
+- story: request author to site
+  steps:
+  - intent:  greet
+  - action: utter_greet
+  - intent:  requirements_author_to_site
+  - action: utter_requirements_for_site
+  - intent:  thanks
+  - action: utter_answer_thanks
+
+- story: involved universities
+  steps:
+  - intent:  greet
+  - action: utter_greet
+  - intent:  show_involved_universities
+  - action: utter_show_involved_universities
+  - intent:  thanks
+  - action: utter_answer_thanks
+
+- story: content check
+  steps:
+  - intent:  greet
+  - action: utter_greet
+  - intent:  ask_for_data_check
+  - action: utter_explain_data_check
+  - intent:  data_check_time
+  - action: utter_data_check_time
+  - intent:  thanks
+  - action: utter_answer_thanks
+
+
