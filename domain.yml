@@ -22,7 +22,6 @@ intents:
   - contact_method
   - who_is_possible_user
   - ask_for_access_types
-  - ask_for_acces_types_for_facilities
   - ask_duty_verify_as_author
   - ask_voluntary_verify_as_author
   - people_expand_website
@@ -33,6 +32,10 @@ intents:
   - query_knowledge_base
   - get_information
   - decide
+  - use_custom_search_function
+  - choose_custom_search
+  - requirements_site_to_author
+  - ask_for_access_type_for_facilities
   
 entities:
   - maptype
@@ -42,7 +45,10 @@ entities:
   - mention
   - name
   - person
-  - domicile
+  - residence
+  - city
+  - year
+  - organization
 
 slots:
   maptype:
@@ -71,83 +77,18 @@ slots:
   person:
     type: text
     influence_conversation: false
-  domicile:
+  residence:
     type: text
     influence_conversation: false
-
-actions:
-  - utter_greet
-  - utter_goodbye
-  - utter_website_information
-  - utter_answer_thanks
-  - utter_add_person_check_account
-  - utter_user_account_menu
-  - utter_create_account
-  - utter_confirm_creation
-  - utter_please_login
-  - utter_add_person
-  - utter_add_person_name
-  - utter_add_person_biography
-  - utter_add_person_family
-  - utter_add_person_chronic
-  - utter_add_person_network
-  - utter_add_person_domicil
-  - utter_add_person_bibliography
-  - utter_add_person_picture
-  - utter_add_person_data
-  - utter_show_person_preview
-  - utter_view_created_person
-  - utter_introduce_maps
-  - utter_ask_for_maptype
-  - utter_explain_activity_map
-  - utter_explain_map_functions
-  - utter_explain_tooltip
-  - utter_ask_for_more_map_information
-  - utter_explain_persons_residence_map
-  - utter_explain_persons_residence_map_search
-  - utter_explain_social_education_map
-  - utter_default_search
-  - utter_enter_custom_search_function
-  - utter_choose_custom_search_topic
-  - utter_explain_custom_search_keywords
-  - utter_explain_custom_search_types
-  - utter_explain_custom_search_language
-  - utter_get_custom_search_results
-  - utter_report_error
-  - utter_locate_contact_form
-  - utter_explain_report_error
-  - utter_show_contact_form_preview
-  - utter_send_report_error
-  - utter_show_involved_persons
-  - utter_refer_to_glossary
-  - utter_explain_source_of_information
-  - utter_refer_to_research_project
-  - utter_contact_for_support
-  - utter_explain_contact
-  - utter_requirements_for_authors
-  - utter_possible_user
-  - utter_access_types
-  - utter_verify_duty_deny
-  - utter_verify_voluntary
-  - requirements_for_site
-  - utter_show_involved_universities
-  - utter_explain_data_check
-  - utter_data_check_time
-  - utter_requirements_for_site
-  - action_ask_howcanhelp
-  - action_on_it
-  - action_ask_cuisine
-  - action_ask_numpeople
-  - action_ack_dosearch
-  - action_hello_world
-  - action_query_knowledge_base
-  - utter_attribute_to_person
-  - utter_ask_peoplelist
-  - utter_know_people
-  - utter_attribute
-  - utter_ask_for_attribute_for_person
-  - utter_ask_for_attributes_peoplelist
-  - utter_specific_person 
+  city: 
+    type: text
+    influence_conversation: false
+  organization: 
+    type: text
+    influence_conversation: false
+  year: 
+    type: text
+    influence_conversation: false
   
 responses:
   utter_greet:
@@ -166,7 +107,7 @@ responses:
   - text: "If you have an account, you have the option to add a person. Do you have an account?"
   
   utter_user_account_menu:
-  - text: "Please create an acoount in the User Account Menu. Did you found the Menu?"
+  - text: "Please create an account in the User Account Menu. Did you found the Menu?"
   
   utter_create_account:
   - text: "Great. Please type in an email address and username. If you like, add a photo of yourself. If you like other users to contact you, check the control box."
@@ -349,6 +290,13 @@ responses:
 
   utter_contact_for_support:
   - text: "For support you can contact Max Mustermann"
+
+  utter_explain_data_check:
+  - text: "That should not take more than a few hours."
+
+actions:
+  - action_hello_world
+  - action_query_knowledge_base
 
 session_config:
   session_expiration_time: 60

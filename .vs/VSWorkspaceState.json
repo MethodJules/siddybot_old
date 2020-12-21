@@ -2,9 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\actions",
-    "\\data",
-    "\\models"
+    "\\data"
   ],
-  "SelectedNode": "\\actions\\actions.py",
+  "SelectedNode": "\\rules.yml",
   "PreviewInSolutionExplorer": false
 }

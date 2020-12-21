@@ -2,6 +2,16 @@ version: "2.0"
 
 stories:
 
+- story: greet
+  steps: 
+  - intent: greet
+  - action: utter_greet
+
+- story: thanks
+  steps:
+  - intent:  thanks
+  - action: utter_answer_thanks
+
 - story: action
   steps:
   - intent: query_knowledge_base
@@ -18,8 +28,6 @@ stories:
 
 - story: information
   steps:
-   - intent: greet
-   - action: utter_greet
    - intent: get_information
    - action: utter_know_people
    - intent: agree
@@ -32,8 +40,6 @@ stories:
 
 - story: list saved people 
   steps:
-   - intent: greet
-   - action: utter_greet
    - intent: get_information
    - action: utter_know_people
    - intent: denied
@@ -44,8 +50,6 @@ stories:
    
 - story: website information
   steps:
-  - intent: greet
-  - action: utter_greet
   - intent: website_information
   - action: utter_website_information
   - intent: thanks
@@ -53,8 +57,6 @@ stories:
 
 - story: add missing person + create account
   steps:
-  - intent: greet
-  - action: utter_greet
   - intent: add_person
   - action: utter_add_person_check_account
   - intent:  denied
@@ -94,8 +96,6 @@ stories:
 
 - story: use maps
   steps:
-  - intent:  greet
-  - action: utter_greet
   - intent:  use_map
   - action: utter_introduce_maps
   - action: utter_ask_for_maptype
@@ -126,8 +126,6 @@ stories:
    
 - story: use the custom search for content
   steps:
-  - intent:  greet
-  - action: utter_greet
   - intent:  use_custom_search_function
   - action: utter_default_search
   - action: utter_enter_custom_search_function
@@ -143,13 +141,11 @@ stories:
   - action: utter_explain_custom_search_language
   - intent:  accept
   - action: utter_get_custom_search_results
-  - intent:  thanks.
+  - intent:  thanks
   - action: utter_answer_thanks
    
 - story: report error
   steps:
-  - intent:  greet
-  - action: utter_greet
   - intent:  found_error
   - action: utter_report_error
   - action: utter_locate_contact_form
@@ -164,8 +160,6 @@ stories:
   
 - story: involved person
   steps:
-  - intent:  greet
-  - action: utter_greet
   - intent:  show_involved_persons
   - action: utter_show_involved_persons
   - intent:  thanks
@@ -173,8 +167,6 @@ stories:
 
 - story: show facilities + schools of social work
   steps:
-  - intent:  greet
-  - action: utter_greet
   - intent:  show_list_of_facilities_and_schools
   - action: utter_refer_to_glossary
   - intent: thanks
@@ -182,8 +174,6 @@ stories:
  
 - story: source of information
   steps:
-  - intent:  greet
-  - action: utter_greet
   - intent:  show_source_of_information
   - action: utter_explain_source_of_information
   - action: utter_refer_to_research_project
@@ -192,8 +182,6 @@ stories:
    
 - story: offer support
   steps:
-  - intent:  greet
-  - action: utter_greet
   - intent:  offer_support
   - action: utter_contact_for_support
   - intent:  contact_method
@@ -206,8 +194,6 @@ stories:
 
 - story: request site to author
   steps:
-  - intent:  greet
-  - action: utter_greet
   - intent:  requirements_site_to_author
   - action: utter_requirements_for_authors
   - intent:  who_is_possible_user
@@ -221,8 +207,6 @@ stories:
 
 - story: verification as author
   steps:
-  - intent:  greet
-  - action: utter_greet
   - intent:  ask_duty_verify_as_author
   - action: utter_verify_duty_deny
   - intent:  ask_voluntary_verify_as_author
@@ -232,17 +216,13 @@ stories:
 
 - story: expand website
   steps:
-  - intent:  greet
-  - action: utter_greet
-  - intent:  peaople_expand_website
+  - intent:  people_expand_website
   - action: utter_show_involved_persons
   - intent:  thanks
   - action: utter_answer_thanks
 
 - story: request author to site
   steps:
-  - intent:  greet
-  - action: utter_greet
   - intent:  requirements_author_to_site
   - action: utter_requirements_for_site
   - intent:  thanks
@@ -250,8 +230,6 @@ stories:
 
 - story: involved universities
   steps:
-  - intent:  greet
-  - action: utter_greet
   - intent:  show_involved_universities
   - action: utter_show_involved_universities
   - intent:  thanks
@@ -259,8 +237,6 @@ stories:
 
 - story: content check
   steps:
-  - intent:  greet
-  - action: utter_greet
   - intent:  ask_for_data_check
   - action: utter_explain_data_check
   - intent:  data_check_time

@@ -8,17 +8,13 @@ class MyKnowledgeBaseAction(ActionQueryKnowledgeBase):
 
         # overwrite the representation function of the hotel object
         # by default the representation function is just the name of the object
-#        knowledge_base.set_representation_function_of_object(
-#            "hotel", lambda obj: obj["name"] + " (" + obj["city"] + ")"
-#        )
         knowledge_base.set_representation_function_of_object(
             "person", lambda obj: obj["title"] + " " + obj["name"] + " (" + obj["date_of_birth"] + " - " + obj["date_of_death"] + ")"
         )
 
-        #knowledge_base.set_representation_function_of_object(
-        #    "domicile", lambda obj: obj["place"] + " (" + obj["start"] +  " - " + obj["end"] + ")"
-        #)
-
+        knowledge_base.set_representation_function_of_object(
+            "domicile", lambda obj: obj["place"] + " (" + obj["start"] +  " - " + obj["end"] + ")"
+        )
 
         super().__init__(knowledge_base)
 
@@ -31,9 +27,10 @@ class MyKnowledgeBaseAction(ActionQueryKnowledgeBase):
             objects: the list of objects
         """
         if objects:
-            dispatcher.utter_message(
-                text=f"The following '{object_type}' I have in my list:"
-            )
+            if object_type == "person":
+                dispatcher.utter_message(
+                    text=f"Here are some people:"
+                )
 
             repr_function = await utils.call_potential_coroutine(
                 self.knowledge_base.get_representation_function_of_object(object_type)
@@ -51,26 +48,32 @@ class MyKnowledgeBaseAction(ActionQueryKnowledgeBase):
         Utters a response that informs the user about the attribute value of the
         attribute of interest.
         Args:
-            dispatcher: the dispatcher
+            dispatcher: the dispatcher (Ermöglicht die Ausgabe)
             object_name: the name of the object
             attribute_name: the name of the attribute
             attribute_value: the value of the attribute
         """
-        if attribute_value:
+        
+        # object_name = das key-Attribute (hier id) des gesuchten Objektes
 
+        if attribute_value:
             if (attribute_name == "domicile"):
-                dispatcher.utter_message(
-                    text=f"The domicile of {object_name} were {attribute_value}."
+                repr_function = await utils.call_potential_coroutine(
+                self.knowledge_base.get_representation_function_of_object("domicile")
                 )
+
+                for i, obj in enumerate(attribute_value, 1):
+                    dispatcher.utter_message(text=f"{i}: {repr_function(obj)}")
+
             elif (attribute_name == "biographie"):
                  dispatcher.utter_message(
                     text=f"{attribute_value}"
                 )
             else:
                 dispatcher.utter_message(
-                    text=f"'{object_name}' has the value '{attribute_value}' for attribute '{attribute_name}'."
+                    text=f"'{attribute_value}"
                 )
         else:
             dispatcher.utter_message(
-                text=f"Did not find a valid value for attribute '{attribute_name}' for object '{object_name}'."
+                text=f"Did not find a valid value for attribute '{attribute_name}'."
             )

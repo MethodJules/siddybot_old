@@ -26,6 +26,7 @@ nlu:
     - Thanks
     - Thank you
     - Thanks a lot
+    - ok, thanks
 
 - intent: agree
   examples: |
@@ -136,6 +137,11 @@ nlu:
     - There is an overview of facilities and schools?
     - Can you show me all the schools?
 
+- intent: ask_for_access_type_for_facilities
+  examples: |
+    - Which access type has the facilities?
+    - Could you tell me the access types?
+
 - intent: show_source_of_information
   examples: |
     - What is the source of all the information?
@@ -245,12 +251,31 @@ nlu:
     - How can I get information?
     - How can I get information about people in your list?
     - Can you show me, how I can get some information?
+    - Show me, how I can get information
 
+- intent: choose_custom_search
+  examples: |
+    - I want to search for [content](searchtype).
+    - [content](searchtype), please
+
+- intent: save_created_person
+  examples: |
+    - I saved the person.
+    - The data is correct. I saved it.
+    - I pushed the save button. 
+    - Done.
+
+- intent: use_custom_search_function
+  examples: |
+    - I want to do a custom search.
+    - I search a custom search function.
+    - Where can I do a custom search?
 
 - synonym: person
   examples: |
     - people
     - persons
+    - social worker
 
 - synonym: domiciles_of_person
   examples: |
@@ -277,3 +302,95 @@ nlu:
     - Tell me [something]{"entity": "attribute", "value": "biographie"} about [Esther Apfelberg](name)
     - Tell me [something]{"entity": "attribute", "value": "biographie"} about [second](mention) person
     - Can you tell me [more]{"entity": "attribute", "value": "biographie"} about the person?
+    - [hebrew name]{"entity": "attribute", "value": "hebrew_name"} of the [first one]{"entity": "mention", "value": "1"}?
+    - Do you know the [hebrew name]{"entity": "attribute", "value": "hebrew_name"} of the [first one]{"entity": "mention", "value": "1"}?
+    - Can you tell me the [birth day]{"entity": "attribute", "value": "date_of_birth"} from the [second](mention) person?
+
+
+- intent: questions_detail_person/date
+  examples: |
+    - Tell me in which year was the  [birthday] {"entity": "attribute", "value": "date_of_birth"} of [Esther Apfelberg] (person)
+    - I would like to know when the [birthday] {"entity": "attribute", "value": "date_of_birth"} of [Esther Apfelberg] (person) was
+    - Can you tell me the [birthday] {"entity": "attribute", "value": "date_of_birth"} of [Esther Apfelberg] (person)?
+    - When was the [deathday] {"entity": "attribute", "value": "date_of_death"} of [Esther Apfelberg] (person)?
+    - Show me when was [Esther Apfelberg] (person) in [Berlin](city)
+    - When was [Esther Apfelberg] (person) in [Palestine](city)?
+
+- intent: questions_detail_person/persons
+  examples: |
+    - Call me the [father] {"entity": "attribute", "value": "father"} of [Esther Apfelberg] (person)
+    - Can you tell me the names oft the [siblings] {"entity": "attribute", "value": "sibling"} of [Esther Apfelberg] (person)?
+    - I want to know the name oft the [spouse] {"entity": "attribute", "value": "spouse"} of [Esther Apfelberg] (person)
+    - Who was the [mother] {"entity": "attribute", "value": "mother"} of [Esther Apfelberg] (person)?
+    - Which name had the [mother] {"entity": "attribute", "value": "mother"} of [Esther Apfelberg](person)?
+    - Who was the [belongs] {"entity": "attribute", "value": "belong"} of [Esther Apfelberg] (person)?
+
+- intent: questions_detail_person/places
+  examples: |
+    - Show some domicils {attribute} from [Esther Apfelberg] (person)
+    - Can you show me where [Esther Apfelberg] (person) lived?
+    - I would like to know in which city [Esther Apfelberg] (person) was born
+    - Where was [Esther Apfelberg] (person) born [attribute]?
+    - In which [city] died [Esther Apfelberg] (person)?
+    - Where did [person] lived [Esther Apfelberg] (person)? 
+    - Where was [Esther Apfelberg] (person) lived in [year]?
+    - Can you show me where [Esther Apfelberg] (person) was in [year]?
+    - I like to know in which [city] was [Esther Apfelberg] (person) in [year]?
+
+- intent: questions_detail_person/general
+  examples: |
+    - Show me the [religion](attribute) of [Esther Apfelberg] (person)
+    - Could you tell me the [organization](attribute) of [Esther Apfelberg] (person)?
+    - I want to know the [title](attribute) of [Esther Apfelberg] (person)
+    - What was the [religion](attribute) of [Esther Apfelberg] (person)?
+    - On which [school](attribute) was [Esther Apfelberg] (person)?
+    - At which [university](attribute) did [Esther Apfelberg] (person) studied?
+
+- intent: questions_detail_person/activities
+  examples: |
+    - Tell me what [activites](object_type) did [Esther Apfelberg] (person)
+    - Could you show me the [activities](object_type) of [Esther Apfelberg] (person)?
+    - What were the [activites](object_type) from [Esther Apfelberg] (person)?
+    - Which [activities](object_type) did [Esther Apfelberg] (person)?
+
+- intent: list_of/persons
+  examples: |
+    - Give me a list of [people] {"entity": "object_type", "value": "person"}
+    - I would like to some [people] {"entity": "object_type", "value": "person"}
+    - I would like to suggested some [people] {"entity": "object_type", "value": "person"} from your list
+    - Can you show me a list of some [people] {"entity": "object_type", "value": "person"}?
+    - Give me a list of [people] {"entity": "object_type", "value": "person"} who lived in [Jerusalem](city)
+    - I would like to see some [people] {"entity": "object_type", "value": "person"} who lived in [Jerusalem](city)
+    - I would like to get suggested some [people] {"entity": "object_type", "value": "person"} who lived in [Jerusalem](city)
+    - Can you show me a list of some [people] {"entity": "object_type", "value": "person"} who lived in [Jerusalem](city)?
+    - Can you show me a list of some [people] {"entity": "object_type", "value": "person"} who lived in {city} in [1945](year)
+    - I would like to get suggested some [people] {"entity": "object_type", "value": "person"} who lived in [Jerusalem](city) in [1945](year)
+    - I would like to see some [people] {"entity": "object_type", "value": "person"} who lived in [Berlin](city) in [1945](year)
+    - Show me a list of [people] {"entity": "object_type", "value": "person"} who lived in [Jerusalem](city) in [1945](year)
+    - Give me a list of [people] {"entity": "object_type", "value": "person"} who was by [WIZO](organization)
+    - I would like to see some [people] {"entity": "object_type", "value": "person"} who worked by [WIZO](organization)
+    - I would like to get suggested some [people] {"entity": "object_type", "value": "person"} who worked by [WIZO](organization)
+    - Can you show me a list of some [people] {"entity": "object_type", "value": "person"} who worked at [WIZO](organization)
+
+
+- intent: list_of/residences
+  examples: |
+    - Tell me where the social workers lived
+    - Could you show me some places where the social workers lived? 
+    - I would like to see some places where the social workers were.
+    - In which citys lived the social workers?
+    - Where lived the social workers? 
+
+
+- intent: list_of/activities
+  examples: |
+     - Show me which [activities](object_type) have done the social workers
+     - I would like to know some [activities](object_type) oft he social workers
+     - Can you tell me some [activities](object_type) of the social workers?
+     - Which [activities](object_type) have done the social workers?
+     - What [activities](object_type) were carried out?
+     - Which [activities](object_type) were carried out in [Hamburg](city)?
+     - I want to know some [activities](object_type) in [Hamburg](city)
+
+
+
