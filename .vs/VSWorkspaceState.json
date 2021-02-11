@@ -2,8 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\actions",
-    "\\data"
+    "\\data",
+    "\\models",
+    "\\results"
   ],
-  "SelectedNode": "\\rules.yml",
+  "SelectedNode": "\\results\\DIETClassifier_errors.json",
   "PreviewInSolutionExplorer": false
 }

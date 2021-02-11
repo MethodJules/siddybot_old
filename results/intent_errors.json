@@ -1,0 +1,1418 @@
+[
+  {
+    "text": "Whats up?",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "goodybye",
+      "confidence": 0.23194678127765656
+    }
+  },
+  {
+    "text": "Goodbye",
+    "intent": "goodybye",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.2819443941116333
+    }
+  },
+  {
+    "text": "Bye",
+    "intent": "goodybye",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.2819443941116333
+    }
+  },
+  {
+    "text": "Ciao",
+    "intent": "goodybye",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.2819443941116333
+    }
+  },
+  {
+    "text": "Thanks",
+    "intent": "thanks",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.2819443941116333
+    }
+  },
+  {
+    "text": "Thank you",
+    "intent": "thanks",
+    "intent_prediction": {
+      "name": "goodybye",
+      "confidence": 0.23194678127765656
+    }
+  },
+  {
+    "text": "Thanks a lot",
+    "intent": "thanks",
+    "intent_prediction": {
+      "name": "goodybye",
+      "confidence": 0.15011990070343018
+    }
+  },
+  {
+    "text": "ok, thanks",
+    "intent": "thanks",
+    "intent_prediction": {
+      "name": "goodybye",
+      "confidence": 0.23194678127765656
+    }
+  },
+  {
+    "text": "yes",
+    "intent": "agree",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.2819443941116333
+    }
+  },
+  {
+    "text": "oh yeah",
+    "intent": "agree",
+    "intent_prediction": {
+      "name": "goodybye",
+      "confidence": 0.23194678127765656
+    }
+  },
+  {
+    "text": "yep",
+    "intent": "agree",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.2819443941116333
+    }
+  },
+  {
+    "text": "of course",
+    "intent": "agree",
+    "intent_prediction": {
+      "name": "goodybye",
+      "confidence": 0.23194678127765656
+    }
+  },
+  {
+    "text": "No",
+    "intent": "denied",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.2819443941116333
+    }
+  },
+  {
+    "text": "Never",
+    "intent": "denied",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.2819443941116333
+    }
+  },
+  {
+    "text": "Nope",
+    "intent": "denied",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.2819443941116333
+    }
+  },
+  {
+    "text": "Not at all",
+    "intent": "denied",
+    "intent_prediction": {
+      "name": "goodybye",
+      "confidence": 0.15011990070343018
+    }
+  },
+  {
+    "text": "Not a chance",
+    "intent": "denied",
+    "intent_prediction": {
+      "name": "goodybye",
+      "confidence": 0.15011990070343018
+    }
+  },
+  {
+    "text": "Ok",
+    "intent": "accept",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.2819443941116333
+    }
+  },
+  {
+    "text": "Check",
+    "intent": "accept",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.2819443941116333
+    }
+  },
+  {
+    "text": "I understand",
+    "intent": "confirm",
+    "intent_prediction": {
+      "name": "goodybye",
+      "confidence": 0.23194678127765656
+    }
+  },
+  {
+    "text": "What is this site about?",
+    "intent": "website_information",
+    "intent_prediction": {
+      "name": "offer_support",
+      "confidence": 0.14637117087841034
+    }
+  },
+  {
+    "text": "what is this for a page?",
+    "intent": "website_information",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.20310239493846893
+    }
+  },
+  {
+    "text": "what is jigsaw about?",
+    "intent": "website_information",
+    "intent_prediction": {
+      "name": "offer_support",
+      "confidence": 0.16610895097255707
+    }
+  },
+  {
+    "text": "what is jigsaw?",
+    "intent": "website_information",
+    "intent_prediction": {
+      "name": "goodybye",
+      "confidence": 0.15011990070343018
+    }
+  },
+  {
+    "text": "what can i do here?",
+    "intent": "website_information",
+    "intent_prediction": {
+      "name": "offer_support",
+      "confidence": 0.14637117087841034
+    }
+  },
+  {
+    "text": "Jigsaw?",
+    "intent": "website_information",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.2819443941116333
+    }
+  },
+  {
+    "text": "Where am i?",
+    "intent": "website_information",
+    "intent_prediction": {
+      "name": "goodybye",
+      "confidence": 0.15011990070343018
+    }
+  },
+  {
+    "text": "How can i add a person to the list?",
+    "intent": "add_person",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.19682613015174866
+    }
+  },
+  {
+    "text": "can i add a person?",
+    "intent": "add_person",
+    "intent_prediction": {
+      "name": "offer_support",
+      "confidence": 0.14637117087841034
+    }
+  },
+  {
+    "text": "i am missing a person",
+    "intent": "add_person",
+    "intent_prediction": {
+      "name": "offer_support",
+      "confidence": 0.14637117087841034
+    }
+  },
+  {
+    "text": "i want to add a person",
+    "intent": "add_person",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.20310239493846893
+    }
+  },
+  {
+    "text": "show me how to add a person to the list",
+    "intent": "add_person",
+    "intent_prediction": {
+      "name": "list_of",
+      "confidence": 0.18663927912712097
+    }
+  },
+  {
+    "text": "there is a person missing from the list",
+    "intent": "add_person",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.2648906111717224
+    }
+  },
+  {
+    "text": "Someone is missing",
+    "intent": "add_person",
+    "intent_prediction": {
+      "name": "goodybye",
+      "confidence": 0.15011990070343018
+    }
+  },
+  {
+    "text": "are all persons on the list?",
+    "intent": "add_person",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.20310239493846893
+    }
+  },
+  {
+    "text": "How can i use the maps?",
+    "intent": "use_map",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.20310239493846893
+    }
+  },
+  {
+    "text": "what can i do with the maps?",
+    "intent": "use_map",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.2712826430797577
+    }
+  },
+  {
+    "text": "What do the maps show me?",
+    "intent": "use_map",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.20310239493846893
+    }
+  },
+  {
+    "text": "maps?",
+    "intent": "use_map",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.2819443941116333
+    }
+  },
+  {
+    "text": "can you explain me the maps?",
+    "intent": "use_map",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.20310239493846893
+    }
+  },
+  {
+    "text": "What information can I find in the maps?",
+    "intent": "use_map",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.2648906111717224
+    }
+  },
+  {
+    "text": "explain the maps",
+    "intent": "use_map",
+    "intent_prediction": {
+      "name": "goodybye",
+      "confidence": 0.15011990070343018
+    }
+  },
+  {
+    "text": "Activity map",
+    "intent": "choose_map",
+    "intent_prediction": {
+      "name": "goodybye",
+      "confidence": 0.23194678127765656
+    }
+  },
+  {
+    "text": "How can i use the custom search function?",
+    "intent": "use_custom_search",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.2648906111717224
+    }
+  },
+  {
+    "text": "Is there a custom search?",
+    "intent": "use_custom_search",
+    "intent_prediction": {
+      "name": "offer_support",
+      "confidence": 0.14637117087841034
+    }
+  },
+  {
+    "text": "Can I filter my search results",
+    "intent": "use_custom_search",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.20310239493846893
+    }
+  },
+  {
+    "text": "how can I specify my search",
+    "intent": "use_custom_search",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.20310239493846893
+    }
+  },
+  {
+    "text": "I did not find what I was looking for",
+    "intent": "use_custom_search",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.19682613015174866
+    }
+  },
+  {
+    "text": "is there more than the default search",
+    "intent": "use_custom_search",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.2712826430797577
+    }
+  },
+  {
+    "text": "how can i get more or less results?",
+    "intent": "use_custom_search",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.2648906111717224
+    }
+  },
+  {
+    "text": "there is an error on the website",
+    "intent": "found_error",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.2712826430797577
+    }
+  },
+  {
+    "text": "I found an error",
+    "intent": "found_error",
+    "intent_prediction": {
+      "name": "offer_support",
+      "confidence": 0.16610895097255707
+    }
+  },
+  {
+    "text": "What can i do, if i find an error?",
+    "intent": "found_error",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.19682613015174866
+    }
+  },
+  {
+    "text": "where can i report an error?",
+    "intent": "found_error",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.20310239493846893
+    }
+  },
+  {
+    "text": "is not that a mistake?",
+    "intent": "found_error",
+    "intent_prediction": {
+      "name": "offer_support",
+      "confidence": 0.14637117087841034
+    }
+  },
+  {
+    "text": "you have errors on your site",
+    "intent": "found_error",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.20310239493846893
+    }
+  },
+  {
+    "text": "Who works on this project?",
+    "intent": "show_involved_persons",
+    "intent_prediction": {
+      "name": "offer_support",
+      "confidence": 0.14637117087841034
+    }
+  },
+  {
+    "text": "who has collected all this information?",
+    "intent": "show_involved_persons",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.20310239493846893
+    }
+  },
+  {
+    "text": "which persons work on this project?",
+    "intent": "show_involved_persons",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.20310239493846893
+    }
+  },
+  {
+    "text": "which people are involved in this project?",
+    "intent": "show_involved_persons",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.2712826430797577
+    }
+  },
+  {
+    "text": "Show me the people involved in the project",
+    "intent": "show_involved_persons",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.2648906111717224
+    }
+  },
+  {
+    "text": "Is there a list of people involved in this project?",
+    "intent": "show_involved_persons",
+    "intent_prediction": {
+      "name": "list_of",
+      "confidence": 0.18663927912712097
+    }
+  },
+  {
+    "text": "Which people are responsible for progress of this project?",
+    "intent": "show_involved_persons",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.19682613015174866
+    }
+  },
+  {
+    "text": "who is involved in this website?",
+    "intent": "show_involved_persons",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.20310239493846893
+    }
+  },
+  {
+    "text": "What institutions or schools of social work existed back then?",
+    "intent": "show_list_of_facilities_and_schools",
+    "intent_prediction": {
+      "name": "list_of",
+      "confidence": 0.18663927912712097
+    }
+  },
+  {
+    "text": "Is there a list of facilities and schools?",
+    "intent": "show_list_of_facilities_and_schools",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.2648906111717224
+    }
+  },
+  {
+    "text": "is there a list of facilities",
+    "intent": "show_list_of_facilities_and_schools",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.20310239493846893
+    }
+  },
+  {
+    "text": "list of social education schools",
+    "intent": "show_list_of_facilities_and_schools",
+    "intent_prediction": {
+      "name": "choose_map",
+      "confidence": 0.9187707901000977
+    }
+  },
+  {
+    "text": "what institutions are known",
+    "intent": "show_list_of_facilities_and_schools",
+    "intent_prediction": {
+      "name": "offer_support",
+      "confidence": 0.16610895097255707
+    }
+  },
+  {
+    "text": "There is an overview of facilities and schools?",
+    "intent": "show_list_of_facilities_and_schools",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.2648906111717224
+    }
+  },
+  {
+    "text": "Can you show me all the schools?",
+    "intent": "show_list_of_facilities_and_schools",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.2712826430797577
+    }
+  },
+  {
+    "text": "Which access type has the facilities?",
+    "intent": "ask_for_access_type_for_facilities",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.20310239493846893
+    }
+  },
+  {
+    "text": "Could you tell me the access types?",
+    "intent": "ask_for_access_type_for_facilities",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.2712826430797577
+    }
+  },
+  {
+    "text": "What is the source of all the information?",
+    "intent": "show_source_of_information",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.2648906111717224
+    }
+  },
+  {
+    "text": "Where does the information come from?",
+    "intent": "show_source_of_information",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.20310239493846893
+    }
+  },
+  {
+    "text": "What are the sources of information?",
+    "intent": "show_source_of_information",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.20310239493846893
+    }
+  },
+  {
+    "text": "where can I see the sources?",
+    "intent": "show_source_of_information",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.20310239493846893
+    }
+  },
+  {
+    "text": "source disclosures",
+    "intent": "show_source_of_information",
+    "intent_prediction": {
+      "name": "goodybye",
+      "confidence": 0.23194678127765656
+    }
+  },
+  {
+    "text": "from which sources the information is composed?",
+    "intent": "show_source_of_information",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.2712826430797577
+    }
+  },
+  {
+    "text": "How can I support this website?",
+    "intent": "offer_support",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.20310239493846893
+    }
+  },
+  {
+    "text": "i want to support this site",
+    "intent": "offer_support",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.20310239493846893
+    }
+  },
+  {
+    "text": "is it possible to support you?",
+    "intent": "offer_support",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.20310239493846893
+    }
+  },
+  {
+    "text": "How can i contact you?",
+    "intent": "contact_method",
+    "intent_prediction": {
+      "name": "offer_support",
+      "confidence": 0.14637117087841034
+    }
+  },
+  {
+    "text": "how can i get in touch with you?",
+    "intent": "contact_method",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.2648906111717224
+    }
+  },
+  {
+    "text": "can i contact other people?",
+    "intent": "contact_method",
+    "intent_prediction": {
+      "name": "offer_support",
+      "confidence": 0.14637117087841034
+    }
+  },
+  {
+    "text": "What requirements are placed on the authors by the side?",
+    "intent": "requirements_site_to_author",
+    "intent_prediction": {
+      "name": "list_of",
+      "confidence": 0.18663927912712097
+    }
+  },
+  {
+    "text": "what duty is imposed on the authors",
+    "intent": "requirements_site_to_author",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.2712826430797577
+    }
+  },
+  {
+    "text": "what do authors have to adhere to?",
+    "intent": "requirements_site_to_author",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.2712826430797577
+    }
+  },
+  {
+    "text": "There are restrictions for authors",
+    "intent": "requirements_site_to_author",
+    "intent_prediction": {
+      "name": "offer_support",
+      "confidence": 0.14637117087841034
+    }
+  },
+  {
+    "text": "content requirements for authors?",
+    "intent": "requirements_site_to_author",
+    "intent_prediction": {
+      "name": "offer_support",
+      "confidence": 0.16610895097255707
+    }
+  },
+  {
+    "text": "And who gets access to the page?",
+    "intent": "who_is_possible_user",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.2712826430797577
+    }
+  },
+  {
+    "text": "who will get access to this website?",
+    "intent": "who_is_possible_user",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.2712826430797577
+    }
+  },
+  {
+    "text": "what kind of people are going to use this site?",
+    "intent": "who_is_possible_user",
+    "intent_prediction": {
+      "name": "list_of",
+      "confidence": 0.18663927912712097
+    }
+  },
+  {
+    "text": "what are the possible users of  jigsaw?",
+    "intent": "who_is_possible_user",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.2712826430797577
+    }
+  },
+  {
+    "text": "who will use jigsaw?",
+    "intent": "who_is_possible_user",
+    "intent_prediction": {
+      "name": "offer_support",
+      "confidence": 0.16610895097255707
+    }
+  },
+  {
+    "text": "what is the target group of Jigsaw?",
+    "intent": "who_is_possible_user",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.2712826430797577
+    }
+  },
+  {
+    "text": "Should a certain target group be addressed with this page?",
+    "intent": "who_is_possible_user",
+    "intent_prediction": {
+      "name": "list_of",
+      "confidence": 0.18663927912712097
+    }
+  },
+  {
+    "text": "Are there different types of access to this site?",
+    "intent": "ask_for_access_types",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.19682613015174866
+    }
+  },
+  {
+    "text": "What sorts of access types are there?",
+    "intent": "ask_for_access_types",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.2712826430797577
+    }
+  },
+  {
+    "text": "Do different people get different types of access?",
+    "intent": "ask_for_access_types",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.2648906111717224
+    }
+  },
+  {
+    "text": "Are there different types of access? For example, for students?",
+    "intent": "ask_for_access_types",
+    "intent_prediction": {
+      "name": "list_of",
+      "confidence": 0.18663927912712097
+    }
+  },
+  {
+    "text": "Do i have to verify me as an author?",
+    "intent": "ask_duty_verify_as_author",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.19682613015174866
+    }
+  },
+  {
+    "text": "do I have to verify myself?",
+    "intent": "ask_duty_verify_as_author",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.20310239493846893
+    }
+  },
+  {
+    "text": "Is there a duty to verify?",
+    "intent": "ask_duty_verify_as_author",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.20310239493846893
+    }
+  },
+  {
+    "text": "Can I set content without being verified?",
+    "intent": "ask_duty_verify_as_author",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.2712826430797577
+    }
+  },
+  {
+    "text": "is the verification required?",
+    "intent": "ask_duty_verify_as_author",
+    "intent_prediction": {
+      "name": "offer_support",
+      "confidence": 0.16610895097255707
+    }
+  },
+  {
+    "text": "Can i verify myself if i want to?",
+    "intent": "ask_voluntary_verify_as_author",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.2648906111717224
+    }
+  },
+  {
+    "text": "i want to verify myself as an author.",
+    "intent": "ask_voluntary_verify_as_author",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.2648906111717224
+    }
+  },
+  {
+    "text": "is there a way to verify myself?",
+    "intent": "ask_voluntary_verify_as_author",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.2712826430797577
+    }
+  },
+  {
+    "text": "can i verify myself?",
+    "intent": "ask_voluntary_verify_as_author",
+    "intent_prediction": {
+      "name": "offer_support",
+      "confidence": 0.16610895097255707
+    }
+  },
+  {
+    "text": "Are there any people activly expanding the site?",
+    "intent": "people_expand_website",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.2648906111717224
+    }
+  },
+  {
+    "text": "will the website continue to be expanded?",
+    "intent": "people_expand_website",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.2712826430797577
+    }
+  },
+  {
+    "text": "who expands the website?",
+    "intent": "people_expand_website",
+    "intent_prediction": {
+      "name": "offer_support",
+      "confidence": 0.16610895097255707
+    }
+  },
+  {
+    "text": "who is responsible for the expansion of the website",
+    "intent": "people_expand_website",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.19682613015174866
+    }
+  },
+  {
+    "text": "What is the claim of the authors?",
+    "intent": "requirements_author_to_site",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.2712826430797577
+    }
+  },
+  {
+    "text": "what do the authors insist on?",
+    "intent": "requirements_author_to_site",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.20310239493846893
+    }
+  },
+  {
+    "text": "what about copyright",
+    "intent": "requirements_author_to_site",
+    "intent_prediction": {
+      "name": "goodybye",
+      "confidence": 0.15011990070343018
+    }
+  },
+  {
+    "text": "on what rights can authors call themselves?",
+    "intent": "requirements_author_to_site",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.2712826430797577
+    }
+  },
+  {
+    "text": "are the rights of the authors respected?",
+    "intent": "requirements_author_to_site",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.2712826430797577
+    }
+  },
+  {
+    "text": "Rights for authors",
+    "intent": "requirements_author_to_site",
+    "intent_prediction": {
+      "name": "goodybye",
+      "confidence": 0.15011990070343018
+    }
+  },
+  {
+    "text": "Which universities are involved in this project?",
+    "intent": "show_involved_universities",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.2712826430797577
+    }
+  },
+  {
+    "text": "involved universities?",
+    "intent": "show_involved_universities",
+    "intent_prediction": {
+      "name": "goodybye",
+      "confidence": 0.23194678127765656
+    }
+  },
+  {
+    "text": "is there a list of universities that are resonsible for jigsaw?",
+    "intent": "show_involved_universities",
+    "intent_prediction": {
+      "name": "list_of",
+      "confidence": 0.35037052631378174
+    }
+  },
+  {
+    "text": "which persons of which universities are involved in the project?",
+    "intent": "show_involved_universities",
+    "intent_prediction": {
+      "name": "list_of",
+      "confidence": 0.18663927912712097
+    }
+  },
+  {
+    "text": "How are the data checked?",
+    "intent": "ask_for_data_check",
+    "intent_prediction": {
+      "name": "offer_support",
+      "confidence": 0.14637117087841034
+    }
+  },
+  {
+    "text": "Will the content be checked before it gets published?",
+    "intent": "ask_for_data_check",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.19682613015174866
+    }
+  },
+  {
+    "text": "content check?",
+    "intent": "ask_for_data_check",
+    "intent_prediction": {
+      "name": "goodybye",
+      "confidence": 0.23194678127765656
+    }
+  },
+  {
+    "text": "can i upload anything i want?",
+    "intent": "ask_for_data_check",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.20310239493846893
+    }
+  },
+  {
+    "text": "will anything directly be published?",
+    "intent": "ask_for_data_check",
+    "intent_prediction": {
+      "name": "offer_support",
+      "confidence": 0.14637117087841034
+    }
+  },
+  {
+    "text": "how long will it take to check my data?",
+    "intent": "data_check_time",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.19682613015174866
+    }
+  },
+  {
+    "text": "How can I get information?",
+    "intent": "get_information",
+    "intent_prediction": {
+      "name": "offer_support",
+      "confidence": 0.14637117087841034
+    }
+  },
+  {
+    "text": "How can I get information about people in your list?",
+    "intent": "get_information",
+    "intent_prediction": {
+      "name": "list_of",
+      "confidence": 0.18663927912712097
+    }
+  },
+  {
+    "text": "Can you show me, how I can get some information?",
+    "intent": "get_information",
+    "intent_prediction": {
+      "name": "list_of",
+      "confidence": 0.18663927912712097
+    }
+  },
+  {
+    "text": "Show me, how I can get information",
+    "intent": "get_information",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.2712826430797577
+    }
+  },
+  {
+    "text": "I want to search for content.",
+    "intent": "choose_custom_search",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.20310239493846893
+    }
+  },
+  {
+    "text": "content, please",
+    "intent": "choose_custom_search",
+    "intent_prediction": {
+      "name": "goodybye",
+      "confidence": 0.23194678127765656
+    }
+  },
+  {
+    "text": "I saved the person.",
+    "intent": "save_created_person",
+    "intent_prediction": {
+      "name": "offer_support",
+      "confidence": 0.16610895097255707
+    }
+  },
+  {
+    "text": "The data is correct. I saved it.",
+    "intent": "save_created_person",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.2712826430797577
+    }
+  },
+  {
+    "text": "I pushed the save button.",
+    "intent": "save_created_person",
+    "intent_prediction": {
+      "name": "offer_support",
+      "confidence": 0.14637117087841034
+    }
+  },
+  {
+    "text": "Done.",
+    "intent": "save_created_person",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.2819443941116333
+    }
+  },
+  {
+    "text": "I want to do a custom search.",
+    "intent": "use_custom_search_function",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.2712826430797577
+    }
+  },
+  {
+    "text": "I search a custom search function.",
+    "intent": "use_custom_search_function",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.20310239493846893
+    }
+  },
+  {
+    "text": "Where can I do a custom search?",
+    "intent": "use_custom_search_function",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.2712826430797577
+    }
+  },
+  {
+    "text": "list some people",
+    "intent": "query_knowledge_base",
+    "intent_prediction": {
+      "name": "goodybye",
+      "confidence": 0.15011990070343018
+    }
+  },
+  {
+    "text": "show me some people in your list",
+    "intent": "query_knowledge_base",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.2712826430797577
+    }
+  },
+  {
+    "text": "Show me all your people in your list",
+    "intent": "query_knowledge_base",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.2648906111717224
+    }
+  },
+  {
+    "text": "Which domicile had Esther Apfelberg?",
+    "intent": "query_knowledge_base",
+    "intent_prediction": {
+      "name": "offer_support",
+      "confidence": 0.14637117087841034
+    }
+  },
+  {
+    "text": "Show me some domicile of the first one",
+    "intent": "query_knowledge_base",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.2648906111717224
+    }
+  },
+  {
+    "text": "Show me some people",
+    "intent": "query_knowledge_base",
+    "intent_prediction": {
+      "name": "offer_support",
+      "confidence": 0.16610895097255707
+    }
+  },
+  {
+    "text": "When was the birth day of Esther Apfelberg?",
+    "intent": "query_knowledge_base",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.2648906111717224
+    }
+  },
+  {
+    "text": "What was the hebrew name of Esther Apfelberg?",
+    "intent": "query_knowledge_base",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.2648906111717224
+    }
+  },
+  {
+    "text": "What was the hebrew name of the first one?",
+    "intent": "query_knowledge_base",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.19682613015174866
+    }
+  },
+  {
+    "text": "When was the birth day of the first one?",
+    "intent": "query_knowledge_base",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.19682613015174866
+    }
+  },
+  {
+    "text": "Can you tell me the hebrew name of the second person?",
+    "intent": "query_knowledge_base",
+    "intent_prediction": {
+      "name": "list_of",
+      "confidence": 0.35037052631378174
+    }
+  },
+  {
+    "text": "Tell me something about Esther Apfelberg",
+    "intent": "query_knowledge_base",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.20310239493846893
+    }
+  },
+  {
+    "text": "Tell me something about second person",
+    "intent": "query_knowledge_base",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.20310239493846893
+    }
+  },
+  {
+    "text": "Can you tell me more about the person?",
+    "intent": "query_knowledge_base",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.2648906111717224
+    }
+  },
+  {
+    "text": "hebrew name of the first one?",
+    "intent": "query_knowledge_base",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.20310239493846893
+    }
+  },
+  {
+    "text": "Do you know the hebrew name of the first one?",
+    "intent": "query_knowledge_base",
+    "intent_prediction": {
+      "name": "list_of",
+      "confidence": 0.18663927912712097
+    }
+  },
+  {
+    "text": "Can you tell me the birth day from the second person?",
+    "intent": "query_knowledge_base",
+    "intent_prediction": {
+      "name": "list_of",
+      "confidence": 0.35037052631378174
+    }
+  },
+  {
+    "text": "Tell me in which year was the  birthday of Esther Apfelberg",
+    "intent": "questions_detail_person",
+    "intent_prediction": {
+      "name": "list_of",
+      "confidence": 0.35037052631378174
+    }
+  },
+  {
+    "text": "Where did Esther Apfelberg lived ?",
+    "intent": "questions_detail_person",
+    "intent_prediction": {
+      "name": "offer_support",
+      "confidence": 0.14637117087841034
+    }
+  },
+  {
+    "text": "Which activities did Esther Apfelberg?",
+    "intent": "questions_detail_person",
+    "intent_prediction": {
+      "name": "offer_support",
+      "confidence": 0.14637117087841034
+    }
+  },
+  {
+    "text": "Give me a list of people",
+    "intent": "list_of",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.20310239493846893
+    }
+  },
+  {
+    "text": "I would like to some people",
+    "intent": "list_of",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.20310239493846893
+    }
+  },
+  {
+    "text": "Can you show me a list of some people?",
+    "intent": "list_of",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.19682613015174866
+    }
+  },
+  {
+    "text": "I would like to get suggested some people who lived in Jerusalem",
+    "intent": "list_of",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.7457619905471802
+    }
+  },
+  {
+    "text": "Show me a list of people who lived in Jerusalem in 1945",
+    "intent": "list_of",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.7374463081359863
+    }
+  },
+  {
+    "text": "Tell me where the social workers lived",
+    "intent": "list_of",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.2712826430797577
+    }
+  },
+  {
+    "text": "I would like to see some places where the social workers were.",
+    "intent": "list_of",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.7457619905471802
+    }
+  },
+  {
+    "text": "In which citys lived the social workers?",
+    "intent": "list_of",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.2712826430797577
+    }
+  },
+  {
+    "text": "Where lived the social workers?",
+    "intent": "list_of",
+    "intent_prediction": {
+      "name": "offer_support",
+      "confidence": 0.14637117087841034
+    }
+  },
+  {
+    "text": "Show me which activities have done the social workers",
+    "intent": "list_of",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.19682613015174866
+    }
+  },
+  {
+    "text": "Which activities have done the social workers?",
+    "intent": "list_of",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.2712826430797577
+    }
+  },
+  {
+    "text": "What activities were carried out?",
+    "intent": "list_of",
+    "intent_prediction": {
+      "name": "offer_support",
+      "confidence": 0.14637117087841034
+    }
+  },
+  {
+    "text": "Which activities were carried out in Hamburg?",
+    "intent": "list_of",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.2712826430797577
+    }
+  },
+  {
+    "text": "I want to know some activities in Hamburg",
+    "intent": "list_of",
+    "intent_prediction": {
+      "name": "questions_detail_person",
+      "confidence": 0.2648906111717224
+    }
+  }
+]

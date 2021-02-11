@@ -36,10 +36,13 @@ intents:
   - choose_custom_search
   - requirements_site_to_author
   - ask_for_access_type_for_facilities
+  - list_of/*
+  - questions_detail_person/*
   
 entities:
   - maptype
   - contacttype
+  - searchtype
   - object_type
   - attribute
   - mention
@@ -62,6 +65,10 @@ slots:
     values:
       - email
       - contact formular
+  searchtype:
+    type: categorical
+    values:
+      - content
   object_type:
     type: text
     influence_conversation: false
