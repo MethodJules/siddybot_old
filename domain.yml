@@ -38,7 +38,17 @@ intents:
   - ask_for_access_type_for_facilities
   - list_of/*
   - questions_detail_person/*
-  
+  - search_with_chatbot
+ 
+forms:
+  person_form:
+    name:
+      - type: from_entity
+        entity: PERSON
+    attribute:
+      - type: from_entity
+        entity: attribute
+
 entities:
   - maptype
   - contacttype
@@ -46,12 +56,15 @@ entities:
   - object_type
   - attribute
   - mention
-  - name
   - person
   - residence
   - city
   - year
   - organization
+  - GPE
+  - PERSON
+  - ORG
+  - DATE
 
 slots:
   maptype:
@@ -69,6 +82,7 @@ slots:
     type: categorical
     values:
       - content
+      - person detail
   object_type:
     type: text
     influence_conversation: false
@@ -76,9 +90,6 @@ slots:
     type: text
     influence_conversation: false
   attribute:
-    type: text
-    influence_conversation: false
-  name:
     type: text
     influence_conversation: false
   person:
@@ -96,8 +107,23 @@ slots:
   year: 
     type: text
     influence_conversation: false
+  DATE: 
+    type: text
+    influence_conversation: false
+  PERSON: 
+    type: text
+    influence_conversation: false
+  ORG: 
+    type: text
+    influence_conversation: false
+  GPE: 
+    type: text
+    influence_conversation: false
   
 responses:
+  utter_welcome:
+  - text: "Hi! I'm Jiggy and you can ask me FAQ-Questions or something to persons on this websites"
+
   utter_greet:
   - text: "Welcome, how can i help you?"
   
@@ -273,6 +299,9 @@ responses:
   - text: "Sorry, I'm not sure I understand. Could you rephrase it?"
   - text: "Could you please rephrase your message? I didn't quite get that."
 
+  utter_out_of_scope:
+  - text: "Sorry, this topic is out of my scope. You can ask me FAQs to this website or something to the data of this website."
+
   utter_know_people:
   - text: "Do you know some people on our website?"
   - text: "Do you search for sepcific people?"
@@ -289,6 +318,10 @@ responses:
   utter_attribute:
   - text: "For a person we saved these attributes: Title, Name, birth day and place, death day and place, hebrew name, domicile, ..."
 
+  utter_ask_attribute:
+  - text: "What do you want to know of the person?"
+  - text: "We saved for example these attributes to a person: Title, birth day and place, death day and place, hebrew name, domicile. What do you want to know?"
+
   utter_ask_for_attribute_for_person:
   - text: "You can ask something like: 'What was the hebrew name of Esther Apfelberg?'"
 
@@ -301,9 +334,31 @@ responses:
   utter_explain_data_check:
   - text: "That should not take more than a few hours."
 
+  utter_ask_person:
+  - text: "What is the name of the person?"
+  - text: "How is the name of the person?"
+
+  utter_dummy:
+  - text: "Dies ist erstmal eine Dummy-Antwort."
+
+  utter_submit:
+  - text: "Thank you! I am going to search for your information."
+
+#rules:
+#  - rule: Ask the user to rephrase whenever they send a message with low NLU confidence
+#    steps:
+#      - intent: nlu_fallback
+#      - action: utter_ask_rephrase
+
+# - rule: welcome user
+#    conversation_start: true
+#    steps:
+#      - intent: greet
+#      - action: utter_welcome
+
 actions:
-  - action_hello_world
   - action_query_knowledge_base
+  - action_person_detail
 
 session_config:
   session_expiration_time: 60

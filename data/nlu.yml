@@ -10,7 +10,7 @@ nlu:
     - Heya
     - Howdy
 
-- intent: goodybye
+- intent: goodbye
   examples: |
     - Goodbye
     - Bye
@@ -245,6 +245,7 @@ nlu:
 - intent: data_check_time
   examples: |
     - how long will it take to check my data?
+    - Could you say me how long it will take to check my data?
 
 - intent: get_information
   examples: |
@@ -253,10 +254,21 @@ nlu:
     - Can you show me, how I can get some information?
     - Show me, how I can get information
 
-- intent: choose_custom_search
+- intent: search_function/choose_custom_search
   examples: |
     - I want to search for [content](searchtype).
     - [content](searchtype), please
+
+- synonym: person detail
+  examples: |
+    - informations from persons 
+    - person informations
+
+- synonym: information
+  examples: |
+    - details
+    - detail
+    - informations
 
 - intent: save_created_person
   examples: |
@@ -265,7 +277,7 @@ nlu:
     - I pushed the save button. 
     - Done.
 
-- intent: use_custom_search_function
+- intent:  search_function/use_custom_search_function
   examples: |
     - I want to do a custom search.
     - I search a custom search function.
@@ -291,21 +303,20 @@ nlu:
     - list some [people]{"entity": "object_type", "value": "person"}
     - show me some [people]{"entity": "object_type", "value": "person"} in your list
     - Show me all your [people]{"entity": "object_type", "value": "person"} in your list
-    - Which [domicile]{"entity": "attribute", "value": "domicile"} had [Esther Apfelberg](name)?
+    - Which [domicile]{"entity": "attribute", "value": "domicile"} had [Esther Apfelberg](person)?
     - Show me some [domicile]{"entity": "attribute", "value": "domicile"} of the [first one]{"entity": "mention", "value": "1"}
     - Show me some [people]{"entity": "object_type", "value": "person"}
-    - When was the [birth day]{"entity": "attribute", "value": "date_of_birth"} of [Esther Apfelberg](name)?
-    - What was the [hebrew name]{"entity": "attribute", "value": "hebrew_name"} of [Esther Apfelberg](name)?
+    - When was the [birth day]{"entity": "attribute", "value": "date_of_birth"} of [Esther Apfelberg](person)?
+    - What was the [hebrew name]{"entity": "attribute", "value": "hebrew_name"} of [Esther Apfelberg](person)?
     - What was the [hebrew name]{"entity": "attribute", "value": "hebrew_name"} of the [first one]{"entity": "mention", "value": "1"}?
     - When was the [birth day]{"entity": "attribute", "value": "date_of_birth"} of the [first one]{"entity": "mention", "value": "1"}?
     - Can you tell me the [hebrew name]{"entity": "attribute", "value": "hebrew_name"} of the [second](mention) person?
-    - Tell me [something]{"entity": "attribute", "value": "biographie"} about [Esther Apfelberg](name)
+    - Tell me [something]{"entity": "attribute", "value": "biographie"} about [Esther Apfelberg](person)
     - Tell me [something]{"entity": "attribute", "value": "biographie"} about [second](mention) person
     - Can you tell me [more]{"entity": "attribute", "value": "biographie"} about the person?
     - [hebrew name]{"entity": "attribute", "value": "hebrew_name"} of the [first one]{"entity": "mention", "value": "1"}?
     - Do you know the [hebrew name]{"entity": "attribute", "value": "hebrew_name"} of the [first one]{"entity": "mention", "value": "1"}?
     - Can you tell me the [birth day]{"entity": "attribute", "value": "date_of_birth"} from the [second](mention) person?
-
 
 - intent: questions_detail_person/date
   examples: |
@@ -320,7 +331,7 @@ nlu:
   examples: |
     - Call me the [father]{"entity":"attribute","value":"father"} of [Esther Apfelberg](person)
     - Can you tell me the names oft the [siblings]{"entity":"attribute","value":"sibling"} of [Esther Apfelberg](person)?
-    - I want to know the name oft the [spouse]{"entity":"attribute","value":"spouse"} of [Esther Apfelberg](person)
+    - I want to know the name of the [spouse]{"entity":"attribute","value":"spouse"} of [Esther Apfelberg](person)
     - Who was the [mother]{"entity":"attribute","value":"mother"} of [Esther Apfelberg](person)?
     - Which name had the [mother]{"entity":"attribute","value":"mother"} of [Esther Apfelberg](person)?
     - Who was the [belongs]{"entity":"attribute","value":"belong"} of [Esther Apfelberg](person)?
@@ -331,11 +342,12 @@ nlu:
     - Can you show me where [Esther Apfelberg](person) lived?
     - I would like to know in which city [Esther Apfelberg](person) was born
     - Where was [Esther Apfelberg](person) born {"entity":"attribute","value":"birth_place"}?
-    - In which [city]{"entity":"attribute","value":"city"} died [Esther Apfelberg](person)?
-    - Where did [Esther Apfelberg](person) lived ? 
-    - Where was [Esther Apfelberg](person) lived in 1998?
-    - Can you show me where [Esther Apfelberg](person) was in 2000 ?
-    - I like to know in which [city]{"entity":"attribute","value":"city"} was [Esther Apfelberg](person) in 1950 ?
+    - In which [city]{"entity":"attribute","value":"city"} died [Else Cohn](person)?
+    - Where did [Rachel Ellern](person) lived ? 
+    - Where was [Irene Gaster](person) lived in [1998](year)?
+    - Where was [Benjaming Jonas](person) in [1895](year)?
+    - Can you show me where [Esther Apfelberg](person) was in [2000](year) ?
+    - I like to know in which [city]{"entity":"attribute","value":"city"} was [Esther Apfelberg](person) in [1950](year)?
 #    - Where was [Esther Apfelberg](person) lived in [year]?
 #    - Can you show me where [Esther Apfelberg](person) was in [year]?
 #    - I like to know in which [city] was [Esther Apfelberg](person) in [year]?
@@ -351,10 +363,10 @@ nlu:
 
 - intent: questions_detail_person/activities
   examples: |
-    - Tell me what [activites](object_type) did [Esther Apfelberg](person)
+    - Tell me what [activites](object_type) did [Natalie Jarecki](person)
     - Could you show me the [activities](object_type) of [Esther Apfelberg](person)?
     - What were the [activites](object_type) from [Esther Apfelberg](person)?
-    - Which [activities](object_type) did [Esther Apfelberg](person)?
+    - Which [activities](object_type) did [Benjamin Jonas](person)?
 
 - intent: list_of/persons
   examples: |
@@ -364,7 +376,7 @@ nlu:
     - Can you show me a list of some [people]{"entity": "object_type", "value": "person"}?
     - Give me a list of [people]{"entity": "object_type", "value": "person"} who lived in [Jerusalem](city)
     - I would like to see some [people]{"entity": "object_type", "value": "person"} who lived in [Jerusalem](city)
-    - I would like to get suggested some [people]{"entity": "object_type", "value": "person"} who lived in [Jerusalem](city)
+    - I would like to get suggested some [people]{"entity": "object_type", "value": "person"} who lived in [New York](city)
     - Can you show me a list of some [people]{"entity": "object_type", "value": "person"} who lived in [Jerusalem](city)?
     - Can you show me a list of some [people]{"entity": "object_type", "value": "person"} who lived in {city} in [1945](year)
     - I would like to get suggested some [people]{"entity": "object_type", "value": "person"} who lived in [Jerusalem](city) in [1945](year)
@@ -394,6 +406,14 @@ nlu:
      - What [activities](object_type) were carried out?
      - Which [activities](object_type) were carried out in [Hamburg](city)?
      - I want to know some [activities](object_type) in [Hamburg](city)
+
+- intent:  search_function/search_with_chatbot
+  examples: |
+    - Looking for [person detail](searchtype)
+    - I am looking for [person detail](searchtype)
+    - Could you show me some [person detail](searchtype)?
+
+#- intent: introduction
 
 - regex: year
   examples: |
@@ -438,7 +458,6 @@ nlu:
     - Yeshivat Merkaz
     - Szold Prize for Medicine and Public Hygiene
 
-
 - lookup: maptype
   examples: |
     - activity
@@ -449,3 +468,13 @@ nlu:
   examples: |
     - email
     - contact formular
+
+- lookup: searchtype
+  examples: |
+    - content
+    - person detail
+
+- lookup: object_type
+  examples: |
+     - person
+     - organization

@@ -1,0 +1,2635 @@
+[
+  {
+    "text": "How can i add a person to the list?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "object_type",
+        "start": 16,
+        "end": 22,
+        "value": "person",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "can i add a person?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "object_type",
+        "start": 12,
+        "end": 18,
+        "value": "person",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "i am missing a person",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "object_type",
+        "start": 15,
+        "end": 21,
+        "value": "person",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "i want to add a person",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "object_type",
+        "start": 16,
+        "end": 22,
+        "value": "person",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "show me how to add a person to the list",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "object_type",
+        "start": 21,
+        "end": 27,
+        "value": "person",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "there is a person missing from the list",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "object_type",
+        "start": 11,
+        "end": 17,
+        "value": "person",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Activity map",
+    "entities": [
+      {
+        "start": 0,
+        "end": 8,
+        "value": "Activity",
+        "entity": "maptype"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "maptype",
+        "start": 0,
+        "end": 8,
+        "confidence_entity": 0.9765577912330627,
+        "value": "Activity",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "content requirements for authors?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "searchtype",
+        "start": 0,
+        "end": 7,
+        "value": "content",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Can I set content without being verified?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "searchtype",
+        "start": 10,
+        "end": 17,
+        "value": "content",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Will the content be checked before it gets published?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "searchtype",
+        "start": 9,
+        "end": 16,
+        "value": "content",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "content check?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "searchtype",
+        "start": 0,
+        "end": 7,
+        "value": "content",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "I saved the person.",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "object_type",
+        "start": 12,
+        "end": 18,
+        "value": "person",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "list some people",
+    "entities": [
+      {
+        "start": 10,
+        "end": 16,
+        "value": "person",
+        "entity": "object_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "show me some people in your list",
+    "entities": [
+      {
+        "start": 13,
+        "end": 19,
+        "value": "person",
+        "entity": "object_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Show me all your people in your list",
+    "entities": [
+      {
+        "start": 17,
+        "end": 23,
+        "value": "person",
+        "entity": "object_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Which domicile had Esther Apfelberg?",
+    "entities": [
+      {
+        "start": 6,
+        "end": 14,
+        "value": "domicile",
+        "entity": "attribute"
+      },
+      {
+        "start": 19,
+        "end": 35,
+        "value": "Esther Apfelberg",
+        "entity": "person"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "attribute",
+        "start": 6,
+        "end": 14,
+        "confidence_entity": 0.9979212880134583,
+        "value": "domicile",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "person",
+        "start": 19,
+        "end": 35,
+        "confidence_entity": 0.9994786381721497,
+        "value": "Esther Apfelberg",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Show me some domicile of the first one",
+    "entities": [
+      {
+        "start": 13,
+        "end": 21,
+        "value": "domicile",
+        "entity": "attribute"
+      },
+      {
+        "start": 29,
+        "end": 38,
+        "value": "1",
+        "entity": "mention"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "attribute",
+        "start": 13,
+        "end": 21,
+        "confidence_entity": 0.9977164268493652,
+        "value": "domicile",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "mention",
+        "start": 29,
+        "end": 38,
+        "confidence_entity": 0.9948180317878723,
+        "value": "1",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Show me some people",
+    "entities": [
+      {
+        "start": 13,
+        "end": 19,
+        "value": "person",
+        "entity": "object_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "When was the birth day of Esther Apfelberg?",
+    "entities": [
+      {
+        "start": 13,
+        "end": 22,
+        "value": "date_of_birth",
+        "entity": "attribute"
+      },
+      {
+        "start": 26,
+        "end": 42,
+        "value": "Esther Apfelberg",
+        "entity": "person"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "attribute",
+        "start": 13,
+        "end": 22,
+        "confidence_entity": 0.9908531308174133,
+        "value": "date_of_birth",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "person",
+        "start": 26,
+        "end": 42,
+        "confidence_entity": 0.9994516968727112,
+        "value": "Esther Apfelberg",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "What was the hebrew name of Esther Apfelberg?",
+    "entities": [
+      {
+        "start": 13,
+        "end": 24,
+        "value": "hebrew_name",
+        "entity": "attribute"
+      },
+      {
+        "start": 28,
+        "end": 44,
+        "value": "Esther Apfelberg",
+        "entity": "person"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "attribute",
+        "start": 13,
+        "end": 24,
+        "confidence_entity": 0.9906126260757446,
+        "value": "hebrew_name",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "person",
+        "start": 28,
+        "end": 44,
+        "confidence_entity": 0.9994412064552307,
+        "value": "Esther Apfelberg",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "What was the hebrew name of the first one?",
+    "entities": [
+      {
+        "start": 13,
+        "end": 24,
+        "value": "hebrew_name",
+        "entity": "attribute"
+      },
+      {
+        "start": 32,
+        "end": 41,
+        "value": "1",
+        "entity": "mention"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "attribute",
+        "start": 13,
+        "end": 24,
+        "confidence_entity": 0.9905286431312561,
+        "value": "hebrew_name",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "mention",
+        "start": 32,
+        "end": 41,
+        "confidence_entity": 0.99315345287323,
+        "value": "1",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "When was the birth day of the first one?",
+    "entities": [
+      {
+        "start": 13,
+        "end": 22,
+        "value": "date_of_birth",
+        "entity": "attribute"
+      },
+      {
+        "start": 30,
+        "end": 39,
+        "value": "1",
+        "entity": "mention"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "attribute",
+        "start": 13,
+        "end": 22,
+        "confidence_entity": 0.9899590611457825,
+        "value": "date_of_birth",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "mention",
+        "start": 30,
+        "end": 39,
+        "confidence_entity": 0.9946157336235046,
+        "value": "1",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Can you tell me the hebrew name of the second person?",
+    "entities": [
+      {
+        "start": 20,
+        "end": 31,
+        "value": "hebrew_name",
+        "entity": "attribute"
+      },
+      {
+        "start": 39,
+        "end": 45,
+        "value": "second",
+        "entity": "mention"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "attribute",
+        "start": 20,
+        "end": 31,
+        "confidence_entity": 0.9865807294845581,
+        "value": "hebrew_name",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "mention",
+        "start": 39,
+        "end": 45,
+        "confidence_entity": 0.9880809783935547,
+        "value": "second",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "object_type",
+        "start": 46,
+        "end": 52,
+        "value": "person",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Tell me something about Esther Apfelberg",
+    "entities": [
+      {
+        "start": 8,
+        "end": 17,
+        "value": "biographie",
+        "entity": "attribute"
+      },
+      {
+        "start": 24,
+        "end": 40,
+        "value": "Esther Apfelberg",
+        "entity": "person"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "attribute",
+        "start": 8,
+        "end": 17,
+        "confidence_entity": 0.8339917659759521,
+        "value": "biographie",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "person",
+        "start": 24,
+        "end": 40,
+        "confidence_entity": 0.9993582367897034,
+        "value": "Esther Apfelberg",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Tell me something about second person",
+    "entities": [
+      {
+        "start": 8,
+        "end": 17,
+        "value": "biographie",
+        "entity": "attribute"
+      },
+      {
+        "start": 24,
+        "end": 30,
+        "value": "second",
+        "entity": "mention"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "attribute",
+        "start": 8,
+        "end": 17,
+        "confidence_entity": 0.6590766310691833,
+        "value": "biographie",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "mention",
+        "start": 24,
+        "end": 30,
+        "confidence_entity": 0.990196943283081,
+        "value": "second",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "object_type",
+        "start": 31,
+        "end": 37,
+        "value": "person",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Can you tell me more about the person?",
+    "entities": [
+      {
+        "start": 16,
+        "end": 20,
+        "value": "biographie",
+        "entity": "attribute"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "object_type",
+        "start": 31,
+        "end": 37,
+        "value": "person",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "hebrew name of the first one?",
+    "entities": [
+      {
+        "start": 0,
+        "end": 11,
+        "value": "hebrew_name",
+        "entity": "attribute"
+      },
+      {
+        "start": 19,
+        "end": 28,
+        "value": "1",
+        "entity": "mention"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "attribute",
+        "start": 0,
+        "end": 11,
+        "confidence_entity": 0.9895005822181702,
+        "value": "hebrew_name",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "mention",
+        "start": 19,
+        "end": 28,
+        "confidence_entity": 0.9917904138565063,
+        "value": "1",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Do you know the hebrew name of the first one?",
+    "entities": [
+      {
+        "start": 16,
+        "end": 27,
+        "value": "hebrew_name",
+        "entity": "attribute"
+      },
+      {
+        "start": 35,
+        "end": 44,
+        "value": "1",
+        "entity": "mention"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "attribute",
+        "start": 16,
+        "end": 27,
+        "confidence_entity": 0.9890130758285522,
+        "value": "hebrew_name",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "mention",
+        "start": 35,
+        "end": 44,
+        "confidence_entity": 0.9930734038352966,
+        "value": "1",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Can you tell me the birth day from the second person?",
+    "entities": [
+      {
+        "start": 20,
+        "end": 29,
+        "value": "date_of_birth",
+        "entity": "attribute"
+      },
+      {
+        "start": 39,
+        "end": 45,
+        "value": "second",
+        "entity": "mention"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "attribute",
+        "start": 20,
+        "end": 29,
+        "confidence_entity": 0.9836217761039734,
+        "value": "date_of_birth",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "mention",
+        "start": 39,
+        "end": 45,
+        "confidence_entity": 0.9908139109611511,
+        "value": "second",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "object_type",
+        "start": 46,
+        "end": 52,
+        "value": "person",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Tell me in which year was the  birthday of Esther Apfelberg",
+    "entities": [
+      {
+        "start": 31,
+        "end": 39,
+        "value": "date_of_birth",
+        "entity": "attribute"
+      },
+      {
+        "start": 43,
+        "end": 59,
+        "value": "Esther Apfelberg",
+        "entity": "person"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "attribute",
+        "start": 31,
+        "end": 39,
+        "confidence_entity": 0.9965428709983826,
+        "value": "date_of_birth",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "person",
+        "start": 43,
+        "end": 59,
+        "confidence_entity": 0.9994046688079834,
+        "value": "Esther Apfelberg",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I would like to know when the birthday of Esther Apfelberg was",
+    "entities": [
+      {
+        "start": 30,
+        "end": 38,
+        "value": "date_of_birth",
+        "entity": "attribute"
+      },
+      {
+        "start": 42,
+        "end": 58,
+        "value": "Esther Apfelberg",
+        "entity": "person"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "attribute",
+        "start": 30,
+        "end": 38,
+        "confidence_entity": 0.9965893030166626,
+        "value": "date_of_birth",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "person",
+        "start": 42,
+        "end": 58,
+        "confidence_entity": 0.999481737613678,
+        "value": "Esther Apfelberg",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Can you tell me the birthday of Esther Apfelberg?",
+    "entities": [
+      {
+        "start": 20,
+        "end": 28,
+        "value": "date_of_birth",
+        "entity": "attribute"
+      },
+      {
+        "start": 32,
+        "end": 48,
+        "value": "Esther Apfelberg",
+        "entity": "person"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "attribute",
+        "start": 20,
+        "end": 28,
+        "confidence_entity": 0.9964087605476379,
+        "value": "date_of_birth",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "person",
+        "start": 32,
+        "end": 48,
+        "confidence_entity": 0.9994502663612366,
+        "value": "Esther Apfelberg",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "When was the deathday of Esther Apfelberg?",
+    "entities": [
+      {
+        "start": 13,
+        "end": 21,
+        "value": "date_of_death",
+        "entity": "attribute"
+      },
+      {
+        "start": 25,
+        "end": 41,
+        "value": "Esther Apfelberg",
+        "entity": "person"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "attribute",
+        "start": 13,
+        "end": 21,
+        "confidence_entity": 0.9919794797897339,
+        "value": "date_of_death",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "person",
+        "start": 25,
+        "end": 41,
+        "confidence_entity": 0.9994530081748962,
+        "value": "Esther Apfelberg",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Show me when was Esther Apfelberg in Berlin",
+    "entities": [
+      {
+        "start": 17,
+        "end": 33,
+        "value": "Esther Apfelberg",
+        "entity": "person"
+      },
+      {
+        "start": 37,
+        "end": 43,
+        "value": "Berlin",
+        "entity": "city"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "person",
+        "start": 17,
+        "end": 33,
+        "confidence_entity": 0.9994547963142395,
+        "value": "Esther Apfelberg",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "city",
+        "start": 37,
+        "end": 43,
+        "confidence_entity": 0.9925553202629089,
+        "value": "Berlin",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "When was Esther Apfelberg in Palestine?",
+    "entities": [
+      {
+        "start": 9,
+        "end": 25,
+        "value": "Esther Apfelberg",
+        "entity": "person"
+      },
+      {
+        "start": 29,
+        "end": 38,
+        "value": "Palestine",
+        "entity": "city"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "person",
+        "start": 9,
+        "end": 25,
+        "confidence_entity": 0.9994872808456421,
+        "value": "Esther Apfelberg",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "city",
+        "start": 29,
+        "end": 38,
+        "confidence_entity": 0.9899270534515381,
+        "value": "Palestine",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Call me the father of Esther Apfelberg",
+    "entities": [
+      {
+        "start": 12,
+        "end": 18,
+        "value": "father",
+        "entity": "attribute"
+      },
+      {
+        "start": 22,
+        "end": 38,
+        "value": "Esther Apfelberg",
+        "entity": "person"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "attribute",
+        "start": 12,
+        "end": 18,
+        "confidence_entity": 0.9908854365348816,
+        "value": "father",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "person",
+        "start": 22,
+        "end": 38,
+        "confidence_entity": 0.9993438124656677,
+        "value": "Esther Apfelberg",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Can you tell me the names oft the siblings of Esther Apfelberg?",
+    "entities": [
+      {
+        "start": 34,
+        "end": 42,
+        "value": "sibling",
+        "entity": "attribute"
+      },
+      {
+        "start": 46,
+        "end": 62,
+        "value": "Esther Apfelberg",
+        "entity": "person"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "attribute",
+        "start": 34,
+        "end": 42,
+        "confidence_entity": 0.9946075677871704,
+        "value": "sibling",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "person",
+        "start": 46,
+        "end": 62,
+        "confidence_entity": 0.9994673132896423,
+        "value": "Esther Apfelberg",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I want to know the name of the spouse of Esther Apfelberg",
+    "entities": [
+      {
+        "start": 31,
+        "end": 37,
+        "value": "spouse",
+        "entity": "attribute"
+      },
+      {
+        "start": 41,
+        "end": 57,
+        "value": "Esther Apfelberg",
+        "entity": "person"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "attribute",
+        "start": 31,
+        "end": 37,
+        "confidence_entity": 0.9948068261146545,
+        "value": "spouse",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "person",
+        "start": 41,
+        "end": 57,
+        "confidence_entity": 0.999390721321106,
+        "value": "Esther Apfelberg",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Who was the mother of Esther Apfelberg?",
+    "entities": [
+      {
+        "start": 12,
+        "end": 18,
+        "value": "mother",
+        "entity": "attribute"
+      },
+      {
+        "start": 22,
+        "end": 38,
+        "value": "Esther Apfelberg",
+        "entity": "person"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "attribute",
+        "start": 12,
+        "end": 18,
+        "confidence_entity": 0.9985552430152893,
+        "value": "mother",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "person",
+        "start": 22,
+        "end": 38,
+        "confidence_entity": 0.9994377493858337,
+        "value": "Esther Apfelberg",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Which name had the mother of Esther Apfelberg?",
+    "entities": [
+      {
+        "start": 19,
+        "end": 25,
+        "value": "mother",
+        "entity": "attribute"
+      },
+      {
+        "start": 29,
+        "end": 45,
+        "value": "Esther Apfelberg",
+        "entity": "person"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "attribute",
+        "start": 19,
+        "end": 25,
+        "confidence_entity": 0.9984017014503479,
+        "value": "mother",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "person",
+        "start": 29,
+        "end": 45,
+        "confidence_entity": 0.9994311928749084,
+        "value": "Esther Apfelberg",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Who was the belongs of Esther Apfelberg?",
+    "entities": [
+      {
+        "start": 12,
+        "end": 19,
+        "value": "belong",
+        "entity": "attribute"
+      },
+      {
+        "start": 23,
+        "end": 39,
+        "value": "Esther Apfelberg",
+        "entity": "person"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "attribute",
+        "start": 12,
+        "end": 19,
+        "confidence_entity": 0.9932345747947693,
+        "value": "belong",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "person",
+        "start": 23,
+        "end": 39,
+        "confidence_entity": 0.9994394183158875,
+        "value": "Esther Apfelberg",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Show some domicils from Esther Apfelberg",
+    "entities": [
+      {
+        "start": 10,
+        "end": 18,
+        "value": "domicils",
+        "entity": "attribute"
+      },
+      {
+        "start": 24,
+        "end": 40,
+        "value": "Esther Apfelberg",
+        "entity": "person"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "attribute",
+        "start": 10,
+        "end": 18,
+        "confidence_entity": 0.9964401125907898,
+        "value": "domiciles_of_person",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "person",
+        "start": 24,
+        "end": 40,
+        "confidence_entity": 0.9993415474891663,
+        "value": "Esther Apfelberg",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Can you show me where Esther Apfelberg lived?",
+    "entities": [
+      {
+        "start": 22,
+        "end": 38,
+        "value": "Esther Apfelberg",
+        "entity": "person"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "person",
+        "start": 22,
+        "end": 38,
+        "confidence_entity": 0.9994317889213562,
+        "value": "Esther Apfelberg",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I would like to know in which city Esther Apfelberg was born",
+    "entities": [
+      {
+        "start": 35,
+        "end": 51,
+        "value": "Esther Apfelberg",
+        "entity": "person"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "person",
+        "start": 35,
+        "end": 51,
+        "confidence_entity": 0.9994693398475647,
+        "value": "Esther Apfelberg",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Where was Esther Apfelberg born {\"entity\":\"attribute\",\"value\":\"birth_place\"}?",
+    "entities": [
+      {
+        "start": 10,
+        "end": 26,
+        "value": "Esther Apfelberg",
+        "entity": "person"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "person",
+        "start": 10,
+        "end": 26,
+        "confidence_entity": 0.9995149374008179,
+        "value": "Esther Apfelberg",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "In which city died Else Cohn?",
+    "entities": [
+      {
+        "start": 9,
+        "end": 13,
+        "value": "city",
+        "entity": "attribute"
+      },
+      {
+        "start": 19,
+        "end": 28,
+        "value": "Else Cohn",
+        "entity": "person"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "attribute",
+        "start": 9,
+        "end": 13,
+        "confidence_entity": 0.7053516507148743,
+        "value": "city",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "person",
+        "start": 19,
+        "end": 28,
+        "confidence_entity": 0.975683331489563,
+        "value": "Else Cohn",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Where did Rachel Ellern lived ?",
+    "entities": [
+      {
+        "start": 10,
+        "end": 23,
+        "value": "Rachel Ellern",
+        "entity": "person"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "person",
+        "start": 10,
+        "end": 23,
+        "confidence_entity": 0.9977214932441711,
+        "value": "Rachel Ellern",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Where was Irene Gaster lived in 1998?",
+    "entities": [
+      {
+        "start": 10,
+        "end": 22,
+        "value": "Irene Gaster",
+        "entity": "person"
+      },
+      {
+        "start": 32,
+        "end": 36,
+        "value": "1998",
+        "entity": "year"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "person",
+        "start": 10,
+        "end": 22,
+        "confidence_entity": 0.9942368268966675,
+        "value": "Irene Gaster",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "year",
+        "start": 32,
+        "end": 36,
+        "confidence_entity": 0.9946398138999939,
+        "value": "1998",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "year",
+        "start": 32,
+        "end": 36,
+        "value": "1998",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Where was Benjaming Jonas in 1895?",
+    "entities": [
+      {
+        "start": 10,
+        "end": 25,
+        "value": "Benjaming Jonas",
+        "entity": "person"
+      },
+      {
+        "start": 29,
+        "end": 33,
+        "value": "1895",
+        "entity": "year"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "person",
+        "start": 10,
+        "end": 25,
+        "confidence_entity": 0.9940754175186157,
+        "value": "Benjaming Jonas",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "year",
+        "start": 29,
+        "end": 33,
+        "confidence_entity": 0.9963611960411072,
+        "value": "1895",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "year",
+        "start": 29,
+        "end": 33,
+        "value": "1895",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Can you show me where Esther Apfelberg was in 2000 ?",
+    "entities": [
+      {
+        "start": 22,
+        "end": 38,
+        "value": "Esther Apfelberg",
+        "entity": "person"
+      },
+      {
+        "start": 46,
+        "end": 50,
+        "value": "2000",
+        "entity": "year"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "person",
+        "start": 22,
+        "end": 38,
+        "confidence_entity": 0.9994433522224426,
+        "value": "Esther Apfelberg",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "year",
+        "start": 46,
+        "end": 50,
+        "confidence_entity": 0.9934675097465515,
+        "value": "2000",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "year",
+        "start": 46,
+        "end": 50,
+        "value": "2000",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "I like to know in which city was Esther Apfelberg in 1950?",
+    "entities": [
+      {
+        "start": 24,
+        "end": 28,
+        "value": "city",
+        "entity": "attribute"
+      },
+      {
+        "start": 33,
+        "end": 49,
+        "value": "Esther Apfelberg",
+        "entity": "person"
+      },
+      {
+        "start": 53,
+        "end": 57,
+        "value": "1950",
+        "entity": "year"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "person",
+        "start": 33,
+        "end": 49,
+        "confidence_entity": 0.9994799494743347,
+        "value": "Esther Apfelberg",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "year",
+        "start": 53,
+        "end": 57,
+        "confidence_entity": 0.9981544613838196,
+        "value": "1950",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "year",
+        "start": 53,
+        "end": 57,
+        "value": "1950",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Show me the religion of Esther Apfelberg",
+    "entities": [
+      {
+        "start": 12,
+        "end": 20,
+        "value": "religion",
+        "entity": "attribute"
+      },
+      {
+        "start": 24,
+        "end": 40,
+        "value": "Esther Apfelberg",
+        "entity": "person"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "attribute",
+        "start": 12,
+        "end": 20,
+        "confidence_entity": 0.9971080422401428,
+        "value": "religion",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "person",
+        "start": 24,
+        "end": 40,
+        "confidence_entity": 0.9993243217468262,
+        "value": "Esther Apfelberg",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Could you tell me the organization of Esther Apfelberg?",
+    "entities": [
+      {
+        "start": 22,
+        "end": 34,
+        "value": "organization",
+        "entity": "attribute"
+      },
+      {
+        "start": 38,
+        "end": 54,
+        "value": "Esther Apfelberg",
+        "entity": "person"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "attribute",
+        "start": 22,
+        "end": 34,
+        "confidence_entity": 0.9954625964164734,
+        "value": "organization",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "person",
+        "start": 38,
+        "end": 54,
+        "confidence_entity": 0.9994542002677917,
+        "value": "Esther Apfelberg",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "object_type",
+        "start": 22,
+        "end": 34,
+        "value": "organization",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "I want to know the title of Esther Apfelberg",
+    "entities": [
+      {
+        "start": 19,
+        "end": 24,
+        "value": "title",
+        "entity": "attribute"
+      },
+      {
+        "start": 28,
+        "end": 44,
+        "value": "Esther Apfelberg",
+        "entity": "person"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "attribute",
+        "start": 19,
+        "end": 24,
+        "confidence_entity": 0.9937534928321838,
+        "value": "title",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "person",
+        "start": 28,
+        "end": 44,
+        "confidence_entity": 0.9993467926979065,
+        "value": "Esther Apfelberg",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "What was the religion of Esther Apfelberg?",
+    "entities": [
+      {
+        "start": 13,
+        "end": 21,
+        "value": "religion",
+        "entity": "attribute"
+      },
+      {
+        "start": 25,
+        "end": 41,
+        "value": "Esther Apfelberg",
+        "entity": "person"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "attribute",
+        "start": 13,
+        "end": 21,
+        "confidence_entity": 0.9970918893814087,
+        "value": "religion",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "person",
+        "start": 25,
+        "end": 41,
+        "confidence_entity": 0.9994297623634338,
+        "value": "Esther Apfelberg",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "On which school was Esther Apfelberg?",
+    "entities": [
+      {
+        "start": 9,
+        "end": 15,
+        "value": "school",
+        "entity": "attribute"
+      },
+      {
+        "start": 20,
+        "end": 36,
+        "value": "Esther Apfelberg",
+        "entity": "person"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "attribute",
+        "start": 9,
+        "end": 15,
+        "confidence_entity": 0.9615909457206726,
+        "value": "school",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "person",
+        "start": 20,
+        "end": 36,
+        "confidence_entity": 0.9994624257087708,
+        "value": "Esther Apfelberg",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "At which university did Esther Apfelberg studied?",
+    "entities": [
+      {
+        "start": 9,
+        "end": 19,
+        "value": "university",
+        "entity": "attribute"
+      },
+      {
+        "start": 24,
+        "end": 40,
+        "value": "Esther Apfelberg",
+        "entity": "person"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "attribute",
+        "start": 9,
+        "end": 19,
+        "confidence_entity": 0.9657363295555115,
+        "value": "university",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "person",
+        "start": 24,
+        "end": 40,
+        "confidence_entity": 0.9994636178016663,
+        "value": "Esther Apfelberg",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Tell me what activites did Natalie Jarecki",
+    "entities": [
+      {
+        "start": 13,
+        "end": 22,
+        "value": "activites",
+        "entity": "object_type"
+      },
+      {
+        "start": 27,
+        "end": 42,
+        "value": "Natalie Jarecki",
+        "entity": "person"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "object_type",
+        "start": 13,
+        "end": 22,
+        "confidence_entity": 0.9971100687980652,
+        "value": "activites",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "person",
+        "start": 27,
+        "end": 42,
+        "confidence_entity": 0.9975720047950745,
+        "value": "Natalie Jarecki",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Could you show me the activities of Esther Apfelberg?",
+    "entities": [
+      {
+        "start": 22,
+        "end": 32,
+        "value": "activities",
+        "entity": "object_type"
+      },
+      {
+        "start": 36,
+        "end": 52,
+        "value": "Esther Apfelberg",
+        "entity": "person"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "object_type",
+        "start": 22,
+        "end": 32,
+        "confidence_entity": 0.9943286776542664,
+        "value": "activities",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "person",
+        "start": 36,
+        "end": 52,
+        "confidence_entity": 0.9994482398033142,
+        "value": "Esther Apfelberg",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "What were the activites from Esther Apfelberg?",
+    "entities": [
+      {
+        "start": 14,
+        "end": 23,
+        "value": "activites",
+        "entity": "object_type"
+      },
+      {
+        "start": 29,
+        "end": 45,
+        "value": "Esther Apfelberg",
+        "entity": "person"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "object_type",
+        "start": 14,
+        "end": 23,
+        "confidence_entity": 0.9974647760391235,
+        "value": "activites",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "person",
+        "start": 29,
+        "end": 45,
+        "confidence_entity": 0.9994418025016785,
+        "value": "Esther Apfelberg",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Which activities did Benjamin Jonas?",
+    "entities": [
+      {
+        "start": 6,
+        "end": 16,
+        "value": "activities",
+        "entity": "object_type"
+      },
+      {
+        "start": 21,
+        "end": 35,
+        "value": "Benjamin Jonas",
+        "entity": "person"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "object_type",
+        "start": 6,
+        "end": 16,
+        "confidence_entity": 0.9913095235824585,
+        "value": "activities",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "person",
+        "start": 21,
+        "end": 35,
+        "confidence_entity": 0.9940390586853027,
+        "value": "Benjamin Jonas",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Give me a list of people",
+    "entities": [
+      {
+        "start": 18,
+        "end": 24,
+        "value": "person",
+        "entity": "object_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I would like to some people",
+    "entities": [
+      {
+        "start": 21,
+        "end": 27,
+        "value": "person",
+        "entity": "object_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I would like to suggested some people from your list",
+    "entities": [
+      {
+        "start": 31,
+        "end": 37,
+        "value": "person",
+        "entity": "object_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "object_type",
+        "start": 31,
+        "end": 37,
+        "confidence_entity": 0.9557801485061646,
+        "value": "person",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Can you show me a list of some people?",
+    "entities": [
+      {
+        "start": 31,
+        "end": 37,
+        "value": "person",
+        "entity": "object_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Give me a list of people who lived in Jerusalem",
+    "entities": [
+      {
+        "start": 18,
+        "end": 24,
+        "value": "person",
+        "entity": "object_type"
+      },
+      {
+        "start": 38,
+        "end": 47,
+        "value": "Jerusalem",
+        "entity": "city"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "object_type",
+        "start": 18,
+        "end": 24,
+        "confidence_entity": 0.9743129014968872,
+        "value": "person",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "city",
+        "start": 38,
+        "end": 47,
+        "confidence_entity": 0.9974439144134521,
+        "value": "Jerusalem",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I would like to see some people who lived in Jerusalem",
+    "entities": [
+      {
+        "start": 25,
+        "end": 31,
+        "value": "person",
+        "entity": "object_type"
+      },
+      {
+        "start": 45,
+        "end": 54,
+        "value": "Jerusalem",
+        "entity": "city"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "object_type",
+        "start": 25,
+        "end": 31,
+        "confidence_entity": 0.9767226576805115,
+        "value": "person",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "city",
+        "start": 45,
+        "end": 54,
+        "confidence_entity": 0.9973151087760925,
+        "value": "Jerusalem",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I would like to get suggested some people who lived in New York",
+    "entities": [
+      {
+        "start": 35,
+        "end": 41,
+        "value": "person",
+        "entity": "object_type"
+      },
+      {
+        "start": 55,
+        "end": 63,
+        "value": "New York",
+        "entity": "city"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "object_type",
+        "start": 35,
+        "end": 41,
+        "confidence_entity": 0.928908109664917,
+        "value": "person",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "city",
+        "start": 55,
+        "end": 63,
+        "confidence_entity": 0.9696234464645386,
+        "value": "New York",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Can you show me a list of some people who lived in Jerusalem?",
+    "entities": [
+      {
+        "start": 31,
+        "end": 37,
+        "value": "person",
+        "entity": "object_type"
+      },
+      {
+        "start": 51,
+        "end": 60,
+        "value": "Jerusalem",
+        "entity": "city"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "object_type",
+        "start": 31,
+        "end": 37,
+        "confidence_entity": 0.9770171642303467,
+        "value": "person",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "city",
+        "start": 51,
+        "end": 60,
+        "confidence_entity": 0.9978030323982239,
+        "value": "Jerusalem",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Can you show me a list of some people who lived in {city} in 1945",
+    "entities": [
+      {
+        "start": 31,
+        "end": 37,
+        "value": "person",
+        "entity": "object_type"
+      },
+      {
+        "start": 61,
+        "end": 65,
+        "value": "1945",
+        "entity": "year"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "object_type",
+        "start": 31,
+        "end": 37,
+        "confidence_entity": 0.9580356478691101,
+        "value": "person",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "year",
+        "start": 61,
+        "end": 65,
+        "confidence_entity": 0.9984577894210815,
+        "value": "1945",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "year",
+        "start": 61,
+        "end": 65,
+        "value": "1945",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "I would like to get suggested some people who lived in Jerusalem in 1945",
+    "entities": [
+      {
+        "start": 35,
+        "end": 41,
+        "value": "person",
+        "entity": "object_type"
+      },
+      {
+        "start": 55,
+        "end": 64,
+        "value": "Jerusalem",
+        "entity": "city"
+      },
+      {
+        "start": 68,
+        "end": 72,
+        "value": "1945",
+        "entity": "year"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "object_type",
+        "start": 35,
+        "end": 41,
+        "confidence_entity": 0.9774678945541382,
+        "value": "person",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "city",
+        "start": 55,
+        "end": 64,
+        "confidence_entity": 0.9979451298713684,
+        "value": "Jerusalem",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "year",
+        "start": 68,
+        "end": 72,
+        "confidence_entity": 0.9983623623847961,
+        "value": "1945",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "year",
+        "start": 68,
+        "end": 72,
+        "value": "1945",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "I would like to see some people who lived in Berlin in 1945",
+    "entities": [
+      {
+        "start": 25,
+        "end": 31,
+        "value": "person",
+        "entity": "object_type"
+      },
+      {
+        "start": 45,
+        "end": 51,
+        "value": "Berlin",
+        "entity": "city"
+      },
+      {
+        "start": 55,
+        "end": 59,
+        "value": "1945",
+        "entity": "year"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "object_type",
+        "start": 25,
+        "end": 31,
+        "confidence_entity": 0.958560049533844,
+        "value": "person",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "city",
+        "start": 45,
+        "end": 51,
+        "confidence_entity": 0.9921372532844543,
+        "value": "Berlin",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "year",
+        "start": 55,
+        "end": 59,
+        "confidence_entity": 0.9983819723129272,
+        "value": "1945",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "year",
+        "start": 55,
+        "end": 59,
+        "value": "1945",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Show me a list of people who lived in Jerusalem in 1945",
+    "entities": [
+      {
+        "start": 18,
+        "end": 24,
+        "value": "person",
+        "entity": "object_type"
+      },
+      {
+        "start": 38,
+        "end": 47,
+        "value": "Jerusalem",
+        "entity": "city"
+      },
+      {
+        "start": 51,
+        "end": 55,
+        "value": "1945",
+        "entity": "year"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "object_type",
+        "start": 18,
+        "end": 24,
+        "confidence_entity": 0.9738455414772034,
+        "value": "person",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "city",
+        "start": 38,
+        "end": 47,
+        "confidence_entity": 0.9980800151824951,
+        "value": "Jerusalem",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "year",
+        "start": 51,
+        "end": 55,
+        "confidence_entity": 0.9983123540878296,
+        "value": "1945",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "year",
+        "start": 51,
+        "end": 55,
+        "value": "1945",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Give me a list of people who was by WIZO",
+    "entities": [
+      {
+        "start": 18,
+        "end": 24,
+        "value": "person",
+        "entity": "object_type"
+      },
+      {
+        "start": 36,
+        "end": 40,
+        "value": "WIZO",
+        "entity": "organization"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "object_type",
+        "start": 18,
+        "end": 24,
+        "confidence_entity": 0.979138195514679,
+        "value": "person",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "organization",
+        "start": 36,
+        "end": 40,
+        "confidence_entity": 0.997140645980835,
+        "value": "WIZO",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "organization",
+        "start": 36,
+        "end": 40,
+        "value": "WIZO",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "I would like to see some people who worked by WIZO",
+    "entities": [
+      {
+        "start": 25,
+        "end": 31,
+        "value": "person",
+        "entity": "object_type"
+      },
+      {
+        "start": 46,
+        "end": 50,
+        "value": "WIZO",
+        "entity": "organization"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "object_type",
+        "start": 25,
+        "end": 31,
+        "confidence_entity": 0.981605589389801,
+        "value": "person",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "organization",
+        "start": 46,
+        "end": 50,
+        "confidence_entity": 0.9975429773330688,
+        "value": "WIZO",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "organization",
+        "start": 46,
+        "end": 50,
+        "value": "WIZO",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "I would like to get suggested some people who worked by WIZO",
+    "entities": [
+      {
+        "start": 35,
+        "end": 41,
+        "value": "person",
+        "entity": "object_type"
+      },
+      {
+        "start": 56,
+        "end": 60,
+        "value": "WIZO",
+        "entity": "organization"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "object_type",
+        "start": 35,
+        "end": 41,
+        "confidence_entity": 0.9830120205879211,
+        "value": "person",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "organization",
+        "start": 56,
+        "end": 60,
+        "confidence_entity": 0.9975293278694153,
+        "value": "WIZO",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "organization",
+        "start": 56,
+        "end": 60,
+        "value": "WIZO",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Can you show me a list of some people who worked at WIZO",
+    "entities": [
+      {
+        "start": 31,
+        "end": 37,
+        "value": "person",
+        "entity": "object_type"
+      },
+      {
+        "start": 52,
+        "end": 56,
+        "value": "WIZO",
+        "entity": "organization"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "object_type",
+        "start": 31,
+        "end": 37,
+        "confidence_entity": 0.9823107719421387,
+        "value": "person",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "organization",
+        "start": 52,
+        "end": 56,
+        "confidence_entity": 0.997556209564209,
+        "value": "WIZO",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "organization",
+        "start": 52,
+        "end": 56,
+        "value": "WIZO",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Show me which activities have done the social workers",
+    "entities": [
+      {
+        "start": 14,
+        "end": 24,
+        "value": "activities",
+        "entity": "object_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "object_type",
+        "start": 14,
+        "end": 24,
+        "confidence_entity": 0.9940454959869385,
+        "value": "activities",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I would like to know some activities oft he social workers",
+    "entities": [
+      {
+        "start": 26,
+        "end": 36,
+        "value": "activities",
+        "entity": "object_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "object_type",
+        "start": 26,
+        "end": 36,
+        "confidence_entity": 0.9947751760482788,
+        "value": "activities",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Can you tell me some activities of the social workers?",
+    "entities": [
+      {
+        "start": 21,
+        "end": 31,
+        "value": "activities",
+        "entity": "object_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "object_type",
+        "start": 21,
+        "end": 31,
+        "confidence_entity": 0.9942518472671509,
+        "value": "activities",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Which activities have done the social workers?",
+    "entities": [
+      {
+        "start": 6,
+        "end": 16,
+        "value": "activities",
+        "entity": "object_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "object_type",
+        "start": 6,
+        "end": 16,
+        "confidence_entity": 0.9923346638679504,
+        "value": "activities",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "What activities were carried out?",
+    "entities": [
+      {
+        "start": 5,
+        "end": 15,
+        "value": "activities",
+        "entity": "object_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "object_type",
+        "start": 5,
+        "end": 15,
+        "confidence_entity": 0.992685079574585,
+        "value": "activities",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Which activities were carried out in Hamburg?",
+    "entities": [
+      {
+        "start": 6,
+        "end": 16,
+        "value": "activities",
+        "entity": "object_type"
+      },
+      {
+        "start": 37,
+        "end": 44,
+        "value": "Hamburg",
+        "entity": "city"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "object_type",
+        "start": 6,
+        "end": 16,
+        "confidence_entity": 0.9940853118896484,
+        "value": "activities",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "city",
+        "start": 37,
+        "end": 44,
+        "confidence_entity": 0.9953259229660034,
+        "value": "Hamburg",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I want to know some activities in Hamburg",
+    "entities": [
+      {
+        "start": 20,
+        "end": 30,
+        "value": "activities",
+        "entity": "object_type"
+      },
+      {
+        "start": 34,
+        "end": 41,
+        "value": "Hamburg",
+        "entity": "city"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "object_type",
+        "start": 20,
+        "end": 30,
+        "confidence_entity": 0.9953873753547668,
+        "value": "activities",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "city",
+        "start": 34,
+        "end": 41,
+        "confidence_entity": 0.9928921461105347,
+        "value": "Hamburg",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]

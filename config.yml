@@ -6,26 +6,39 @@ pipeline:
 # # No configuration for the NLU pipeline was provided. The following default pipeline was used to train your model.
 # # If you'd like to customize it, uncomment and adjust the pipeline.
 # # See https://rasa.com/docs/rasa/tuning-your-model for more information.
-#- name: SpacyNLP
-#  model: en_core_web_md
-#  case_sensitive: False
-- name: WhitespaceTokenizer
-- name: RegexFeaturizer
+   - name: "SpacyNLP"
+     model: "en_core_web_md"
+     case_sensitive: False
+#   - name: WhitespaceTokenizer
+   - name: "SpacyTokenizer"
+   - name: "SpacyFeaturizer"
+     pooling: "mean"
+   - name: RegexFeaturizer
 #   - name: LexicalSyntacticFeaturizer
 #   - name: CountVectorsFeaturizer
-#   - name: CountVectorsFeaturizer
-#     analyzer: char_wb
-#     min_ngram: 1
-#     max_ngram: 4
-- name: DIETClassifier
-  entity_recognition: True
-  intent_classification: True
-#     epochs: 100
-- name: EntitySynonymMapper
+   - name: CountVectorsFeaturizer
+     analyzer: char_wb
+     min_ngram: 1
+     max_ngram: 4
+   - name: "SpacyEntityExtractor"
+     dimensions: ["PERSON", "DATE", "ORG", "GPE"]
+   - name: DIETClassifier
+     epochs: 300
+   - name: EntitySynonymMapper
+   - name: RegexEntityExtractor
+     case_sensitive: True
+   - name: FallbackClassifier
+     threshold: 0.3
 #   - name: ResponseSelector
 #     epochs: 100
-- name: FallbackClassifier
+#   - name: FallbackClassifier
 #     threshold: 0.3
+#     ambiguity_threshold: 0.1
+
+#- name: EntitySynonymMapper
+#   - name: ResponseSelector
+#     epochs: 100
+
 #     ambiguity_threshold: 0.1
 
 # Configuration for Rasa Core.
@@ -35,7 +48,11 @@ policies:
 # # If you'd like to customize them, uncomment and adjust the policies.
 # # See https://rasa.com/docs/rasa/policies for more information.
 #   - name: MemoizationPolicy
-#   - name: TEDPolicy
-#     max_history: 5
-#     epochs: 100
+   - name: TEDPolicy
+     max_history: 5
+     epochs: 200
 #   - name: RulePolicy
+     #max_history: 5
+#     epochs: 100
+   - name: RulePolicy
+     core_fallback_action_name: utter_ask_rephrase
