@@ -36,9 +36,11 @@ intents:
   - choose_custom_search
   - requirements_site_to_author
   - ask_for_access_type_for_facilities
-  - list_of/*
-  - questions_detail_person/*
+  - list_of
+  - questions_detail_person
   - search_with_chatbot
+
+#https://rasa.com/docs/rasa/chitchat-faqs
  
 forms:
   person_form:
@@ -221,7 +223,7 @@ responses:
   - text: "If you did not found what you were looking for, you can now click on Advanced Search."
   
   utter_choose_custom_search_topic:
-  - text: "Here you can choose, wether to search for content or persons."
+  - text: "Here you can choose, wether to search for content or person details."
   
   utter_explain_custom_search_keywords:
   - text: "First you can specify which keywords should be included in the input."
@@ -343,6 +345,9 @@ responses:
 
   utter_submit:
   - text: "Thank you! I am going to search for your information."
+
+  utter_how_user_can_ask:
+  - text: "You can ask something like What is the hebrew name of Esther Apfelbaum?"
 
 #rules:
 #  - rule: Ask the user to rephrase whenever they send a message with low NLU confidence

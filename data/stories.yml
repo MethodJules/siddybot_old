@@ -17,14 +17,12 @@ stories:
   - intent: query_knowledge_base
   - action: action_query_knowledge_base
 
-#-  story: information about people
-#   steps:
-#   - intent: greet
-#   - action: utter_greet
-#   - intent: information_about_people
-#   - action: utter_how_user_can_ask
-#   - intent: query_knowledge_base
-#   - action: action_query_knowledge_base
+-  story: information about people
+   steps:
+   - intent: information_about_people
+   - action: utter_how_user_can_ask
+   - intent: questions_detail_person
+   - action: action_person_detail
 
 - story: information
   steps:
@@ -126,7 +124,8 @@ stories:
    
 - story: use the custom search for content
   steps:
-  - intent:  use_custom_search_function
+#  - intent:  use_custom_search_function
+  - intent: use_custom_search
   - action: utter_default_search
   - action: utter_enter_custom_search_function
   - intent:  accept
@@ -244,13 +243,12 @@ stories:
   - intent:  thanks
   - action: utter_answer_thanks
 
-
-#- story: dummy
-#  steps:
-#  - intent: list_of/*
-#  - action: utter_dummy
-#  - intent: questions_detail_person/*
-#  - action: utter_dummy
+- story: dummy
+  steps:
+  - intent: list_of
+  - action: utter_dummy
+  - intent: questions_detail_person
+  - action: utter_dummy
 
 #- story: what can i do
 #  steps: 
@@ -265,7 +263,7 @@ stories:
 
 - story: search for details of a person
   steps:
-  - intent: questions_detail_person/*
+  - intent: questions_detail_person
   - action: action_person_detail
 
 #- story: combination of list and details search

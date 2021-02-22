@@ -9,6 +9,7 @@ nlu:
     - Whats up?
     - Heya
     - Howdy
+    - Hey there
 
 - intent: goodbye
   examples: |
@@ -17,7 +18,6 @@ nlu:
     - See ya
     - See you
     - Bye bye
-    - Hey there
     - See you later
     - Ciao
 
@@ -97,7 +97,7 @@ nlu:
     - [social education](maptype) map
     - tell me about the [social education](maptype) map
 
-- intent: use_custom_search
+- intent: search_function/use_custom_search
   examples: |
     - How can i use the custom search function?
     - Is there a custom search?
@@ -106,6 +106,9 @@ nlu:
     - I did not find what I was looking for
     - is there more than the default search
     - how can i get more or less results?
+    - I want to do a custom search.
+    - I search a custom search function.
+    - Where can I do a custom search?
 
 - intent: found_error
   examples: |
@@ -263,6 +266,7 @@ nlu:
   examples: |
     - informations from persons 
     - person informations
+    - person infortmation  
 
 - synonym: information
   examples: |
@@ -277,11 +281,11 @@ nlu:
     - I pushed the save button. 
     - Done.
 
-- intent:  search_function/use_custom_search_function
-  examples: |
-    - I want to do a custom search.
-    - I search a custom search function.
-    - Where can I do a custom search?
+#- intent:  search_function/use_custom_search_function
+#  examples: |
+#    - I want to do a custom search.
+#    - I search a custom search function.
+#    - Where can I do a custom search?
 
 - synonym: person
   examples: |
@@ -413,7 +417,19 @@ nlu:
     - I am looking for [person detail](searchtype)
     - Could you show me some [person detail](searchtype)?
 
-#- intent: introduction
+- intent: introduction
+  examples: |
+    - How can I search with you?
+    - Can you show me how I can search for informations?
+    - Show me how I can search with you
+
+- synonym: information
+  examples: |
+    - details
+    - detail
+    - info
+    - informations
+    - infos
 
 - regex: year
   examples: |

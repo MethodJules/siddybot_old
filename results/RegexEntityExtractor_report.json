@@ -1,25 +1,4 @@
 {
-  "person": {
-    "precision": 0.0,
-    "recall": 0.0,
-    "f1-score": 0.0,
-    "support": 72,
-    "confused_with": {}
-  },
-  "city": {
-    "precision": 0.0,
-    "recall": 0.0,
-    "f1-score": 0.0,
-    "support": 12,
-    "confused_with": {}
-  },
-  "organization": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 4,
-    "confused_with": {}
-  },
   "object_type": {
     "precision": 0.0,
     "recall": 0.0,
@@ -27,17 +6,10 @@
     "support": 31,
     "confused_with": {}
   },
-  "maptype": {
-    "precision": 1.0,
-    "recall": 0.9473684210526315,
-    "f1-score": 0.972972972972973,
-    "support": 19,
-    "confused_with": {}
-  },
-  "year": {
-    "precision": 1.0,
+  "searchtype": {
+    "precision": 0.6666666666666666,
     "recall": 1.0,
-    "f1-score": 1.0,
+    "f1-score": 0.8,
     "support": 8,
     "confused_with": {}
   },
@@ -48,11 +20,32 @@
     "support": 5,
     "confused_with": {}
   },
-  "searchtype": {
-    "precision": 0.6666666666666666,
+  "city": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 12,
+    "confused_with": {}
+  },
+  "year": {
+    "precision": 1.0,
     "recall": 1.0,
-    "f1-score": 0.8,
+    "f1-score": 1.0,
     "support": 8,
+    "confused_with": {}
+  },
+  "organization": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 4,
+    "confused_with": {}
+  },
+  "maptype": {
+    "precision": 1.0,
+    "recall": 0.9473684210526315,
+    "f1-score": 0.972972972972973,
+    "support": 19,
     "confused_with": {}
   },
   "mention": {
@@ -60,6 +53,13 @@
     "recall": 0.0,
     "f1-score": 0.0,
     "support": 13,
+    "confused_with": {}
+  },
+  "person": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 72,
     "confused_with": {}
   },
   "attribute": {
