@@ -60,13 +60,22 @@ entities:
   - mention
   - person
   - residence
-  - city
+  - CITY
   - year
-  - organization
-  - GPE
   - PERSON
-  - ORG
   - DATE
+  - COUNTRY
+  - NATIONALITY
+  - LOCATION
+  - TITLE
+  - MISC
+  - RELIGION
+  - DURATION
+  - ORDINAL
+  - NUMBER
+  - IDEOLOGY
+  - STATE_OR_PROVINCE
+  - CAUSE_OF_DEATH
 
 slots:
   maptype:
@@ -92,7 +101,37 @@ slots:
     type: text
     influence_conversation: false
   attribute:
-    type: text
+    type: categorical
+    values:
+      - spouse
+      - cities_of_residence
+      - title
+      - city_of_death
+      - country_of_death
+      - date_of_death
+      - country_of_birth
+      - city_of_birth
+      - countries_of_residence
+      - country_of_headquarters
+      - city_of_headquarters
+      - origin
+      - employee_or_member_of
+      - religion
+      - political_religious_affiliation
+      - schools_attended
+      - top_members_employees
+      - parents
+      - children
+      - age
+      - statesorprovinces_of_residence
+      - stateorprovince_of_headquarters
+      - siblings
+      - date_founded
+      - subsidiaries
+      - alternate_names
+      - other_family
+      - cause_of_death
+      - founded_by
     influence_conversation: false
   person:
     type: text
@@ -100,10 +139,10 @@ slots:
   residence:
     type: text
     influence_conversation: false
-  city: 
+  CITY: 
     type: text
     influence_conversation: false
-  organization: 
+  ORGANIZATION: 
     type: text
     influence_conversation: false
   year: 
@@ -115,10 +154,40 @@ slots:
   PERSON: 
     type: text
     influence_conversation: false
-  ORG: 
+  COUNTRY:
     type: text
     influence_conversation: false
-  GPE: 
+  NATIONALITY:
+    type: text
+    influence_conversation: false
+  LOCATION:
+    type: text
+    influence_conversation: false
+  TITLE:
+    type: text
+    influence_conversation: false
+  MISC:
+    type: text
+    influence_conversation: false
+  RELIGION:
+    type: text
+    influence_conversation: false
+  DURATION:
+    type: text
+    influence_conversation: false
+  ORDINAL:
+    type: text
+    influence_conversation: false
+  NUMBER:
+    type: text
+    influence_conversation: false
+  IDEOLOGY:
+    type: text
+    influence_conversation: false
+  STATE_OR_PROVINCE:
+    type: text
+    influence_conversation: false
+  CAUSE_OF_DEATH:
     type: text
     influence_conversation: false
   
@@ -364,6 +433,7 @@ responses:
 actions:
   - action_query_knowledge_base
   - action_person_detail
+  - action_semantic_search
 
 session_config:
   session_expiration_time: 60

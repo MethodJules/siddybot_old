@@ -259,7 +259,10 @@ stories:
 
 #- story: search for a list
 #  steps:
-  
+#- story: abfrage von residence zu persons
+#  steps:
+#  - intent: questions_detail_person/places
+ # - action: action_list_residence
 
 - story: search for details of a person
   steps:

@@ -3,7 +3,7 @@ rules:
 - rule: Ask the user to rephrase whenever they send a message with low NLU confidence
   steps:
   - intent: nlu_fallback
-  - action: utter_out_of_scope
+  - action: action_semantic_search
 
 - rule: welcome user
   conversation_start: true

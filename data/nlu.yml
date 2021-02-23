@@ -287,16 +287,12 @@ nlu:
 #    - I search a custom search function.
 #    - Where can I do a custom search?
 
-- synonym: person
+- synonym: PERSON
   examples: |
     - people
     - persons
     - social worker
 
-- synonym: domiciles_of_person
-  examples: |
-    - domicil
-    - domicils
 
 - synonym: date_of_birth
   examples: |
@@ -346,12 +342,12 @@ nlu:
     - Can you show me where [Esther Apfelberg](person) lived?
     - I would like to know in which city [Esther Apfelberg](person) was born
     - Where was [Esther Apfelberg](person) born {"entity":"attribute","value":"birth_place"}?
-    - In which [city]{"entity":"attribute","value":"city"} died [Else Cohn](person)?
+    - In which [city]{"entity":"object_type","value":"city"} died [Else Cohn](person)?
     - Where did [Rachel Ellern](person) lived ? 
     - Where was [Irene Gaster](person) lived in [1998](year)?
     - Where was [Benjaming Jonas](person) in [1895](year)?
     - Can you show me where [Esther Apfelberg](person) was in [2000](year) ?
-    - I like to know in which [city]{"entity":"attribute","value":"city"} was [Esther Apfelberg](person) in [1950](year)?
+    - I like to know in which [city]{"entity":"object_type","value":"CITY"} was [Esther Apfelberg](person) in [1950](year)?
 #    - Where was [Esther Apfelberg](person) lived in [year]?
 #    - Can you show me where [Esther Apfelberg](person) was in [year]?
 #    - I like to know in which [city] was [Esther Apfelberg](person) in [year]?
@@ -435,7 +431,7 @@ nlu:
   examples: |
     - \d{4}
 
-- lookup: organization
+- lookup: ORGANIZATION
   examples: |
     - University of Wurzburg
     - WIZO World Organization
@@ -490,7 +486,64 @@ nlu:
     - content
     - person detail
 
-- lookup: object_type
+- lookup: attribute
   examples: |
-     - person
-     - organization
+    - spouse
+    - cities_of_residence
+    - title
+    - city_of_death
+    - country_of_death
+    - date_of_death
+    - country_of_birth
+    - city_of_birth
+    - countries_of_residence
+    - country_of_headquarters
+    - city_of_headquarters
+    - origin
+    - employee_or_member_of
+    - religion
+    - political_religious_affiliation
+    - schools_attended
+    - top_members_employees
+    - parents
+    - children
+    - age
+    - statesorprovinces_of_residence
+    - stateorprovince_of_headquarters
+    - siblings
+    - date_founded
+    - subsidiaries
+    - alternate_names
+    - other_family
+    - cause_of_death
+    - founded_by
+
+- synonym: spouse
+  examples: |
+    - husband
+    - wife
+
+- synonym: cities_of_residence
+  examples: |
+    - residence
+    - domicil
+    - domicils
+   
+- synonym: children
+  examples: |
+    - kids
+    - child
+
+- synonym: siblings
+  examples: |
+    - sister
+    - brother
+    - sisters
+    - brothers
+
+- synonym: cause_of_death
+  examples: |
+    - cause of death
+    
+
+
