@@ -246,9 +246,9 @@ stories:
 - story: dummy
   steps:
   - intent: list_of
-  - action: utter_dummy
-  - intent: questions_detail_person
-  - action: utter_dummy
+  - action: action_list_of
+  - intent: details_of_organizations
+  - action: action_organization_details
 
 #- story: what can i do
 #  steps: 

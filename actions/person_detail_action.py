@@ -9,7 +9,6 @@ from actions.semantic_search_action import SemanticSearchAction
 #import base64,cv2
 
 class PersonDetailAction(Action):
-
   app=Flask(__name__)
   def name(self) -> Text:
       return "action_person_detail"
@@ -66,33 +65,20 @@ class PersonDetailAction(Action):
         for x in entities:
           if(x["rel"] == attribute):
             dispatcher.utter_message(text=f""+x["ent2_text"])
+      self.findNote(dispatcher, name)
 
+  @app.route("/get-nodes-by-filter", methods=['POST'])
+  def findNote(self, dispatcher: CollectingDispatcher, name):
+      searchquery = '{"filter":"'+name+'"}'
+      search_request = json.loads(searchquery, encoding="utf-8")
+      answer = requests.post('https://semanticsearch.x-navi.de/get-nodes-by-filter', search_request)
+      print(answer.text)
 
   def searchForEntitesFromTheNode(self, nodeID):
       query1 = '{"node_id": "nodeID"}'
       search_request1 = json.loads(query1, encoding="utf-8")
       answer1 = requests.post('https://semanticsearch.x-navi.de/get-entities-by-id', search_request1)
       print(answer1.text)
-
-  def linkErstellen(self, dispatcher: CollectingDispatcher, node_titel):
-    """
-    In dieser Methode wird mit Hilfe des node_title der Link zu der Seite der Person erstellt
-    """
-    node_titel = self.deleteMarks(node_titel)
-    node = node_titel.split()
-    link = ""
-    while len(node) > 1:
-      link = link + node[0] + "-"
-      node.remove(node[0])
-    link = link + node[0]
-    dispatcher.utter_message(text=f"For more informations you can look here:")
-    dispatcher.utter_message(text=f"https://www.jigsaw-navi.net/de/content/"+link)
-
-  def deleteMarks(self, word) -> str:
-    word = word.replace(".","")
-    word = word.replace(",","")
-    word = word.replace("/","")
-    return word
 
   def utter_birthday(self, dispatcher: CollectingDispatcher, name, entities):
     checked = False
@@ -121,5 +107,5 @@ class PersonDetailAction(Action):
               dispatcher.utter_message(country)
               checked = True
       if checked == False:
-          SemanticSearchAction.searchSemanticSearch(SemanticSearchAction, dispatcher, entity_person, abfrage_attribute)
+          SemanticSearchAction.searchSemanticSearch(SemanticSearchAction, dispatcher, entityPerson, abfrage_attribute)
       

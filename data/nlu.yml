@@ -390,11 +390,11 @@ nlu:
 
 - intent: list_of/residences
   examples: |
-    - Tell me where the social workers lived
-    - Could you show me some places where the social workers lived? 
-    - I would like to see some places where the social workers were.
-    - In which citys lived the social workers?
-    - Where lived the social workers? 
+    - Tell me where the social workers lived {"entity": "object_type", "value": "city"}
+    - Could you show me some places where the social workers lived? {"entity": "object_type", "value": "city"}
+    - I would like to see some places where the social workers were. {"entity": "object_type", "value": "city"}
+    - In which citys lived the social workers? {"entity": "object_type", "value": "city"}
+    - Where lived the social workers?  {"entity": "object_type", "value": "city"}
 
 
 - intent: list_of/activities
@@ -406,6 +406,24 @@ nlu:
      - What [activities](object_type) were carried out?
      - Which [activities](object_type) were carried out in [Hamburg](city)?
      - I want to know some [activities](object_type) in [Hamburg](city)
+
+- intent: list_of/organizations
+  examples: |
+    - Could you tell me in which [organization](object_type) worked the people?
+    - Show me in which [organization](object_type) the social workers worked?
+    - Which [organization](object_type) are saved on these website?
+    - [organization](object_type), please
+    - I want to know some [organization](object_type)
+    - Could you tell me some [organizations](object_type) in [Zurich](CITY)?
+    - Show me some [organizations](object_type) where [Ruth Barak](PERSON) was working
+    - Some [organizations](object_type) in [Germany](COUNTRY)
+
+- intent: details_of_organizations
+  examples: |
+    - Could you show me some [members]{"entity": "attribute", "value": "employee_or_member_of"} of [Jewish National Party](ORGANIZATION)?
+    - Show me some [top members]{"entity": "attribute", "value": "top_members_employees"} of [Mizrahi Womens Organization](ORGANIZATION)?
+    - Headquarter{"entity": "attribute", "value": "city_of_headquarter"} of [Hebrew Gymnasium Herzliya](ORGANIZATION), please
+    - Tell me the [top members]{"entity": "attribute", "value": "top_members_employees"} of [Zentralwohlfahrtsstelle](ORGANIZATION)
 
 - intent:  search_function/search_with_chatbot
   examples: |
@@ -430,6 +448,26 @@ nlu:
 - regex: year
   examples: |
     - \d{4}
+
+- lookup: object_type
+  examples: |
+    - CITY
+    - year
+    - PERSON
+    - DATE
+    - COUNTRY
+    - NATIONALITY
+    - LOCATION
+    - TITLE
+    - MISC
+    - RELIGION
+    - DURATION
+    - ORDINAL
+    - NUMBER
+    - IDEOLOGY
+    - STATE_OR_PROVINCE
+    - CAUSE_OF_DEATH
+    - ORGANIZATION
 
 - lookup: ORGANIZATION
   examples: |
@@ -485,6 +523,32 @@ nlu:
   examples: |
     - content
     - person detail
+
+- synonym: ORGANIZATION
+  examples: |
+    - organization
+    - orga 
+    - organizations 
+    - group
+    - company
+    - party
+    - body
+    - concern
+    - league
+    - association
+    - band
+    - institution
+    - gathering
+    - circle
+    - corporation
+    - federation
+    - outfit (informal)
+    - faction
+    - consortium
+    - syndicate
+    - combine
+    - congregation
+    - confederation
 
 - lookup: attribute
   examples: |

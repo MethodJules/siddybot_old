@@ -39,6 +39,7 @@ intents:
   - list_of
   - questions_detail_person
   - search_with_chatbot
+  - details_of_organizations
 
 #https://rasa.com/docs/rasa/chitchat-faqs
  
@@ -58,7 +59,6 @@ entities:
   - object_type
   - attribute
   - mention
-  - person
   - residence
   - CITY
   - year
@@ -76,6 +76,8 @@ entities:
   - IDEOLOGY
   - STATE_OR_PROVINCE
   - CAUSE_OF_DEATH
+  - GPE
+  - ORG
 
 slots:
   maptype:
@@ -95,7 +97,25 @@ slots:
       - content
       - person detail
   object_type:
-    type: text
+    type: categorical
+    values:
+      - CITY
+      - year
+      - PERSON
+      - DATE
+      - COUNTRY
+      - NATIONALITY
+      - LOCATION
+      - TITLE
+      - MISC
+      - RELIGION
+      - DURATION
+      - ORDINAL
+      - NUMBER
+      - IDEOLOGY
+      - STATE_OR_PROVINCE
+      - CAUSE_OF_DEATH
+      - ORGANIZATION
     influence_conversation: false
   mention:
     type: text
@@ -132,9 +152,6 @@ slots:
       - other_family
       - cause_of_death
       - founded_by
-    influence_conversation: false
-  person:
-    type: text
     influence_conversation: false
   residence:
     type: text
@@ -188,6 +205,12 @@ slots:
     type: text
     influence_conversation: false
   CAUSE_OF_DEATH:
+    type: text
+    influence_conversation: false
+  GPE:
+    type: text
+    influence_conversation: false
+  ORG:
     type: text
     influence_conversation: false
   
@@ -434,6 +457,8 @@ actions:
   - action_query_knowledge_base
   - action_person_detail
   - action_semantic_search
+  - action_list_of
+  - action_organization_details
 
 session_config:
   session_expiration_time: 60

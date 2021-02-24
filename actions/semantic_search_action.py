@@ -29,12 +29,14 @@ class SemanticSearchAction(Action):
         result = answer["result"]
         print(result)
         if (len(result) > 0):
-          result = result[0]
-          print(result)
           dispatcher.utter_message(text=f"I have found these results for your question:")
-          for x in result["sents"]:
-            dispatcher.utter_message(text=f""+x)
-          self.linkErstellen(dispatcher, result["node_title"])
+          for y in result:
+            dispatcher.utter_message(text=f"For " + y["node_title"] + " I found :")
+            print(y)
+            for x in y["sents"]:
+              print(x)
+              dispatcher.utter_message(text=f""+x)
+            self.linkErstellen(self, dispatcher, y["node_title"])
         else: 
           dispatcher.utter_message(text=f"I'm sorry but I don't have a answer for your question.")
       else: 
@@ -43,9 +45,30 @@ class SemanticSearchAction(Action):
   def searchSemanticSearch(self, dispatcher, name, attribute):
     searchquery = '{"search_query":"'+name+' ' + attribute+'"}'
     searchquery = json.loads(searchquery, encoding="utf-8")
-    self.semanticSearch(self, dispatcher, searchquery)
+    self.semanticSearch(dispatcher, searchquery)
 
   def searchSemanticSearch(self, dispatcher, intent):
+    print("searchSemanticSearch")
     searchquery = '{"search_query":"'+intent+'"}'
     searchquery = json.loads(searchquery, encoding="utf-8")
     self.semanticSearch(self, dispatcher, searchquery)
+
+  def linkErstellen(self, dispatcher: CollectingDispatcher, node_titel):
+    """
+    In dieser Methode wird mit Hilfe des node_title der Link zu der Seite der Person erstellt
+    """
+    node_titel = self.deleteMarks(self, node_titel)
+    node = node_titel.split()
+    link = ""
+    while len(node) > 1:
+      link = link + node[0] + "-"
+      node.remove(node[0])
+    link = link + node[0]
+    dispatcher.utter_message(text=f"For more informations you can look here:")
+    dispatcher.utter_message(text=f"https://www.jigsaw-navi.net/de/content/"+link)
+
+  def deleteMarks(self, word) -> str:
+    word = word.replace(".","")
+    word = word.replace(",","")
+    word = word.replace("/","")
+    return word
