@@ -29,13 +29,13 @@ class PersonDetailAction(Action):
       print("start der action")
       entity_person = None
       abfrage_attribute = None
-      entity_person = tracker.get_slot('person')
+      entity_person = tracker.get_slot('PERSON')
       #dispatcher.utter_message(text=f"Abfrage zu "+ entity_person)
       abfrage_attribute = tracker.get_slot('attribute')
       #dispatcher.utter_message(text=f"Abzufragenes Attribute " + abfrage_attribute)
       if ( (entity_person is None) | (abfrage_attribute is None)):
           intent = tracker.get_intent_of_latest_message()
-          SemanticSearchAction.searchSemanticSearch(SemanticSearchAction, dispatcher, intent)
+          SemanticSearchAction.searchSemanticSearchIntent(SemanticSearchAction, dispatcher, intent)
           return
       personExist = self.validationPerson(entity_person)
       print(personExist)
@@ -43,7 +43,7 @@ class PersonDetailAction(Action):
           print("Ja, die Person existiert")
           self.searchForEntity(dispatcher, entity_person, abfrage_attribute)
       else: 
-          SemanticSearchAction.searchSemanticSearch(SemanticSearchAction, dispatcher, entity_person, abfrage_attribute)
+          SemanticSearchAction.searchSemanticSearchAttribute(SemanticSearchAction, dispatcher, entity_person, abfrage_attribute)
 
       #TODO: Bevor die Methode genutzt werden kann, muss hier der richtige Node gefunden werden
       #self.linkErstellen(dispatcher, entity_person)
@@ -107,5 +107,5 @@ class PersonDetailAction(Action):
               dispatcher.utter_message(country)
               checked = True
       if checked == False:
-          SemanticSearchAction.searchSemanticSearch(SemanticSearchAction, dispatcher, entityPerson, abfrage_attribute)
+          SemanticSearchAction.searchSemanticSearchAttribute(SemanticSearchAction, dispatcher, entityPerson, abfrage_attribute)
       

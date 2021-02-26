@@ -152,11 +152,9 @@ slots:
       - other_family
       - cause_of_death
       - founded_by
+      - member
     influence_conversation: false
   residence:
-    type: text
-    influence_conversation: false
-  CITY: 
     type: text
     influence_conversation: false
   ORGANIZATION: 
@@ -169,9 +167,6 @@ slots:
     type: text
     influence_conversation: false
   PERSON: 
-    type: text
-    influence_conversation: false
-  COUNTRY:
     type: text
     influence_conversation: false
   NATIONALITY:

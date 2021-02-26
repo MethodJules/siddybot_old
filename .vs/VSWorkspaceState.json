@@ -1,11 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\actions",
-    "\\data",
-    "\\models",
-    "\\results"
+    "\\actions"
   ],
-  "SelectedNode": "\\actions\\knowledgeAction.py",
+  "SelectedNode": "\\actions\\organization_details_action.py",
   "PreviewInSolutionExplorer": false
 }

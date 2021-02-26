@@ -16,38 +16,38 @@ class SemanticSearchAction(Action):
     domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
     #self.semanticSearch(dispatcher, name, attribute)
     dispatcher.utter_message(text=f"Hier soll die semantische Suche mit dem Satz der eingegeben wurde ausgefuehrt werden")
-    intent = tracker.get_intent_of_latest_message()
-    self.searchSemanticSearch(dispatcher, intent)
+    intent = tracker.latest_message["text"]
+    self.searchSemanticSearchIntent(dispatcher, intent)
 
   @app.route("/semantic-search", methods=['POST'])
   def semanticSearch(self, dispatcher, searchquery):
-      print("Start der semantischen Suche")
-      answer = requests.post('https://semanticsearch.x-navi.de/semantic-search',searchquery)
-      answer = json.loads(answer.text,encoding="utf-8")
-      print(answer)
-      if (answer["type"] == "success"):
-        result = answer["result"]
-        print(result)
-        if (len(result) > 0):
-          dispatcher.utter_message(text=f"I have found these results for your question:")
-          for y in result:
-            dispatcher.utter_message(text=f"For " + y["node_title"] + " I found :")
-            print(y)
-            for x in y["sents"]:
-              print(x)
-              dispatcher.utter_message(text=f""+x)
-            self.linkErstellen(self, dispatcher, y["node_title"])
-        else: 
-          dispatcher.utter_message(text=f"I'm sorry but I don't have a answer for your question.")
+    print("Start der semantischen Suche")
+    answer = requests.post('https://semanticsearch.x-navi.de/semantic-search',searchquery)
+    answer = json.loads(answer.text,encoding="utf-8")
+    print(answer)
+    if (answer["type"] == "success"):
+      result = answer["result"]
+      print(result)
+      if (len(result) > 0):
+        dispatcher.utter_message(text=f"I have found these results for your question:")
+        for y in result:
+          dispatcher.utter_message(text=f"For " + y["node_title"] + " I found :")
+          print(y)
+          for x in y["sents"]:
+            print(x)
+            dispatcher.utter_message(text=f""+x)
+          self.linkErstellen(self, dispatcher, y["node_title"])
       else: 
-        dispatcher.utter_message(text=f"I don't found something to this person.")
+        dispatcher.utter_message(text=f"I'm sorry but I don't have a answer for your question.")
+    else: 
+      dispatcher.utter_message(text=f"I don't found something to this person.")
 
-  def searchSemanticSearch(self, dispatcher, name, attribute):
+  def searchSemanticSearchAttribute(self, dispatcher: CollectingDispatcher, name, attribute):
     searchquery = '{"search_query":"'+name+' ' + attribute+'"}'
     searchquery = json.loads(searchquery, encoding="utf-8")
-    self.semanticSearch(dispatcher, searchquery)
+    self.semanticSearch(self, dispatcher, searchquery)
 
-  def searchSemanticSearch(self, dispatcher, intent):
+  def searchSemanticSearchIntent(self, dispatcher: CollectingDispatcher, intent):
     print("searchSemanticSearch")
     searchquery = '{"search_query":"'+intent+'"}'
     searchquery = json.loads(searchquery, encoding="utf-8")
