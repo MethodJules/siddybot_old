@@ -293,11 +293,7 @@ nlu:
     - persons
     - social worker
     - peoples
-
-
-- synonym: date_of_birth
-  examples: |
-    - birthday
+    - person
 
 - intent: query_knowledge_base
   examples: |
@@ -318,6 +314,74 @@ nlu:
     - [hebrew name]{"entity": "attribute", "value": "hebrew_name"} of the [first one]{"entity": "mention", "value": "1"}?
     - Do you know the [hebrew name]{"entity": "attribute", "value": "hebrew_name"} of the [first one]{"entity": "mention", "value": "1"}?
     - Can you tell me the [birth day]{"entity": "attribute", "value": "date_of_birth"} from the [second](mention) person?
+
+- synonym: date_of_birth
+  examples: |
+    - birthday
+    - date of birth
+    - day of death
+    - birthdate
+
+- intent: questions_detail_person/birthday
+  examples: |
+    - Tell me in which year was the  [birthday]{"entity": "attribute", "value": "date_of_birth"} of [Esther Apfelberg](PERSON)
+    - I would like to know when the [birthday]{"entity": "attribute", "value": "date_of_birth"} of [Esther Apfelberg](PERSON) was
+    - Can you tell me the [birthday]{"entity": "attribute", "value": "date_of_birth"} of [Esther Apfelberg](PERSON)?
+    - When was [Esther Apfelberg](PERSON) was born? {"entity": "attribute", "value": "date_of_birth"} 
+
+- synonym: date_of_death
+  examples: |
+    - deathday
+    - date of death
+    - day of death
+    - deathdate
+
+- intent: questions_detail_person/deathday
+  examples: |
+    - When was the [deathday]{"entity": "attribute", "value": "date_of_death"} of [Esther Apfelberg](PERSON)?
+    - Could you tell me when [Ruth Barak](PERSON) died?{"entity": "attribute", "value": "date_of_death"}
+    - Show me the [deathday]{"entity": "attribute", "value": "date_of_death"} of [Benjamin Jonas](PERSON)?
+    - On which day died [Benjamin Jonas](PERSON)? {"entity": "attribute", "value": "date_of_death"} 
+
+- synonym: death_place
+  examples: |
+    - place of death
+    - death place
+
+- intent: questions_detail_person/death_place
+  examples: |
+    - Where did [Ruth Barak](PERSON) died?{"entity": "attribute", "value": "death_place"}
+    - Show me where [Benjamin Jonas](PERSON) died {"entity": "attribute", "value": "death_place"}
+    - Where is the [death_place]{"entity": "attribute", "value": "death_place"} of [Rachel Ellern](PERSON)?
+    
+- intent: questions_detail_person/country_of_death
+  examples: |
+    - In which country did [Ruth Barak](PERSON) die? {"entity": "attribute", "value": "country_of_death"}
+    - Show me the country where [Ruth Barak](PERSON) die? {"entity": "attribute", "value": "country_of_death"}
+    - Country where [Ruth Barak](PERSON) die? {"entity": "attribute", "value": "country_of_death"}
+
+- intent: questions_detail_person/city_of_death
+  examples: |
+    - What is the name of the city where [Irene Gaster](PERSON) died? {"entity": "attribute", "value": "city_of_death"}
+    - City of death of [Ruth Barak](PERSON), please {"entity": "attribute", "value": "city_of_death"}
+    - Show me in which city [Irene Gaster](PERSON) die? {"entity": "attribute", "value": "city_of_death"}
+
+- synonym: city_of_birth
+  examples: |
+    - birth town
+    - city of birth
+
+- intent: questions_detail_person/city_of_birth
+  examples: |
+    - What is the [birth town]{"entity": "attribute", "value": "city_of_birth" } [Natalie Jarecki](PERSON)?
+    - Show me the [city of birth]{"entity": "attribute", "value": "city_of_birth" } of [Natalie Jarecki](PERSON)
+    - Could you tell me where [Natalie Jarecki](PERSON) was born? {"entity": "attribute", "value": "city_of_birth" }
+
+- intent: questions_detail_person/country_of_birth
+  examples: |
+    - In which country was [Natalie Jarecki](PERSON) born?{"entity": "attribute", "value": "country_of_birth" } 
+    - Show me the country where [Irene Gaster](PERSON) was born {"entity": "attribute", "value": "city_of_birth" } 
+    - [Country of birth]{"entity": "attribute", "value": "country_of_birth" } of [Benjamin Jonas](PERSON)
 
 - intent: questions_detail_person/date
   examples: |
@@ -368,6 +432,12 @@ nlu:
     - Could you show me the [activities](object_type) of [Esther Apfelberg](PERSON)?
     - What were the [activites](object_type) from [Esther Apfelberg](PERSON)?
     - Which [activities](object_type) did [Benjamin Jonas](PERSON)?
+
+- intent: count_object_type
+  examples: |
+    - How much objects do you have of [PERSON](object_type)?
+    - How much [OGRANIZATION](object_type) do you have saved?
+    - Could you told me how much [ORGANIZATION](object_type) are on your website?
 
 - intent: list_of/persons
   examples: |
@@ -569,36 +639,40 @@ nlu:
 
 - lookup: attribute
   examples: |
-    - spouse
-    - cities_of_residence
-    - title
-    - city_of_death
-    - country_of_death
-    - date_of_death
-    - country_of_birth
-    - city_of_birth
-    - countries_of_residence
-    - country_of_headquarters
-    - city_of_headquarters
-    - origin
-    - employee_or_member_of
-    - religion
-    - political_religious_affiliation
-    - schools_attended
-    - top_members_employees
-    - parents
-    - children
-    - age
-    - statesorprovinces_of_residence
-    - stateorprovince_of_headquarters
-    - siblings
-    - date_founded
-    - subsidiaries
-    - alternate_names
-    - other_family
-    - cause_of_death
-    - founded_by
-    - member
+      - spouse
+      - cities_of_residence
+      - title
+      - city_of_death
+      - country_of_death
+      - date_of_death
+      - country_of_birth
+      - city_of_birth
+      - countries_of_residence
+      - country_of_headquarters
+      - city_of_headquarters
+      - origin
+      - employee_or_member_of
+      - religion
+      - political_religious_affiliation
+      - schools_attended
+      - top_members_employees
+      - parents
+      - children
+      - age
+      - statesorprovinces_of_residence
+      - stateorprovince_of_headquarters
+      - siblings
+      - date_founded
+      - subsidiaries
+      - alternate_names
+      - other_family
+      - cause_of_death
+      - founded_by
+      - member
+      - residences
+      - family
+      - death_place
+      - birth_place
 
 - synonym: spouse
   examples: |
@@ -623,9 +697,10 @@ nlu:
     - sisters
     - brothers
 
-- synonym: cause_of_death
+- synonym: CAUSE_OF_DEATH
   examples: |
     - cause of death
+    - why someone died
     
 
 

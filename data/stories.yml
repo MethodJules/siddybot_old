@@ -243,12 +243,28 @@ stories:
   - intent:  thanks
   - action: utter_answer_thanks
 
-- story: dummy
+- story: questions organizations
   steps:
   - intent: list_of
   - action: action_list_of
   - intent: details_of_organizations
+    entities:
+      - object_type: "ORGANIZATION"
   - action: action_organization_details
+
+- story: questions persons
+  steps:
+  - intent: list_of
+  - action: action_list_of
+  - intent: questions_detail_person
+    entities:
+      - object_type: "PERSON"
+  - action: action_person_detail
+
+- story: count objects
+  steps: 
+  - intent: count_object_type
+  - action: action_count_object_type
 
 #- story: what can i do
 #  steps: 

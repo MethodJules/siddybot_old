@@ -40,6 +40,7 @@ intents:
   - questions_detail_person
   - search_with_chatbot
   - details_of_organizations
+  - count_object_type
 
 #https://rasa.com/docs/rasa/chitchat-faqs
  
@@ -100,7 +101,7 @@ slots:
     type: categorical
     values:
       - CITY
-      - year
+      - DATE
       - PERSON
       - DATE
       - COUNTRY
@@ -153,6 +154,10 @@ slots:
       - cause_of_death
       - founded_by
       - member
+      - birth_place
+      - residences
+      - family
+      - death_place
     influence_conversation: false
   residence:
     type: text
@@ -454,6 +459,7 @@ actions:
   - action_semantic_search
   - action_list_of
   - action_organization_details
+  - action_count_object_type
 
 session_config:
   session_expiration_time: 60

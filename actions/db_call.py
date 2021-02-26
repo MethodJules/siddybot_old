@@ -27,3 +27,13 @@ class DbCall():
       answer = json.loads(answer.text,encoding="utf-8")
       results = answer["result"]
       return results
+
+  @app.route("/get-nodes-count", methods=['POST'])
+  def searchNodeCount(object_type) -> Dict[Text, Any]:
+      query = '{"content_type":"'+object_type+'"}'
+      search_request = json.loads(query, encoding="utf-8")
+      answer = requests.post('https://semanticsearch.x-navi.de/get-nodes-count',search_request)
+      answer = json.loads(answer.text,encoding="utf-8")
+      results = answer["result"]
+      return results
+
