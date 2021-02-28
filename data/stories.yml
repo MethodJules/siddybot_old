@@ -248,8 +248,6 @@ stories:
   - intent: list_of
   - action: action_list_of
   - intent: details_of_organizations
-    entities:
-      - object_type: "ORGANIZATION"
   - action: action_organization_details
 
 - story: questions persons
@@ -257,8 +255,6 @@ stories:
   - intent: list_of
   - action: action_list_of
   - intent: questions_detail_person
-    entities:
-      - object_type: "PERSON"
   - action: action_person_detail
 
 - story: count objects
@@ -266,23 +262,24 @@ stories:
   - intent: count_object_type
   - action: action_count_object_type
 
-#- story: what can i do
-#  steps: 
-  
-
-#- story: how can i search for informations
-#  steps: 
-
-#- story: search for a list
-#  steps:
-#- story: abfrage von residence zu persons
-#  steps:
-#  - intent: questions_detail_person/places
- # - action: action_list_residence
-
-- story: search for details of a person
+- story: search for details of a person GPE
   steps:
-  - intent: questions_detail_person
+  - intent: questionsYesNoPerson_connection_to_GPE
+  - action: action_person_detail
+
+- story: search for details of a person RELIGION
+  steps:
+  - intent: questionsYesNoPerson_connection_to_RELIGION
+  - action: action_person_detail
+
+- story: search for details of a person ORG
+  steps:
+  - intent: questionsYesNoPerson_connection_to_ORG
+  - action: action_person_detail
+ 
+- story: search for details of a person attribute
+  steps:
+  - intent: questionsYesNoPerson_connection_to_RELIGION
   - action: action_person_detail
 
 #- story: combination of list and details search

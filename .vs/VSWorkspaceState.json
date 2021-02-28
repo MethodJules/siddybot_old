@@ -1,8 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\actions"
+    "\\actions",
+    "\\data",
+    "\\models",
+    "\\results"
   ],
-  "SelectedNode": "\\actions\\organization_details_action.py",
+  "SelectedNode": "\\actions\\person_detail_action.py",
   "PreviewInSolutionExplorer": false
 }

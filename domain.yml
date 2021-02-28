@@ -41,6 +41,10 @@ intents:
   - search_with_chatbot
   - details_of_organizations
   - count_object_type
+  - questionsYesNoPerson_connection_to_GPE
+  - questionsYesNoPerson_connection_to_ORG
+  - questionsYesNoPerson_attributes
+  - questionsYesNoPerson_connection_to_RELIGION
 
 #https://rasa.com/docs/rasa/chitchat-faqs
  
@@ -159,15 +163,6 @@ slots:
       - family
       - death_place
     influence_conversation: false
-  residence:
-    type: text
-    influence_conversation: false
-  ORGANIZATION: 
-    type: text
-    influence_conversation: false
-  year: 
-    type: text
-    influence_conversation: false
   DATE: 
     type: text
     influence_conversation: false
@@ -213,6 +208,11 @@ slots:
   ORG:
     type: text
     influence_conversation: false
+  explained_add_entity:
+    type: bool
+    influence_conversation: false
+  
+
   
 responses:
   utter_welcome:
@@ -441,17 +441,8 @@ responses:
   utter_how_user_can_ask:
   - text: "You can ask something like What is the hebrew name of Esther Apfelbaum?"
 
-#rules:
-#  - rule: Ask the user to rephrase whenever they send a message with low NLU confidence
-#    steps:
-#      - intent: nlu_fallback
-#      - action: utter_ask_rephrase
-
-# - rule: welcome user
-#    conversation_start: true
-#    steps:
-#      - intent: greet
-#      - action: utter_welcome
+  utter_should_show_entity:
+  - text: "Shall I show you how to create entities?"
 
 actions:
   - action_query_knowledge_base
@@ -460,6 +451,7 @@ actions:
   - action_list_of
   - action_organization_details
   - action_count_object_type
+  - action_yes_no_questions_person
 
 session_config:
   session_expiration_time: 60

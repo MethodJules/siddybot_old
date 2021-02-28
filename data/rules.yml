@@ -1,6 +1,6 @@
 rules:
 
-- rule: Ask the user to rephrase whenever they send a message with low NLU confidence
+- rule: Ask the user to rephrase when ever they send a message with low NLU confidence
   steps:
   - intent: nlu_fallback
   - action: action_semantic_search
@@ -10,21 +10,3 @@ rules:
   steps:
   - intent: greet
   - action: utter_welcome
-
-- rule: search for person form
-  steps: 
-  - intent:  search_function/*
-    entities:
-    - searchtype: "person detail"
-  - action: person_form
-  - active_loop: person_form
-
-- rule: submit form
-  condition:
-  - active_loop: person_form
-  steps: 
-  - action: person_form
-  - active_loop: null
-  - action: utter_ask_person
-  - action: utter_ask_attribute
-  - action: utter_submit

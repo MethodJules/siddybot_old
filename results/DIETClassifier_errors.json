@@ -1,0 +1,29 @@
+[
+  {
+    "text": "[Other familymember]other familymembers of Rachel Ellen",
+    "entities": [
+      {
+        "start": 20,
+        "end": 39,
+        "value": "other_family",
+        "entity": "attribute"
+      },
+      {
+        "start": 43,
+        "end": 55,
+        "value": "Rachel Ellen",
+        "entity": "PERSON"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "PERSON",
+        "start": 43,
+        "end": 55,
+        "confidence_entity": 0.9995090961456299,
+        "value": "Rachel Ellen",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]

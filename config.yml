@@ -55,4 +55,4 @@ policies:
      #max_history: 5
 #     epochs: 100
    - name: RulePolicy
-     core_fallback_action_name: utter_ask_rephrase
+     core_fallback_action_name: action_semantic_search

@@ -2,18 +2,15 @@ from typing import Any, Text, Dict, List
 #
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
-from flask import Flask, render_template, request, jsonify, Response
-import requests
 import json
-from actions.semantic_search_action import SemanticSearchAction
+from actions.semantic_search import SemanticSearch
 from actions.db_call import DbCall
 #import base64,cv2
 
 class ListOfObjecttype(Action):
-  app=Flask(__name__)
+
   def name(self) -> Text:
       return "action_list_of"
-
 
   def run(self, dispatcher: CollectingDispatcher,
         tracker: Tracker,
@@ -26,12 +23,12 @@ class ListOfObjecttype(Action):
       self.searchOrganizations(dispatcher, tracker)
     else: 
       if ((attribute is None) & (not(object_type is None))):
-        answer =  DbCall.searchForEntitiy(DbCall, object_type)
+        answer =  DbCall.searchForEntitiy(object_type)
         for x in answer[object_type]:
             dispatcher.utter_message(x)
       else: 
         intent = tracker.latest_message["text"]
-        SemanticSearchAction.searchSemanticSearchIntent(SemanticSearchAction, dispatcher, intent)
+        SemanticSearch.searchSemanticSearchIntent(dispatcher, intent)
 
   def searchOrganizations(self, dispatcher: CollectingDispatcher, tracker: Tracker):
       """
@@ -45,14 +42,10 @@ class ListOfObjecttype(Action):
       ausgabe_entities = []
       if ((not(person is None)) | (not(gpe is None))):
         for x in answer["ORGANIZATION"]:
-          entities = DbCall.searchForEntityRelationship(DbCall, x, "ORGANIZATION")
+          entities = DbCall.searchForEntityRelationship(x, "ORGANIZATION")
           entities = entities["entities_relations"]
           for y in entities:
               if (y["ent_text"] == x):
-                #if ((not(city is None)) & (y["ent2_ner"] == "CITY") & (y["ent2_text"] == city)):
-                #  ausgabe_entities.append(x)
-                #elif ((not(country is None)) & (y["ent2_ner"] == "COUNTRY") & (y["ent2_text"] == country)):
-                #  ausgabe_entities.append(x)
                 if ((not(person is None)) & (y["ent2_ner"] == "PERSON") & (y["ent2_text"] == person)):
                   ausgabe_entities.append(x)
                 elif ((not(person is None)) & ((y["ent2_ner"] == "COUNTRY")|(y["ent2_ner"] == "CITY")) & ((y["ent2_text"] == gpe)|(y["ent2_text"] == gpe))):
