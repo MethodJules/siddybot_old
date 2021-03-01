@@ -27,6 +27,7 @@ class PersonDetailAction(Action):
         tracker: Tracker,
         domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
       print("action_person_detail")
+      print(tracker.get_intent_of_latest_message())
       entity_person = None
       abfrage_attribute = None
       entity_person = tracker.get_slot('PERSON')

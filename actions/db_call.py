@@ -12,7 +12,7 @@ import json
 class DbCall():
 
   app=Flask(__name__)
-  @app.route("/get-entities", methods=['POST'])
+
   def searchForEntitiy(object_type) -> Dict[Text, Any]:
       """
       Verwendet Flask um alle Entitaeten der Datenbank zu ermitteln.
@@ -23,7 +23,6 @@ class DbCall():
       answer = answer["types"]
       return answer
 
-  @app.route("/get-entities-relations-by-entity", methods=['POST'])
   def searchForEntityRelationship(name, object_type) -> Dict[Text, Any]:
       """
       Verwendet Flask um zu einer bestimmten Entitaet alle relationships zu ermitteln.
@@ -37,7 +36,6 @@ class DbCall():
       results = answer["result"]
       return results
 
-  @app.route("/get-nodes-count", methods=['POST'])
   def searchNodeCount(object_type) -> Dict[Text, Any]:
       """
       Verwendet Flask um die Anzahl der Knoten eines bestimmten Objekttyps zu ermitteln
@@ -49,7 +47,6 @@ class DbCall():
       results = answer["result"]
       return results
 
-  @app.route("/semantic-search", methods=['POST'])
   def semanticSearch(searchquery) -> Dict[Text, Any]:
     """
     Verwendet Flask um eine semantische Suche durchzufuehren
@@ -62,7 +59,6 @@ class DbCall():
     results = answer["result"]
     return results
 
-  @app.route("/check-entity-exists", methods=['POST'])
   def validationPerson(name) -> bool:
     """
     Verwendet Flask um zu pruefen ob zu einem mitgegebenem Namen eine bestimmte Entitaet vorhanden ist.
@@ -75,7 +71,6 @@ class DbCall():
       return True
     return False
 
-  @app.route("/get-nodes-by-filter", methods=['POST'])
   def findNote(dispatcher: CollectingDispatcher, name):
     """
     Verwendet Flask um einen Knoten ueber einen mitgegeben Filter zu ermitteln

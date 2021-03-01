@@ -18,14 +18,17 @@ class ListOfObjecttype(Action):
     print("start action_list_of")
     object_type = tracker.get_slot("object_type")
     print(object_type)
+    number = tracker.get_slot("NUMBER")
+    print(number)
     attribute = tracker.get_slot("attribute")
     if (object_type == "ORG"):
       self.searchOrganizations(dispatcher, tracker)
     else: 
       if ((attribute is None) & (not(object_type is None))):
         answer =  DbCall.searchForEntitiy(object_type)
-        for x in answer[object_type]:
-            dispatcher.utter_message(x)
+        objects = []
+        objects = answer[object_type]
+        self.utter_objects(dispatcher, tracker, objects)
       else: 
         intent = tracker.latest_message["text"]
         SemanticSearch.searchSemanticSearchIntent(dispatcher, intent)
@@ -53,6 +56,20 @@ class ListOfObjecttype(Action):
       else: 
           ausgabe_entities = answer["ORGANIZATION"]
       print(ausgabe_entities)
-      for x in ausgabe_entities:
-          dispatcher.utter_message(text=f""+x)
+      self.utter_objects(dispatcher, tracker, ausgabe_entities)
+
+
+  def utter_objects(self, dispatcher: CollectingDispatcher, tracker: Tracker, objects):
+      count = tracker.get_slot("NUMBER")
+      count = int(count)
+      print(count)
+      if(len(objects) > 0):
+        if (count is None):
+          for x in answer[object_type]:
+            dispatcher.utter_message(text=f""+x)
+        else: 
+          while int(count) > 0:
+            dispatcher.utter_message(text=f""+objects[0])
+            objects.remove(objects[0])
+            count = count - 1
 

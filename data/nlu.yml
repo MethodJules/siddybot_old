@@ -300,41 +300,26 @@ nlu:
     - I would like to see some [people]{"entity": "object_type", "value": "PERSON"} who worked by [WIZO](ORG)
     - I would like to get suggested some [people]{"entity": "object_type", "value": "PERSON"} who worked by [WIZO](ORG)
     - Can you show me a list of some [people]{"entity": "object_type", "value": "PERSON"} who worked at [WIZO](ORG)
-
-
-- intent: list_of/residences
-  examples: |
-    - Tell me where the social workers lived {"entity": "object_type", "value": "CITY"}
-    - Could you show me some places where the social workers lived? {"entity": "object_type", "value": "CITY"}
-    - I would like to see some places where the social workers were. {"entity": "object_type", "value": "CITY"}
-    - In which citys lived the social workers? {"entity": "object_type", "value": "CITY"}
-    - Where lived the social workers?  {"entity": "object_type", "value": "CITY"}
+    - Show me [10]{"entity": "NUMBER", "value": 10} [people]{"entity": "object_type", "value": "PERSON"}
+    - Could you tell me [twenty]{"entity": "NUMBER", "value": 20} examples of [people]{"entity": "object_type", "value": "PERSON"}
+    - Show me some [people]{"entity": "object_type", "value": "PERSON"}
+    - I want to see [15]{"entity": "NUMBER", "value": 15} examples from your website
 
 - intent: list_of/organizations
   examples: |
-    - Could you tell me in which [ORG](object_type) worked the people?
-    - Show me in which [ORG](object_type) the social workers worked?
-    - Which [ORG](object_type) are saved on these website?
-    - [ORG](object_type), please
-    - I want to know some [ORG](object_type)
-    - Could you tell me some [ORG](object_type) in [Zurich](GPE)?
-    - Show me some [ORG](object_type) where [Ruth Barak](PERSON) was working
-    - Some [ORG](object_type) in [Germany](GPE)
-    - List some [ORG](object_type)
+    - Could you tell me in which [organizations]{"entity": "object_type", "value": "ORG"} worked the people?
+    - Show me in which [companys]{"entity": "object_type", "value": "ORG"} the social workers worked?
+    - Which [organizations]{"entity": "object_type", "value": "ORG"} are saved on these website?
+    - [Organizations]{"entity": "object_type", "value": "ORG"}, please
+    - I want to know [10]{"entity": "NUMBER", "value": 10} examples of [companies]{"entity": "object_type", "value": "ORG"}
+    - Could you tell me some [companys]{"entity": "object_type", "value": "ORG"} in [Zurich](GPE)?
+    - Show me [15]{"entity": "NUMBER", "value": 15} [organization](object_type) where [Ruth Barak]{"entity": "object_type", "value": "ORG"} was working
+    - Some [organizations]{"entity": "object_type", "value": "ORG"} in [Germany](GPE)
+    - List some [orgs]({"entity": "object_type", "value": "ORG"}
     - Could you show me some? 
+    - List [20]{"entity": "NUMBER", "value": 20} 
+    - List [30]{"entity": "NUMBER", "value": 30} from your website
 
-
-- intent:  search_function/search_with_chatbot
-  examples: |
-    - Looking for [person detail](searchtype)
-    - I am looking for [person detail](searchtype)
-    - Could you show me some [person detail](searchtype)?
-
-- intent: introduction
-  examples: |
-    - How can I search with you?
-    - Can you show me how I can search for informations?
-    - Show me how I can search with you
 
 - intent: questions_detail_person/birthday
   examples: |
@@ -639,7 +624,7 @@ nlu:
      - Was [Ruth Barak](PERSON) [married]{"entity": "attribute", "value": "spouse"}
      - Did [RuthBarak](PERSON) had a [husband]{"entity": "attribute", "value": "spouse"}?
      - Could yo tell me, if [Ruth Barak](PERSON) had [children](attribute)?
-     - I would be happy, if you can tell(PERSON) me if [Ruth Barak] had [children](attribute)
+     - I would be happy, if you can tell me if [Ruth Barak](PERSON) had [children](attribute)
      - Do you know if [Ruth Barak](PERSON) had a [job]{"entity": "attribute", "value": "title"}
      - Could you tell me, if [Ruth Barak](PERSON) had [siblings](attribute)?
 
@@ -661,6 +646,36 @@ nlu:
     - Was [Ruth Barak](PERSON) a [Jewess]{"entity": "RELIGION", "value": "Jewish"}
     - Could you tell me the if [Ruth Barak](PERSON) was a [christian]{"entity": "RELIGION", "value": "Christian"}
 
+- intent: information_search_with_chatbot
+  examples: |
+    - Which information can you search?
+    - What type of information I can search with you?
+    - What information can I look for with you?
+    - Can you tell me what information I can look for you with you?
+    - What can you give me information for?
+    - Could you tell me what kind of information you can give me for?
+
+- intent: how_search_with_chatbot
+  examples: |
+    - How can I search with you?
+    - What do I have to do to get the information?
+    - How can I get the information?
+    - How can I search for information with you?
+    - Can you show me how I can search for informations?
+    - Show me how I can search with you
+    - What do I have to do to look for information with you?
+
+- intent: ask_for_information_type
+  examples: |
+    - I want to know [something of people]{"entity": "informationtype", "value": "person-detail"}
+    - I like to know [something about organizations]{"entity": "informationtype", "value": "organization-detail"}
+    - [List of objects]{"entity": "informationtype", "value": "list-of"}
+    - Show me how I can search for [details of persons]{"entity": "informationtype", "value": "person-detail"}
+    - I would like to know [details about people]{"entity": "informationtype", "value": "person-detail"}
+    - Could you show me how I can get [details about organizations]{"entity": "informationtype", "value": "organization-detail"}
+    - Looking for [person detail]{"entity": "informationtype", "value": "person-detail"}
+    - I am looking for [person detail]{"entity": "informationtype", "value": "person-detail"}
+    - Could you show me some [person detail]{"entity": "informationtype", "value": "person-detail"}?
 
 - regex: year
   examples: |
@@ -703,7 +718,7 @@ nlu:
   examples: |
     - content
     - person detail
-
+    - chatbot
 
 - lookup: attribute
   examples: |

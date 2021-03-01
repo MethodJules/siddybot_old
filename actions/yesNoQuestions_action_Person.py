@@ -18,8 +18,9 @@ class YesNoQuestionsPersonAction(Action):
     print("start action_yes_no_questions")
     person = tracker.get_slot("PERSON")
     object_type = "PERSON"
+    print(person)
     person_exist = DbCall.validationPerson(person)
-    intent = tracker.latest_message(text)
+    intent = tracker.get_intent_of_latest_message()
     attribute = tracker.get_slot("attribute")
     if (person_exist == "false"):
       if (attribute is None):
@@ -30,8 +31,9 @@ class YesNoQuestionsPersonAction(Action):
     if (tracker.get_intent_of_latest_message() == "questionsYesNoPerson_attributes"):
       if (not(attribute is None)):
         answer = DbCall.searchForEntityRelationship(person, object_type)
+
         checked = "No"
-        for x in answer["entites-relationships"]:
+        for x in answer["entities_relations"]:
             if (x["rel"] == attribute):
                 checked = "Yes"
                 break
@@ -40,9 +42,11 @@ class YesNoQuestionsPersonAction(Action):
         SemanticSearch.searchSemanticSearchIntent(dispatcher, intent)
     elif (tracker.get_intent_of_latest_message() == "questionsYesNoPerson_connection_to_GPE"):
         value_gpe = tracker.get_slot("GPE")
+        print(value_gpe)
         answer = DbCall.searchForEntityRelationship(person, object_type)
+        print(answer)
         checked = "No"
-        for x in answer["entites-relationships"]:
+        for x in answer["entities_relations"]:
             if (x["ent2_text"] == value_gpe):
                 checked = "Yes"
                 break
@@ -60,7 +64,7 @@ class YesNoQuestionsPersonAction(Action):
         value_rel = tracker.get_slot("RELIGION")
         answer = DbCall.searchForEntityRelationship(person, object_type)
         checked = "No"
-        for x in answer["entites-relationships"]:
+        for x in answer["entities_relations"]:
             if (x["ent2_text"] == value_rel):
                 checked = "Yes"
                 break

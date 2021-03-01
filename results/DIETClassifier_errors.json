@@ -1,28 +1,78 @@
 [
   {
-    "text": "[Other familymember]other familymembers of Rachel Ellen",
+    "text": "Can you tell me in which city the headquarter of Organization of German Immigrants is",
     "entities": [
       {
-        "start": 20,
-        "end": 39,
-        "value": "other_family",
+        "start": 25,
+        "end": 45,
+        "value": "city_of_headquarters",
         "entity": "attribute"
       },
       {
-        "start": 43,
-        "end": 55,
-        "value": "Rachel Ellen",
-        "entity": "PERSON"
+        "start": 49,
+        "end": 82,
+        "value": "Organization of German Immigrants",
+        "entity": "ORG"
       }
     ],
     "predicted_entities": [
       {
-        "entity": "PERSON",
-        "start": 43,
-        "end": 55,
-        "confidence_entity": 0.9995090961456299,
-        "value": "Rachel Ellen",
+        "entity": "attribute",
+        "start": 25,
+        "end": 48,
+        "confidence_entity": 0.8172696828842163,
+        "value": "city the headquarter of",
         "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "ORG",
+        "start": 49,
+        "end": 82,
+        "confidence_entity": 0.966056227684021,
+        "value": "Organization of German Immigrants",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Who worked at at the Jewish National Party?",
+    "entities": [
+      {
+        "start": 4,
+        "end": 13,
+        "value": "employee_or_member_of",
+        "entity": "attribute"
+      },
+      {
+        "start": 21,
+        "end": 42,
+        "value": "Jewish National Party",
+        "entity": "ORG"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "attribute",
+        "start": 4,
+        "end": 16,
+        "confidence_entity": 0.6034597158432007,
+        "value": "worked at at",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "ORG",
+        "start": 21,
+        "end": 42,
+        "confidence_entity": 0.9974334836006165,
+        "value": "Jewish National Party",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "RELIGION",
+        "start": 21,
+        "end": 27,
+        "value": "Jewish",
+        "extractor": "RegexEntityExtractor"
       }
     ]
   }

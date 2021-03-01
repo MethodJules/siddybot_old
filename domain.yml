@@ -40,22 +40,14 @@ intents:
   - questions_detail_person
   - search_with_chatbot
   - details_of_organizations
-  - count_object_type
   - questionsYesNoPerson_connection_to_GPE
   - questionsYesNoPerson_connection_to_ORG
   - questionsYesNoPerson_attributes
   - questionsYesNoPerson_connection_to_RELIGION
-
-#https://rasa.com/docs/rasa/chitchat-faqs
- 
-forms:
-  person_form:
-    name:
-      - type: from_entity
-        entity: PERSON
-    attribute:
-      - type: from_entity
-        entity: attribute
+  - count_object_type
+  - how_search_with_chatbot
+  - ask_for_information_type
+  - information_search_with_chatbot
 
 entities:
   - maptype
@@ -83,6 +75,7 @@ entities:
   - CAUSE_OF_DEATH
   - GPE
   - ORG
+  - informationtype
 
 slots:
   maptype:
@@ -100,7 +93,6 @@ slots:
     type: categorical
     values:
       - content
-      - person detail
   object_type:
     type: categorical
     values:
@@ -192,8 +184,10 @@ slots:
     type: text
     influence_conversation: false
   NUMBER:
-    type: text
+    type: float
     influence_conversation: false
+    min_value: 0
+    max_value: 100000.0
   IDEOLOGY:
     type: text
     influence_conversation: false
@@ -215,8 +209,13 @@ slots:
   explained_add_person:
     type: bool
     influence_conversation: true
-  
-
+  informationtype:
+    type: categorical
+    values:
+      - person-detail
+      - organization-detail
+      - list-of
+    influence_conversation: true
   
 responses:
   utter_welcome:
@@ -453,6 +452,33 @@ responses:
 
   utter_shall_explain_add_entity:
   - text: "Shall I tell you how to create the entity?"
+
+  utter_information_of_website:
+  - text: "I can give you informations about the persons and the organizations which are saved at these website."
+
+  utter_types_of_information:
+  - text: "I can give you different types of informations: details about people, details of organizations and a list of objects of a certain type. What kind of information you want to know?"
+
+  utter_ask_person_is_known:
+  - text: "Do you know a person you would like information about?"
+
+  utter_ask_organization_is_known:
+  - text: "Do you know a organization you would like information about?"
+
+  utter_ask_for_a_list_of_person:
+  - text: "First ask \"List 10 persons of your website\" to get a selection of people"
+
+  utter_ask_for_a_list_of_organization:
+  - text: "At first ask \"List 10 organizations of your website\" to get a selection of organizations"
+
+  utter_explain_ask_for_person_details:
+  - text: "Now you can ask something like: When was ... born?, Show me the birthplace of ...!, Did ... had a spouse?"
+
+  utter_explain_ask_for_organization_details:
+  - text: "Now you can ask something like: Where was the headquarter of...?, Show me some members of ...?, Who was the leader of ...?"
+
+  utter_explain_ask_for_list_of_object_type:
+  - text: "You can ask something like \"Show me a list of people of your website\" or \"Could you tell me 10 organizations?\""
 
 actions:
   - action_query_knowledge_base

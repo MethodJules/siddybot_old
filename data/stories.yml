@@ -358,6 +358,75 @@ stories:
     - intent: questionsYesNoPerson_attributes
   - action: action_yes_no_questions_person
 
+- story: search with chatbots person details without list
+  steps: 
+  - intent: information_search_with_chatbot
+  - action: utter_information_of_website
+  - intent: how_search_with_chatbot
+  - action: utter_types_of_information
+  - intent: ask_for_information_type
+    entities:
+    - informationtype: "person-detail"
+  - action: utter_ask_person_is_known
+  - intent: agree
+  - action: utter_explain_ask_for_person_details
 
+- story: search with chatbots person details with list
+  steps: 
+  - intent: information_search_with_chatbot
+  - action: utter_information_of_website
+  - intent: how_search_with_chatbot
+  - action: utter_types_of_information
+  - intent: ask_for_information_type
+    entities:
+    - informationtype: "person-detail"
+  - action: utter_ask_person_is_known
+  - intent: denied
+  - action: utter_ask_for_a_list_of_person
+  - intent: accept
+  - intent: list_of
+  - action: action_list_of
+  - action: utter_explain_ask_for_person_details
+
+- story: search with chatbots organizations details without list
+  steps: 
+  - intent: information_search_with_chatbot
+  - action: utter_information_of_website
+  - intent: how_search_with_chatbot
+  - action: utter_types_of_information
+  - intent: ask_for_information_type
+    entities:
+    - informationtype: "organization-detail"
+  - action: utter_ask_organization_is_known
+  - intent: agree
+  - action: utter_explain_ask_for_organization_details
+
+- story: search with chatbots organizations details with list
+  steps: 
+  - intent: information_search_with_chatbot
+  - action: utter_information_of_website
+  - intent: how_search_with_chatbot
+  - action: utter_types_of_information
+  - intent: ask_for_information_type
+    entities:
+    - informationtype: "organization-detail"
+  - action: utter_ask_organization_is_known
+  - intent: denied
+  - action: utter_ask_for_a_list_of_organization
+  - intent: accept
+  - intent: list_of
+  - action: action_list_of
+  - action: utter_explain_ask_for_organization_details
+
+- story: search with chatbots for lists of
+  steps: 
+  - intent: information_search_with_chatbot
+  - action: utter_information_of_website
+  - intent: how_search_with_chatbot
+  - action: utter_types_of_information
+  - intent: ask_for_information_type
+    entities:
+    - informationtype: "list-of"
+  - action: utter_explain_ask_for_list_of_object_type
 
 
