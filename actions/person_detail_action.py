@@ -1,6 +1,7 @@
 from typing import Any, Text, Dict, List
 #
 from rasa_sdk import Action, Tracker
+from rasa_sdk.events import SlotSet
 from rasa_sdk.executor import CollectingDispatcher
 import json
 from actions.semantic_search import SemanticSearch
@@ -53,6 +54,7 @@ class PersonDetailAction(Action):
   def searchForEntity(self, dispatcher: CollectingDispatcher, tracker: Tracker, name, attribute):
       answer = DbCall.searchForEntityRelationship(name, "PERSON")
       entities = answer["entities_relations"]
+      print(answer)
       return_ok = False
       if(attribute == "date_of_birth"):
           return_ok = self.utter_birthday(dispatcher, name, entities)
@@ -115,8 +117,9 @@ class PersonDetailAction(Action):
             intent = tracker.get_intent_of_latest_message()
             SemanticSearch.searchSemanticSearchIntent(dispatcher, intent)
           else:
-            SemanticSearch.searchSemanticSearchAttribute(dispatcher, entity_person, abfrage_attribute)
-
+            SemanticSearch.searchSemanticSearchAttribute(dispatcher, name, attribute)
+      else:
+          return SlotSet("entity_not_found", False)
       #self.findNote(dispatcher, name)
 
   def searchForEntitesFromTheNode(self, nodeID):
@@ -424,7 +427,7 @@ class PersonDetailAction(Action):
       dispatcher.utter_message(text=f""+ name + " was a member of: " + GeneralMethods.liste_ausgeben(organizations))
     return checked
 
-  def utter_top_member(self, dispatcher: CollectingDispatcher, name, entities, abfrage_attribute) -> bool:
+  def utter_top_member(self, dispatcher: CollectingDispatcher, name, entities) -> bool:
     checked = False
     organizations = []
     for x in entities:

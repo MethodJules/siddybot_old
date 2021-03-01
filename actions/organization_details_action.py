@@ -70,6 +70,8 @@ class OrganizationDetailsAction(Action):
             checked = True
       if (checked == False):
         SemanticSearch.searchSemanticSearchAttribute(dispatcher, name, attribute)
+      else: 
+          return SlotSet("entity_not_found", False)
 
   def utter_city_of_headquarter(self, dispatcher: CollectingDispatcher, name, entities) -> bool:
     checked = False

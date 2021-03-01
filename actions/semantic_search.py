@@ -2,6 +2,7 @@ from typing import Any, Text, Dict, List
 #
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
+from rasa_sdk.events import SlotSet
 from flask import Flask, render_template, request, jsonify, Response
 import requests
 import json
@@ -44,6 +45,7 @@ class SemanticSearch():
         for x in y["sents"]:
           dispatcher.utter_message(text=f""+x)
         GeneralMethods.linkErstellen(dispatcher, y["node_title"])
+        return SlotSet("entity_not_found", False)
     else: 
-      dispatcher.utter_message(text=f"I'm sorry but I don't have a answer for your question. Maybe the mistake is that the entity is missing.")
-      dispatcher.utter_message(text=f"Shall I tell you how to create the entity?")
+      return SlotSet("entity_not_found", True)
+      

@@ -19,7 +19,7 @@ class ListOfObjecttype(Action):
     object_type = tracker.get_slot("object_type")
     print(object_type)
     attribute = tracker.get_slot("attribute")
-    if (object_type == "ORGANIZATION"):
+    if (object_type == "ORG"):
       self.searchOrganizations(dispatcher, tracker)
     else: 
       if ((attribute is None) & (not(object_type is None))):
@@ -36,7 +36,7 @@ class ListOfObjecttype(Action):
       Wenn der Anwender in dem Intent eine Person, eine Stadt oder ein Land mitgibt, dann werden nur die Organisationen zurueck gegeben,
       die auf irgendeine Art und Weise mit der Person, der Stadt oder dem Land verbunden sind.
       """
-      answer = DbCall.searchForEntitiy(DbCall, "ORGANIZATION")
+      answer = DbCall.searchForEntitiy("ORGANIZATION")
       person = tracker.get_slot("PERSON")
       gpe = tracker.get_slot("GPE")
       ausgabe_entities = []

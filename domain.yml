@@ -121,6 +121,7 @@ slots:
       - STATE_OR_PROVINCE
       - CAUSE_OF_DEATH
       - ORGANIZATION
+      - ORG
     influence_conversation: false
   mention:
     type: text
@@ -208,9 +209,12 @@ slots:
   ORG:
     type: text
     influence_conversation: false
-  explained_add_entity:
+  entity_not_found:
     type: bool
-    influence_conversation: false
+    influence_conversation: true
+  explained_add_person:
+    type: bool
+    influence_conversation: true
   
 
   
@@ -444,6 +448,12 @@ responses:
   utter_should_show_entity:
   - text: "Shall I show you how to create entities?"
 
+  utter_data_not_found:
+  - text: "I'm sorry but I don't have a answer for your question. Maybe the mistake is that the entity or relationship is missing."
+
+  utter_shall_explain_add_entity:
+  - text: "Shall I tell you how to create the entity?"
+
 actions:
   - action_query_knowledge_base
   - action_person_detail
@@ -452,6 +462,9 @@ actions:
   - action_organization_details
   - action_count_object_type
   - action_yes_no_questions_person
+  - action_set_exlpained_add_person
+
+
 
 session_config:
   session_expiration_time: 60

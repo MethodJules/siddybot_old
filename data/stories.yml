@@ -67,6 +67,7 @@ stories:
   - action: utter_please_login
   - intent:  confirm
   - action: utter_add_person
+  - action: action_set_exlpained_add_person
   - intent:  confirm
   - action: utter_add_person_name
   - intent:  accept
@@ -250,39 +251,113 @@ stories:
   - intent: details_of_organizations
   - action: action_organization_details
 
-- story: questions persons
+- story: questions persons + explain add missing person
   steps:
   - intent: list_of
   - action: action_list_of
   - intent: questions_detail_person
   - action: action_person_detail
+  - slot_was_set:
+    - entity_not_found: true
+  - action: utter_data_not_found
+  - slot_was_set:
+    - explained_add_person: false
+  - action: utter_shall_explain_add_entity
+  - or: 
+    - intent: accept
+    - intent: agree
+  - action: utter_add_person_check_account
+  - intent:  denied
+  - action: utter_user_account_menu
+  - intent:  agree
+  - action: utter_create_account
+  - intent:  accept
+  - action: utter_confirm_creation
+  - intent:  agree
+  - action: utter_please_login
+  - intent:  confirm
+  - action: utter_add_person
+  - action: action_set_exlpained_add_person
+  - intent:  confirm
+  - action: utter_add_person_name
+  - intent:  accept
+  - action: utter_add_person_biography
+  - intent:  accept
+  - action: utter_add_person_family
+  - intent:  accept
+  - action: utter_add_person_chronic
+  - intent:  accept
+  - action: utter_add_person_network
+  - intent:  accept
+  - action: utter_add_person_domicil
+  - intent:  accept
+  - action: utter_add_person_bibliography
+  - intent:  accept
+  - action: utter_add_person_picture
+  - intent:  accept
+  - action: utter_add_person_data
+  - intent:  accept   
+  - action: utter_show_person_preview
+  - intent:  save_created_person
+  - action:  utter_view_created_person
+  - intent:  thanks
+  - action: utter_answer_thanks
+    
+- story: questions persons + entity not found but explained
+  steps:
+  - intent: list_of
+  - action: action_list_of
+  - intent: questions_detail_person
+  - action: action_person_detail
+  - slot_was_set:
+    - entity_not_found: true
+  - action: utter_data_not_found
+  - slot_was_set:
+    - explained_add_person: true
 
-- story: count objects
+- story: questions persons + entity not found + not explain
+  steps:
+  - intent: list_of
+  - action: action_list_of
+  - intent: questions_detail_person
+  - action: action_person_detail
+  - slot_was_set:
+    - entity_not_found: true
+  - action: utter_data_not_found
+  - slot_was_set:
+    - explained_add_person: false
+  - action: utter_shall_explain_add_entity
+  - intent: denied
+
+- story: count + list objects
   steps: 
   - intent: count_object_type
   - action: action_count_object_type
+  - intent: list_of
+  - action: action_list_of
 
-- story: search for details of a person GPE
+- story: details and yes/no questions persons
   steps:
-  - intent: questionsYesNoPerson_connection_to_GPE
+  - intent: list_of
+  - action: action_list_of
+  - intent: questions_detail_person
   - action: action_person_detail
+  - or:
+    - intent: questionsYesNoPerson_connection_to_RELIGION
+    - intent: questionsYesNoPerson_connection_to_ORG
+    - intent: questionsYesNoPerson_connection_to_GPE
+    - intent: questionsYesNoPerson_attributes
+  - action: action_yes_no_questions_person
 
-- story: search for details of a person RELIGION
+- story: yes or no questions
   steps:
-  - intent: questionsYesNoPerson_connection_to_RELIGION
-  - action: action_person_detail
+  - or:
+    - intent: questionsYesNoPerson_connection_to_RELIGION
+    - intent: questionsYesNoPerson_connection_to_ORG
+    - intent: questionsYesNoPerson_connection_to_GPE
+    - intent: questionsYesNoPerson_attributes
+  - action: action_yes_no_questions_person
 
-- story: search for details of a person ORG
-  steps:
-  - intent: questionsYesNoPerson_connection_to_ORG
-  - action: action_person_detail
- 
-- story: search for details of a person attribute
-  steps:
-  - intent: questionsYesNoPerson_connection_to_RELIGION
-  - action: action_person_detail
-
-#- story: combination of list and details search
 
 
 
