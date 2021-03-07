@@ -46,18 +46,18 @@ class ListOfObjecttype(Action):
       person = tracker.get_slot(Constants.slot_person)
       gpe = tracker.get_slot(Constants.slot_place)
       ausgabe_entities = []
-      if ((not(person is None)) | (not(gpe is None))):
-        for x in answer[Constants.organization]:
-          entities = DbCall.searchForEntityRelationship(x, Constants.organization)
-          entities = entities[Constants.entities_relation]
-          for y in entities:
-              if (y[Constants.ent_text] == x):
-                if ((not(person is None)) & (y[Constants.ent2_ner] == Constants.slot_person) & (y[Constants.ent2_text] == person)):
-                  ausgabe_entities.append(x)
-                elif ((not(person is None)) & ((y[Constants.ent2_ner] == Constants.slot_country)|(y[Constants.ent2_ner] == Constants.slot_city)) & ((y[Constants.ent2_text] == gpe)|(y[Constants.ent2_text] == gpe))):
-                  ausgabe_entities.append(x)
-      else: 
-          ausgabe_entities = answer[Constants.organization]
+      #if ((not(person is None)) | (not(gpe is None))):
+      #  for x in answer[Constants.organization]:
+      #    entities = DbCall.searchForEntityRelationship(x, Constants.organization)
+      #    entities = entities[Constants.entities_relation]
+      #    for y in entities:
+      #        if (y[Constants.ent_text] == x):
+      #          if ((not(person is None)) & (y[Constants.ent2_ner] == Constants.slot_person) & (y[Constants.ent2_text] == person)):
+      #            ausgabe_entities.append(x)
+      #          elif ((not(person is None)) & ((y[Constants.ent2_ner] == Constants.slot_country)|(y[Constants.ent2_ner] == Constants.slot_city)) & ((y[Constants.ent2_text] == gpe)|(y[Constants.ent2_text] == gpe))):
+      #            ausgabe_entities.append(x)
+      #else: 
+      ausgabe_entities = answer[Constants.organization]
       print(ausgabe_entities)
       self.utter_objects(dispatcher, tracker, ausgabe_entities)
 

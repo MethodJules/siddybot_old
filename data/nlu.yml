@@ -27,6 +27,7 @@ nlu:
     - Thank you
     - Thanks a lot
     - ok, thanks
+    - thanks for the information
 
 - intent: agree
   examples: |
@@ -271,11 +272,11 @@ nlu:
     - I pushed the save button. 
     - Done.
 
-#- intent:  search_function/use_custom_search_function
-#  examples: |
-#    - I want to do a custom search.
-#    - I search a custom search function.
-#    - Where can I do a custom search?
+- intent:  search_function/use_custom_search_function
+  examples: |
+    - I want to do a custom search.
+    - I search a custom search function.
+    - Where can I do a custom search?
 
 - intent: count_object_type
   examples: |
@@ -329,30 +330,36 @@ nlu:
     - Tell me in which year was the  [birthday]{"entity": "attribute", "value": "date_of_birth"} of [Esther Apfelberg](PERSON)
     - I would like to know when the [birthday]{"entity": "attribute", "value": "date_of_birth"} of [Esther Apfelberg](PERSON) was
     - Can you tell me the [birthday]{"entity": "attribute", "value": "date_of_birth"} of [Esther Apfelberg](PERSON)?
-    - When was [Esther Apfelberg](PERSON) [was born]{"entity": "attribute", "value": "date_of_birth"}?  
+    - [When was [Esther Apfelberg](PERSON) was born]{"entity": "attribute", "value": "date_of_birth"}?  
     - Tell me her [birthday]{"entity": "attribute", "value": "date_of_birth"}
     - When is his [birthday]{"entity": "attribute", "value": "date_of_birth"}?
     - I would like to know his [birthday]{"entity": "attribute", "value": "date_of_birth"}
     - When was the [birthday]{"entity": "attribute", "value": "date_of_birth"} of him?
+    - Please show me [Max Mustermann](PERSON)'s [birthday]{"entity": "attribute", "value": "date_of_birth"}
+    - Tell me in which year was the  [birthday]{"entity": "attribute", "value": "date_of_birth"} of [Esther Apfelberg](PERSON)
+    - I would like to know when the [birthday]{"entity": "attribute", "value": "date_of_birth"} of [Esther Apfelberg](PERSON) was
+    - Can you tell me the [birthday]{"entity": "attribute", "value": "date_of_birth"} of [Esther Apfelberg](PERSON)?
 
 - intent: questions_detail_person/deathday
   examples: |
     - When was the [deathday]{"entity": "attribute", "value": "date_of_death"} of [Esther Apfelberg](PERSON)?
-    - Could you tell me when [Ruth Barak](PERSON) [died]{"entity": "attribute", "value": "date_of_death"}?
+    - Could you tell me [when [Ruth Barak](PERSON) died]{"entity": "attribute", "value": "date_of_death"}?
     - Show me the [deathday]{"entity": "attribute", "value": "date_of_death"} of [Benjamin Jonas](PERSON)?
     - On which [day died]{"entity": "attribute", "value": "date_of_death"}  [Benjamin Jonas](PERSON)? 
     - When was the [deathday]{"entity": "attribute", "value": "date_of_death"} of [Esther Apfelberg](PERSON)?
     - Could you show me the [deathday]{"entity": "attribute", "value": "date_of_death"} of her?
     - When was his [deathday]{"entity": "attribute", "value": "date_of_death"}?
-    - When did [Benjamin Jonas](PERSON) [died]{"entity": "attribute", "value": "date_of_death"}?
+    - [Benjamin Jonas](PERSON)'s [day of death]{"entity": "attribute", "value": "date_of_death"}
+    - [When did [Benjamin Jonas](PERSON) died]{"entity": "attribute", "value": "date_of_death"}?
     - [When was the death]{"entity": "attribute", "value": "date_of_death"} of [Benjamin Jonas](PERSON)?
 
 - intent: questions_detail_person/death_place
   examples: |
-    - Where did [Ruth Barak](PERSON) [died]{"entity": "attribute", "value": "death_place"}?
-    - Show me where [Benjamin Jonas](PERSON) [died]{"entity": "attribute", "value": "death_place"}
+    - [Where did [Ruth Barak](PERSON) died]{"entity": "attribute", "value": "death_place"}?
+    - Show me [where [Benjamin Jonas](PERSON) died]{"entity": "attribute", "value": "death_place"}
     - Where was the [death_place]{"entity": "attribute", "value": "death_place"} of [Rachel Ellern](PERSON)?
-    - Where did he [died]{"entity": "attribute", "value": "death_place"}?
+    - [Where did he died]{"entity": "attribute", "value": "death_place"}?
+    - [Where did she died]{"entity": "attribute", "value": "death_place"}?
     - Could you show me his [death_place]{"entity": "attribute", "value": "death_place"}?
     
 - intent: questions_detail_person/country_of_death
@@ -365,47 +372,44 @@ nlu:
 
 - intent: questions_detail_person/city_of_death
   examples: |
-    - What is the name of the city where [Irene Gaster](PERSON) [died]{"entity": "attribute", "value": "city_of_death"}?
+    - What is the [name of the city where [Irene Gaster](PERSON) died]{"entity": "attribute", "value": "city_of_death"}?
     - [City of death]{"entity": "attribute", "value": "city_of_death"} of [Ruth Barak](PERSON), please 
-    - Show me in which city [Irene Gaster](PERSON) [die]{"entity": "attribute", "value": "city_of_death"}? 
-    - In which city [Else Cohn](PERSON) [died]{"entity":"attribute","value":"city_of_death"}?
+    - Show me in [which city [Irene Gaster](PERSON) die]{"entity": "attribute", "value": "city_of_death"}? 
+    - In [which city [Else Cohn](PERSON) died]{"entity":"attribute","value":"city_of_death"}?
     - In which [city he died]{"entity": "attribute", "value": "city_of_death"}?
     - Could you tell me in which [city she died]{"entity": "attribute", "value": "city_of_death"}?
 
 - intent: questions_detail_person/city_of_birth
   examples: |
-    - What is the [birth town]{"entity": "attribute", "value": "city_of_birth"} [Natalie Jarecki](PERSON)?
+    - What is the [birthtown]{"entity": "attribute", "value": "city_of_birth"} [Natalie Jarecki](PERSON)?
     - Show me the [city of birth]{"entity": "attribute", "value": "city_of_birth" } of [Natalie Jarecki](PERSON)
-    - Could you tell me where [Natalie Jarecki](PERSON) [was born]{"entity": "attribute", "value": "city_of_birth" }?
-    - I would like to know in which city [Esther Apfelberg](PERSON) [was born]{"entity":"attribute","value":"city_of_birth"}
-    - Tell me in which year was the  [birthday]{"entity": "attribute", "value": "date_of_birth"} of [Esther Apfelberg](PERSON)
-    - I would like to know when the [birthday]{"entity": "attribute", "value": "date_of_birth"} of [Esther Apfelberg](PERSON) was
-    - Can you tell me the [birthday]{"entity": "attribute", "value": "date_of_birth"} of [Esther Apfelberg](PERSON)?
-    - Where is the [birth town]{"entity": "attribute", "value": "city_of_birth"}?
+    - Could you tell me [where [Natalie Jarecki](PERSON) was born]{"entity": "attribute", "value": "city_of_birth" }?
+    - I would like to know in [which city [Esther Apfelberg](PERSON) was born]{"entity":"attribute","value":"city_of_birth"}
+    - Where is the [birthtown]{"entity": "attribute", "value": "city_of_birth"}?
     - Show me his [city of birth]{"entity": "attribute", "value": "city_of_birth" }
 
 - intent: questions_detail_person/country_of_birth
   examples: |
-    - In which [country]{"entity": "attribute", "value": "country_of_birth"} was [Natalie Jarecki](PERSON) born? 
-    - Show me the country where [Irene Gaster](PERSON) [was born]{"entity": "attribute", "value": "city_of_birth"} 
+    - In which [country was [Natalie Jarecki](PERSON) born]{"entity": "attribute", "value": "country_of_birth"}? 
+    - Show me the [country where [Irene Gaster](PERSON) was born]{"entity": "attribute", "value": "city_of_birth"} 
     - [Country of birth]{"entity": "attribute", "value": "country_of_birth"} of [Benjamin Jonas](PERSON)
     - Could you tell me the [country of birth]{"entity": "attribute", "value": "country_of_birth"}?
     - I liked to know in which [country he was born]{"entity": "attribute", "value": "country_of_birth"}
 
 - intent: questions_detail_person/birthplace
   examples: |
-    - Where was [Natalie Jarecki](PERSON) [born]{"entity": "attribute", "value": "birthplace"}? 
-    - Could you show me, where [Irene Gaster](PERSON) [was born]{"entity": "attribute", "value": "birthplace"}?
+    - [Where was [Natalie Jarecki](PERSON) born]{"entity": "attribute", "value": "birthplace"}? 
+    - Could you show me, [where [Irene Gaster](PERSON) was born]{"entity": "attribute", "value": "birthplace"}?
     - What is the [birthplace]{"entity": "attribute", "value": "birthplace"} of [Natalie Jarecki](PERSON)?
     - Show me the [place of birth]{"entity": "attribute", "value": "birthplace"} of [Irene Gaster](PERSON)
-    - Where was [Esther Apfelberg](PERSON) [born]{"entity":"attribute","value":"birthplace"}?
+    - [Where was [Esther Apfelberg](PERSON) born]{"entity":"attribute","value":"birthplace"}?
     - Could you tell me where the [birthplace]{"entity": "attribute", "value": "birthplace"} is?
     - I liked to know the [birthplace]{"entity": "attribute", "value": "birthplace"} of her
     - [birthplace]{"entity": "attribute", "value": "birthplace"}, please
 
 - intent: questions_detail_person/cause_of_death
   examples: |
-    - Why did [Esther Apfelberg](PERSON) [die]{"entity": "attribute", "value": "cause_of_death"}?
+    - [Why did [Esther Apfelberg](PERSON) die]{"entity": "attribute", "value": "cause_of_death"}?
     - Could you show me the [cause of death]{"entity": "attribute", "value": "cause_of_death"} of [Natalie Jarecki](PERSON)
     - [Cause of death]{"entity": "attribute", "value": "cause_of_death"} of [Irene Gaster](PERSON), please
     - What was the [cause of death]{"entity": "attribute", "value": "cause_of_death"} ?
@@ -425,6 +429,8 @@ nlu:
     - Where did [Rachel Ellern](PERSON) [lived]{"entity":"attribute","value":"residences"}? 
     - I liked to know where she [lived]{"entity":"attribute","value":"residences"}
     - I would be happy if you tell me where he [lived]{"entity":"attribute","value":"residences"}
+    - Where was the [residence]{"entity": "attribute", "value": "residences"} of [Benjamin Jonas](PERSON)
+    - Where was the [home]{"entity": "attribute", "value": "residences"} of [Benjamin Jonas](PERSON)
 
 - intent: questions_detail_person/cities_of_residence
   examples: |
@@ -456,7 +462,8 @@ nlu:
     - Who were the [children]{"entity":"attribute","value":"children"} of [Rachel Ellern](PERSON)
     - Could you show me the [children]{"entity":"attribute","value":"children"} of [Rachel Ellern](PERSON)
     - Tell me who were the [children]{"entity":"attribute","value":"children"} of [Rachel Ellern](PERSON)
-
+    - What are the names of the [children](attribute) of [Benjamin Jonas](PERSON)?
+    - Name the [children](attribute) of [Rachel Ellen](PERSON)
 - intent: questions_detail_person/spouse
   examples: |
     - Who was the [spouse]{"entity": "attribute", "value": "spouse"} of [Rachel Ellern](PERSON)?
@@ -465,6 +472,10 @@ nlu:
     - Please, show me the [spouse]{"entity": "attribute", "value": "spouse"} of [Rachel Ellen](PERSON)
     - I want to know the name of the [spouse]{"entity":"attribute","value":"spouse"} of [Esther Apfelberg](PERSON)
     - Who was the [husband]{"entity":"attribute","value":"spouse"} of [Esther Apfelberg](PERSON)?
+    - To whom was [Benjamin Jonas](PERSON) [married]{"entity": "attribute", "value": "spouse"}?
+    - To whom?
+    - Who was the [spouse](attribute)?
+    - Please show me the [spouse](attribute)
   
 - intent: questions_detail_person/other_family
   examples: |
@@ -554,6 +565,9 @@ nlu:
     - To what [religion](attribute) did [Beate Berger] belong to?
     - I want to know [something]{"entity":"attribute","value":"biographie"} of her
     - Please show me the [biographie]{"entity":"attribute","value":"biographie"} of [Ruth Barak](PERSON)
+    - Tell me [something]{"entity":"attribute","value":"biographie"} about [Ruth Barak](PERSON)
+    - Can you give me [some information about]{"entity":"attribute","value":"biographie"} about [Ruth Barak](PERSON)
+    - [What can you tell me about]{"entity":"attribute","value":"biographie"} of [Ruth Barak](PERSON)
 
 
 - intent: details_of_organizations/city_of_headquarter
@@ -648,7 +662,7 @@ nlu:
 - intent: questionsYesNoPerson_attributes
   examples: |
      - Did [Ruth Barak](PERSON) had a [spouse](attribute)?
-     - Was [Ruth Barak](PERSON) [married]{"entity": "attribute", "value": "spouse"}
+     - Was [Ruth Barak](PERSON) [married]{"entity": "attribute", "value": "spouse"}?
      - Did [RuthBarak](PERSON) had a [husband]{"entity": "attribute", "value": "spouse"}?
      - Could yo tell me, if [Ruth Barak](PERSON) had [children]{"entity": "attribute", "value": "children"}?
      - I would be happy, if you can tell me if [Ruth Barak](PERSON) had [children]{"entity": "attribute", "value": "children"}
@@ -656,6 +670,8 @@ nlu:
      - Could you tell me, if [Beate Berger](PERSON) had [siblings]{"entity": "attribute", "value": "siblings"}?
      - Did she had [siblings]{"entity": "attribute", "value": "siblings"}?
      - I like to know if he had a [spouse](attribute)
+     - Was she part of any [religion](attribute)?
+     - Could you tell me if she had [children](attribute)
 
 - intent: questionsYesNoPerson_connection_to_GPE
   examples: | 
@@ -728,6 +744,8 @@ nlu:
     - Show me how I can search with you
     - What do I have to do to look for information with you?
     - How can I serach for those information?
+    - How can I search for informations with you?
+    - How can I ask you questions?
 
 - intent: ask_for_information_type
   examples: |
@@ -829,6 +847,19 @@ nlu:
     - Christian
     - orthodox
 
+- synonym: residences
+  examples: |
+    - home
+    - residence
+    - domiciles
+    - domicil
+
+- synonym: religion
+  examples: |
+    - confession
+    - religions
+
+
 - synonym: Jewish
   examples: |
     - jewish
@@ -853,6 +884,10 @@ nlu:
     - scholar
     - pupil
     - study
+
+- synonym: die
+  examples: |
+    - died
 
 - synonym: death_place
   examples: |
@@ -913,6 +948,7 @@ nlu:
     - careers
     - trades
     - professions
+    - occupation
 
 - synonym: alternate_name
   examples: |
@@ -946,6 +982,10 @@ nlu:
     - informations
     - infos
 
+- synonym: biographie
+  examples: |
+    - something
+
 - synonym: ORGANIZATION
   examples: |
     - organization
@@ -971,6 +1011,8 @@ nlu:
     - combine
     - congregation
     - confederation
+    - organisation
+    - organisations
 
 - synonym: spouse
   examples: |
@@ -993,6 +1035,9 @@ nlu:
   examples: |
     - office
     - offices
+    - main spot
+    - main
+    - headquarters
 
 - synonym: '1'
   examples: |
@@ -1073,3 +1118,557 @@ nlu:
 - synonym: '20'
   examples: |
     - twenty
+
+- lookup: PERSON
+  examples: |
+    - Heinrich Zwi Schupler
+    - Sarah Silbermann
+    - Brit Haolim
+    - Betty nee Goldschmidt
+    - Artur Biram
+    - Beate Berger
+    - Yakir Aliyat Hanoar
+    - Uriel Yashubi
+    - Fanny Baer
+    - Ollendorff
+    - Juden
+    - Max Kreuzberger
+    - Henrietta Szold
+    - Georg Landauer
+    - Kartell Juedischer Verbindungen
+    - Ha-Poel Ha-Zair
+    - Aliyah Hadasha
+    - Hans Lubinski
+    - Alfred Lubinski
+    - Gerda Lubinski
+    - Hilda Cohn
+    - David Senator
+    - Judah Magnes
+    - Leopold Jehuda Rothschild
+    - Jochanan Hugo Rothschild Moses Max Rothschild
+    - Emil Rothschild
+    - Seligmann Pinchas Rothschild
+    - Emma Ernestine Rothschild
+    - Ziporah Rothschild
+    - Zvi Hermon Ostfeld
+    - Yitzhak Ben Aharon
+    - Carl Frankenstein
+    - Siegfried Rothschild
+    - Antwerpen Siegfried
+    - Rose Rothschild
+    - Franz Hainbach Heinebach
+    - Ernst Ullmann
+    - Ernst Rund
+    - Siegfried Hirsch
+    - Jaemann Furthermore
+    - Lili Treiser
+    - Mordechai Brachiahu
+    - Abba Yaakov HaCohen Borochov
+    - Hevel Yaakov
+    - Aharon Michal Brachiahu
+    - Sonia Belkind
+    - M. Asia M. Ben-Yaakov M. Knights
+    - Hanna Brachiahu
+    - Jenny Aloni
+    - Moritz Rosenbaum
+    - Jenny Rosenbaum
+    - Adass Iisroel
+    - Esra Aloni
+    - Dovrat Ha-Poelat
+    - Max Brod
+    - Heinrich Boll
+    - Annette von Droste-Hulshoff
+    - Bruria Avneri
+    - Rachel Heymann
+    - Frieda Weinreich
+    - Zwi Avneri
+    - Yael Snapir
+    - Shay Avneri
+    - Siddy Wronsky
+    - Zentralwohlfahrtsstelle der Juden
+    - Alice Salomon
+    - Hertha Neufeld 
+    - Judische Kinderhilfe
+    - Siddy Wronskys
+    - Hans Neufeld
+    - Mirjam Hoffert
+    - Hashomer Hatzair
+    - Johann Heinrich Pestalozzi
+    - Zvi Peretz Chajes
+    - Anna Freud
+    - Siegfried Bernfeld
+    - Janusz Korczak
+    - Mordechai Brachyahu
+    - Yaacov Horani
+    - Dorothy Filene
+    - Verein Jugendheim Berlin-Charlottenburg
+    - Anna von Gierke
+    - Hanna Hochmann
+    - Hachshara
+    - Sophia Ragolsky
+    - Friedrich Ollendorff
+    - Zipora Bloch
+    - Hedwig Gellner
+    - Julius Gellner
+    - Rudolf Gellner 
+    - Thea Nathan
+    - Max Nathan
+    - Dina Liberman
+    - Rachel Ben-Zvi
+    - Deborah Dora Frankel-Eliner
+    - Siegmund Aviezri Fraenkel
+    - Charlotte Haia
+    - Abraham Adolf Halevi
+    - Yoel Ogen Frankel
+    - Paula Tirza Levinger
+    - Eliezer Eliner
+    - Fanny Ollendorff
+    - Joseph Baer
+    - Rosalie Baer
+    - Helene Barth
+    - Frieda Duensing
+    - Beth Shemesh
+    - Hilde Lotan
+    - Fritz Itzhak Baer
+    - Adolf Schmidt
+    - Hermann Struck
+    - Yaakov Steinhardt
+    - Mordechai Ardon
+    - Gershom Scholem
+    - Ernst Simon
+    - Siegfried Lehmann
+    - Albert Einstein
+    - Zessi Rosenbluth
+    - Felix Rosenbluth
+    - Kibbutz Geneygar
+    - Regina Schachter
+    - Martin Bubers
+    - Hava Danziger
+    - Paul Baerwald
+    - Frieda Hanf-Weinreich
+    - Anni Samuelsdorf Ismar Weinreich
+    - Max Weinreich
+    - Shaul Weinreich
+    - Rachel Lurie
+    - Otto Hanf
+    - Palestine Frieda
+    - Hilde Hochwald Alexander-Katz
+    - Bertha Pappenheim
+    - Moshe Shapira 
+    - Ernst Alexander Katz
+    - Miriam Itzkovitz
+    - Stela Kraemer-Rosenkranz
+    - Paula Eskeles 
+    - Otto Eskeles
+    - Chava Magnes
+    - David Johnny Magnes
+    - Felix Danziger
+    - Yehuda Leyb Magness
+    - Regina Schaechter
+    - Lilli Popper
+    - Edward Bernstein
+    - Walter Zadek
+    - Jetty Zadek 
+    - Kathe Kollwitz
+    - Siegfried Lehmann Martin Buber Berl Katzenelson
+    - Zalman Shazar
+    - Histadruth Imahot Ovdot
+    - Natalie Jarecki
+    - Kibbutz Mizra
+    - Hilde Jarecki
+    - Sophie Friedlander
+    - Naomi Schattner
+    - Hilde Blumenfeld
+    - Yitzhak Schattner
+    - Nadia Stein
+    - Eugenie Schwarzwald
+    - Andor Ornstein
+    - Anitta Muller-Cohen
+    - Hanni Ullmann
+    - Ernst Menachem Ullmann
+    - Hugo Bergmann
+    - Neve Hannah
+    - Maya Rosenberg
+    - Jessy Sampter
+    - Johanna Kaphan
+    - Hanni Ullman
+    - Kiryat Gat Neve Hannah
+    - Esther Apfelberg Appelberg
+    - Yehuda Appelberg
+    - Ruth Barak
+    - Elisabeth Bergman
+    - Salli Altman
+    - Eliezer Bergman
+    - Emmy Mirjam Bergmann
+    - Meir Shfeya
+    - Gertrud Sara Blank
+    - Ely Blank
+    - Emilie Levy Gertrud
+    - Emilie Levy
+    - Paula Blank
+    - Lucy Levy-Zobel
+    - Judische Winterhilfe
+    - Hitachduth Olei Germania
+    - Carl-Menachem Levy
+    - Regina Boritzer
+    - Isaac Boritzer
+    - Joseph Britschgi
+    - Paul Nathan
+    - Gustav Landauer
+    - Martin Buber
+    - Zvia Chayuth
+    - Eva Cohn
+    - Gustav Cohn
+    - Eva Cohn Cohen
+    - Oskar Cohn
+    - Magda Cohn
+    - Franze Rahmer
+    - Vera Pulvermacher
+    - Vera Shiffmann
+    - Maon Oley Merkaz Europa
+    - Henrietta Sold Zeev Glick
+    - Hans Beyth
+    - Nachum Munya Shifman
+    - Yehudith Dajan
+    - Hans Sachs
+    - Anna Sachs
+    - nee Seligsohn
+    - Ein Hashofet
+    - Yohoshua Dajan
+    - Eva Danelius
+    - Leopold Liepman Danelius
+    - Else Danelius
+    - Rosa Dukas
+    - Recha Ellern
+    - Bnai Brith
+    - Anna Feuchtwanger-Steinitz
+    - Eliezer Feuchtwanger
+    - Hannah Em Habanot
+    - Hilde Freund
+    - Lea Freund
+    - Alexander Tachauer
+    - Bnei Akiva
+    - Gidon Freund
+    - Irene Gaster
+    - Moshe Gaster
+    - Margarete Isserlin
+    - Siegfried Isserlin
+    - Anni Samuelsdorf
+    - Frieda Weinreich Ismar Weinreich
+    - Felix Shinnar
+    - Fayge Ilanit
+    - Sharaga Hindes
+    - Hannah Shkop
+    - Kibbutz Gan Shmuel
+    - Shlomo Ilan
+    - Dvaar Hapoelet
+    - Grete Jacobi
+    - Paula Rabow
+    - Albert Rabow
+    - Mirjam Hoffert-Horani
+    - Ruth Jaffe
+    - Alphons Jaffe
+    - Moshe Wolf
+    - Gabriele Kalinhoff
+    - Ramat Chen
+    - Albert Feuchtwanger
+    - Gershon Kalinhoff
+    - Liselotte Aliza Katz
+    - Shimon HaTzadik
+    - Anna Jenny Katzenstein
+    - Wilhelmine Martha
+    - Julius Katzenstein
+    - Ida Heinrich
+    - Jenya Twersky
+    - Miriam Keren
+    - Richard Mayer
+    - Erich Kraemer
+    - Moshe Keren
+    - Michael Keren
+    - Ludwig Mayer
+    - Hannah Hirsch
+    - Phillip Kreyn
+    - Fritz Kunkel
+    - Annemarie Wolffs
+    - Sophie Kahan-Nagler Faioled
+    - Chaim Arlozorov
+    - Kibbutz Merchavia
+    - Hermann Hirsch
+    - Yehudith Rachel Rochberg
+    - Charlotte Landau-Muhsam
+    - Hans Muhsam
+    - Siegfried Muhsam
+    - Minna Adler
+    - Erich Muhsam
+    - Leo Landau
+    - Wyk Fohr
+    - Margot Levi-Altman
+    - Mordechai Levi
+    - Ramat Rachel
+    - Armon Yeladim
+    - Hadar Hacarmel
+    - Mirjam Lewin
+    - Katharina Kathe Dr. Ernst Levy
+    - Erich Lewin
+    - Yehudith Lewin
+    - Aminadav Lewin
+    - Yehudith Katzir
+    - Yehudit Lewin
+    - Edith Mirjam Lowitsch
+    - Anni Samuelsdorff
+    - Lina Schreiber
+    - Israel Schreiber 
+    - Hilde Hochwald
+    - Ellen Shapiro
+    - Ein Shemer
+    - Johannah Oppenheim
+    - Richard Neter
+    - Ina Britschgi-Schimmer
+
+- lookup: ORG
+  examples: |
+    - Nazis
+    - International Save the Children Union
+    - Yad Vashem Archives
+    - Zentralwohlfahrtsstelle
+    - Collection of Welfare Legislation
+    - International Conference of Jewish Social Work
+    - Vaad Leumi
+    - Youth Aliyah
+    - Jewish Agency Central Bureau
+    - Leo Baeck Institute
+    - University of Frankfurt
+    - Ministry of Defense
+    - Department of Public Insurance
+    - Ministry of Labor
+    - Department of Old Age Insurance
+    - UN Social Committee
+    - National Insurance Institute
+    - Ministry of Welfare and Labor
+    - Distribution Committee
+    - Jewish Agency
+    - Jewish Agency Council
+    - Immigration Department
+    - Hebrew University
+    - Training School for Social Service
+    - Ministry of Welfare
+    - Youth Rehabilitation Department
+    - Israel Prison Service
+    - Israel Police
+    - Prison Service
+    - Institute of Criminology
+    - Hebrew University of Jerusalem
+    - Berlin University
+    - University of Erlangen
+    - Department of Criminology
+    - Henrietta Szold Institute
+    - ESRA
+    - Antwerpen
+    - OSE
+    - Lehmanns
+    - Alyat Hanoar Camp
+    - Rishon
+    - Rishon LeZion
+    - University of Politics
+    - Histadrut
+    - Yeshivat Merkaz
+    - Hebrew Gymnasium Herzliya
+    - HaMelitz
+    - Haaretz Davar
+    - Spiritual Hygiene
+    - Szold Prize for Medicine and Public Hygiene
+    - Tel Aviv Municipality
+    - Catholic Lyceum
+    - Labor
+    - Vaad Leumi Department of Social Work When
+    - Vaad Leumi Department of Social Work
+    - Central Office for Jewish Welfare
+    - German Union of Welfare Workers
+    - Social-Pedagogical Department of the Jewish National Council
+    - Social Workers Union
+    - Hertha
+    - Alliance Israelite Universelle
+    - AJR
+    - University of Vienna
+    - Israeli Social Work Union
+    - Displaced Persons Camp
+    - United Service
+    - Childrens Service
+    - Petah Tikva
+    - Mapai Party
+    - Union of Social Workers
+    - JDC
+    - UNRA
+    - UNICEF
+    - WIZO
+    - London School of Economics
+    - Tel Aviv School of Social Work
+    - Paul Baerwald School of Social Work
+    - Kiev University
+    - Nachalat Achim
+    - Schank Jugendheim Charlottenburg
+    - Hapoel HaMizrachi
+    - National Council
+    - Red Cross
+    - Zentrale
+    - Dr Neumanns
+    - Department for Special Education
+    - Ministry for Education
+    - German Army
+    - UN 
+    - German Association of Zionist Women
+    - Jewish National Council
+    - Bureau
+    - Sorbonne University
+    - Jean-Jacques-Rousseau Pedagogical Institute
+    - Institute Mounier
+    - School of Social Work
+    - University of Cologne
+    - German Social Democratic Party
+    - Berliner Tageblatt
+    - Israels Mapai
+    - Hapoel Hamizrachi
+    - University of Zurich
+    - Zionist Movement
+    - Womens International League for Peace and Freedom Together
+    - Womens International League for Peace and Freedom
+    - WIZOs Propaganda and Publicity Department
+    - JNF
+    - Reali School
+    - Womens International Zionist Organization
+    - Viktoria-Luisen School
+    - Seminary for Individual Psychology
+    - Labor Federation
+    - School of Applied Social Science of the Case Western Reserve University Cleveland
+    - Social Science Administration
+    - Israeli Ministry of Welfare
+    - Ministrys Institute for Welfare Work
+    - School for Social Work
+    - Lasker Institute
+    - Bellefaire Treatment Center
+    - Boston Colleges School for Social Work
+    - Yeshiva Universitys Wurzweiler School for Social Work
+    - Tel Aviv University School
+    - Israeli Association of Welfare and Social Workers
+    - National Association of Social Workers the Council of Social Work Education
+    - Child Welfare League
+    - Jewish Communal Service Association of North America
+    - Soziale Frauenschule Berlin-Schoneberg
+    - Tnuva
+    - Saad Journal
+    - Central Office for German Jewish Welfare
+    - Department of Child Social Services of the Ministry of Welfare
+    - Association of Former Officers
+    - Swiss Association
+    - Institute for Applied Psychology
+    - Ina
+    - Siddy Wronsky School of Social
+    - Siddy Wronsky School of Social services
+    - Development of Modern Education for the Blind
+    - Fehrbelliner Strasse
+    - Pestalozzi Frobel House
+    - Protection of Young Girls
+    - Warmserstrasse
+    - Social Democratic Party
+    - Judisches Lexikon
+    - Academy for Social and Pedagogical Womens Work
+    - Schendor Furst
+    - University of Cleveland
+    - Tel Aviv University School of Social Work 
+    - Emunah
+    - Matav
+    - Mental Deficiency Committee
+    - KIAH School
+    - National Committee
+    - Retraining Department
+    - Ministry of Foreign Affairs
+    - IDF
+    - Womens Labor Council
+    - Knesset
+    - House and Education and Culture Committees
+    - Palestine Communist Party
+    - Zionist Student Union
+    - Zionist Association
+    - Progressive Party the Independent Liberal Party
+    - Soroptimist International
+    - Siddy Wronskys School
+    - Palestinian Psychoanalytic Society
+    - Bitan Hospital
+    - Institute
+    - Tel Aviv Medical School
+    - Shalvata Hospital
+    - Defense Method in Concentration Camps
+    - Histadrut Nashim
+    - Womens Workers Union
+    - Department of Social Work
+    - University of Heidelberg
+    - Haaretz
+    - British Army
+    - Communist Party
+    - Association for Individual Psychology
+    - City Association of Women Unions
+    - Democratic Party
+    - JFB
+    - Israel Community Organization the Zentralwohlfahrtsstelle
+    - Central Welfare Office of German Jews
+    - Hecksher Hospital and Research Institute
+    - Kibbutz Givat Brenner
+    - Irene Gaster Childrens Institute One
+    - Bnai Brith Institute for the Children
+    - Zion Lodge
+    - Central Office for Private Welfare
+    - Verein Jugendheim-Charlottenburg Berlins Jugendamt 
+    - Siddy Wronskys School for Social Sevices
+    - Jewish National Party
+    - City Council of Vienna
+    - U.S.A.
+    - Congress
+    - World Federation of Jewish Women
+    - Womens International League for Peace
+    - Womens Social Service
+    - Mizrahi Womens Organization
+    - Greater Actions Committee
+    - University of Strasbourg
+    - Union of Religious Pioneers
+    - Gestapo
+    - Reut Social Womens Service
+    - Lichtenstater Hospital
+    - Reut Medical Center
+    - Burt House
+    - Association of Services
+    - Mizrachi Womens Organization
+    - Siddy Wronsky School of Social Work
+    - Jerusalems Department of Welfare
+    - University of Charkov
+    - Zentralwohlfahrtsstelle der Deutschen Juden Between
+    - Sozialpolitik Journal
+    - Opitzstrasse
+    - Tel Aviv Social Work School
+    - Karlsruhe Instead
+    - Agricultural School
+    - Jewish Joint Distribution Society
+    - Preparatory Commission
+    - Preparatory Commission for International Refugees Organization
+    - Tel Aviv municipal School of Social Work
+    - School of Applied Social Sciences of Case Western Reserve University
+    - Smith College
+    - Independent Liberal Party
+    - Strauss Center
+    - Association of Studying Women
+    - Association of Jewish Women for Palestine
+    - Jewish Womens League
+    - AKIM National Organization for People with Intellectual Disabilities
+    - AKIM
+    - Joint Distribution Committee
+    - Institute for Childrens Literature
+    - Organization of German Immigrants
+    - Aliyah Hadashah the Association of Central European Immigrants
+    - Association of Central European Immigrants
+    - University of Warsaw First
+    - Judaica
+    - Jewish-National Womens Union
+    - University of Wurzburg
+    -WIZO World Organization
+    - Ministry of Social Affairs
+    - Siddy Wronskys School for Social Service
+    - Youth and Welfare Office

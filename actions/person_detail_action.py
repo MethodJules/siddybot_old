@@ -93,17 +93,20 @@ class PersonDetailAction(Action):
           return_ok = self.utter_alternate_name(dispatcher, name, entities)
       elif(attribute == Constants.schools_attended):
           return_ok = self.utter_schools_attended(dispatcher, name, entities)
-      else: 
+      else:
+        output = []  
         for x in entities:
           if((x[Constants.relationship] == attribute) & (x[Constants.ent_text] == name)):
-            dispatcher.utter_message(text=f""+x[Constants.ent2_text])
-        return_ok =  True
+            output.append(x[Constants.ent2_text])
+            return_ok =  True
+        for x in output:
+          dispatcher.utter_message(text=f""+x)
       print(return_ok)
       if (return_ok == False):
         semantic_search_successful = SemanticSearch.searchSemanticSearchAttribute(dispatcher, name, attribute, Constants.person)
         if (semantic_search_successful == True):
-          dispatcher.utter_message(text="I hope the result helps you further.")
-        dispatcher.utter_message(text="The correct answer is missing in the graph. Maybe you could add the entity.")
+          dispatcher.utter_message(text=f"I hope the result helps you further.")
+        dispatcher.utter_message(text=f"The correct answer is missing in the graph. Maybe you could add the entity.")
         entity_explained = tracker.get_slot(Constants.slot_explained_add_entity)
         if ((entity_explained is None)):
           dispatcher.utter_message(template="utter_shall_how_add_entity")
@@ -167,6 +170,16 @@ class PersonDetailAction(Action):
               city = x[Constants.ent2_text]
               checked = True
               dispatcher.utter_message(text=f""+ entityPerson + " was born in " + city)
+              break
+      return checked
+
+  def utter_religion(self, dispatcher: CollectingDispatcher, name, entities) -> bool:
+      checked = False
+      for x in entities:
+          if((x[Constants.relationship] == Constants.religion) & (x[Constants.ent_text] == name)):
+              religion = x[Constants.ent2_text]
+              checked = True
+              dispatcher.utter_message(text=f"The religion of "+ entityPerson + " was " + religion)
               break
       return checked
 

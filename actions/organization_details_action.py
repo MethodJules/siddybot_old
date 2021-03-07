@@ -45,10 +45,9 @@ class OrganizationDetailsAction(Action):
       elif(attribute == Constants.employee_or_member):
           checked = self.utter_employee_or_member_of(dispatcher, name, entities)
       elif(attribute == Constants.top_employee_member):
-          checked = self.utter_top_members_employee(dispatcher, name, entities)
-      elif(attribute == Constants.member):
           checked = self.utter_employee_or_member_of(dispatcher, name, entities)
-          checked = self.utter_top_members_employee(dispatcher, name, entities)
+      elif(attribute == Constants.member):
+          checked = self.utter_member(dispatcher, name, entities)
       elif(attribute == Constants.schools_attended):
           checked = self.utter_schools_attended(dispatcher, name, entities)
       elif(attribute == Constants.country_of_headquarter):
@@ -103,6 +102,33 @@ class OrganizationDetailsAction(Action):
     if (checked == True):
       dispatcher.utter_message(text=f"These employees or members were by " + name +":")
       dispatcher.utter_message(text=f""+ GeneralMethods.liste_ausgeben(members))
+    return checked
+
+  def utter_member(self, dispatcher: CollectingDispatcher, name, entities) -> bool:
+    """
+    Ausgabemethode für das Attribut employee_or_member
+    """
+    checked = False
+    top_members = []
+    students = []
+    members = []
+    for x in entities:
+        if(x[Constants.relationship] == Constants.employee_or_member):
+          members.append(x[Constants.ent2_text])
+          checked = True
+        elif(x[Constants.relationship] == Constants.top_employee_member):
+          top_members.append(x[Constants.ent2_text])
+          checked = True
+        elif(x[Constants.relationship] == Constants.schools_attended):
+          students.append(x[Constants.ent2_text])
+          checked = True
+    if (checked == True):
+      if (len(members) > 0):
+        dispatcher.utter_message(text=f"These employees or members were: " + GeneralMethods.liste_ausgeben(members))
+      if (len(top_members) > 0):
+        dispatcher.utter_message(text=f""+ name + " had these top employees/members: " + GeneralMethods.liste_ausgeben(members))
+      if (len(students) > 0):
+        dispatcher.utter_message(text=f"These students were at " + name + ": " + GeneralMethods.liste_ausgeben(members))
     return checked
 
   def utter_top_members_employee(self, dispatcher: CollectingDispatcher, name, entities) -> bool:

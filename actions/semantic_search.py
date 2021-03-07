@@ -70,9 +70,15 @@ class SemanticSearch():
     """
     print(result)
     print(name)
+    max_results = 15
     if (len(result) > 0):
       node_equal_name = None
       for y in result:
+        if (max_results == 0):
+          dispatcher.utter_message(text=f"...")
+          dispatcher.utter_message(text=f"I found some more results. If you don't find the right information here, please use the search at the website.")
+          return True
+        max_results = max_results - 1
         if ((object_type == Constants.person) & (not(name is None))):
             node_equal_name = GeneralMethods.findeRichtigenKnoten(name, y[Constants.node_title])
             if (node_equal_name == True):
@@ -110,7 +116,7 @@ class SemanticSearch():
     print(call_successfull)
     if (call_successfull == False):
       dispatcher.utter_message(template="utter_data_not_found")
-      explained_add_person = tracker.get_slot(Constants.slot_explained_add_person) 
-      if ((explained_add_person is None) | (explained_add_person  == False)):
-        dispatcher.utter_message(template="utter_shall_explain_add_person")
-        return[SlotSet(Constants.slot_shall_explain_add_person, True)]
+    explained_add_person = tracker.get_slot(Constants.slot_explained_add_person) 
+    if ((explained_add_person is None) | (explained_add_person  == False)):
+      dispatcher.utter_message(template="utter_shall_explain_add_person")
+    return[SlotSet(Constants.slot_shall_explain_add_person, True)]

@@ -4,7 +4,7 @@ class Constants():
    # Attribute der Organisationen:
    organization_attributes = ["city_of_headquarters","employee_or_member_of", "top_members_employee", "schools_attended", "member", "country_of_headquarters",
                                "date_founded", "founded_by", "political_religious_affiliation", "stateorprovince_of_headquarters", "subsidiares", "headquarter", "founded"]
-   headquarter_attribute = ["city_of_headquarters", "stateorprovince_of_headquarters", "country_of_headquarters"]
+   headquarter_attribute = ["city_of_headquarters", "stateorprovince_of_headquarters", "country_of_headquarters", "biographie"]
    subsidiares = "subsidiares" 
    political_religious_affiliation = "political_religious_affiliation"
    city_of_headquarter = "city_of_headquarters"
@@ -27,7 +27,7 @@ class Constants():
                        "stateorprovince_of_residence", "title", "top_members_employees", "birthplace", "residences",
                        "family", "member"]
    residence_attribute = ["stateorprovince_of_residence", "countries_of_residence", "cities_of_residence"]
-   members = ["employee_or_member_of", "top_members_employees"]
+   members = ["employee_or_member_of", "top_members_employees", "schools_attended"]
    residences = "residences"
    date_of_birth = "date_of_birth"
    birthplace = "birthplace"
@@ -50,6 +50,7 @@ class Constants():
    origin = "origin"
    alternate_name = "alternate_name"
    stateorprovince_of_residence = "stateorprovince_of_residence"
+   religion = "religion"
 
    # 2. Knoten der Rueckgabe:
    ent2_text = "ent2_text"
