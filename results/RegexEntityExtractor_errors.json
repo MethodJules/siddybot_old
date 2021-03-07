@@ -14,7 +14,7 @@
         "entity": "maptype",
         "start": 0,
         "end": 8,
-        "confidence_entity": 0.9970167875289917,
+        "confidence_entity": 0.996478259563446,
         "value": "Activity",
         "extractor": "DIETClassifier"
       }
@@ -87,7 +87,7 @@
         "entity": "object_type",
         "start": 32,
         "end": 38,
-        "confidence_entity": 0.996648371219635,
+        "confidence_entity": 0.9927543997764587,
         "value": "PERSON",
         "extractor": "DIETClassifier",
         "processors": [
@@ -111,7 +111,7 @@
         "entity": "object_type",
         "start": 9,
         "end": 21,
-        "confidence_entity": 0.9991850256919861,
+        "confidence_entity": 0.9945858716964722,
         "value": "ORGANIZATION",
         "extractor": "DIETClassifier",
         "processors": [
@@ -135,7 +135,7 @@
         "entity": "object_type",
         "start": 27,
         "end": 39,
-        "confidence_entity": 0.9980225563049316,
+        "confidence_entity": 0.9950128197669983,
         "value": "ORGANIZATION",
         "extractor": "DIETClassifier",
         "processors": [
@@ -159,7 +159,7 @@
         "entity": "object_type",
         "start": 0,
         "end": 7,
-        "confidence_entity": 0.9950172305107117,
+        "confidence_entity": 0.9963376522064209,
         "value": "PERSON",
         "extractor": "DIETClassifier",
         "processors": [
@@ -183,7 +183,7 @@
         "entity": "object_type",
         "start": 18,
         "end": 24,
-        "confidence_entity": 0.9996227025985718,
+        "confidence_entity": 0.9994144439697266,
         "value": "PERSON",
         "extractor": "DIETClassifier",
         "processors": [
@@ -207,7 +207,7 @@
         "entity": "object_type",
         "start": 21,
         "end": 27,
-        "confidence_entity": 0.9995183944702148,
+        "confidence_entity": 0.9989224672317505,
         "value": "PERSON",
         "extractor": "DIETClassifier",
         "processors": [
@@ -231,7 +231,7 @@
         "entity": "object_type",
         "start": 31,
         "end": 37,
-        "confidence_entity": 0.999362051486969,
+        "confidence_entity": 0.9998142123222351,
         "value": "PERSON",
         "extractor": "DIETClassifier",
         "processors": [
@@ -255,7 +255,7 @@
         "entity": "object_type",
         "start": 31,
         "end": 37,
-        "confidence_entity": 0.9984402060508728,
+        "confidence_entity": 0.9993492960929871,
         "value": "PERSON",
         "extractor": "DIETClassifier",
         "processors": [
@@ -285,7 +285,7 @@
         "entity": "object_type",
         "start": 18,
         "end": 24,
-        "confidence_entity": 0.9996441602706909,
+        "confidence_entity": 0.9993199110031128,
         "value": "PERSON",
         "extractor": "DIETClassifier",
         "processors": [
@@ -296,7 +296,7 @@
         "entity": "GPE",
         "start": 38,
         "end": 47,
-        "confidence_entity": 0.9989988207817078,
+        "confidence_entity": 0.9992693066596985,
         "value": "Jerusalem",
         "extractor": "DIETClassifier"
       }
@@ -323,7 +323,7 @@
         "entity": "object_type",
         "start": 25,
         "end": 31,
-        "confidence_entity": 0.9996057152748108,
+        "confidence_entity": 0.9995995163917542,
         "value": "PERSON",
         "extractor": "DIETClassifier",
         "processors": [
@@ -334,7 +334,7 @@
         "entity": "GPE",
         "start": 45,
         "end": 54,
-        "confidence_entity": 0.9989583492279053,
+        "confidence_entity": 0.9992565512657166,
         "value": "Jerusalem",
         "extractor": "DIETClassifier"
       }
@@ -361,7 +361,7 @@
         "entity": "object_type",
         "start": 35,
         "end": 41,
-        "confidence_entity": 0.9997414946556091,
+        "confidence_entity": 0.997871994972229,
         "value": "PERSON",
         "extractor": "DIETClassifier",
         "processors": [
@@ -372,7 +372,7 @@
         "entity": "GPE",
         "start": 55,
         "end": 63,
-        "confidence_entity": 0.9794703125953674,
+        "confidence_entity": 0.9726525545120239,
         "value": "New York",
         "extractor": "DIETClassifier"
       }
@@ -399,7 +399,7 @@
         "entity": "object_type",
         "start": 31,
         "end": 37,
-        "confidence_entity": 0.9994334578514099,
+        "confidence_entity": 0.9993798732757568,
         "value": "PERSON",
         "extractor": "DIETClassifier",
         "processors": [
@@ -410,7 +410,7 @@
         "entity": "GPE",
         "start": 51,
         "end": 60,
-        "confidence_entity": 0.9989513158798218,
+        "confidence_entity": 0.9993728995323181,
         "value": "Jerusalem",
         "extractor": "DIETClassifier"
       }
@@ -437,7 +437,7 @@
         "entity": "object_type",
         "start": 31,
         "end": 37,
-        "confidence_entity": 0.9997852444648743,
+        "confidence_entity": 0.9992984533309937,
         "value": "PERSON",
         "extractor": "DIETClassifier",
         "processors": [
@@ -448,7 +448,7 @@
         "entity": "year",
         "start": 61,
         "end": 65,
-        "confidence_entity": 0.9975213408470154,
+        "confidence_entity": 0.9952301979064941,
         "value": "1945",
         "extractor": "DIETClassifier"
       },
@@ -488,7 +488,7 @@
         "entity": "object_type",
         "start": 35,
         "end": 41,
-        "confidence_entity": 0.999659538269043,
+        "confidence_entity": 0.9997352957725525,
         "value": "PERSON",
         "extractor": "DIETClassifier",
         "processors": [
@@ -499,7 +499,7 @@
         "entity": "GPE",
         "start": 55,
         "end": 64,
-        "confidence_entity": 0.9990092515945435,
+        "confidence_entity": 0.9993578791618347,
         "value": "Jerusalem",
         "extractor": "DIETClassifier"
       },
@@ -507,7 +507,7 @@
         "entity": "year",
         "start": 68,
         "end": 72,
-        "confidence_entity": 0.9981614947319031,
+        "confidence_entity": 0.9958003163337708,
         "value": "1945",
         "extractor": "DIETClassifier"
       },
@@ -547,7 +547,7 @@
         "entity": "object_type",
         "start": 25,
         "end": 31,
-        "confidence_entity": 0.9996873140335083,
+        "confidence_entity": 0.9996681213378906,
         "value": "PERSON",
         "extractor": "DIETClassifier",
         "processors": [
@@ -558,7 +558,7 @@
         "entity": "GPE",
         "start": 45,
         "end": 51,
-        "confidence_entity": 0.9978764057159424,
+        "confidence_entity": 0.9993922710418701,
         "value": "Berlin",
         "extractor": "DIETClassifier"
       },
@@ -566,7 +566,7 @@
         "entity": "year",
         "start": 55,
         "end": 59,
-        "confidence_entity": 0.9982661604881287,
+        "confidence_entity": 0.9957436919212341,
         "value": "1945",
         "extractor": "DIETClassifier"
       },
@@ -606,7 +606,7 @@
         "entity": "object_type",
         "start": 18,
         "end": 24,
-        "confidence_entity": 0.999637246131897,
+        "confidence_entity": 0.9998021721839905,
         "value": "PERSON",
         "extractor": "DIETClassifier",
         "processors": [
@@ -617,7 +617,7 @@
         "entity": "GPE",
         "start": 38,
         "end": 47,
-        "confidence_entity": 0.9990167617797852,
+        "confidence_entity": 0.9992486834526062,
         "value": "Jerusalem",
         "extractor": "DIETClassifier"
       },
@@ -625,7 +625,7 @@
         "entity": "year",
         "start": 51,
         "end": 55,
-        "confidence_entity": 0.9981022477149963,
+        "confidence_entity": 0.9962239265441895,
         "value": "1945",
         "extractor": "DIETClassifier"
       },
@@ -659,7 +659,7 @@
         "entity": "object_type",
         "start": 18,
         "end": 24,
-        "confidence_entity": 0.999841570854187,
+        "confidence_entity": 0.9997759461402893,
         "value": "PERSON",
         "extractor": "DIETClassifier",
         "processors": [
@@ -670,7 +670,7 @@
         "entity": "ORG",
         "start": 36,
         "end": 40,
-        "confidence_entity": 0.9993640780448914,
+        "confidence_entity": 0.999247670173645,
         "value": "WIZO",
         "extractor": "DIETClassifier"
       }
@@ -697,7 +697,7 @@
         "entity": "object_type",
         "start": 25,
         "end": 31,
-        "confidence_entity": 0.9998002648353577,
+        "confidence_entity": 0.9997434020042419,
         "value": "PERSON",
         "extractor": "DIETClassifier",
         "processors": [
@@ -708,7 +708,7 @@
         "entity": "ORG",
         "start": 46,
         "end": 50,
-        "confidence_entity": 0.9994394183158875,
+        "confidence_entity": 0.999535083770752,
         "value": "WIZO",
         "extractor": "DIETClassifier"
       }
@@ -735,7 +735,7 @@
         "entity": "object_type",
         "start": 35,
         "end": 41,
-        "confidence_entity": 0.9998457431793213,
+        "confidence_entity": 0.9997362494468689,
         "value": "PERSON",
         "extractor": "DIETClassifier",
         "processors": [
@@ -746,7 +746,7 @@
         "entity": "ORG",
         "start": 56,
         "end": 60,
-        "confidence_entity": 0.9993832111358643,
+        "confidence_entity": 0.9996994733810425,
         "value": "WIZO",
         "extractor": "DIETClassifier"
       }
@@ -773,7 +773,7 @@
         "entity": "object_type",
         "start": 31,
         "end": 37,
-        "confidence_entity": 0.9996614456176758,
+        "confidence_entity": 0.9996680021286011,
         "value": "PERSON",
         "extractor": "DIETClassifier",
         "processors": [
@@ -784,89 +784,282 @@
         "entity": "ORG",
         "start": 52,
         "end": 56,
-        "confidence_entity": 0.9993013143539429,
+        "confidence_entity": 0.9995623230934143,
         "value": "WIZO",
         "extractor": "DIETClassifier"
       }
     ]
   },
   {
-    "text": "Tell me where the social workers lived {\"entity\": \"object_type\", \"value\": \"CITY\"}",
-    "entities": [],
-    "predicted_entities": [
-      {
-        "entity": "object_type",
-        "start": 75,
-        "end": 79,
-        "value": "CITY",
-        "extractor": "RegexEntityExtractor"
-      }
-    ]
-  },
-  {
-    "text": "Could you show me some places where the social workers lived? {\"entity\": \"object_type\", \"value\": \"CITY\"}",
-    "entities": [],
-    "predicted_entities": [
-      {
-        "entity": "object_type",
-        "start": 98,
-        "end": 102,
-        "value": "CITY",
-        "extractor": "RegexEntityExtractor"
-      }
-    ]
-  },
-  {
-    "text": "I would like to see some places where the social workers were. {\"entity\": \"object_type\", \"value\": \"CITY\"}",
-    "entities": [],
-    "predicted_entities": [
-      {
-        "entity": "object_type",
-        "start": 99,
-        "end": 103,
-        "value": "CITY",
-        "extractor": "RegexEntityExtractor"
-      }
-    ]
-  },
-  {
-    "text": "In which citys lived the social workers? {\"entity\": \"object_type\", \"value\": \"CITY\"}",
-    "entities": [],
-    "predicted_entities": [
-      {
-        "entity": "object_type",
-        "start": 77,
-        "end": 81,
-        "value": "CITY",
-        "extractor": "RegexEntityExtractor"
-      }
-    ]
-  },
-  {
-    "text": "Where lived the social workers?  {\"entity\": \"object_type\", \"value\": \"CITY\"}",
-    "entities": [],
-    "predicted_entities": [
-      {
-        "entity": "object_type",
-        "start": 69,
-        "end": 73,
-        "value": "CITY",
-        "extractor": "RegexEntityExtractor"
-      }
-    ]
-  },
-  {
-    "text": "Could you tell me some ORG in Zurich?",
+    "text": "Show me 10 people",
     "entities": [
       {
-        "start": 23,
-        "end": 26,
-        "value": "ORG",
+        "start": 8,
+        "end": 10,
+        "value": "10",
+        "entity": "CARDINAL"
+      },
+      {
+        "start": 11,
+        "end": 17,
+        "value": "PERSON",
         "entity": "object_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "CARDINAL",
+        "start": 8,
+        "end": 10,
+        "confidence_entity": 0.9981229901313782,
+        "value": "10",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "object_type",
+        "start": 11,
+        "end": 17,
+        "confidence_entity": 0.9998959302902222,
+        "value": "PERSON",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Could you tell me twenty examples of people",
+    "entities": [
+      {
+        "start": 18,
+        "end": 24,
+        "value": "twenty",
+        "entity": "CARDINAL"
+      },
+      {
+        "start": 37,
+        "end": 43,
+        "value": "PERSON",
+        "entity": "object_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "CARDINAL",
+        "start": 18,
+        "end": 24,
+        "confidence_entity": 0.9973952770233154,
+        "value": "20",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "object_type",
+        "start": 37,
+        "end": 43,
+        "confidence_entity": 0.9998722076416016,
+        "value": "PERSON",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Show me some people",
+    "entities": [
+      {
+        "start": 13,
+        "end": 19,
+        "value": "PERSON",
+        "entity": "object_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "object_type",
+        "start": 13,
+        "end": 19,
+        "confidence_entity": 0.9993222951889038,
+        "value": "PERSON",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "I want to see 15 examples from your website",
+    "entities": [
+      {
+        "start": 14,
+        "end": 16,
+        "value": "15",
+        "entity": "CARDINAL"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "CARDINAL",
+        "start": 14,
+        "end": 16,
+        "confidence_entity": 0.9978455305099487,
+        "value": "15",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Could you tell me in which organizations worked the people?",
+    "entities": [
+      {
+        "start": 27,
+        "end": 40,
+        "value": "ORGANIZATION",
+        "entity": "object_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "object_type",
+        "start": 27,
+        "end": 40,
+        "confidence_entity": 0.9850757718086243,
+        "value": "ORGANIZATION",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Show me in which companys the social workers worked?",
+    "entities": [
+      {
+        "start": 17,
+        "end": 25,
+        "value": "ORGANIZATION",
+        "entity": "object_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "object_type",
+        "start": 17,
+        "end": 25,
+        "confidence_entity": 0.9974307417869568,
+        "value": "ORGANIZATION",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Which organizations are saved on these website?",
+    "entities": [
+      {
+        "start": 6,
+        "end": 19,
+        "value": "ORGANIZATION",
+        "entity": "object_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "object_type",
+        "start": 6,
+        "end": 19,
+        "confidence_entity": 0.994607150554657,
+        "value": "ORGANIZATION",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Organizations, please",
+    "entities": [
+      {
+        "start": 0,
+        "end": 13,
+        "value": "ORGANIZATION",
+        "entity": "object_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "object_type",
+        "start": 0,
+        "end": 13,
+        "confidence_entity": 0.9950268864631653,
+        "value": "ORGANIZATION",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "I want to know 10 examples of companies",
+    "entities": [
+      {
+        "start": 15,
+        "end": 17,
+        "value": "10",
+        "entity": "CARDINAL"
       },
       {
         "start": 30,
-        "end": 36,
+        "end": 39,
+        "value": "ORGANIZATION",
+        "entity": "object_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "CARDINAL",
+        "start": 15,
+        "end": 17,
+        "confidence_entity": 0.997660756111145,
+        "value": "10",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "object_type",
+        "start": 30,
+        "end": 39,
+        "confidence_entity": 0.9997233748435974,
+        "value": "ORGANIZATION",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Could you tell me some companys in Zurich?",
+    "entities": [
+      {
+        "start": 23,
+        "end": 31,
+        "value": "ORGANIZATION",
+        "entity": "object_type"
+      },
+      {
+        "start": 35,
+        "end": 41,
         "value": "Zurich",
         "entity": "GPE"
       }
@@ -875,82 +1068,74 @@
       {
         "entity": "object_type",
         "start": 23,
-        "end": 26,
-        "confidence_entity": 0.9994574189186096,
-        "value": "ORG",
-        "extractor": "DIETClassifier"
+        "end": 31,
+        "confidence_entity": 0.9997445940971375,
+        "value": "ORGANIZATION",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
       },
       {
         "entity": "GPE",
-        "start": 30,
-        "end": 36,
-        "confidence_entity": 0.9959989786148071,
+        "start": 35,
+        "end": 41,
+        "confidence_entity": 0.9975802898406982,
         "value": "Zurich",
         "extractor": "DIETClassifier"
-      },
-      {
-        "entity": "object_type",
-        "start": 23,
-        "end": 26,
-        "value": "ORG",
-        "extractor": "RegexEntityExtractor"
       }
     ]
   },
   {
-    "text": "Show me some ORG where Ruth Barak was working",
+    "text": "Show me 15 organization was working",
     "entities": [
       {
-        "start": 13,
-        "end": 16,
-        "value": "ORG",
-        "entity": "object_type"
+        "start": 8,
+        "end": 10,
+        "value": "15",
+        "entity": "CARDINAL"
       },
       {
-        "start": 23,
-        "end": 33,
-        "value": "Ruth Barak",
-        "entity": "PERSON"
+        "start": 11,
+        "end": 23,
+        "value": "ORGANIZATION",
+        "entity": "object_type"
       }
     ],
     "predicted_entities": [
       {
-        "entity": "object_type",
-        "start": 13,
-        "end": 16,
-        "confidence_entity": 0.9993027448654175,
-        "value": "ORG",
-        "extractor": "DIETClassifier"
-      },
-      {
-        "entity": "PERSON",
-        "start": 23,
-        "end": 33,
-        "confidence_entity": 0.999783456325531,
-        "value": "Ruth Barak",
+        "entity": "CARDINAL",
+        "start": 8,
+        "end": 10,
+        "confidence_entity": 0.9980150461196899,
+        "value": "15",
         "extractor": "DIETClassifier"
       },
       {
         "entity": "object_type",
-        "start": 13,
-        "end": 16,
-        "value": "ORG",
-        "extractor": "RegexEntityExtractor"
+        "start": 11,
+        "end": 23,
+        "confidence_entity": 0.993671178817749,
+        "value": "ORGANIZATION",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
       }
     ]
   },
   {
-    "text": "Some ORG in Germany",
+    "text": "Some organizations in Germany",
     "entities": [
       {
         "start": 5,
-        "end": 8,
-        "value": "ORG",
+        "end": 18,
+        "value": "ORGANIZATION",
         "entity": "object_type"
       },
       {
-        "start": 12,
-        "end": 19,
+        "start": 22,
+        "end": 29,
         "value": "Germany",
         "entity": "GPE"
       }
@@ -959,25 +1144,128 @@
       {
         "entity": "object_type",
         "start": 5,
-        "end": 8,
-        "confidence_entity": 0.9992608428001404,
-        "value": "ORG",
-        "extractor": "DIETClassifier"
+        "end": 18,
+        "confidence_entity": 0.9970159530639648,
+        "value": "ORGANIZATION",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
       },
       {
         "entity": "GPE",
-        "start": 12,
-        "end": 19,
-        "confidence_entity": 0.9960655570030212,
+        "start": 22,
+        "end": 29,
+        "confidence_entity": 0.9926756024360657,
         "value": "Germany",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Can you give me 18 organizations?",
+    "entities": [
+      {
+        "start": 16,
+        "end": 18,
+        "value": "18",
+        "entity": "CARDINAL"
+      },
+      {
+        "start": 19,
+        "end": 32,
+        "value": "ORGANIZATION",
+        "entity": "object_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "CARDINAL",
+        "start": 16,
+        "end": 18,
+        "confidence_entity": 0.9970799088478088,
+        "value": "18",
         "extractor": "DIETClassifier"
       },
       {
         "entity": "object_type",
+        "start": 19,
+        "end": 32,
+        "confidence_entity": 0.9977134466171265,
+        "value": "ORGANIZATION",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "List some orgs",
+    "entities": [
+      {
+        "start": 10,
+        "end": 14,
+        "value": "ORGANIZATION",
+        "entity": "object_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "object_type",
+        "start": 10,
+        "end": 14,
+        "confidence_entity": 0.9988219141960144,
+        "value": "ORGANIZATION",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "List five",
+    "entities": [
+      {
         "start": 5,
-        "end": 8,
-        "value": "ORG",
-        "extractor": "RegexEntityExtractor"
+        "end": 9,
+        "value": "five",
+        "entity": "CARDINAL"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "CARDINAL",
+        "start": 5,
+        "end": 9,
+        "confidence_entity": 0.9947715401649475,
+        "value": "5",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "List 30 from your website",
+    "entities": [
+      {
+        "start": 5,
+        "end": 7,
+        "value": "30",
+        "entity": "CARDINAL"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "CARDINAL",
+        "start": 5,
+        "end": 7,
+        "confidence_entity": 0.9956988096237183,
+        "value": "30",
+        "extractor": "DIETClassifier"
       }
     ]
   },
@@ -1002,7 +1290,7 @@
         "entity": "attribute",
         "start": 31,
         "end": 39,
-        "confidence_entity": 0.9999475479125977,
+        "confidence_entity": 0.9999631643295288,
         "value": "date_of_birth",
         "extractor": "DIETClassifier",
         "processors": [
@@ -1013,16 +1301,9 @@
         "entity": "PERSON",
         "start": 43,
         "end": 59,
-        "confidence_entity": 0.999914288520813,
+        "confidence_entity": 0.9998917579650879,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
-      },
-      {
-        "entity": "object_type",
-        "start": 17,
-        "end": 21,
-        "value": "year",
-        "extractor": "RegexEntityExtractor"
       }
     ]
   },
@@ -1047,7 +1328,7 @@
         "entity": "attribute",
         "start": 30,
         "end": 38,
-        "confidence_entity": 0.9999568462371826,
+        "confidence_entity": 0.9999579191207886,
         "value": "date_of_birth",
         "extractor": "DIETClassifier",
         "processors": [
@@ -1058,7 +1339,7 @@
         "entity": "PERSON",
         "start": 42,
         "end": 58,
-        "confidence_entity": 0.9998793601989746,
+        "confidence_entity": 0.9998323917388916,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       }
@@ -1085,7 +1366,7 @@
         "entity": "attribute",
         "start": 20,
         "end": 28,
-        "confidence_entity": 0.9999650716781616,
+        "confidence_entity": 0.999974250793457,
         "value": "date_of_birth",
         "extractor": "DIETClassifier",
         "processors": [
@@ -1096,7 +1377,7 @@
         "entity": "PERSON",
         "start": 32,
         "end": 48,
-        "confidence_entity": 0.9999028444290161,
+        "confidence_entity": 0.9998737573623657,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       }
@@ -1123,7 +1404,7 @@
         "entity": "PERSON",
         "start": 9,
         "end": 25,
-        "confidence_entity": 0.9999207258224487,
+        "confidence_entity": 0.9998893737792969,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       },
@@ -1131,7 +1412,7 @@
         "entity": "attribute",
         "start": 26,
         "end": 34,
-        "confidence_entity": 0.9962582588195801,
+        "confidence_entity": 0.9797621369361877,
         "value": "birthplace",
         "extractor": "DIETClassifier",
         "processors": [
@@ -1155,7 +1436,7 @@
         "entity": "attribute",
         "start": 12,
         "end": 20,
-        "confidence_entity": 0.9998703002929688,
+        "confidence_entity": 0.9998438358306885,
         "value": "date_of_birth",
         "extractor": "DIETClassifier",
         "processors": [
@@ -1179,7 +1460,7 @@
         "entity": "attribute",
         "start": 12,
         "end": 20,
-        "confidence_entity": 0.9998434782028198,
+        "confidence_entity": 0.9999160766601562,
         "value": "date_of_birth",
         "extractor": "DIETClassifier",
         "processors": [
@@ -1203,7 +1484,7 @@
         "entity": "attribute",
         "start": 25,
         "end": 33,
-        "confidence_entity": 0.9998645782470703,
+        "confidence_entity": 0.9997819066047668,
         "value": "date_of_birth",
         "extractor": "DIETClassifier",
         "processors": [
@@ -1227,7 +1508,7 @@
         "entity": "attribute",
         "start": 13,
         "end": 21,
-        "confidence_entity": 0.9998587369918823,
+        "confidence_entity": 0.9999197721481323,
         "value": "date_of_birth",
         "extractor": "DIETClassifier",
         "processors": [
@@ -1257,7 +1538,7 @@
         "entity": "attribute",
         "start": 13,
         "end": 21,
-        "confidence_entity": 0.9997530579566956,
+        "confidence_entity": 0.9999403953552246,
         "value": "date_of_death",
         "extractor": "DIETClassifier",
         "processors": [
@@ -1268,7 +1549,7 @@
         "entity": "PERSON",
         "start": 25,
         "end": 41,
-        "confidence_entity": 0.9999171495437622,
+        "confidence_entity": 0.9998823404312134,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       }
@@ -1295,7 +1576,7 @@
         "entity": "PERSON",
         "start": 23,
         "end": 33,
-        "confidence_entity": 0.999743640422821,
+        "confidence_entity": 0.9998507499694824,
         "value": "Ruth Barak",
         "extractor": "DIETClassifier"
       },
@@ -1303,8 +1584,8 @@
         "entity": "attribute",
         "start": 34,
         "end": 38,
-        "confidence_entity": 0.999494194984436,
-        "value": "cause_of_death",
+        "confidence_entity": 0.9998119473457336,
+        "value": "city_of_death",
         "extractor": "DIETClassifier",
         "processors": [
           "EntitySynonymMapper"
@@ -1333,7 +1614,7 @@
         "entity": "attribute",
         "start": 12,
         "end": 20,
-        "confidence_entity": 0.999748170375824,
+        "confidence_entity": 0.9999159574508667,
         "value": "date_of_death",
         "extractor": "DIETClassifier",
         "processors": [
@@ -1344,7 +1625,7 @@
         "entity": "PERSON",
         "start": 24,
         "end": 38,
-        "confidence_entity": 0.9998338222503662,
+        "confidence_entity": 0.9998137354850769,
         "value": "Benjamin Jonas",
         "extractor": "DIETClassifier"
       }
@@ -1371,7 +1652,7 @@
         "entity": "attribute",
         "start": 9,
         "end": 17,
-        "confidence_entity": 0.9959612488746643,
+        "confidence_entity": 0.9980850219726562,
         "value": "date_of_death",
         "extractor": "DIETClassifier",
         "processors": [
@@ -1382,7 +1663,7 @@
         "entity": "PERSON",
         "start": 19,
         "end": 33,
-        "confidence_entity": 0.9997496008872986,
+        "confidence_entity": 0.9998599290847778,
         "value": "Benjamin Jonas",
         "extractor": "DIETClassifier"
       }
@@ -1403,7 +1684,7 @@
         "entity": "attribute",
         "start": 22,
         "end": 30,
-        "confidence_entity": 0.999472439289093,
+        "confidence_entity": 0.9997329115867615,
         "value": "date_of_death",
         "extractor": "DIETClassifier",
         "processors": [
@@ -1427,12 +1708,88 @@
         "entity": "attribute",
         "start": 13,
         "end": 21,
-        "confidence_entity": 0.9995132684707642,
+        "confidence_entity": 0.9993155002593994,
         "value": "date_of_death",
         "extractor": "DIETClassifier",
         "processors": [
           "EntitySynonymMapper"
         ]
+      }
+    ]
+  },
+  {
+    "text": "When did Benjamin Jonas died?",
+    "entities": [
+      {
+        "start": 9,
+        "end": 23,
+        "value": "Benjamin Jonas",
+        "entity": "PERSON"
+      },
+      {
+        "start": 24,
+        "end": 28,
+        "value": "date_of_death",
+        "entity": "attribute"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "PERSON",
+        "start": 9,
+        "end": 23,
+        "confidence_entity": 0.9998327493667603,
+        "value": "Benjamin Jonas",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "attribute",
+        "start": 24,
+        "end": 28,
+        "confidence_entity": 0.9999508857727051,
+        "value": "city_of_death",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "When was the death of Benjamin Jonas?",
+    "entities": [
+      {
+        "start": 0,
+        "end": 18,
+        "value": "date_of_death",
+        "entity": "attribute"
+      },
+      {
+        "start": 22,
+        "end": 36,
+        "value": "Benjamin Jonas",
+        "entity": "PERSON"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "attribute",
+        "start": 0,
+        "end": 18,
+        "confidence_entity": 0.9826289415359497,
+        "value": "date_of_death",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "PERSON",
+        "start": 22,
+        "end": 36,
+        "confidence_entity": 0.9998406171798706,
+        "value": "Benjamin Jonas",
+        "extractor": "DIETClassifier"
       }
     ]
   },
@@ -1457,7 +1814,7 @@
         "entity": "PERSON",
         "start": 10,
         "end": 20,
-        "confidence_entity": 0.9997867941856384,
+        "confidence_entity": 0.999848484992981,
         "value": "Ruth Barak",
         "extractor": "DIETClassifier"
       },
@@ -1465,8 +1822,8 @@
         "entity": "attribute",
         "start": 21,
         "end": 25,
-        "confidence_entity": 0.9999668598175049,
-        "value": "cause_of_death",
+        "confidence_entity": 0.9999663829803467,
+        "value": "city_of_death",
         "extractor": "DIETClassifier",
         "processors": [
           "EntitySynonymMapper"
@@ -1495,7 +1852,7 @@
         "entity": "PERSON",
         "start": 14,
         "end": 28,
-        "confidence_entity": 0.9997603297233582,
+        "confidence_entity": 0.9997268319129944,
         "value": "Benjamin Jonas",
         "extractor": "DIETClassifier"
       },
@@ -1503,8 +1860,8 @@
         "entity": "attribute",
         "start": 29,
         "end": 33,
-        "confidence_entity": 0.9999297857284546,
-        "value": "cause_of_death",
+        "confidence_entity": 0.9999779462814331,
+        "value": "city_of_death",
         "extractor": "DIETClassifier",
         "processors": [
           "EntitySynonymMapper"
@@ -1533,7 +1890,7 @@
         "entity": "attribute",
         "start": 14,
         "end": 25,
-        "confidence_entity": 0.999984860420227,
+        "confidence_entity": 0.9999850988388062,
         "value": "death_place",
         "extractor": "DIETClassifier"
       },
@@ -1541,7 +1898,7 @@
         "entity": "PERSON",
         "start": 29,
         "end": 42,
-        "confidence_entity": 0.9998788833618164,
+        "confidence_entity": 0.9998481273651123,
         "value": "Rachel Ellern",
         "extractor": "DIETClassifier"
       },
@@ -1569,8 +1926,8 @@
         "entity": "attribute",
         "start": 13,
         "end": 17,
-        "confidence_entity": 0.9998227953910828,
-        "value": "cause_of_death",
+        "confidence_entity": 0.9986139535903931,
+        "value": "city_of_death",
         "extractor": "DIETClassifier",
         "processors": [
           "EntitySynonymMapper"
@@ -1599,7 +1956,7 @@
         "entity": "attribute",
         "start": 9,
         "end": 16,
-        "confidence_entity": 0.999936580657959,
+        "confidence_entity": 0.9999364614486694,
         "value": "country_of_birth",
         "extractor": "DIETClassifier",
         "processors": [
@@ -1610,7 +1967,7 @@
         "entity": "PERSON",
         "start": 21,
         "end": 31,
-        "confidence_entity": 0.999834418296814,
+        "confidence_entity": 0.9998546838760376,
         "value": "Ruth Barak",
         "extractor": "DIETClassifier"
       }
@@ -1637,7 +1994,7 @@
         "entity": "attribute",
         "start": 12,
         "end": 19,
-        "confidence_entity": 0.9999371767044067,
+        "confidence_entity": 0.999962329864502,
         "value": "country_of_birth",
         "extractor": "DIETClassifier",
         "processors": [
@@ -1648,7 +2005,7 @@
         "entity": "PERSON",
         "start": 26,
         "end": 36,
-        "confidence_entity": 0.9998303651809692,
+        "confidence_entity": 0.9997450709342957,
         "value": "Ruth Barak",
         "extractor": "DIETClassifier"
       }
@@ -1675,7 +2032,7 @@
         "entity": "attribute",
         "start": 0,
         "end": 7,
-        "confidence_entity": 0.999925971031189,
+        "confidence_entity": 0.9999575614929199,
         "value": "country_of_birth",
         "extractor": "DIETClassifier",
         "processors": [
@@ -1686,7 +2043,7 @@
         "entity": "PERSON",
         "start": 14,
         "end": 24,
-        "confidence_entity": 0.9998483657836914,
+        "confidence_entity": 0.9998449087142944,
         "value": "Ruth Barak",
         "extractor": "DIETClassifier"
       }
@@ -1707,7 +2064,7 @@
         "entity": "attribute",
         "start": 19,
         "end": 35,
-        "confidence_entity": 0.9957727789878845,
+        "confidence_entity": 0.9977239966392517,
         "value": "country_of_death",
         "extractor": "DIETClassifier",
         "processors": [
@@ -1731,7 +2088,7 @@
         "entity": "attribute",
         "start": 27,
         "end": 42,
-        "confidence_entity": 0.9960963129997253,
+        "confidence_entity": 0.9860638380050659,
         "value": "country_of_death",
         "extractor": "DIETClassifier",
         "processors": [
@@ -1761,7 +2118,7 @@
         "entity": "PERSON",
         "start": 35,
         "end": 47,
-        "confidence_entity": 0.9994394183158875,
+        "confidence_entity": 0.9995811581611633,
         "value": "Irene Gaster",
         "extractor": "DIETClassifier"
       },
@@ -1769,8 +2126,8 @@
         "entity": "attribute",
         "start": 48,
         "end": 52,
-        "confidence_entity": 0.998941957950592,
-        "value": "cause_of_death",
+        "confidence_entity": 0.9998377561569214,
+        "value": "city_of_death",
         "extractor": "DIETClassifier",
         "processors": [
           "EntitySynonymMapper"
@@ -1799,7 +2156,7 @@
         "entity": "attribute",
         "start": 0,
         "end": 13,
-        "confidence_entity": 0.935893177986145,
+        "confidence_entity": 0.9425155520439148,
         "value": "city_of_death",
         "extractor": "DIETClassifier",
         "processors": [
@@ -1810,7 +2167,7 @@
         "entity": "PERSON",
         "start": 17,
         "end": 27,
-        "confidence_entity": 0.9998266100883484,
+        "confidence_entity": 0.999843955039978,
         "value": "Ruth Barak",
         "extractor": "DIETClassifier"
       }
@@ -1837,7 +2194,7 @@
         "entity": "PERSON",
         "start": 22,
         "end": 34,
-        "confidence_entity": 0.9994528889656067,
+        "confidence_entity": 0.999619722366333,
         "value": "Irene Gaster",
         "extractor": "DIETClassifier"
       },
@@ -1845,8 +2202,8 @@
         "entity": "attribute",
         "start": 35,
         "end": 38,
-        "confidence_entity": 0.9994555115699768,
-        "value": "city_of_death",
+        "confidence_entity": 0.9996219873428345,
+        "value": "cause_of_death",
         "extractor": "DIETClassifier",
         "processors": [
           "EntitySynonymMapper"
@@ -1875,7 +2232,7 @@
         "entity": "PERSON",
         "start": 14,
         "end": 23,
-        "confidence_entity": 0.998538613319397,
+        "confidence_entity": 0.9972430467605591,
         "value": "Else Cohn",
         "extractor": "DIETClassifier"
       },
@@ -1883,8 +2240,8 @@
         "entity": "attribute",
         "start": 24,
         "end": 28,
-        "confidence_entity": 0.9994532465934753,
-        "value": "cause_of_death",
+        "confidence_entity": 0.9997698664665222,
+        "value": "city_of_death",
         "extractor": "DIETClassifier",
         "processors": [
           "EntitySynonymMapper"
@@ -1907,7 +2264,7 @@
         "entity": "attribute",
         "start": 9,
         "end": 21,
-        "confidence_entity": 0.9966540336608887,
+        "confidence_entity": 0.9831790924072266,
         "value": "city_of_death",
         "extractor": "DIETClassifier",
         "processors": [
@@ -1931,7 +2288,7 @@
         "entity": "attribute",
         "start": 27,
         "end": 40,
-        "confidence_entity": 0.9955530762672424,
+        "confidence_entity": 0.9932599663734436,
         "value": "city_of_death",
         "extractor": "DIETClassifier",
         "processors": [
@@ -1961,7 +2318,7 @@
         "entity": "attribute",
         "start": 12,
         "end": 22,
-        "confidence_entity": 0.9959314465522766,
+        "confidence_entity": 0.9835562705993652,
         "value": "city_of_birth",
         "extractor": "DIETClassifier",
         "processors": [
@@ -1972,7 +2329,7 @@
         "entity": "PERSON",
         "start": 23,
         "end": 38,
-        "confidence_entity": 0.9995237588882446,
+        "confidence_entity": 0.9997416138648987,
         "value": "Natalie Jarecki",
         "extractor": "DIETClassifier"
       }
@@ -1999,7 +2356,7 @@
         "entity": "attribute",
         "start": 12,
         "end": 25,
-        "confidence_entity": 0.915949285030365,
+        "confidence_entity": 0.8406935334205627,
         "value": "city_of_birth",
         "extractor": "DIETClassifier",
         "processors": [
@@ -2010,7 +2367,7 @@
         "entity": "PERSON",
         "start": 29,
         "end": 44,
-        "confidence_entity": 0.9997166991233826,
+        "confidence_entity": 0.9997517466545105,
         "value": "Natalie Jarecki",
         "extractor": "DIETClassifier"
       }
@@ -2037,7 +2394,7 @@
         "entity": "PERSON",
         "start": 24,
         "end": 39,
-        "confidence_entity": 0.999742329120636,
+        "confidence_entity": 0.9997087121009827,
         "value": "Natalie Jarecki",
         "extractor": "DIETClassifier"
       },
@@ -2045,7 +2402,7 @@
         "entity": "attribute",
         "start": 40,
         "end": 48,
-        "confidence_entity": 0.9965142607688904,
+        "confidence_entity": 0.9981614947319031,
         "value": "birthplace",
         "extractor": "DIETClassifier",
         "processors": [
@@ -2075,7 +2432,7 @@
         "entity": "PERSON",
         "start": 35,
         "end": 51,
-        "confidence_entity": 0.9998689889907837,
+        "confidence_entity": 0.9998233914375305,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       },
@@ -2083,7 +2440,7 @@
         "entity": "attribute",
         "start": 52,
         "end": 60,
-        "confidence_entity": 0.9957601428031921,
+        "confidence_entity": 0.9897554516792297,
         "value": "birthplace",
         "extractor": "DIETClassifier",
         "processors": [
@@ -2113,7 +2470,7 @@
         "entity": "attribute",
         "start": 31,
         "end": 39,
-        "confidence_entity": 0.9999475479125977,
+        "confidence_entity": 0.9999631643295288,
         "value": "date_of_birth",
         "extractor": "DIETClassifier",
         "processors": [
@@ -2124,16 +2481,9 @@
         "entity": "PERSON",
         "start": 43,
         "end": 59,
-        "confidence_entity": 0.999914288520813,
+        "confidence_entity": 0.9998917579650879,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
-      },
-      {
-        "entity": "object_type",
-        "start": 17,
-        "end": 21,
-        "value": "year",
-        "extractor": "RegexEntityExtractor"
       }
     ]
   },
@@ -2158,7 +2508,7 @@
         "entity": "attribute",
         "start": 30,
         "end": 38,
-        "confidence_entity": 0.9999568462371826,
+        "confidence_entity": 0.9999579191207886,
         "value": "date_of_birth",
         "extractor": "DIETClassifier",
         "processors": [
@@ -2169,7 +2519,7 @@
         "entity": "PERSON",
         "start": 42,
         "end": 58,
-        "confidence_entity": 0.9998793601989746,
+        "confidence_entity": 0.9998323917388916,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       }
@@ -2196,7 +2546,7 @@
         "entity": "attribute",
         "start": 20,
         "end": 28,
-        "confidence_entity": 0.9999650716781616,
+        "confidence_entity": 0.999974250793457,
         "value": "date_of_birth",
         "extractor": "DIETClassifier",
         "processors": [
@@ -2207,7 +2557,7 @@
         "entity": "PERSON",
         "start": 32,
         "end": 48,
-        "confidence_entity": 0.9999028444290161,
+        "confidence_entity": 0.9998737573623657,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       }
@@ -2228,7 +2578,7 @@
         "entity": "attribute",
         "start": 13,
         "end": 23,
-        "confidence_entity": 0.9959102869033813,
+        "confidence_entity": 0.9943153262138367,
         "value": "city_of_birth",
         "extractor": "DIETClassifier",
         "processors": [
@@ -2252,7 +2602,7 @@
         "entity": "attribute",
         "start": 12,
         "end": 25,
-        "confidence_entity": 0.9973158240318298,
+        "confidence_entity": 0.9907045960426331,
         "value": "city_of_birth",
         "extractor": "DIETClassifier",
         "processors": [
@@ -2282,7 +2632,7 @@
         "entity": "attribute",
         "start": 9,
         "end": 16,
-        "confidence_entity": 0.9993934631347656,
+        "confidence_entity": 0.9994638562202454,
         "value": "country_of_birth",
         "extractor": "DIETClassifier",
         "processors": [
@@ -2293,7 +2643,7 @@
         "entity": "PERSON",
         "start": 21,
         "end": 36,
-        "confidence_entity": 0.9997016787528992,
+        "confidence_entity": 0.9996342658996582,
         "value": "Natalie Jarecki",
         "extractor": "DIETClassifier"
       }
@@ -2320,7 +2670,7 @@
         "entity": "PERSON",
         "start": 26,
         "end": 38,
-        "confidence_entity": 0.9995974898338318,
+        "confidence_entity": 0.9996215105056763,
         "value": "Irene Gaster",
         "extractor": "DIETClassifier"
       },
@@ -2328,7 +2678,7 @@
         "entity": "attribute",
         "start": 39,
         "end": 47,
-        "confidence_entity": 0.9989089965820312,
+        "confidence_entity": 0.9994244575500488,
         "value": "birthplace",
         "extractor": "DIETClassifier",
         "processors": [
@@ -2358,7 +2708,7 @@
         "entity": "attribute",
         "start": 0,
         "end": 16,
-        "confidence_entity": 0.907239556312561,
+        "confidence_entity": 0.7995207905769348,
         "value": "country_of_birth",
         "extractor": "DIETClassifier",
         "processors": [
@@ -2369,7 +2719,7 @@
         "entity": "PERSON",
         "start": 20,
         "end": 34,
-        "confidence_entity": 0.9998677968978882,
+        "confidence_entity": 0.9997385144233704,
         "value": "Benjamin Jonas",
         "extractor": "DIETClassifier"
       }
@@ -2390,7 +2740,7 @@
         "entity": "attribute",
         "start": 22,
         "end": 38,
-        "confidence_entity": 0.9051169753074646,
+        "confidence_entity": 0.9820601940155029,
         "value": "country_of_birth",
         "extractor": "DIETClassifier",
         "processors": [
@@ -2414,7 +2764,7 @@
         "entity": "attribute",
         "start": 25,
         "end": 44,
-        "confidence_entity": 0.9914201498031616,
+        "confidence_entity": 0.9830381870269775,
         "value": "country_of_birth",
         "extractor": "DIETClassifier",
         "processors": [
@@ -2444,7 +2794,7 @@
         "entity": "PERSON",
         "start": 10,
         "end": 25,
-        "confidence_entity": 0.9997605681419373,
+        "confidence_entity": 0.999765932559967,
         "value": "Natalie Jarecki",
         "extractor": "DIETClassifier"
       },
@@ -2452,7 +2802,7 @@
         "entity": "attribute",
         "start": 26,
         "end": 30,
-        "confidence_entity": 0.9998352527618408,
+        "confidence_entity": 0.9995355606079102,
         "value": "birthplace",
         "extractor": "DIETClassifier",
         "processors": [
@@ -2482,7 +2832,7 @@
         "entity": "PERSON",
         "start": 25,
         "end": 37,
-        "confidence_entity": 0.9996316432952881,
+        "confidence_entity": 0.9996834993362427,
         "value": "Irene Gaster",
         "extractor": "DIETClassifier"
       },
@@ -2490,7 +2840,7 @@
         "entity": "attribute",
         "start": 38,
         "end": 46,
-        "confidence_entity": 0.9990365505218506,
+        "confidence_entity": 0.9986984729766846,
         "value": "birthplace",
         "extractor": "DIETClassifier",
         "processors": [
@@ -2520,7 +2870,7 @@
         "entity": "attribute",
         "start": 12,
         "end": 22,
-        "confidence_entity": 0.9999454021453857,
+        "confidence_entity": 0.9998787641525269,
         "value": "birthplace",
         "extractor": "DIETClassifier"
       },
@@ -2528,7 +2878,7 @@
         "entity": "PERSON",
         "start": 26,
         "end": 41,
-        "confidence_entity": 0.9997133612632751,
+        "confidence_entity": 0.9997556805610657,
         "value": "Natalie Jarecki",
         "extractor": "DIETClassifier"
       }
@@ -2555,7 +2905,7 @@
         "entity": "attribute",
         "start": 12,
         "end": 26,
-        "confidence_entity": 0.7865816950798035,
+        "confidence_entity": 0.8520294427871704,
         "value": "birthplace",
         "extractor": "DIETClassifier",
         "processors": [
@@ -2566,7 +2916,7 @@
         "entity": "PERSON",
         "start": 30,
         "end": 42,
-        "confidence_entity": 0.9995193481445312,
+        "confidence_entity": 0.9995878338813782,
         "value": "Irene Gaster",
         "extractor": "DIETClassifier"
       }
@@ -2593,7 +2943,7 @@
         "entity": "PERSON",
         "start": 10,
         "end": 26,
-        "confidence_entity": 0.9999102354049683,
+        "confidence_entity": 0.9999066591262817,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       },
@@ -2601,7 +2951,7 @@
         "entity": "attribute",
         "start": 27,
         "end": 31,
-        "confidence_entity": 0.9997918009757996,
+        "confidence_entity": 0.9990967512130737,
         "value": "birthplace",
         "extractor": "DIETClassifier",
         "processors": [
@@ -2625,7 +2975,7 @@
         "entity": "attribute",
         "start": 28,
         "end": 38,
-        "confidence_entity": 0.9998518228530884,
+        "confidence_entity": 0.9997603297233582,
         "value": "birthplace",
         "extractor": "DIETClassifier"
       }
@@ -2646,7 +2996,7 @@
         "entity": "attribute",
         "start": 20,
         "end": 30,
-        "confidence_entity": 0.9999011754989624,
+        "confidence_entity": 0.9996277093887329,
         "value": "birthplace",
         "extractor": "DIETClassifier"
       }
@@ -2667,14 +3017,14 @@
         "entity": "attribute",
         "start": 0,
         "end": 10,
-        "confidence_entity": 0.9997077584266663,
+        "confidence_entity": 0.9996360540390015,
         "value": "birthplace",
         "extractor": "DIETClassifier"
       }
     ]
   },
   {
-    "text": "Why did Esther Apfelberg died?",
+    "text": "Why did Esther Apfelberg die?",
     "entities": [
       {
         "start": 8,
@@ -2684,7 +3034,7 @@
       },
       {
         "start": 25,
-        "end": 29,
+        "end": 28,
         "value": "cause_of_death",
         "entity": "attribute"
       }
@@ -2694,15 +3044,15 @@
         "entity": "PERSON",
         "start": 8,
         "end": 24,
-        "confidence_entity": 0.9999086856842041,
+        "confidence_entity": 0.9998898506164551,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       },
       {
         "entity": "attribute",
         "start": 25,
-        "end": 29,
-        "confidence_entity": 0.9999421834945679,
+        "end": 28,
+        "confidence_entity": 0.9998173117637634,
         "value": "cause_of_death",
         "extractor": "DIETClassifier",
         "processors": [
@@ -2732,7 +3082,7 @@
         "entity": "attribute",
         "start": 22,
         "end": 36,
-        "confidence_entity": 0.9533966183662415,
+        "confidence_entity": 0.8622317910194397,
         "value": "cause_of_death",
         "extractor": "DIETClassifier",
         "processors": [
@@ -2743,7 +3093,7 @@
         "entity": "PERSON",
         "start": 40,
         "end": 55,
-        "confidence_entity": 0.9997537732124329,
+        "confidence_entity": 0.9998077750205994,
         "value": "Natalie Jarecki",
         "extractor": "DIETClassifier"
       }
@@ -2770,7 +3120,7 @@
         "entity": "attribute",
         "start": 0,
         "end": 14,
-        "confidence_entity": 0.93119877576828,
+        "confidence_entity": 0.923775851726532,
         "value": "cause_of_death",
         "extractor": "DIETClassifier",
         "processors": [
@@ -2781,7 +3131,7 @@
         "entity": "PERSON",
         "start": 18,
         "end": 30,
-        "confidence_entity": 0.9995822310447693,
+        "confidence_entity": 0.9996414184570312,
         "value": "Irene Gaster",
         "extractor": "DIETClassifier"
       }
@@ -2802,7 +3152,7 @@
         "entity": "attribute",
         "start": 13,
         "end": 27,
-        "confidence_entity": 0.9913492202758789,
+        "confidence_entity": 0.9780011177062988,
         "value": "cause_of_death",
         "extractor": "DIETClassifier",
         "processors": [
@@ -2826,12 +3176,112 @@
         "entity": "attribute",
         "start": 22,
         "end": 36,
-        "confidence_entity": 0.9970121383666992,
+        "confidence_entity": 0.9962857961654663,
         "value": "cause_of_death",
         "extractor": "DIETClassifier",
         "processors": [
           "EntitySynonymMapper"
         ]
+      }
+    ]
+  },
+  {
+    "text": "Why die Natalie Jarecki?",
+    "entities": [
+      {
+        "start": 0,
+        "end": 7,
+        "value": "cause_of_death",
+        "entity": "attribute"
+      },
+      {
+        "start": 8,
+        "end": 23,
+        "value": "Natalie Jarecki",
+        "entity": "PERSON"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "attribute",
+        "start": 0,
+        "end": 7,
+        "confidence_entity": 0.9991586208343506,
+        "value": "cause_of_death",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "PERSON",
+        "start": 8,
+        "end": 23,
+        "confidence_entity": 0.9997041821479797,
+        "value": "Natalie Jarecki",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Why did she die?",
+    "entities": [
+      {
+        "start": 0,
+        "end": 15,
+        "value": "cause_of_death",
+        "entity": "attribute"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "attribute",
+        "start": 0,
+        "end": 15,
+        "confidence_entity": 0.8841385245323181,
+        "value": "cause_of_death",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Death Natalie Jarecki",
+    "entities": [
+      {
+        "start": 0,
+        "end": 5,
+        "value": "cause_of_death",
+        "entity": "attribute"
+      },
+      {
+        "start": 6,
+        "end": 21,
+        "value": "Natalie Jarecki",
+        "entity": "PERSON"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "attribute",
+        "start": 0,
+        "end": 5,
+        "confidence_entity": 0.9991428852081299,
+        "value": "cause_of_death",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "PERSON",
+        "start": 6,
+        "end": 21,
+        "confidence_entity": 0.9987586736679077,
+        "value": "Natalie Jarecki",
+        "extractor": "DIETClassifier"
       }
     ]
   },
@@ -2856,7 +3306,7 @@
         "entity": "PERSON",
         "start": 10,
         "end": 26,
-        "confidence_entity": 0.9999037981033325,
+        "confidence_entity": 0.9999004602432251,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       },
@@ -2864,7 +3314,7 @@
         "entity": "attribute",
         "start": 27,
         "end": 31,
-        "confidence_entity": 0.9997305274009705,
+        "confidence_entity": 0.999954104423523,
         "value": "residences",
         "extractor": "DIETClassifier",
         "processors": [
@@ -2894,7 +3344,7 @@
         "entity": "attribute",
         "start": 5,
         "end": 14,
-        "confidence_entity": 0.9998102784156799,
+        "confidence_entity": 0.9999377727508545,
         "value": "residences",
         "extractor": "DIETClassifier",
         "processors": [
@@ -2905,7 +3355,7 @@
         "entity": "PERSON",
         "start": 19,
         "end": 35,
-        "confidence_entity": 0.9999097585678101,
+        "confidence_entity": 0.9998874664306641,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       }
@@ -2932,7 +3382,7 @@
         "entity": "attribute",
         "start": 0,
         "end": 10,
-        "confidence_entity": 0.9997873902320862,
+        "confidence_entity": 0.999880313873291,
         "value": "residences",
         "extractor": "DIETClassifier"
       },
@@ -2940,7 +3390,7 @@
         "entity": "PERSON",
         "start": 14,
         "end": 30,
-        "confidence_entity": 0.9999151229858398,
+        "confidence_entity": 0.9998570680618286,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       },
@@ -2974,7 +3424,7 @@
         "entity": "attribute",
         "start": 6,
         "end": 16,
-        "confidence_entity": 0.9998539686203003,
+        "confidence_entity": 0.9999017715454102,
         "value": "residences",
         "extractor": "DIETClassifier"
       },
@@ -2982,7 +3432,7 @@
         "entity": "PERSON",
         "start": 21,
         "end": 37,
-        "confidence_entity": 0.9999195337295532,
+        "confidence_entity": 0.9998899698257446,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       },
@@ -3016,7 +3466,7 @@
         "entity": "attribute",
         "start": 10,
         "end": 20,
-        "confidence_entity": 0.9998218417167664,
+        "confidence_entity": 0.9999068975448608,
         "value": "residences",
         "extractor": "DIETClassifier"
       },
@@ -3024,7 +3474,7 @@
         "entity": "PERSON",
         "start": 26,
         "end": 42,
-        "confidence_entity": 0.9999357461929321,
+        "confidence_entity": 0.9998787641525269,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       },
@@ -3058,7 +3508,7 @@
         "entity": "PERSON",
         "start": 22,
         "end": 38,
-        "confidence_entity": 0.9999032020568848,
+        "confidence_entity": 0.9998723268508911,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       },
@@ -3066,7 +3516,7 @@
         "entity": "attribute",
         "start": 39,
         "end": 44,
-        "confidence_entity": 0.9998817443847656,
+        "confidence_entity": 0.9999725818634033,
         "value": "residences",
         "extractor": "DIETClassifier",
         "processors": [
@@ -3096,7 +3546,7 @@
         "entity": "PERSON",
         "start": 10,
         "end": 23,
-        "confidence_entity": 0.9998714923858643,
+        "confidence_entity": 0.9998117089271545,
         "value": "Rachel Ellern",
         "extractor": "DIETClassifier"
       },
@@ -3104,7 +3554,7 @@
         "entity": "attribute",
         "start": 24,
         "end": 29,
-        "confidence_entity": 0.9999548196792603,
+        "confidence_entity": 0.9999803304672241,
         "value": "residences",
         "extractor": "DIETClassifier",
         "processors": [
@@ -3128,7 +3578,7 @@
         "entity": "attribute",
         "start": 26,
         "end": 31,
-        "confidence_entity": 0.9998728036880493,
+        "confidence_entity": 0.9999233484268188,
         "value": "residences",
         "extractor": "DIETClassifier",
         "processors": [
@@ -3152,7 +3602,7 @@
         "entity": "attribute",
         "start": 41,
         "end": 46,
-        "confidence_entity": 0.9997933506965637,
+        "confidence_entity": 0.9999338388442993,
         "value": "residences",
         "extractor": "DIETClassifier",
         "processors": [
@@ -3165,7 +3615,7 @@
     "text": "In which cities did Esther Apfelberg live?",
     "entities": [
       {
-        "start": 3,
+        "start": 0,
         "end": 19,
         "value": "cities_of_residence",
         "entity": "attribute"
@@ -3180,9 +3630,9 @@
     "predicted_entities": [
       {
         "entity": "attribute",
-        "start": 3,
+        "start": 0,
         "end": 19,
-        "confidence_entity": 0.9857144951820374,
+        "confidence_entity": 0.911893904209137,
         "value": "cities_of_residence",
         "extractor": "DIETClassifier",
         "processors": [
@@ -3193,7 +3643,7 @@
         "entity": "PERSON",
         "start": 20,
         "end": 36,
-        "confidence_entity": 0.9998617172241211,
+        "confidence_entity": 0.9999134540557861,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       }
@@ -3203,7 +3653,7 @@
     "text": "Show me some cities were Esther Apfelberg lived",
     "entities": [
       {
-        "start": 8,
+        "start": 13,
         "end": 24,
         "value": "cities_of_residence",
         "entity": "attribute"
@@ -3218,9 +3668,9 @@
     "predicted_entities": [
       {
         "entity": "attribute",
-        "start": 8,
+        "start": 13,
         "end": 24,
-        "confidence_entity": 0.9877008199691772,
+        "confidence_entity": 0.9289206862449646,
         "value": "cities_of_residence",
         "extractor": "DIETClassifier",
         "processors": [
@@ -3231,14 +3681,14 @@
         "entity": "PERSON",
         "start": 25,
         "end": 41,
-        "confidence_entity": 0.9998284578323364,
+        "confidence_entity": 0.9997766613960266,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       }
     ]
   },
   {
-    "text": "Tell me some cities of residence of Irene Gaster",
+    "text": "Tell me some cities of residence from Irene Gaster",
     "entities": [
       {
         "start": 13,
@@ -3247,8 +3697,8 @@
         "entity": "attribute"
       },
       {
-        "start": 36,
-        "end": 48,
+        "start": 38,
+        "end": 50,
         "value": "Irene Gaster",
         "entity": "PERSON"
       }
@@ -3258,7 +3708,7 @@
         "entity": "attribute",
         "start": 13,
         "end": 32,
-        "confidence_entity": 0.907711923122406,
+        "confidence_entity": 0.9364855885505676,
         "value": "cities_of_residence",
         "extractor": "DIETClassifier",
         "processors": [
@@ -3267,9 +3717,9 @@
       },
       {
         "entity": "PERSON",
-        "start": 36,
-        "end": 48,
-        "confidence_entity": 0.999539852142334,
+        "start": 38,
+        "end": 50,
+        "confidence_entity": 0.9996747970581055,
         "value": "Irene Gaster",
         "extractor": "DIETClassifier"
       }
@@ -3296,7 +3746,7 @@
         "entity": "attribute",
         "start": 23,
         "end": 42,
-        "confidence_entity": 0.9649754762649536,
+        "confidence_entity": 0.8666418790817261,
         "value": "cities_of_residence",
         "extractor": "DIETClassifier",
         "processors": [
@@ -3307,24 +3757,24 @@
         "entity": "PERSON",
         "start": 46,
         "end": 60,
-        "confidence_entity": 0.9997289776802063,
+        "confidence_entity": 0.9998880624771118,
         "value": "Benjamin Jonas",
         "extractor": "DIETClassifier"
       }
     ]
   },
   {
-    "text": "I like to know in which city was was Esther Apfelberg?",
+    "text": "I like to know in which city was Esther Apfelberg?",
     "entities": [
       {
-        "start": 18,
+        "start": 15,
         "end": 32,
         "value": "cities_of_residence",
         "entity": "attribute"
       },
       {
-        "start": 37,
-        "end": 53,
+        "start": 33,
+        "end": 49,
         "value": "Esther Apfelberg",
         "entity": "PERSON"
       }
@@ -3332,9 +3782,9 @@
     "predicted_entities": [
       {
         "entity": "attribute",
-        "start": 18,
+        "start": 15,
         "end": 32,
-        "confidence_entity": 0.9621339440345764,
+        "confidence_entity": 0.9318109750747681,
         "value": "cities_of_residence",
         "extractor": "DIETClassifier",
         "processors": [
@@ -3343,9 +3793,9 @@
       },
       {
         "entity": "PERSON",
-        "start": 37,
-        "end": 53,
-        "confidence_entity": 0.999861478805542,
+        "start": 33,
+        "end": 49,
+        "confidence_entity": 0.9998563528060913,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       }
@@ -3372,7 +3822,7 @@
         "entity": "attribute",
         "start": 9,
         "end": 18,
-        "confidence_entity": 0.9991656541824341,
+        "confidence_entity": 0.999824583530426,
         "value": "countries_of_residence",
         "extractor": "DIETClassifier",
         "processors": [
@@ -3383,7 +3833,7 @@
         "entity": "PERSON",
         "start": 23,
         "end": 39,
-        "confidence_entity": 0.9999010562896729,
+        "confidence_entity": 0.9998965263366699,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       }
@@ -3410,7 +3860,7 @@
         "entity": "attribute",
         "start": 13,
         "end": 22,
-        "confidence_entity": 0.9993641972541809,
+        "confidence_entity": 0.9998207688331604,
         "value": "countries_of_residence",
         "extractor": "DIETClassifier",
         "processors": [
@@ -3421,7 +3871,7 @@
         "entity": "PERSON",
         "start": 29,
         "end": 45,
-        "confidence_entity": 0.9998296499252319,
+        "confidence_entity": 0.9997920393943787,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       }
@@ -3448,7 +3898,7 @@
         "entity": "attribute",
         "start": 5,
         "end": 27,
-        "confidence_entity": 0.8377814292907715,
+        "confidence_entity": 0.8011037111282349,
         "value": "countries_of_residence",
         "extractor": "DIETClassifier",
         "processors": [
@@ -3459,7 +3909,7 @@
         "entity": "PERSON",
         "start": 31,
         "end": 43,
-        "confidence_entity": 0.9994663596153259,
+        "confidence_entity": 0.9995740056037903,
         "value": "Irene Gaster",
         "extractor": "DIETClassifier"
       }
@@ -3486,7 +3936,7 @@
         "entity": "attribute",
         "start": 23,
         "end": 45,
-        "confidence_entity": 0.9692129492759705,
+        "confidence_entity": 0.8352599740028381,
         "value": "countries_of_residence",
         "extractor": "DIETClassifier",
         "processors": [
@@ -3497,7 +3947,7 @@
         "entity": "PERSON",
         "start": 49,
         "end": 63,
-        "confidence_entity": 0.9997302889823914,
+        "confidence_entity": 0.9998704195022583,
         "value": "Benjamin Jonas",
         "extractor": "DIETClassifier"
       }
@@ -3524,7 +3974,7 @@
         "entity": "attribute",
         "start": 13,
         "end": 21,
-        "confidence_entity": 0.9999456405639648,
+        "confidence_entity": 0.9997230172157288,
         "value": "siblings",
         "extractor": "DIETClassifier",
         "processors": [
@@ -3535,7 +3985,7 @@
         "entity": "PERSON",
         "start": 25,
         "end": 38,
-        "confidence_entity": 0.9999033212661743,
+        "confidence_entity": 0.9998108744621277,
         "value": "Rachel Ellern",
         "extractor": "DIETClassifier"
       },
@@ -3569,7 +4019,7 @@
         "entity": "attribute",
         "start": 12,
         "end": 20,
-        "confidence_entity": 0.9999452829360962,
+        "confidence_entity": 0.9997361302375793,
         "value": "siblings",
         "extractor": "DIETClassifier",
         "processors": [
@@ -3580,7 +4030,7 @@
         "entity": "PERSON",
         "start": 24,
         "end": 37,
-        "confidence_entity": 0.9999222755432129,
+        "confidence_entity": 0.9998507499694824,
         "value": "Rachel Ellern",
         "extractor": "DIETClassifier"
       },
@@ -3614,7 +4064,7 @@
         "entity": "attribute",
         "start": 0,
         "end": 8,
-        "confidence_entity": 0.9999035596847534,
+        "confidence_entity": 0.9997193217277527,
         "value": "siblings",
         "extractor": "DIETClassifier",
         "processors": [
@@ -3625,7 +4075,7 @@
         "entity": "PERSON",
         "start": 12,
         "end": 25,
-        "confidence_entity": 0.9998739957809448,
+        "confidence_entity": 0.9997854828834534,
         "value": "Rachel Ellern",
         "extractor": "DIETClassifier"
       }
@@ -3652,7 +4102,7 @@
         "entity": "attribute",
         "start": 22,
         "end": 30,
-        "confidence_entity": 0.9999368190765381,
+        "confidence_entity": 0.9996641874313354,
         "value": "siblings",
         "extractor": "DIETClassifier",
         "processors": [
@@ -3663,7 +4113,7 @@
         "entity": "PERSON",
         "start": 34,
         "end": 47,
-        "confidence_entity": 0.9998846054077148,
+        "confidence_entity": 0.9997400641441345,
         "value": "Rachel Ellern",
         "extractor": "DIETClassifier"
       },
@@ -3697,7 +4147,7 @@
         "entity": "attribute",
         "start": 33,
         "end": 41,
-        "confidence_entity": 0.9999256134033203,
+        "confidence_entity": 0.9998237490653992,
         "value": "siblings",
         "extractor": "DIETClassifier",
         "processors": [
@@ -3708,7 +4158,7 @@
         "entity": "PERSON",
         "start": 45,
         "end": 61,
-        "confidence_entity": 0.9998642206192017,
+        "confidence_entity": 0.9998252987861633,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       },
@@ -3742,7 +4192,7 @@
         "entity": "attribute",
         "start": 19,
         "end": 27,
-        "confidence_entity": 0.9999206066131592,
+        "confidence_entity": 0.9999446868896484,
         "value": "children",
         "extractor": "DIETClassifier"
       },
@@ -3750,7 +4200,7 @@
         "entity": "PERSON",
         "start": 31,
         "end": 44,
-        "confidence_entity": 0.999935507774353,
+        "confidence_entity": 0.9998311996459961,
         "value": "Rachel Ellern",
         "extractor": "DIETClassifier"
       },
@@ -3784,7 +4234,7 @@
         "entity": "attribute",
         "start": 13,
         "end": 21,
-        "confidence_entity": 0.9999183416366577,
+        "confidence_entity": 0.9999316930770874,
         "value": "children",
         "extractor": "DIETClassifier"
       },
@@ -3792,7 +4242,7 @@
         "entity": "PERSON",
         "start": 25,
         "end": 38,
-        "confidence_entity": 0.9999411106109619,
+        "confidence_entity": 0.9998736381530762,
         "value": "Rachel Ellern",
         "extractor": "DIETClassifier"
       },
@@ -3826,7 +4276,7 @@
         "entity": "attribute",
         "start": 22,
         "end": 30,
-        "confidence_entity": 0.999916672706604,
+        "confidence_entity": 0.9999394416809082,
         "value": "children",
         "extractor": "DIETClassifier"
       },
@@ -3834,7 +4284,7 @@
         "entity": "PERSON",
         "start": 34,
         "end": 47,
-        "confidence_entity": 0.9999192953109741,
+        "confidence_entity": 0.9998219609260559,
         "value": "Rachel Ellern",
         "extractor": "DIETClassifier"
       },
@@ -3868,7 +4318,7 @@
         "entity": "attribute",
         "start": 21,
         "end": 29,
-        "confidence_entity": 0.9998981952667236,
+        "confidence_entity": 0.9999395608901978,
         "value": "children",
         "extractor": "DIETClassifier"
       },
@@ -3876,7 +4326,7 @@
         "entity": "PERSON",
         "start": 33,
         "end": 46,
-        "confidence_entity": 0.9999363422393799,
+        "confidence_entity": 0.9998108744621277,
         "value": "Rachel Ellern",
         "extractor": "DIETClassifier"
       },
@@ -3910,7 +4360,7 @@
         "entity": "attribute",
         "start": 12,
         "end": 18,
-        "confidence_entity": 0.9999411106109619,
+        "confidence_entity": 0.9999654293060303,
         "value": "spouse",
         "extractor": "DIETClassifier",
         "processors": [
@@ -3921,7 +4371,7 @@
         "entity": "PERSON",
         "start": 22,
         "end": 35,
-        "confidence_entity": 0.9998953342437744,
+        "confidence_entity": 0.999771773815155,
         "value": "Rachel Ellern",
         "extractor": "DIETClassifier"
       },
@@ -3955,7 +4405,7 @@
         "entity": "PERSON",
         "start": 22,
         "end": 35,
-        "confidence_entity": 0.9998890161514282,
+        "confidence_entity": 0.9997058510780334,
         "value": "Rachel Ellern",
         "extractor": "DIETClassifier"
       },
@@ -3963,7 +4413,7 @@
         "entity": "attribute",
         "start": 36,
         "end": 43,
-        "confidence_entity": 0.9997721314430237,
+        "confidence_entity": 0.9998471736907959,
         "value": "spouse",
         "extractor": "DIETClassifier",
         "processors": [
@@ -3993,7 +4443,7 @@
         "entity": "attribute",
         "start": 0,
         "end": 6,
-        "confidence_entity": 0.999894380569458,
+        "confidence_entity": 0.9999203681945801,
         "value": "spouse",
         "extractor": "DIETClassifier",
         "processors": [
@@ -4004,7 +4454,7 @@
         "entity": "PERSON",
         "start": 10,
         "end": 22,
-        "confidence_entity": 0.9997702240943909,
+        "confidence_entity": 0.9996052384376526,
         "value": "Rachel Ellen",
         "extractor": "DIETClassifier"
       }
@@ -4031,7 +4481,7 @@
         "entity": "attribute",
         "start": 20,
         "end": 26,
-        "confidence_entity": 0.9999408721923828,
+        "confidence_entity": 0.9999221563339233,
         "value": "spouse",
         "extractor": "DIETClassifier",
         "processors": [
@@ -4042,7 +4492,7 @@
         "entity": "PERSON",
         "start": 30,
         "end": 42,
-        "confidence_entity": 0.9997549653053284,
+        "confidence_entity": 0.9996180534362793,
         "value": "Rachel Ellen",
         "extractor": "DIETClassifier"
       },
@@ -4076,7 +4526,7 @@
         "entity": "attribute",
         "start": 31,
         "end": 37,
-        "confidence_entity": 0.9998935461044312,
+        "confidence_entity": 0.9999823570251465,
         "value": "spouse",
         "extractor": "DIETClassifier",
         "processors": [
@@ -4087,7 +4537,7 @@
         "entity": "PERSON",
         "start": 41,
         "end": 57,
-        "confidence_entity": 0.9999047517776489,
+        "confidence_entity": 0.9998387098312378,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       },
@@ -4121,7 +4571,7 @@
         "entity": "attribute",
         "start": 12,
         "end": 19,
-        "confidence_entity": 0.9999467134475708,
+        "confidence_entity": 0.9999874830245972,
         "value": "spouse",
         "extractor": "DIETClassifier",
         "processors": [
@@ -4132,7 +4582,7 @@
         "entity": "PERSON",
         "start": 23,
         "end": 39,
-        "confidence_entity": 0.99991774559021,
+        "confidence_entity": 0.9998773336410522,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       }
@@ -4159,7 +4609,7 @@
         "entity": "attribute",
         "start": 13,
         "end": 32,
-        "confidence_entity": 0.9993847608566284,
+        "confidence_entity": 0.999295711517334,
         "value": "other_family",
         "extractor": "DIETClassifier",
         "processors": [
@@ -4170,7 +4620,7 @@
         "entity": "PERSON",
         "start": 36,
         "end": 48,
-        "confidence_entity": 0.9997518658638,
+        "confidence_entity": 0.9997588992118835,
         "value": "Rachel Ellen",
         "extractor": "DIETClassifier"
       }
@@ -4197,7 +4647,7 @@
         "entity": "attribute",
         "start": 23,
         "end": 42,
-        "confidence_entity": 0.9995498061180115,
+        "confidence_entity": 0.9991839528083801,
         "value": "other_family",
         "extractor": "DIETClassifier",
         "processors": [
@@ -4208,7 +4658,7 @@
         "entity": "PERSON",
         "start": 46,
         "end": 58,
-        "confidence_entity": 0.9997448325157166,
+        "confidence_entity": 0.9997486472129822,
         "value": "Rachel Ellen",
         "extractor": "DIETClassifier"
       }
@@ -4235,7 +4685,7 @@
         "entity": "attribute",
         "start": 20,
         "end": 39,
-        "confidence_entity": 0.9994887113571167,
+        "confidence_entity": 0.9991838335990906,
         "value": "other_family",
         "extractor": "DIETClassifier",
         "processors": [
@@ -4246,7 +4696,7 @@
         "entity": "PERSON",
         "start": 43,
         "end": 55,
-        "confidence_entity": 0.9997377991676331,
+        "confidence_entity": 0.9997320771217346,
         "value": "Rachel Ellen",
         "extractor": "DIETClassifier"
       }
@@ -4273,7 +4723,7 @@
         "entity": "attribute",
         "start": 0,
         "end": 18,
-        "confidence_entity": 0.9992081522941589,
+        "confidence_entity": 0.9997492432594299,
         "value": "other_family",
         "extractor": "DIETClassifier",
         "processors": [
@@ -4284,7 +4734,7 @@
         "entity": "PERSON",
         "start": 22,
         "end": 34,
-        "confidence_entity": 0.9998041987419128,
+        "confidence_entity": 0.9996564388275146,
         "value": "Rachel Ellen",
         "extractor": "DIETClassifier"
       }
@@ -4311,7 +4761,7 @@
         "entity": "attribute",
         "start": 12,
         "end": 18,
-        "confidence_entity": 0.9999715089797974,
+        "confidence_entity": 0.9999911785125732,
         "value": "family",
         "extractor": "DIETClassifier",
         "processors": [
@@ -4322,7 +4772,7 @@
         "entity": "PERSON",
         "start": 22,
         "end": 38,
-        "confidence_entity": 0.9999285936355591,
+        "confidence_entity": 0.999869704246521,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       },
@@ -4356,7 +4806,7 @@
         "entity": "attribute",
         "start": 23,
         "end": 36,
-        "confidence_entity": 0.998491644859314,
+        "confidence_entity": 0.9989722967147827,
         "value": "family",
         "extractor": "DIETClassifier",
         "processors": [
@@ -4367,7 +4817,7 @@
         "entity": "PERSON",
         "start": 40,
         "end": 52,
-        "confidence_entity": 0.999891996383667,
+        "confidence_entity": 0.9998226761817932,
         "value": "Rachel Barak",
         "extractor": "DIETClassifier"
       }
@@ -4394,7 +4844,7 @@
         "entity": "attribute",
         "start": 20,
         "end": 33,
-        "confidence_entity": 0.9986660480499268,
+        "confidence_entity": 0.9989773035049438,
         "value": "family",
         "extractor": "DIETClassifier",
         "processors": [
@@ -4405,7 +4855,7 @@
         "entity": "PERSON",
         "start": 37,
         "end": 49,
-        "confidence_entity": 0.9998899698257446,
+        "confidence_entity": 0.9998396635055542,
         "value": "Rachel Barak",
         "extractor": "DIETClassifier"
       }
@@ -4432,7 +4882,7 @@
         "entity": "attribute",
         "start": 0,
         "end": 6,
-        "confidence_entity": 0.9999195337295532,
+        "confidence_entity": 0.9999833106994629,
         "value": "family",
         "extractor": "DIETClassifier",
         "processors": [
@@ -4443,7 +4893,7 @@
         "entity": "PERSON",
         "start": 10,
         "end": 24,
-        "confidence_entity": 0.9997790455818176,
+        "confidence_entity": 0.9997220635414124,
         "value": "Benjamin Jonas",
         "extractor": "DIETClassifier"
       }
@@ -4470,7 +4920,7 @@
         "entity": "attribute",
         "start": 13,
         "end": 20,
-        "confidence_entity": 0.9999510049819946,
+        "confidence_entity": 0.9999313354492188,
         "value": "parents",
         "extractor": "DIETClassifier",
         "processors": [
@@ -4481,7 +4931,7 @@
         "entity": "PERSON",
         "start": 24,
         "end": 36,
-        "confidence_entity": 0.9999037981033325,
+        "confidence_entity": 0.9998067021369934,
         "value": "Rachel Barak",
         "extractor": "DIETClassifier"
       },
@@ -4515,7 +4965,7 @@
         "entity": "attribute",
         "start": 20,
         "end": 27,
-        "confidence_entity": 0.9998923540115356,
+        "confidence_entity": 0.999968409538269,
         "value": "parents",
         "extractor": "DIETClassifier",
         "processors": [
@@ -4526,7 +4976,7 @@
         "entity": "PERSON",
         "start": 31,
         "end": 45,
-        "confidence_entity": 0.9997381567955017,
+        "confidence_entity": 0.9998478889465332,
         "value": "Benjamin Jonas",
         "extractor": "DIETClassifier"
       },
@@ -4560,7 +5010,7 @@
         "entity": "attribute",
         "start": 0,
         "end": 7,
-        "confidence_entity": 0.9997368454933167,
+        "confidence_entity": 0.9999414682388306,
         "value": "parents",
         "extractor": "DIETClassifier",
         "processors": [
@@ -4571,7 +5021,7 @@
         "entity": "PERSON",
         "start": 11,
         "end": 27,
-        "confidence_entity": 0.9999228715896606,
+        "confidence_entity": 0.9998791217803955,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       }
@@ -4598,7 +5048,7 @@
         "entity": "attribute",
         "start": 12,
         "end": 18,
-        "confidence_entity": 0.9999208450317383,
+        "confidence_entity": 0.9999436140060425,
         "value": "parents",
         "extractor": "DIETClassifier",
         "processors": [
@@ -4609,7 +5059,7 @@
         "entity": "PERSON",
         "start": 22,
         "end": 38,
-        "confidence_entity": 0.9999369382858276,
+        "confidence_entity": 0.9999029636383057,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       }
@@ -4630,7 +5080,7 @@
         "entity": "PERSON",
         "start": 65,
         "end": 81,
-        "confidence_entity": 0.9998806715011597,
+        "confidence_entity": 0.999860405921936,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       },
@@ -4644,7 +5094,7 @@
     ]
   },
   {
-    "text": "How was the mother of Esther Apfelberg named?",
+    "text": "Who was the mother of Esther Apfelberg named?",
     "entities": [
       {
         "start": 12,
@@ -4664,7 +5114,7 @@
         "entity": "attribute",
         "start": 12,
         "end": 18,
-        "confidence_entity": 0.9997885823249817,
+        "confidence_entity": 0.9999285936355591,
         "value": "parents",
         "extractor": "DIETClassifier",
         "processors": [
@@ -4675,9 +5125,54 @@
         "entity": "PERSON",
         "start": 22,
         "end": 38,
-        "confidence_entity": 0.9999209642410278,
+        "confidence_entity": 0.9998929500579834,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Who were Bertha Pappenheim's parents?",
+    "entities": [
+      {
+        "start": 9,
+        "end": 26,
+        "value": "Bertha Pappenheim",
+        "entity": "PERSON"
+      },
+      {
+        "start": 29,
+        "end": 36,
+        "value": "parents",
+        "entity": "attribute"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "PERSON",
+        "start": 9,
+        "end": 26,
+        "confidence_entity": 0.9992592930793762,
+        "value": "Bertha Pappenheim",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "attribute",
+        "start": 29,
+        "end": 36,
+        "confidence_entity": 0.9996090531349182,
+        "value": "parents",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "attribute",
+        "start": 29,
+        "end": 36,
+        "value": "parents",
+        "extractor": "RegexEntityExtractor"
       }
     ]
   },
@@ -4702,7 +5197,7 @@
         "entity": "attribute",
         "start": 12,
         "end": 17,
-        "confidence_entity": 0.999920129776001,
+        "confidence_entity": 0.99996018409729,
         "value": "title",
         "extractor": "DIETClassifier"
       },
@@ -4710,7 +5205,7 @@
         "entity": "PERSON",
         "start": 21,
         "end": 37,
-        "confidence_entity": 0.9999217987060547,
+        "confidence_entity": 0.9998958110809326,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       },
@@ -4744,7 +5239,7 @@
         "entity": "attribute",
         "start": 12,
         "end": 17,
-        "confidence_entity": 0.9999144077301025,
+        "confidence_entity": 0.9999549388885498,
         "value": "title",
         "extractor": "DIETClassifier"
       },
@@ -4752,7 +5247,7 @@
         "entity": "PERSON",
         "start": 21,
         "end": 35,
-        "confidence_entity": 0.9998774528503418,
+        "confidence_entity": 0.9998055100440979,
         "value": "Benjamin Jonas",
         "extractor": "DIETClassifier"
       },
@@ -4786,7 +5281,7 @@
         "entity": "attribute",
         "start": 22,
         "end": 27,
-        "confidence_entity": 0.9999322891235352,
+        "confidence_entity": 0.9999022483825684,
         "value": "title",
         "extractor": "DIETClassifier"
       },
@@ -4794,7 +5289,7 @@
         "entity": "PERSON",
         "start": 31,
         "end": 41,
-        "confidence_entity": 0.9998433589935303,
+        "confidence_entity": 0.9998804330825806,
         "value": "Ruth Barak",
         "extractor": "DIETClassifier"
       },
@@ -4828,7 +5323,7 @@
         "entity": "attribute",
         "start": 21,
         "end": 26,
-        "confidence_entity": 0.9999436140060425,
+        "confidence_entity": 0.9998822212219238,
         "value": "title",
         "extractor": "DIETClassifier"
       },
@@ -4836,7 +5331,7 @@
         "entity": "PERSON",
         "start": 27,
         "end": 37,
-        "confidence_entity": 0.9996134638786316,
+        "confidence_entity": 0.9998204112052917,
         "value": "Ruth Barak",
         "extractor": "DIETClassifier"
       },
@@ -4864,7 +5359,83 @@
         "entity": "attribute",
         "start": 22,
         "end": 25,
-        "confidence_entity": 0.9989973902702332,
+        "confidence_entity": 0.999625563621521,
+        "value": "title",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "What did Bertha Pappenheim do?",
+    "entities": [
+      {
+        "start": 9,
+        "end": 26,
+        "value": "Bertha Pappenheim",
+        "entity": "PERSON"
+      },
+      {
+        "start": 27,
+        "end": 29,
+        "value": "title",
+        "entity": "attribute"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "PERSON",
+        "start": 9,
+        "end": 26,
+        "confidence_entity": 0.9996028542518616,
+        "value": "Bertha Pappenheim",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "attribute",
+        "start": 27,
+        "end": 29,
+        "confidence_entity": 0.9930597543716431,
+        "value": "title",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "What did Bertha Pappenheim do for work?",
+    "entities": [
+      {
+        "start": 9,
+        "end": 26,
+        "value": "Bertha Pappenheim",
+        "entity": "PERSON"
+      },
+      {
+        "start": 27,
+        "end": 38,
+        "value": "title",
+        "entity": "attribute"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "PERSON",
+        "start": 9,
+        "end": 26,
+        "confidence_entity": 0.9995840191841125,
+        "value": "Bertha Pappenheim",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "attribute",
+        "start": 27,
+        "end": 38,
+        "confidence_entity": 0.9650552868843079,
         "value": "title",
         "extractor": "DIETClassifier",
         "processors": [
@@ -4894,7 +5465,7 @@
         "entity": "attribute",
         "start": 12,
         "end": 18,
-        "confidence_entity": 0.999900221824646,
+        "confidence_entity": 0.9999667406082153,
         "value": "origin",
         "extractor": "DIETClassifier",
         "processors": [
@@ -4905,7 +5476,7 @@
         "entity": "PERSON",
         "start": 22,
         "end": 36,
-        "confidence_entity": 0.9998846054077148,
+        "confidence_entity": 0.9998077750205994,
         "value": "Benjamin Jonas",
         "extractor": "DIETClassifier"
       },
@@ -4939,7 +5510,7 @@
         "entity": "PERSON",
         "start": 10,
         "end": 24,
-        "confidence_entity": 0.9998278617858887,
+        "confidence_entity": 0.9997757077217102,
         "value": "Benjamin Jonas",
         "extractor": "DIETClassifier"
       },
@@ -4947,7 +5518,7 @@
         "entity": "attribute",
         "start": 29,
         "end": 35,
-        "confidence_entity": 0.9999048709869385,
+        "confidence_entity": 0.9999709129333496,
         "value": "origin",
         "extractor": "DIETClassifier",
         "processors": [
@@ -4984,7 +5555,7 @@
         "entity": "PERSON",
         "start": 10,
         "end": 22,
-        "confidence_entity": 0.9998699426651001,
+        "confidence_entity": 0.9997912049293518,
         "value": "Rachel Barak",
         "extractor": "DIETClassifier"
       },
@@ -4992,7 +5563,7 @@
         "entity": "attribute",
         "start": 27,
         "end": 33,
-        "confidence_entity": 0.9999247789382935,
+        "confidence_entity": 0.9999077320098877,
         "value": "origin",
         "extractor": "DIETClassifier",
         "processors": [
@@ -5029,7 +5600,7 @@
         "entity": "PERSON",
         "start": 24,
         "end": 40,
-        "confidence_entity": 0.9998956918716431,
+        "confidence_entity": 0.9998821020126343,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       },
@@ -5037,7 +5608,7 @@
         "entity": "attribute",
         "start": 49,
         "end": 55,
-        "confidence_entity": 0.9997864365577698,
+        "confidence_entity": 0.9999692440032959,
         "value": "origin",
         "extractor": "DIETClassifier",
         "processors": [
@@ -5074,7 +5645,7 @@
         "entity": "attribute",
         "start": 0,
         "end": 6,
-        "confidence_entity": 0.9997488856315613,
+        "confidence_entity": 0.9999512434005737,
         "value": "origin",
         "extractor": "DIETClassifier",
         "processors": [
@@ -5085,7 +5656,7 @@
         "entity": "PERSON",
         "start": 11,
         "end": 27,
-        "confidence_entity": 0.9999171495437622,
+        "confidence_entity": 0.9998669624328613,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       }
@@ -5112,7 +5683,7 @@
         "entity": "attribute",
         "start": 6,
         "end": 21,
-        "confidence_entity": 0.9969154596328735,
+        "confidence_entity": 0.993305504322052,
         "value": "alternate_name",
         "extractor": "DIETClassifier",
         "processors": [
@@ -5123,7 +5694,7 @@
         "entity": "PERSON",
         "start": 26,
         "end": 42,
-        "confidence_entity": 0.9999208450317383,
+        "confidence_entity": 0.9998927116394043,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       }
@@ -5150,7 +5721,7 @@
         "entity": "attribute",
         "start": 12,
         "end": 27,
-        "confidence_entity": 0.9999786615371704,
+        "confidence_entity": 0.9999707937240601,
         "value": "alternate_name",
         "extractor": "DIETClassifier",
         "processors": [
@@ -5161,7 +5732,7 @@
         "entity": "PERSON",
         "start": 31,
         "end": 45,
-        "confidence_entity": 0.999832272529602,
+        "confidence_entity": 0.9998067021369934,
         "value": "Benjamin Jonas",
         "extractor": "DIETClassifier"
       }
@@ -5188,7 +5759,7 @@
         "entity": "attribute",
         "start": 20,
         "end": 34,
-        "confidence_entity": 0.9999399185180664,
+        "confidence_entity": 0.9999305009841919,
         "value": "alternate_name",
         "extractor": "DIETClassifier"
       },
@@ -5196,7 +5767,7 @@
         "entity": "PERSON",
         "start": 38,
         "end": 48,
-        "confidence_entity": 0.9998061060905457,
+        "confidence_entity": 0.9997379183769226,
         "value": "Ruth Barak",
         "extractor": "DIETClassifier"
       }
@@ -5223,7 +5794,7 @@
         "entity": "PERSON",
         "start": 21,
         "end": 37,
-        "confidence_entity": 0.9999116659164429,
+        "confidence_entity": 0.9998821020126343,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       },
@@ -5231,7 +5802,7 @@
         "entity": "attribute",
         "start": 40,
         "end": 50,
-        "confidence_entity": 0.9988356232643127,
+        "confidence_entity": 0.9994826316833496,
         "value": "top_members_employees",
         "extractor": "DIETClassifier",
         "processors": [
@@ -5268,7 +5839,7 @@
         "entity": "PERSON",
         "start": 25,
         "end": 41,
-        "confidence_entity": 0.9999063014984131,
+        "confidence_entity": 0.9998576641082764,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       },
@@ -5276,7 +5847,7 @@
         "entity": "attribute",
         "start": 48,
         "end": 58,
-        "confidence_entity": 0.9964277148246765,
+        "confidence_entity": 0.999521017074585,
         "value": "top_members_employees",
         "extractor": "DIETClassifier",
         "processors": [
@@ -5313,7 +5884,7 @@
         "entity": "PERSON",
         "start": 27,
         "end": 43,
-        "confidence_entity": 0.9999102354049683,
+        "confidence_entity": 0.9998908042907715,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       },
@@ -5321,7 +5892,7 @@
         "entity": "attribute",
         "start": 46,
         "end": 56,
-        "confidence_entity": 0.9965841770172119,
+        "confidence_entity": 0.9986584186553955,
         "value": "top_members_employees",
         "extractor": "DIETClassifier",
         "processors": [
@@ -5358,7 +5929,7 @@
         "entity": "PERSON",
         "start": 40,
         "end": 54,
-        "confidence_entity": 0.9996422529220581,
+        "confidence_entity": 0.9998574256896973,
         "value": "Benjamin Jonas",
         "extractor": "DIETClassifier"
       },
@@ -5366,7 +5937,7 @@
         "entity": "attribute",
         "start": 61,
         "end": 71,
-        "confidence_entity": 0.9987071752548218,
+        "confidence_entity": 0.9984378218650818,
         "value": "top_members_employees",
         "extractor": "DIETClassifier",
         "processors": [
@@ -5403,7 +5974,7 @@
         "entity": "PERSON",
         "start": 21,
         "end": 35,
-        "confidence_entity": 0.9998100399971008,
+        "confidence_entity": 0.9998262524604797,
         "value": "Benjamin Jonas",
         "extractor": "DIETClassifier"
       },
@@ -5411,7 +5982,7 @@
         "entity": "attribute",
         "start": 36,
         "end": 42,
-        "confidence_entity": 0.9998490810394287,
+        "confidence_entity": 0.9998072981834412,
         "value": "member",
         "extractor": "DIETClassifier",
         "processors": [
@@ -5441,7 +6012,7 @@
         "entity": "PERSON",
         "start": 10,
         "end": 24,
-        "confidence_entity": 0.9998482465744019,
+        "confidence_entity": 0.9998408555984497,
         "value": "Benjamin Jonas",
         "extractor": "DIETClassifier"
       },
@@ -5449,7 +6020,7 @@
         "entity": "attribute",
         "start": 27,
         "end": 33,
-        "confidence_entity": 0.9999483823776245,
+        "confidence_entity": 0.999961256980896,
         "value": "members",
         "extractor": "DIETClassifier",
         "processors": [
@@ -5486,7 +6057,7 @@
         "entity": "PERSON",
         "start": 37,
         "end": 51,
-        "confidence_entity": 0.9997616410255432,
+        "confidence_entity": 0.9998559951782227,
         "value": "Benjamin Jonas",
         "extractor": "DIETClassifier"
       },
@@ -5494,7 +6065,7 @@
         "entity": "attribute",
         "start": 58,
         "end": 64,
-        "confidence_entity": 0.9998798370361328,
+        "confidence_entity": 0.999782383441925,
         "value": "members",
         "extractor": "DIETClassifier",
         "processors": [
@@ -5531,7 +6102,7 @@
         "entity": "PERSON",
         "start": 42,
         "end": 58,
-        "confidence_entity": 0.9998980760574341,
+        "confidence_entity": 0.9998712539672852,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       },
@@ -5539,7 +6110,45 @@
         "entity": "attribute",
         "start": 59,
         "end": 65,
-        "confidence_entity": 0.9991477727890015,
+        "confidence_entity": 0.9998781681060791,
+        "value": "member",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Please tell me where did Benjamin Jonas had a membership",
+    "entities": [
+      {
+        "start": 25,
+        "end": 39,
+        "value": "Benjamin Jonas",
+        "entity": "PERSON"
+      },
+      {
+        "start": 46,
+        "end": 56,
+        "value": "member",
+        "entity": "attribute"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "PERSON",
+        "start": 25,
+        "end": 39,
+        "confidence_entity": 0.9998210072517395,
+        "value": "Benjamin Jonas",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "attribute",
+        "start": 46,
+        "end": 56,
+        "confidence_entity": 0.9999172687530518,
         "value": "member",
         "extractor": "DIETClassifier",
         "processors": [
@@ -5569,7 +6178,7 @@
         "entity": "attribute",
         "start": 6,
         "end": 17,
-        "confidence_entity": 0.9980939030647278,
+        "confidence_entity": 0.9888852834701538,
         "value": "schools_attended",
         "extractor": "DIETClassifier",
         "processors": [
@@ -5580,7 +6189,7 @@
         "entity": "PERSON",
         "start": 18,
         "end": 34,
-        "confidence_entity": 0.9998713731765747,
+        "confidence_entity": 0.9999037981033325,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       }
@@ -5607,7 +6216,7 @@
         "entity": "PERSON",
         "start": 10,
         "end": 26,
-        "confidence_entity": 0.9998984336853027,
+        "confidence_entity": 0.9998725652694702,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       },
@@ -5615,8 +6224,32 @@
         "entity": "attribute",
         "start": 27,
         "end": 34,
-        "confidence_entity": 0.9999654293060303,
+        "confidence_entity": 0.999988317489624,
         "value": "school_attended",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Where did he studied?",
+    "entities": [
+      {
+        "start": 13,
+        "end": 20,
+        "value": "schools_attended",
+        "entity": "attribute"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "attribute",
+        "start": 13,
+        "end": 20,
+        "confidence_entity": 0.9998244643211365,
+        "value": "schools_attended",
         "extractor": "DIETClassifier",
         "processors": [
           "EntitySynonymMapper"
@@ -5645,7 +6278,7 @@
         "entity": "PERSON",
         "start": 26,
         "end": 42,
-        "confidence_entity": 0.999893307685852,
+        "confidence_entity": 0.9998225569725037,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       },
@@ -5653,7 +6286,7 @@
         "entity": "attribute",
         "start": 49,
         "end": 56,
-        "confidence_entity": 0.9999479055404663,
+        "confidence_entity": 0.9999829530715942,
         "value": "school_attended",
         "extractor": "DIETClassifier",
         "processors": [
@@ -5683,7 +6316,7 @@
         "entity": "attribute",
         "start": 22,
         "end": 29,
-        "confidence_entity": 0.9975908994674683,
+        "confidence_entity": 0.9961161613464355,
         "value": "schools_attended",
         "extractor": "DIETClassifier",
         "processors": [
@@ -5694,7 +6327,7 @@
         "entity": "PERSON",
         "start": 36,
         "end": 52,
-        "confidence_entity": 0.9998891353607178,
+        "confidence_entity": 0.9998451471328735,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       }
@@ -5721,7 +6354,7 @@
         "entity": "attribute",
         "start": 9,
         "end": 15,
-        "confidence_entity": 0.999599039554596,
+        "confidence_entity": 0.9997727274894714,
         "value": "schools_attended",
         "extractor": "DIETClassifier",
         "processors": [
@@ -5732,7 +6365,7 @@
         "entity": "PERSON",
         "start": 20,
         "end": 36,
-        "confidence_entity": 0.9999145269393921,
+        "confidence_entity": 0.9999010562896729,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       }
@@ -5759,7 +6392,7 @@
         "entity": "attribute",
         "start": 9,
         "end": 19,
-        "confidence_entity": 0.9998562335968018,
+        "confidence_entity": 0.9995412826538086,
         "value": "schools_attended",
         "extractor": "DIETClassifier",
         "processors": [
@@ -5770,9 +6403,71 @@
         "entity": "PERSON",
         "start": 24,
         "end": 40,
-        "confidence_entity": 0.9999113082885742,
+        "confidence_entity": 0.9999018907546997,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Where did Esther Apfelberg studied?",
+    "entities": [
+      {
+        "start": 10,
+        "end": 26,
+        "value": "Esther Apfelberg",
+        "entity": "PERSON"
+      },
+      {
+        "start": 27,
+        "end": 34,
+        "value": "schools_attended",
+        "entity": "attribute"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "PERSON",
+        "start": 10,
+        "end": 26,
+        "confidence_entity": 0.999902606010437,
+        "value": "Esther Apfelberg",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "attribute",
+        "start": 27,
+        "end": 34,
+        "confidence_entity": 0.9999079704284668,
+        "value": "schools_attended",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Please show me the schools where she studied",
+    "entities": [
+      {
+        "start": 19,
+        "end": 26,
+        "value": "schools_attended",
+        "entity": "attribute"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "attribute",
+        "start": 19,
+        "end": 26,
+        "confidence_entity": 0.9982613921165466,
+        "value": "schools_attended",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
       }
     ]
   },
@@ -5797,7 +6492,7 @@
         "entity": "attribute",
         "start": 12,
         "end": 20,
-        "confidence_entity": 0.9996498823165894,
+        "confidence_entity": 0.9997896552085876,
         "value": "religion",
         "extractor": "DIETClassifier"
       },
@@ -5805,7 +6500,7 @@
         "entity": "PERSON",
         "start": 24,
         "end": 40,
-        "confidence_entity": 0.9999337196350098,
+        "confidence_entity": 0.9999164342880249,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       },
@@ -5839,7 +6534,7 @@
         "entity": "attribute",
         "start": 19,
         "end": 24,
-        "confidence_entity": 0.9998867511749268,
+        "confidence_entity": 0.9999551773071289,
         "value": "title",
         "extractor": "DIETClassifier"
       },
@@ -5847,7 +6542,7 @@
         "entity": "PERSON",
         "start": 28,
         "end": 44,
-        "confidence_entity": 0.9999222755432129,
+        "confidence_entity": 0.9999058246612549,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       },
@@ -5881,7 +6576,7 @@
         "entity": "attribute",
         "start": 13,
         "end": 21,
-        "confidence_entity": 0.9996682405471802,
+        "confidence_entity": 0.9997883439064026,
         "value": "religion",
         "extractor": "DIETClassifier"
       },
@@ -5889,7 +6584,7 @@
         "entity": "PERSON",
         "start": 25,
         "end": 41,
-        "confidence_entity": 0.9999198913574219,
+        "confidence_entity": 0.9998905658721924,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       },
@@ -5899,6 +6594,107 @@
         "end": 21,
         "value": "religion",
         "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "What religion is Esther Apfelberg?",
+    "entities": [
+      {
+        "start": 5,
+        "end": 13,
+        "value": "religion",
+        "entity": "attribute"
+      },
+      {
+        "start": 17,
+        "end": 33,
+        "value": "Esther Apfelberg",
+        "entity": "PERSON"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "attribute",
+        "start": 5,
+        "end": 13,
+        "confidence_entity": 0.9998170733451843,
+        "value": "religion",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "PERSON",
+        "start": 17,
+        "end": 33,
+        "confidence_entity": 0.9998956918716431,
+        "value": "Esther Apfelberg",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "attribute",
+        "start": 5,
+        "end": 13,
+        "value": "religion",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "I want to know something of her",
+    "entities": [
+      {
+        "start": 15,
+        "end": 24,
+        "value": "biographie",
+        "entity": "attribute"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "attribute",
+        "start": 15,
+        "end": 24,
+        "confidence_entity": 0.9992660880088806,
+        "value": "biographie",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Please show me the biographie of Ruth Barak",
+    "entities": [
+      {
+        "start": 19,
+        "end": 29,
+        "value": "biographie",
+        "entity": "attribute"
+      },
+      {
+        "start": 33,
+        "end": 43,
+        "value": "Ruth Barak",
+        "entity": "PERSON"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "attribute",
+        "start": 19,
+        "end": 29,
+        "confidence_entity": 0.9998565912246704,
+        "value": "biographie",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "PERSON",
+        "start": 33,
+        "end": 43,
+        "confidence_entity": 0.9998654127120972,
+        "value": "Ruth Barak",
+        "extractor": "DIETClassifier"
       }
     ]
   },
@@ -5923,7 +6719,7 @@
         "entity": "attribute",
         "start": 12,
         "end": 38,
-        "confidence_entity": 0.9948757290840149,
+        "confidence_entity": 0.9736436605453491,
         "value": "city_of_headquarters",
         "extractor": "DIETClassifier",
         "processors": [
@@ -5934,7 +6730,7 @@
         "entity": "ORG",
         "start": 42,
         "end": 74,
-        "confidence_entity": 0.9995088577270508,
+        "confidence_entity": 0.9984568357467651,
         "value": "Institute for Applied Psychology",
         "extractor": "DIETClassifier"
       }
@@ -5960,16 +6756,19 @@
       {
         "entity": "attribute",
         "start": 25,
-        "end": 48,
-        "confidence_entity": 0.8172696828842163,
-        "value": "city the headquarter of",
-        "extractor": "DIETClassifier"
+        "end": 45,
+        "confidence_entity": 0.9937636256217957,
+        "value": "city_of_headquarters",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
       },
       {
         "entity": "ORG",
         "start": 49,
         "end": 82,
-        "confidence_entity": 0.966056227684021,
+        "confidence_entity": 0.8311591148376465,
         "value": "Organization of German Immigrants",
         "extractor": "DIETClassifier"
       }
@@ -5996,7 +6795,7 @@
         "entity": "attribute",
         "start": 0,
         "end": 19,
-        "confidence_entity": 0.880139172077179,
+        "confidence_entity": 0.7703888416290283,
         "value": "city_of_headquarters",
         "extractor": "DIETClassifier",
         "processors": [
@@ -6007,7 +6806,7 @@
         "entity": "ORG",
         "start": 23,
         "end": 55,
-        "confidence_entity": 0.9985291957855225,
+        "confidence_entity": 0.99899822473526,
         "value": "Institute for Applied Psychology",
         "extractor": "DIETClassifier"
       }
@@ -6028,7 +6827,7 @@
         "entity": "attribute",
         "start": 12,
         "end": 38,
-        "confidence_entity": 0.9948004484176636,
+        "confidence_entity": 0.9779222011566162,
         "value": "city_of_headquarters",
         "extractor": "DIETClassifier",
         "processors": [
@@ -6052,7 +6851,7 @@
         "entity": "attribute",
         "start": 19,
         "end": 45,
-        "confidence_entity": 0.9927331209182739,
+        "confidence_entity": 0.9857656955718994,
         "value": "city_of_headquarters",
         "extractor": "DIETClassifier",
         "processors": [
@@ -6082,7 +6881,7 @@
         "entity": "attribute",
         "start": 0,
         "end": 11,
-        "confidence_entity": 0.9984475374221802,
+        "confidence_entity": 0.9989804625511169,
         "value": "headquarter",
         "extractor": "DIETClassifier",
         "processors": [
@@ -6093,7 +6892,7 @@
         "entity": "ORG",
         "start": 15,
         "end": 40,
-        "confidence_entity": 0.9984440207481384,
+        "confidence_entity": 0.9997133612632751,
         "value": "Hebrew Gymnasium Herzliya",
         "extractor": "DIETClassifier"
       }
@@ -6120,7 +6919,7 @@
         "entity": "attribute",
         "start": 18,
         "end": 29,
-        "confidence_entity": 0.9997199177742004,
+        "confidence_entity": 0.999870777130127,
         "value": "headquarter",
         "extractor": "DIETClassifier",
         "processors": [
@@ -6131,7 +6930,7 @@
         "entity": "ORG",
         "start": 33,
         "end": 65,
-        "confidence_entity": 0.9992074370384216,
+        "confidence_entity": 0.9984105825424194,
         "value": "Institute for Applied Psychology",
         "extractor": "DIETClassifier"
       }
@@ -6158,7 +6957,7 @@
         "entity": "attribute",
         "start": 13,
         "end": 24,
-        "confidence_entity": 0.999763548374176,
+        "confidence_entity": 0.9998576641082764,
         "value": "headquarter",
         "extractor": "DIETClassifier",
         "processors": [
@@ -6169,7 +6968,7 @@
         "entity": "ORG",
         "start": 28,
         "end": 60,
-        "confidence_entity": 0.998757004737854,
+        "confidence_entity": 0.9985665678977966,
         "value": "Institute for Applied Psychology",
         "extractor": "DIETClassifier"
       }
@@ -6190,12 +6989,50 @@
         "entity": "attribute",
         "start": 14,
         "end": 25,
-        "confidence_entity": 0.9996837377548218,
+        "confidence_entity": 0.9998968839645386,
         "value": "headquarter",
         "extractor": "DIETClassifier",
         "processors": [
           "EntitySynonymMapper"
         ]
+      }
+    ]
+  },
+  {
+    "text": "Where are the headquarters of International Save the Children Union?",
+    "entities": [
+      {
+        "start": 14,
+        "end": 26,
+        "value": "headquarter",
+        "entity": "attribute"
+      },
+      {
+        "start": 30,
+        "end": 67,
+        "value": "International Save the Children Union",
+        "entity": "ORG"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "attribute",
+        "start": 14,
+        "end": 26,
+        "confidence_entity": 0.9999468326568604,
+        "value": "headquarter",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "ORG",
+        "start": 30,
+        "end": 67,
+        "confidence_entity": 0.9953204989433289,
+        "value": "International Save the Children Union",
+        "extractor": "DIETClassifier"
       }
     ]
   },
@@ -6220,7 +7057,7 @@
         "entity": "attribute",
         "start": 13,
         "end": 24,
-        "confidence_entity": 0.9997431635856628,
+        "confidence_entity": 0.9996786117553711,
         "value": "top_members_employees",
         "extractor": "DIETClassifier",
         "processors": [
@@ -6231,7 +7068,7 @@
         "entity": "ORG",
         "start": 28,
         "end": 55,
-        "confidence_entity": 0.9969916343688965,
+        "confidence_entity": 0.9820543527603149,
         "value": "Mizrahi Womens Organization",
         "extractor": "DIETClassifier"
       }
@@ -6258,7 +7095,7 @@
         "entity": "attribute",
         "start": 6,
         "end": 17,
-        "confidence_entity": 0.9995483756065369,
+        "confidence_entity": 0.9994906187057495,
         "value": "top_members_employees",
         "extractor": "DIETClassifier",
         "processors": [
@@ -6269,7 +7106,7 @@
         "entity": "ORG",
         "start": 23,
         "end": 40,
-        "confidence_entity": 0.9991705417633057,
+        "confidence_entity": 0.9994003772735596,
         "value": "Spiritual Hygiene",
         "extractor": "DIETClassifier"
       }
@@ -6296,7 +7133,7 @@
         "entity": "attribute",
         "start": 12,
         "end": 22,
-        "confidence_entity": 0.9993556141853333,
+        "confidence_entity": 0.9995717406272888,
         "value": "top_members_employees",
         "extractor": "DIETClassifier",
         "processors": [
@@ -6307,7 +7144,7 @@
         "entity": "ORG",
         "start": 26,
         "end": 39,
-        "confidence_entity": 0.9984671473503113,
+        "confidence_entity": 0.9980225563049316,
         "value": "Haaretz Davar",
         "extractor": "DIETClassifier"
       },
@@ -6341,7 +7178,7 @@
         "entity": "attribute",
         "start": 12,
         "end": 23,
-        "confidence_entity": 0.9997307658195496,
+        "confidence_entity": 0.9992467164993286,
         "value": "top_members_employees",
         "extractor": "DIETClassifier",
         "processors": [
@@ -6352,7 +7189,7 @@
         "entity": "ORG",
         "start": 27,
         "end": 50,
-        "confidence_entity": 0.9997209906578064,
+        "confidence_entity": 0.9998167157173157,
         "value": "Zentralwohlfahrtsstelle",
         "extractor": "DIETClassifier"
       }
@@ -6373,7 +7210,7 @@
         "entity": "attribute",
         "start": 27,
         "end": 33,
-        "confidence_entity": 0.9997445940971375,
+        "confidence_entity": 0.9997205138206482,
         "value": "top_members_employees",
         "extractor": "DIETClassifier",
         "processors": [
@@ -6403,7 +7240,7 @@
         "entity": "attribute",
         "start": 23,
         "end": 30,
-        "confidence_entity": 0.9991917014122009,
+        "confidence_entity": 0.9926326870918274,
         "value": "member",
         "extractor": "DIETClassifier",
         "processors": [
@@ -6414,7 +7251,7 @@
         "entity": "ORG",
         "start": 34,
         "end": 55,
-        "confidence_entity": 0.997283935546875,
+        "confidence_entity": 0.9990129470825195,
         "value": "Jewish National Party",
         "extractor": "DIETClassifier"
       },
@@ -6448,7 +7285,7 @@
         "entity": "attribute",
         "start": 10,
         "end": 16,
-        "confidence_entity": 0.9998418092727661,
+        "confidence_entity": 0.9997215867042542,
         "value": "members",
         "extractor": "DIETClassifier",
         "processors": [
@@ -6459,7 +7296,7 @@
         "entity": "ORG",
         "start": 20,
         "end": 37,
-        "confidence_entity": 0.9980042576789856,
+        "confidence_entity": 0.9984532594680786,
         "value": "Childrens Service",
         "extractor": "DIETClassifier"
       },
@@ -6493,7 +7330,7 @@
         "entity": "attribute",
         "start": 8,
         "end": 15,
-        "confidence_entity": 0.9998430013656616,
+        "confidence_entity": 0.9998047947883606,
         "value": "member",
         "extractor": "DIETClassifier",
         "processors": [
@@ -6504,7 +7341,7 @@
         "entity": "ORG",
         "start": 23,
         "end": 46,
-        "confidence_entity": 0.9998039603233337,
+        "confidence_entity": 0.9998242259025574,
         "value": "Zentralwohlfahrtsstelle",
         "extractor": "DIETClassifier"
       }
@@ -6525,7 +7362,7 @@
         "entity": "attribute",
         "start": 13,
         "end": 20,
-        "confidence_entity": 0.9999402761459351,
+        "confidence_entity": 0.9993646740913391,
         "value": "member",
         "extractor": "DIETClassifier",
         "processors": [
@@ -6549,7 +7386,7 @@
         "entity": "attribute",
         "start": 20,
         "end": 27,
-        "confidence_entity": 0.9999256134033203,
+        "confidence_entity": 0.9983077049255371,
         "value": "member",
         "extractor": "DIETClassifier",
         "processors": [
@@ -6559,7 +7396,7 @@
     ]
   },
   {
-    "text": "Show me who worked at at the Jewish National Party?",
+    "text": "Show me who worked at the Jewish National Party?",
     "entities": [
       {
         "start": 12,
@@ -6568,8 +7405,8 @@
         "entity": "attribute"
       },
       {
-        "start": 29,
-        "end": 50,
+        "start": 26,
+        "end": 47,
         "value": "Jewish National Party",
         "entity": "ORG"
       }
@@ -6579,7 +7416,7 @@
         "entity": "attribute",
         "start": 12,
         "end": 21,
-        "confidence_entity": 0.836662232875824,
+        "confidence_entity": 0.9854029417037964,
         "value": "employee_or_member_of",
         "extractor": "DIETClassifier",
         "processors": [
@@ -6588,16 +7425,16 @@
       },
       {
         "entity": "ORG",
-        "start": 29,
-        "end": 50,
-        "confidence_entity": 0.9981659054756165,
+        "start": 26,
+        "end": 47,
+        "confidence_entity": 0.9991118311882019,
         "value": "Jewish National Party",
         "extractor": "DIETClassifier"
       },
       {
         "entity": "RELIGION",
-        "start": 29,
-        "end": 35,
+        "start": 26,
+        "end": 32,
         "value": "Jewish",
         "extractor": "RegexEntityExtractor"
       }
@@ -6624,7 +7461,7 @@
         "entity": "attribute",
         "start": 22,
         "end": 29,
-        "confidence_entity": 0.9989468455314636,
+        "confidence_entity": 0.9995051622390747,
         "value": "employee_or_member_of",
         "extractor": "DIETClassifier",
         "processors": [
@@ -6635,14 +7472,14 @@
         "entity": "ORG",
         "start": 37,
         "end": 54,
-        "confidence_entity": 0.9983909130096436,
+        "confidence_entity": 0.9981929659843445,
         "value": "Childrens Service",
         "extractor": "DIETClassifier"
       }
     ]
   },
   {
-    "text": "Who worked at at the Jewish National Party?",
+    "text": "Who worked at the Jewish National Party?",
     "entities": [
       {
         "start": 4,
@@ -6651,8 +7488,8 @@
         "entity": "attribute"
       },
       {
-        "start": 21,
-        "end": 42,
+        "start": 18,
+        "end": 39,
         "value": "Jewish National Party",
         "entity": "ORG"
       }
@@ -6661,23 +7498,26 @@
       {
         "entity": "attribute",
         "start": 4,
-        "end": 16,
-        "confidence_entity": 0.6034597158432007,
-        "value": "worked at at",
-        "extractor": "DIETClassifier"
+        "end": 13,
+        "confidence_entity": 0.9853671789169312,
+        "value": "employee_or_member_of",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
       },
       {
         "entity": "ORG",
-        "start": 21,
-        "end": 42,
-        "confidence_entity": 0.9974334836006165,
+        "start": 18,
+        "end": 39,
+        "confidence_entity": 0.9990062117576599,
         "value": "Jewish National Party",
         "extractor": "DIETClassifier"
       },
       {
         "entity": "RELIGION",
-        "start": 21,
-        "end": 27,
+        "start": 18,
+        "end": 24,
         "value": "Jewish",
         "extractor": "RegexEntityExtractor"
       }
@@ -6698,7 +7538,7 @@
         "entity": "attribute",
         "start": 4,
         "end": 13,
-        "confidence_entity": 0.9952772855758667,
+        "confidence_entity": 0.9874267578125,
         "value": "employee_or_member_of",
         "extractor": "DIETClassifier",
         "processors": [
@@ -6728,7 +7568,7 @@
         "entity": "ORG",
         "start": 10,
         "end": 31,
-        "confidence_entity": 0.9975458979606628,
+        "confidence_entity": 0.9984467625617981,
         "value": "Jewish National Party",
         "extractor": "DIETClassifier"
       },
@@ -6736,7 +7576,7 @@
         "entity": "attribute",
         "start": 37,
         "end": 44,
-        "confidence_entity": 0.9996026158332825,
+        "confidence_entity": 0.9993234872817993,
         "value": "school_attended",
         "extractor": "DIETClassifier",
         "processors": [
@@ -6753,17 +7593,17 @@
     ]
   },
   {
-    "text": "Show me some the student of Mizrahi Womens Organization?",
+    "text": "Show me some the students of Mizrahi Womens Organization?",
     "entities": [
       {
         "start": 17,
-        "end": 24,
+        "end": 25,
         "value": "school_attended",
         "entity": "attribute"
       },
       {
-        "start": 28,
-        "end": 55,
+        "start": 29,
+        "end": 56,
         "value": "Mizrahi Womens Organization",
         "entity": "ORG"
       }
@@ -6772,8 +7612,8 @@
       {
         "entity": "attribute",
         "start": 17,
-        "end": 24,
-        "confidence_entity": 0.999826967716217,
+        "end": 25,
+        "confidence_entity": 0.9997441172599792,
         "value": "school_attended",
         "extractor": "DIETClassifier",
         "processors": [
@@ -6782,9 +7622,9 @@
       },
       {
         "entity": "ORG",
-        "start": 28,
-        "end": 55,
-        "confidence_entity": 0.9964041709899902,
+        "start": 29,
+        "end": 56,
+        "confidence_entity": 0.9784278869628906,
         "value": "Mizrahi Womens Organization",
         "extractor": "DIETClassifier"
       }
@@ -6811,7 +7651,7 @@
         "entity": "attribute",
         "start": 6,
         "end": 14,
-        "confidence_entity": 0.9998916387557983,
+        "confidence_entity": 0.9999382495880127,
         "value": "school_attended",
         "extractor": "DIETClassifier",
         "processors": [
@@ -6822,7 +7662,7 @@
         "entity": "ORG",
         "start": 25,
         "end": 42,
-        "confidence_entity": 0.9994378685951233,
+        "confidence_entity": 0.9996384382247925,
         "value": "Spiritual Hygiene",
         "extractor": "DIETClassifier"
       }
@@ -6849,7 +7689,7 @@
         "entity": "attribute",
         "start": 0,
         "end": 8,
-        "confidence_entity": 0.9998021721839905,
+        "confidence_entity": 0.9999762773513794,
         "value": "school_attended",
         "extractor": "DIETClassifier",
         "processors": [
@@ -6860,7 +7700,7 @@
         "entity": "ORG",
         "start": 12,
         "end": 35,
-        "confidence_entity": 0.9998125433921814,
+        "confidence_entity": 0.999695897102356,
         "value": "Zentralwohlfahrtsstelle",
         "extractor": "DIETClassifier"
       }
@@ -6881,7 +7721,7 @@
         "entity": "attribute",
         "start": 10,
         "end": 17,
-        "confidence_entity": 0.9999120235443115,
+        "confidence_entity": 0.9995530247688293,
         "value": "school_attended",
         "extractor": "DIETClassifier",
         "processors": [
@@ -6905,7 +7745,7 @@
         "entity": "attribute",
         "start": 23,
         "end": 31,
-        "confidence_entity": 0.9995974898338318,
+        "confidence_entity": 0.9989407658576965,
         "value": "school_attended",
         "extractor": "DIETClassifier",
         "processors": [
@@ -6935,7 +7775,7 @@
         "entity": "attribute",
         "start": 20,
         "end": 38,
-        "confidence_entity": 0.9995629191398621,
+        "confidence_entity": 0.9982615113258362,
         "value": "date_founded",
         "extractor": "DIETClassifier",
         "processors": [
@@ -6946,7 +7786,7 @@
         "entity": "ORG",
         "start": 42,
         "end": 59,
-        "confidence_entity": 0.9994183778762817,
+        "confidence_entity": 0.9996503591537476,
         "value": "Spiritual Hygiene",
         "extractor": "DIETClassifier"
       }
@@ -6973,7 +7813,7 @@
         "entity": "attribute",
         "start": 19,
         "end": 37,
-        "confidence_entity": 0.9995549321174622,
+        "confidence_entity": 0.9979962706565857,
         "value": "date_founded",
         "extractor": "DIETClassifier",
         "processors": [
@@ -6984,7 +7824,7 @@
         "entity": "ORG",
         "start": 41,
         "end": 58,
-        "confidence_entity": 0.9993618130683899,
+        "confidence_entity": 0.9994649291038513,
         "value": "Spiritual Hygiene",
         "extractor": "DIETClassifier"
       }
@@ -7011,7 +7851,7 @@
         "entity": "attribute",
         "start": 12,
         "end": 30,
-        "confidence_entity": 0.9995250701904297,
+        "confidence_entity": 0.9982777833938599,
         "value": "date_founded",
         "extractor": "DIETClassifier",
         "processors": [
@@ -7022,7 +7862,7 @@
         "entity": "ORG",
         "start": 34,
         "end": 51,
-        "confidence_entity": 0.9993409514427185,
+        "confidence_entity": 0.9996234178543091,
         "value": "Spiritual Hygiene",
         "extractor": "DIETClassifier"
       }
@@ -7049,7 +7889,7 @@
         "entity": "attribute",
         "start": 12,
         "end": 19,
-        "confidence_entity": 0.9998549222946167,
+        "confidence_entity": 0.9999701976776123,
         "value": "founded_by",
         "extractor": "DIETClassifier",
         "processors": [
@@ -7060,7 +7900,7 @@
         "entity": "ORG",
         "start": 27,
         "end": 50,
-        "confidence_entity": 0.9998149275779724,
+        "confidence_entity": 0.9998588562011719,
         "value": "Zentralwohlfahrtsstelle",
         "extractor": "DIETClassifier"
       }
@@ -7087,7 +7927,7 @@
         "entity": "attribute",
         "start": 12,
         "end": 19,
-        "confidence_entity": 0.9998538494110107,
+        "confidence_entity": 0.9999698400497437,
         "value": "founded_by",
         "extractor": "DIETClassifier",
         "processors": [
@@ -7098,7 +7938,7 @@
         "entity": "ORG",
         "start": 27,
         "end": 50,
-        "confidence_entity": 0.9997989535331726,
+        "confidence_entity": 0.9998559951782227,
         "value": "Zentralwohlfahrtsstelle",
         "extractor": "DIETClassifier"
       }
@@ -7125,7 +7965,7 @@
         "entity": "attribute",
         "start": 28,
         "end": 35,
-        "confidence_entity": 0.9998132586479187,
+        "confidence_entity": 0.9999045133590698,
         "value": "founded_by",
         "extractor": "DIETClassifier",
         "processors": [
@@ -7136,7 +7976,7 @@
         "entity": "ORG",
         "start": 43,
         "end": 66,
-        "confidence_entity": 0.9998617172241211,
+        "confidence_entity": 0.9998488426208496,
         "value": "Zentralwohlfahrtsstelle",
         "extractor": "DIETClassifier"
       }
@@ -7163,7 +8003,7 @@
         "entity": "ORG",
         "start": 31,
         "end": 54,
-        "confidence_entity": 0.9998481273651123,
+        "confidence_entity": 0.999860405921936,
         "value": "Zentralwohlfahrtsstelle",
         "extractor": "DIETClassifier"
       },
@@ -7171,7 +8011,7 @@
         "entity": "attribute",
         "start": 59,
         "end": 66,
-        "confidence_entity": 0.9998865127563477,
+        "confidence_entity": 0.9999250173568726,
         "value": "founded",
         "extractor": "DIETClassifier"
       }
@@ -7198,7 +8038,7 @@
         "entity": "attribute",
         "start": 46,
         "end": 56,
-        "confidence_entity": 0.9998914003372192,
+        "confidence_entity": 0.9997367262840271,
         "value": "founded",
         "extractor": "DIETClassifier",
         "processors": [
@@ -7209,7 +8049,7 @@
         "entity": "ORG",
         "start": 60,
         "end": 81,
-        "confidence_entity": 0.9983199238777161,
+        "confidence_entity": 0.9983083009719849,
         "value": "Jewish National Party",
         "extractor": "DIETClassifier"
       },
@@ -7243,7 +8083,7 @@
         "entity": "ORG",
         "start": 46,
         "end": 69,
-        "confidence_entity": 0.9998517036437988,
+        "confidence_entity": 0.999881386756897,
         "value": "Zentralwohlfahrtsstelle",
         "extractor": "DIETClassifier"
       },
@@ -7251,7 +8091,7 @@
         "entity": "attribute",
         "start": 74,
         "end": 81,
-        "confidence_entity": 0.999873161315918,
+        "confidence_entity": 0.9998857975006104,
         "value": "founded",
         "extractor": "DIETClassifier"
       }
@@ -7278,7 +8118,7 @@
         "entity": "attribute",
         "start": 31,
         "end": 41,
-        "confidence_entity": 0.9999411106109619,
+        "confidence_entity": 0.9998062252998352,
         "value": "founded",
         "extractor": "DIETClassifier",
         "processors": [
@@ -7289,7 +8129,7 @@
         "entity": "ORG",
         "start": 45,
         "end": 66,
-        "confidence_entity": 0.9968206882476807,
+        "confidence_entity": 0.9992809891700745,
         "value": "Jewish National Party",
         "extractor": "DIETClassifier"
       },
@@ -7323,7 +8163,7 @@
         "entity": "attribute",
         "start": 9,
         "end": 36,
-        "confidence_entity": 0.9928804039955139,
+        "confidence_entity": 0.992779552936554,
         "value": "country_of_headquarters",
         "extractor": "DIETClassifier",
         "processors": [
@@ -7334,7 +8174,7 @@
         "entity": "ORG",
         "start": 40,
         "end": 61,
-        "confidence_entity": 0.9984980821609497,
+        "confidence_entity": 0.9988705515861511,
         "value": "Jewish National Party",
         "extractor": "DIETClassifier"
       },
@@ -7368,7 +8208,7 @@
         "entity": "attribute",
         "start": 12,
         "end": 38,
-        "confidence_entity": 0.9465592503547668,
+        "confidence_entity": 0.8504196405410767,
         "value": "country_of_headquarters",
         "extractor": "DIETClassifier",
         "processors": [
@@ -7379,7 +8219,7 @@
         "entity": "ORG",
         "start": 42,
         "end": 63,
-        "confidence_entity": 0.9979994893074036,
+        "confidence_entity": 0.9988707900047302,
         "value": "Jewish National Party",
         "extractor": "DIETClassifier"
       },
@@ -7413,7 +8253,7 @@
         "entity": "attribute",
         "start": 24,
         "end": 51,
-        "confidence_entity": 0.9958904981613159,
+        "confidence_entity": 0.9936978220939636,
         "value": "country_of_headquarters",
         "extractor": "DIETClassifier",
         "processors": [
@@ -7424,7 +8264,7 @@
         "entity": "ORG",
         "start": 55,
         "end": 76,
-        "confidence_entity": 0.998691976070404,
+        "confidence_entity": 0.9977622032165527,
         "value": "Jewish National Party",
         "extractor": "DIETClassifier"
       },
@@ -7458,7 +8298,7 @@
         "entity": "attribute",
         "start": 19,
         "end": 30,
-        "confidence_entity": 0.9999532699584961,
+        "confidence_entity": 0.9998669624328613,
         "value": "subsidiares",
         "extractor": "DIETClassifier"
       },
@@ -7466,14 +8306,14 @@
         "entity": "ORG",
         "start": 38,
         "end": 61,
-        "confidence_entity": 0.9998475313186646,
+        "confidence_entity": 0.999832272529602,
         "value": "Zentralwohlfahrtsstelle",
         "extractor": "DIETClassifier"
       }
     ]
   },
   {
-    "text": "Could you show me the subsidiares of the Zentralwohlfahrtsstelle?",
+    "text": "Could you show me the subsidiares of the Vaad Leumi?",
     "entities": [
       {
         "start": 22,
@@ -7483,8 +8323,8 @@
       },
       {
         "start": 41,
-        "end": 64,
-        "value": "Zentralwohlfahrtsstelle",
+        "end": 51,
+        "value": "Vaad Leumi",
         "entity": "ORG"
       }
     ],
@@ -7493,16 +8333,16 @@
         "entity": "attribute",
         "start": 22,
         "end": 33,
-        "confidence_entity": 0.9999517202377319,
+        "confidence_entity": 0.9998338222503662,
         "value": "subsidiares",
         "extractor": "DIETClassifier"
       },
       {
         "entity": "ORG",
         "start": 41,
-        "end": 64,
-        "confidence_entity": 0.9998522996902466,
-        "value": "Zentralwohlfahrtsstelle",
+        "end": 51,
+        "confidence_entity": 0.9978261590003967,
+        "value": "Vaad Leumi",
         "extractor": "DIETClassifier"
       }
     ]
@@ -7528,7 +8368,7 @@
         "entity": "attribute",
         "start": 0,
         "end": 11,
-        "confidence_entity": 0.9999669790267944,
+        "confidence_entity": 0.9999195337295532,
         "value": "Subsidiares",
         "extractor": "DIETClassifier"
       },
@@ -7536,25 +8376,102 @@
         "entity": "ORG",
         "start": 19,
         "end": 42,
-        "confidence_entity": 0.9998420476913452,
+        "confidence_entity": 0.9997979998588562,
         "value": "Zentralwohlfahrtsstelle",
         "extractor": "DIETClassifier"
       }
     ]
   },
   {
-    "text": "Which affiliation had the Jewish National Party?",
+    "text": "Please show me the subsidiares of the Leo Baeck Institute!",
+    "entities": [
+      {
+        "start": 19,
+        "end": 30,
+        "value": "subsidiares",
+        "entity": "attribute"
+      },
+      {
+        "start": 38,
+        "end": 57,
+        "value": "Leo Baeck Institute",
+        "entity": "ORG"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "attribute",
+        "start": 19,
+        "end": 30,
+        "confidence_entity": 0.9998231530189514,
+        "value": "subsidiares",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "ORG",
+        "start": 38,
+        "end": 57,
+        "confidence_entity": 0.9972825050354004,
+        "value": "Leo Baeck Institute",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Show me the subsidiares",
+    "entities": [
+      {
+        "start": 12,
+        "end": 23,
+        "value": "subsidiares",
+        "entity": "attribute"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "attribute",
+        "start": 12,
+        "end": 23,
+        "confidence_entity": 0.9999133348464966,
+        "value": "subsidiares",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Want to know the subsidiares.",
+    "entities": [
+      {
+        "start": 17,
+        "end": 28,
+        "value": "subsidiares",
+        "entity": "attribute"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "attribute",
+        "start": 17,
+        "end": 28,
+        "confidence_entity": 0.9999090433120728,
+        "value": "subsidiares",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Which political affiliation had the Youth Aliyah?",
     "entities": [
       {
         "start": 6,
-        "end": 17,
+        "end": 27,
         "value": "political_religious_affiliation",
         "entity": "attribute"
       },
       {
-        "start": 26,
-        "end": 47,
-        "value": "Jewish National Party",
+        "start": 36,
+        "end": 48,
+        "value": "Youth Aliyah",
         "entity": "ORG"
       }
     ],
@@ -7562,8 +8479,8 @@
       {
         "entity": "attribute",
         "start": 6,
-        "end": 17,
-        "confidence_entity": 0.9998466968536377,
+        "end": 27,
+        "confidence_entity": 0.9986459612846375,
         "value": "political_religious_affiliation",
         "extractor": "DIETClassifier",
         "processors": [
@@ -7572,33 +8489,26 @@
       },
       {
         "entity": "ORG",
-        "start": 26,
-        "end": 47,
-        "confidence_entity": 0.9973986148834229,
-        "value": "Jewish National Party",
+        "start": 36,
+        "end": 48,
+        "confidence_entity": 0.9984843134880066,
+        "value": "Youth Aliyah",
         "extractor": "DIETClassifier"
-      },
-      {
-        "entity": "RELIGION",
-        "start": 26,
-        "end": 32,
-        "value": "Jewish",
-        "extractor": "RegexEntityExtractor"
       }
     ]
   },
   {
-    "text": "Can you show me the affiliation of the Jewish National Party?",
+    "text": "Can you show me the religious affiliation of the Jewish National Party?",
     "entities": [
       {
         "start": 20,
-        "end": 31,
+        "end": 41,
         "value": "political_religious_affiliation",
         "entity": "attribute"
       },
       {
-        "start": 39,
-        "end": 60,
+        "start": 49,
+        "end": 70,
         "value": "Jewish National Party",
         "entity": "ORG"
       }
@@ -7607,8 +8517,8 @@
       {
         "entity": "attribute",
         "start": 20,
-        "end": 31,
-        "confidence_entity": 0.9998548030853271,
+        "end": 41,
+        "confidence_entity": 0.9994996786117554,
         "value": "political_religious_affiliation",
         "extractor": "DIETClassifier",
         "processors": [
@@ -7617,23 +8527,23 @@
       },
       {
         "entity": "ORG",
-        "start": 39,
-        "end": 60,
-        "confidence_entity": 0.9985824823379517,
+        "start": 49,
+        "end": 70,
+        "confidence_entity": 0.9966559410095215,
         "value": "Jewish National Party",
         "extractor": "DIETClassifier"
       },
       {
         "entity": "RELIGION",
-        "start": 39,
-        "end": 45,
+        "start": 49,
+        "end": 55,
         "value": "Jewish",
         "extractor": "RegexEntityExtractor"
       }
     ]
   },
   {
-    "text": "I like to know the affiliation of the Jewish National Party?",
+    "text": "I like to know the affiliation of the Jewish Agency Central Bureau?",
     "entities": [
       {
         "start": 19,
@@ -7643,8 +8553,8 @@
       },
       {
         "start": 38,
-        "end": 59,
-        "value": "Jewish National Party",
+        "end": 66,
+        "value": "Jewish Agency Central Bureau",
         "entity": "ORG"
       }
     ],
@@ -7653,7 +8563,7 @@
         "entity": "attribute",
         "start": 19,
         "end": 30,
-        "confidence_entity": 0.9998742341995239,
+        "confidence_entity": 0.9995841383934021,
         "value": "political_religious_affiliation",
         "extractor": "DIETClassifier",
         "processors": [
@@ -7663,9 +8573,9 @@
       {
         "entity": "ORG",
         "start": 38,
-        "end": 59,
-        "confidence_entity": 0.9982978701591492,
-        "value": "Jewish National Party",
+        "end": 66,
+        "confidence_entity": 0.9979056119918823,
+        "value": "Jewish Agency Central Bureau",
         "extractor": "DIETClassifier"
       },
       {
@@ -7698,7 +8608,7 @@
         "entity": "PERSON",
         "start": 4,
         "end": 14,
-        "confidence_entity": 0.9998196959495544,
+        "confidence_entity": 0.9998270869255066,
         "value": "Ruth Barak",
         "extractor": "DIETClassifier"
       },
@@ -7706,7 +8616,7 @@
         "entity": "attribute",
         "start": 21,
         "end": 27,
-        "confidence_entity": 0.9999717473983765,
+        "confidence_entity": 0.9999610185623169,
         "value": "spouse",
         "extractor": "DIETClassifier",
         "processors": [
@@ -7743,7 +8653,7 @@
         "entity": "PERSON",
         "start": 4,
         "end": 14,
-        "confidence_entity": 0.9996801614761353,
+        "confidence_entity": 0.9998481273651123,
         "value": "Ruth Barak",
         "extractor": "DIETClassifier"
       },
@@ -7751,7 +8661,7 @@
         "entity": "attribute",
         "start": 15,
         "end": 22,
-        "confidence_entity": 0.9999111890792847,
+        "confidence_entity": 0.9993682503700256,
         "value": "spouse",
         "extractor": "DIETClassifier",
         "processors": [
@@ -7781,7 +8691,7 @@
         "entity": "PERSON",
         "start": 4,
         "end": 13,
-        "confidence_entity": 0.9860481023788452,
+        "confidence_entity": 0.9755381941795349,
         "value": "RuthBarak",
         "extractor": "DIETClassifier"
       },
@@ -7789,7 +8699,7 @@
         "entity": "attribute",
         "start": 20,
         "end": 27,
-        "confidence_entity": 0.9998486042022705,
+        "confidence_entity": 0.9998326301574707,
         "value": "spouse",
         "extractor": "DIETClassifier",
         "processors": [
@@ -7819,7 +8729,7 @@
         "entity": "PERSON",
         "start": 21,
         "end": 31,
-        "confidence_entity": 0.9997602105140686,
+        "confidence_entity": 0.9998134970664978,
         "value": "Ruth Barak",
         "extractor": "DIETClassifier"
       },
@@ -7827,7 +8737,7 @@
         "entity": "attribute",
         "start": 36,
         "end": 44,
-        "confidence_entity": 0.9999160766601562,
+        "confidence_entity": 0.9998917579650879,
         "value": "children",
         "extractor": "DIETClassifier"
       },
@@ -7841,35 +8751,42 @@
     ]
   },
   {
-    "text": "I would be happy, if you can tell(PERSON) me if [Ruth Barak] had children",
+    "text": "I would be happy, if you can tell me if Ruth Barak had children",
     "entities": [
       {
-        "start": 65,
-        "end": 73,
+        "start": 40,
+        "end": 50,
+        "value": "Ruth Barak",
+        "entity": "PERSON"
+      },
+      {
+        "start": 55,
+        "end": 63,
         "value": "children",
         "entity": "attribute"
       }
     ],
     "predicted_entities": [
       {
+        "entity": "PERSON",
+        "start": 40,
+        "end": 50,
+        "confidence_entity": 0.9998199343681335,
+        "value": "Ruth Barak",
+        "extractor": "DIETClassifier"
+      },
+      {
         "entity": "attribute",
-        "start": 65,
-        "end": 73,
-        "confidence_entity": 0.9999535083770752,
+        "start": 55,
+        "end": 63,
+        "confidence_entity": 0.9998866319656372,
         "value": "children",
         "extractor": "DIETClassifier"
       },
       {
-        "entity": "object_type",
-        "start": 34,
-        "end": 40,
-        "value": "PERSON",
-        "extractor": "RegexEntityExtractor"
-      },
-      {
         "entity": "attribute",
-        "start": 65,
-        "end": 73,
+        "start": 55,
+        "end": 63,
         "value": "children",
         "extractor": "RegexEntityExtractor"
       }
@@ -7896,7 +8813,7 @@
         "entity": "PERSON",
         "start": 15,
         "end": 25,
-        "confidence_entity": 0.9998027682304382,
+        "confidence_entity": 0.9998302459716797,
         "value": "Ruth Barak",
         "extractor": "DIETClassifier"
       },
@@ -7904,7 +8821,7 @@
         "entity": "attribute",
         "start": 32,
         "end": 35,
-        "confidence_entity": 0.9998779296875,
+        "confidence_entity": 0.9989665746688843,
         "value": "title",
         "extractor": "DIETClassifier",
         "processors": [
@@ -7914,17 +8831,17 @@
     ]
   },
   {
-    "text": "Could you tell me, if Ruth Barak had siblings?",
+    "text": "Could you tell me, if Beate Berger had siblings?",
     "entities": [
       {
         "start": 22,
-        "end": 32,
-        "value": "Ruth Barak",
+        "end": 34,
+        "value": "Beate Berger",
         "entity": "PERSON"
       },
       {
-        "start": 37,
-        "end": 45,
+        "start": 39,
+        "end": 47,
         "value": "siblings",
         "entity": "attribute"
       }
@@ -7933,16 +8850,16 @@
       {
         "entity": "PERSON",
         "start": 22,
-        "end": 32,
-        "confidence_entity": 0.9998400211334229,
-        "value": "Ruth Barak",
+        "end": 34,
+        "confidence_entity": 0.9939174056053162,
+        "value": "Beate Berger",
         "extractor": "DIETClassifier"
       },
       {
         "entity": "attribute",
-        "start": 37,
-        "end": 45,
-        "confidence_entity": 0.9999439716339111,
+        "start": 39,
+        "end": 47,
+        "confidence_entity": 0.9995113611221313,
         "value": "siblings",
         "extractor": "DIETClassifier",
         "processors": [
@@ -7951,8 +8868,8 @@
       },
       {
         "entity": "attribute",
-        "start": 37,
-        "end": 45,
+        "start": 39,
+        "end": 47,
         "value": "siblings",
         "extractor": "RegexEntityExtractor"
       }
@@ -7979,7 +8896,7 @@
         "entity": "PERSON",
         "start": 4,
         "end": 14,
-        "confidence_entity": 0.9998156428337097,
+        "confidence_entity": 0.9998354911804199,
         "value": "Ruth Barak",
         "extractor": "DIETClassifier"
       },
@@ -7987,7 +8904,7 @@
         "entity": "GPE",
         "start": 29,
         "end": 35,
-        "confidence_entity": 0.9981325268745422,
+        "confidence_entity": 0.9980219602584839,
         "value": "Berlin",
         "extractor": "DIETClassifier"
       }
@@ -8014,7 +8931,7 @@
         "entity": "PERSON",
         "start": 21,
         "end": 31,
-        "confidence_entity": 0.999830961227417,
+        "confidence_entity": 0.9997528195381165,
         "value": "Ruth Barak",
         "extractor": "DIETClassifier"
       },
@@ -8022,7 +8939,7 @@
         "entity": "GPE",
         "start": 39,
         "end": 48,
-        "confidence_entity": 0.998362123966217,
+        "confidence_entity": 0.9991113543510437,
         "value": "Jerusalem",
         "extractor": "DIETClassifier"
       }
@@ -8049,7 +8966,7 @@
         "entity": "PERSON",
         "start": 18,
         "end": 28,
-        "confidence_entity": 0.9997792840003967,
+        "confidence_entity": 0.9997702240943909,
         "value": "Ruth Barak",
         "extractor": "DIETClassifier"
       },
@@ -8057,8 +8974,50 @@
         "entity": "GPE",
         "start": 38,
         "end": 44,
-        "confidence_entity": 0.9980289340019226,
+        "confidence_entity": 0.9982603192329407,
         "value": "Vienna",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Did she lived in Berlin?",
+    "entities": [
+      {
+        "start": 17,
+        "end": 23,
+        "value": "Berlin",
+        "entity": "GPE"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "GPE",
+        "start": 17,
+        "end": 23,
+        "confidence_entity": 0.9992561936378479,
+        "value": "Berlin",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I want to know if he had a connection to Palestina",
+    "entities": [
+      {
+        "start": 41,
+        "end": 50,
+        "value": "Palestina",
+        "entity": "GPE"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "GPE",
+        "start": 41,
+        "end": 50,
+        "confidence_entity": 0.9958029389381409,
+        "value": "Palestina",
         "extractor": "DIETClassifier"
       }
     ]
@@ -8084,7 +9043,7 @@
         "entity": "PERSON",
         "start": 17,
         "end": 27,
-        "confidence_entity": 0.9998469352722168,
+        "confidence_entity": 0.999811589717865,
         "value": "Ruth Barak",
         "extractor": "DIETClassifier"
       },
@@ -8092,7 +9051,28 @@
         "entity": "ORG",
         "start": 39,
         "end": 64,
-        "confidence_entity": 0.9976134300231934,
+        "confidence_entity": 0.9995132684707642,
+        "value": "Hebrew Gymnasium Herzliya",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Was he at the Hebrew Gymnasium Herzliya?",
+    "entities": [
+      {
+        "start": 14,
+        "end": 39,
+        "value": "Hebrew Gymnasium Herzliya",
+        "entity": "ORG"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "ORG",
+        "start": 14,
+        "end": 39,
+        "confidence_entity": 0.9995777010917664,
         "value": "Hebrew Gymnasium Herzliya",
         "extractor": "DIETClassifier"
       }
@@ -8119,7 +9099,7 @@
         "entity": "PERSON",
         "start": 19,
         "end": 29,
-        "confidence_entity": 0.9998204112052917,
+        "confidence_entity": 0.999727189540863,
         "value": "Ruth Barak",
         "extractor": "DIETClassifier"
       },
@@ -8127,7 +9107,7 @@
         "entity": "ORG",
         "start": 44,
         "end": 69,
-        "confidence_entity": 0.9973611235618591,
+        "confidence_entity": 0.9994327425956726,
         "value": "Hebrew Gymnasium Herzliya",
         "extractor": "DIETClassifier"
       }
@@ -8154,7 +9134,7 @@
         "entity": "PERSON",
         "start": 21,
         "end": 31,
-        "confidence_entity": 0.9997325539588928,
+        "confidence_entity": 0.9998500347137451,
         "value": "Ruth Barak",
         "extractor": "DIETClassifier"
       },
@@ -8162,7 +9142,7 @@
         "entity": "ORG",
         "start": 43,
         "end": 64,
-        "confidence_entity": 0.9378325343132019,
+        "confidence_entity": 0.9905357956886292,
         "value": "Jewish National Party",
         "extractor": "DIETClassifier"
       },
@@ -8172,6 +9152,62 @@
         "end": 49,
         "value": "Jewish",
         "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Please show me if Esther Apfelberg had a connection to the Zentralwohlfahrtsstelle",
+    "entities": [
+      {
+        "start": 18,
+        "end": 34,
+        "value": "Esther Apfelberg",
+        "entity": "PERSON"
+      },
+      {
+        "start": 59,
+        "end": 82,
+        "value": "Zentralwohlfahrtsstelle",
+        "entity": "ORG"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "PERSON",
+        "start": 18,
+        "end": 34,
+        "confidence_entity": 0.9998981952667236,
+        "value": "Esther Apfelberg",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "ORG",
+        "start": 59,
+        "end": 82,
+        "confidence_entity": 0.999756395816803,
+        "value": "Zentralwohlfahrtsstelle",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Could you show me if she had a connection to Collection of Welfare Legislation?",
+    "entities": [
+      {
+        "start": 45,
+        "end": 78,
+        "value": "Collection of Welfare Legislation",
+        "entity": "ORG"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "ORG",
+        "start": 45,
+        "end": 78,
+        "confidence_entity": 0.9964820146560669,
+        "value": "Collection of Welfare Legislation",
+        "extractor": "DIETClassifier"
       }
     ]
   },
@@ -8196,7 +9232,7 @@
         "entity": "PERSON",
         "start": 4,
         "end": 14,
-        "confidence_entity": 0.9997233748435974,
+        "confidence_entity": 0.9996846914291382,
         "value": "Ruth Barak",
         "extractor": "DIETClassifier"
       },
@@ -8204,7 +9240,7 @@
         "entity": "RELIGION",
         "start": 28,
         "end": 34,
-        "confidence_entity": 0.9770109057426453,
+        "confidence_entity": 0.9969373941421509,
         "value": "Jewish",
         "extractor": "DIETClassifier",
         "processors": [
@@ -8241,7 +9277,7 @@
         "entity": "PERSON",
         "start": 4,
         "end": 14,
-        "confidence_entity": 0.9998619556427002,
+        "confidence_entity": 0.9997668862342834,
         "value": "Ruth Barak",
         "extractor": "DIETClassifier"
       },
@@ -8249,7 +9285,7 @@
         "entity": "RELIGION",
         "start": 17,
         "end": 23,
-        "confidence_entity": 0.9926249384880066,
+        "confidence_entity": 0.9954293966293335,
         "value": "Jewish",
         "extractor": "DIETClassifier",
         "processors": [
@@ -8279,7 +9315,7 @@
         "entity": "PERSON",
         "start": 25,
         "end": 35,
-        "confidence_entity": 0.9996916055679321,
+        "confidence_entity": 0.9997311234474182,
         "value": "Ruth Barak",
         "extractor": "DIETClassifier"
       },
@@ -8287,12 +9323,1000 @@
         "entity": "RELIGION",
         "start": 42,
         "end": 51,
-        "confidence_entity": 0.9933265447616577,
+        "confidence_entity": 0.9966391324996948,
         "value": "Christian",
         "extractor": "DIETClassifier",
         "processors": [
           "EntitySynonymMapper"
         ]
+      }
+    ]
+  },
+  {
+    "text": "Was she a Jewess?",
+    "entities": [
+      {
+        "start": 10,
+        "end": 16,
+        "value": "Jewish",
+        "entity": "RELIGION"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "RELIGION",
+        "start": 10,
+        "end": 16,
+        "confidence_entity": 0.9975417852401733,
+        "value": "Jewish",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Could you tell me if he was a christian?",
+    "entities": [
+      {
+        "start": 30,
+        "end": 39,
+        "value": "Christian",
+        "entity": "RELIGION"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "RELIGION",
+        "start": 30,
+        "end": 39,
+        "confidence_entity": 0.9979903697967529,
+        "value": "Christian",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Did you know the religious affiliation of the Zentralwohlfahrtsstelle?",
+    "entities": [
+      {
+        "start": 17,
+        "end": 38,
+        "value": "political_religious_affiliation",
+        "entity": "attribute"
+      },
+      {
+        "start": 46,
+        "end": 69,
+        "value": "Zentralwohlfahrtsstelle",
+        "entity": "ORG"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "attribute",
+        "start": 17,
+        "end": 38,
+        "confidence_entity": 0.9992234706878662,
+        "value": "political_religious_affiliation",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "ORG",
+        "start": 46,
+        "end": 69,
+        "confidence_entity": 0.9998842477798462,
+        "value": "Zentralwohlfahrtsstelle",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Could you show me the political affiliation of the Hebrew University?",
+    "entities": [
+      {
+        "start": 22,
+        "end": 43,
+        "value": "political_religious_affiliation",
+        "entity": "attribute"
+      },
+      {
+        "start": 51,
+        "end": 68,
+        "value": "Hebrew University",
+        "entity": "ORG"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "attribute",
+        "start": 22,
+        "end": 43,
+        "confidence_entity": 0.9991137385368347,
+        "value": "political_religious_affiliation",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "ORG",
+        "start": 51,
+        "end": 68,
+        "confidence_entity": 0.9997346997261047,
+        "value": "Hebrew University",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Please tell me if the political affiliation of the Hebrew University",
+    "entities": [
+      {
+        "start": 22,
+        "end": 43,
+        "value": "political_religious_affiliation",
+        "entity": "attribute"
+      },
+      {
+        "start": 51,
+        "end": 68,
+        "value": "Hebrew University",
+        "entity": "ORG"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "attribute",
+        "start": 22,
+        "end": 43,
+        "confidence_entity": 0.9991831183433533,
+        "value": "political_religious_affiliation",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "ORG",
+        "start": 51,
+        "end": 68,
+        "confidence_entity": 0.9998180270195007,
+        "value": "Hebrew University",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Did the Hebrew University had a political affiliation?",
+    "entities": [
+      {
+        "start": 8,
+        "end": 25,
+        "value": "Hebrew University",
+        "entity": "ORG"
+      },
+      {
+        "start": 32,
+        "end": 53,
+        "value": "political_religious_affiliation",
+        "entity": "attribute"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "ORG",
+        "start": 8,
+        "end": 25,
+        "confidence_entity": 0.9996504783630371,
+        "value": "Hebrew University",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "attribute",
+        "start": 32,
+        "end": 53,
+        "confidence_entity": 0.9987093210220337,
+        "value": "political_religious_affiliation",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Please tell me if you know the religious affiliation of the Zentralwohlfahrtsstelle",
+    "entities": [
+      {
+        "start": 31,
+        "end": 52,
+        "value": "political_religious_affiliation",
+        "entity": "attribute"
+      },
+      {
+        "start": 60,
+        "end": 83,
+        "value": "Zentralwohlfahrtsstelle",
+        "entity": "ORG"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "attribute",
+        "start": 31,
+        "end": 52,
+        "confidence_entity": 0.999300479888916,
+        "value": "political_religious_affiliation",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "ORG",
+        "start": 60,
+        "end": 83,
+        "confidence_entity": 0.999875545501709,
+        "value": "Zentralwohlfahrtsstelle",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I like to know if the Hebrew University has a connection to Jerusalem",
+    "entities": [
+      {
+        "start": 22,
+        "end": 39,
+        "value": "Hebrew University",
+        "entity": "ORG"
+      },
+      {
+        "start": 60,
+        "end": 69,
+        "value": "Jerusalem",
+        "entity": "GPE"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "ORG",
+        "start": 22,
+        "end": 39,
+        "confidence_entity": 0.9994609951972961,
+        "value": "Hebrew University",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "GPE",
+        "start": 60,
+        "end": 69,
+        "confidence_entity": 0.9995017051696777,
+        "value": "Jerusalem",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Can you tell me whether the headquarters of the Viktoria-Luisen School was in Berlin?",
+    "entities": [
+      {
+        "start": 28,
+        "end": 40,
+        "value": "headquarter",
+        "entity": "attribute"
+      },
+      {
+        "start": 48,
+        "end": 70,
+        "value": "Viktoria-Luisen School",
+        "entity": "ORG"
+      },
+      {
+        "start": 78,
+        "end": 84,
+        "value": "Berlin",
+        "entity": "GPE"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "attribute",
+        "start": 28,
+        "end": 40,
+        "confidence_entity": 0.9999788999557495,
+        "value": "headquarter",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "ORG",
+        "start": 48,
+        "end": 70,
+        "confidence_entity": 0.99716717004776,
+        "value": "Viktoria-Luisen School",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "GPE",
+        "start": 78,
+        "end": 84,
+        "confidence_entity": 0.9986512064933777,
+        "value": "Berlin",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Did German Association of Zionist Women had the headquarter in Israel?",
+    "entities": [
+      {
+        "start": 4,
+        "end": 39,
+        "value": "German Association of Zionist Women",
+        "entity": "ORG"
+      },
+      {
+        "start": 48,
+        "end": 59,
+        "value": "headquarter",
+        "entity": "attribute"
+      },
+      {
+        "start": 63,
+        "end": 69,
+        "value": "Israel",
+        "entity": "GPE"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "ORG",
+        "start": 4,
+        "end": 39,
+        "confidence_entity": 0.9929231405258179,
+        "value": "German Association of Zionist Women",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "attribute",
+        "start": 48,
+        "end": 59,
+        "confidence_entity": 0.9998819828033447,
+        "value": "headquarter",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "GPE",
+        "start": 63,
+        "end": 69,
+        "confidence_entity": 0.9971233010292053,
+        "value": "Israel",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Was the headquarter of the Zentralewohlfahrtsstelle in Berlin?",
+    "entities": [
+      {
+        "start": 8,
+        "end": 19,
+        "value": "headquarter",
+        "entity": "attribute"
+      },
+      {
+        "start": 27,
+        "end": 51,
+        "value": "Zentralewohlfahrtsstelle",
+        "entity": "ORG"
+      },
+      {
+        "start": 55,
+        "end": 61,
+        "value": "Berlin",
+        "entity": "GPE"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "attribute",
+        "start": 8,
+        "end": 19,
+        "confidence_entity": 0.99982088804245,
+        "value": "headquarter",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "ORG",
+        "start": 27,
+        "end": 51,
+        "confidence_entity": 0.9998356103897095,
+        "value": "Zentralewohlfahrtsstelle",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "GPE",
+        "start": 55,
+        "end": 61,
+        "confidence_entity": 0.9976801872253418,
+        "value": "Berlin",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Did the International Conference of Jewish Social Work had a connection to Palestina?",
+    "entities": [
+      {
+        "start": 8,
+        "end": 54,
+        "value": "International Conference of Jewish Social Work",
+        "entity": "ORG"
+      },
+      {
+        "start": 75,
+        "end": 84,
+        "value": "Palestina",
+        "entity": "GPE"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "ORG",
+        "start": 8,
+        "end": 54,
+        "confidence_entity": 0.9930415153503418,
+        "value": "International Conference of Jewish Social Work",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "GPE",
+        "start": 75,
+        "end": 84,
+        "confidence_entity": 0.9973087310791016,
+        "value": "Palestina",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "RELIGION",
+        "start": 36,
+        "end": 42,
+        "value": "Jewish",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Had the Hebrew University the religion affiliation jewish?",
+    "entities": [
+      {
+        "start": 8,
+        "end": 25,
+        "value": "Hebrew University",
+        "entity": "ORG"
+      },
+      {
+        "start": 51,
+        "end": 57,
+        "value": "Jewish",
+        "entity": "RELIGION"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "ORG",
+        "start": 8,
+        "end": 25,
+        "confidence_entity": 0.9992941617965698,
+        "value": "Hebrew University",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "RELIGION",
+        "start": 51,
+        "end": 57,
+        "confidence_entity": 0.9971076846122742,
+        "value": "Jewish",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "attribute",
+        "start": 30,
+        "end": 38,
+        "value": "religion",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Please tell me if the religion of the Jewish National Party was jewish?",
+    "entities": [
+      {
+        "start": 38,
+        "end": 59,
+        "value": "Jewish National Party",
+        "entity": "ORG"
+      },
+      {
+        "start": 64,
+        "end": 70,
+        "value": "Jewish",
+        "entity": "RELIGION"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "ORG",
+        "start": 38,
+        "end": 59,
+        "confidence_entity": 0.9785563945770264,
+        "value": "Jewish National Party",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "RELIGION",
+        "start": 64,
+        "end": 70,
+        "confidence_entity": 0.9257351160049438,
+        "value": "Jewish",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "attribute",
+        "start": 22,
+        "end": 30,
+        "value": "religion",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "RELIGION",
+        "start": 38,
+        "end": 44,
+        "value": "Jewish",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Could you tell me if the Hebrew University a  jewish organization?",
+    "entities": [
+      {
+        "start": 25,
+        "end": 42,
+        "value": "Hebrew University",
+        "entity": "ORG"
+      },
+      {
+        "start": 46,
+        "end": 52,
+        "value": "Jewish",
+        "entity": "RELIGION"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "ORG",
+        "start": 25,
+        "end": 42,
+        "confidence_entity": 0.9992963075637817,
+        "value": "Hebrew University",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "RELIGION",
+        "start": 46,
+        "end": 52,
+        "confidence_entity": 0.9948683977127075,
+        "value": "Jewish",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "I like to know if the National Committe was a christian organization?",
+    "entities": [
+      {
+        "start": 22,
+        "end": 39,
+        "value": "National Committe",
+        "entity": "ORG"
+      },
+      {
+        "start": 46,
+        "end": 55,
+        "value": "Christian",
+        "entity": "RELIGION"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "ORG",
+        "start": 22,
+        "end": 39,
+        "confidence_entity": 0.9852390289306641,
+        "value": "National Committe",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "RELIGION",
+        "start": 46,
+        "end": 55,
+        "confidence_entity": 0.9948570728302002,
+        "value": "Christian",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Was the religion of the International Conference of Jewish Social Work christian?",
+    "entities": [
+      {
+        "start": 24,
+        "end": 70,
+        "value": "International Conference of Jewish Social Work",
+        "entity": "ORG"
+      },
+      {
+        "start": 71,
+        "end": 80,
+        "value": "Christian",
+        "entity": "RELIGION"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "ORG",
+        "start": 24,
+        "end": 70,
+        "confidence_entity": 0.9902291297912598,
+        "value": "International Conference of Jewish Social Work",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "RELIGION",
+        "start": 71,
+        "end": 80,
+        "confidence_entity": 0.9968031644821167,
+        "value": "Christian",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "attribute",
+        "start": 8,
+        "end": 16,
+        "value": "religion",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "RELIGION",
+        "start": 52,
+        "end": 58,
+        "value": "Jewish",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "I like to know if the religious affiliation of the Zentralwohlfahrtsstelle was jewish?",
+    "entities": [
+      {
+        "start": 22,
+        "end": 43,
+        "value": "political_religious_affiliation",
+        "entity": "attribute"
+      },
+      {
+        "start": 51,
+        "end": 74,
+        "value": "Zentralwohlfahrtsstelle",
+        "entity": "ORG"
+      },
+      {
+        "start": 79,
+        "end": 85,
+        "value": "jewish",
+        "entity": "RELIGION"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "attribute",
+        "start": 22,
+        "end": 43,
+        "confidence_entity": 0.9990154504776001,
+        "value": "political_religious_affiliation",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "ORG",
+        "start": 51,
+        "end": 74,
+        "confidence_entity": 0.9998670816421509,
+        "value": "Zentralwohlfahrtsstelle",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "RELIGION",
+        "start": 79,
+        "end": 85,
+        "confidence_entity": 0.9951955676078796,
+        "value": "Jewish",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "I want to know something of people",
+    "entities": [
+      {
+        "start": 15,
+        "end": 34,
+        "value": "person-detail",
+        "entity": "informationtype"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "informationtype",
+        "start": 15,
+        "end": 34,
+        "confidence_entity": 0.9916676878929138,
+        "value": "person-detail",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "I like to know something about organizations",
+    "entities": [
+      {
+        "start": 15,
+        "end": 44,
+        "value": "organization-detail",
+        "entity": "informationtype"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "informationtype",
+        "start": 15,
+        "end": 44,
+        "confidence_entity": 0.9835686087608337,
+        "value": "organization-detail",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "List of objects",
+    "entities": [
+      {
+        "start": 0,
+        "end": 15,
+        "value": "list-of",
+        "entity": "informationtype"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "informationtype",
+        "start": 0,
+        "end": 15,
+        "confidence_entity": 0.9812631607055664,
+        "value": "list-of",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Show me how I can search for details of persons",
+    "entities": [
+      {
+        "start": 29,
+        "end": 47,
+        "value": "person-detail",
+        "entity": "informationtype"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "informationtype",
+        "start": 29,
+        "end": 47,
+        "confidence_entity": 0.9889840483665466,
+        "value": "person-detail",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "I would like to know details about people",
+    "entities": [
+      {
+        "start": 21,
+        "end": 41,
+        "value": "person-detail",
+        "entity": "informationtype"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "informationtype",
+        "start": 21,
+        "end": 41,
+        "confidence_entity": 0.9921634197235107,
+        "value": "person-detail",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Could you show me how I can get details about organizations",
+    "entities": [
+      {
+        "start": 32,
+        "end": 59,
+        "value": "organization-detail",
+        "entity": "informationtype"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "informationtype",
+        "start": 32,
+        "end": 59,
+        "confidence_entity": 0.9808314442634583,
+        "value": "organization-detail",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Looking for person detail",
+    "entities": [
+      {
+        "start": 12,
+        "end": 25,
+        "value": "person-detail",
+        "entity": "informationtype"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "informationtype",
+        "start": 12,
+        "end": 25,
+        "confidence_entity": 0.9925838708877563,
+        "value": "person-detail",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "searchtype",
+        "start": 12,
+        "end": 25,
+        "value": "person detail",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "I am looking for person detail",
+    "entities": [
+      {
+        "start": 17,
+        "end": 30,
+        "value": "person-detail",
+        "entity": "informationtype"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "informationtype",
+        "start": 17,
+        "end": 30,
+        "confidence_entity": 0.9933558702468872,
+        "value": "person-detail",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "searchtype",
+        "start": 17,
+        "end": 30,
+        "value": "person detail",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Could you show me some person detail?",
+    "entities": [
+      {
+        "start": 23,
+        "end": 36,
+        "value": "person-detail",
+        "entity": "informationtype"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "informationtype",
+        "start": 23,
+        "end": 36,
+        "confidence_entity": 0.9928202033042908,
+        "value": "person-detail",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "searchtype",
+        "start": 23,
+        "end": 36,
+        "value": "person detail",
+        "extractor": "RegexEntityExtractor"
       }
     ]
   }

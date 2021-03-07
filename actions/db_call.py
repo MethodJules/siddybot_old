@@ -5,6 +5,7 @@ from rasa_sdk.executor import CollectingDispatcher
 from flask import Flask, render_template, request, jsonify, Response
 import requests
 import json
+from actions.constants import Constants
 
 #import base64,cv2
 
@@ -19,13 +20,15 @@ class DbCall():
       """
       answer = requests.get('https://semanticsearch.x-navi.de/get-entities')
       answer = json.loads(answer.text,encoding="utf-8")
-      answer = answer["result"]
-      answer = answer["types"]
+      answer = answer[Constants.result]
+      answer = answer[Constants.types]
       return answer
 
   def searchForEntityRelationship(name, object_type) -> Dict[Text, Any]:
       """
       Verwendet Flask um zu einer bestimmten Entitaet alle relationships zu ermitteln.
+    
+    
       name = Name der Entitaete (bei einer Person z.B. der Name von dieser
       object_type = passender Objekttyp des Objektes
       """
@@ -33,7 +36,8 @@ class DbCall():
       search_request = json.loads(query, encoding="utf-8")
       answer = requests.post('https://semanticsearch.x-navi.de/get-entities-relations-by-entity',search_request)
       answer = json.loads(answer.text,encoding="utf-8")
-      results = answer["result"]
+      results = answer[Constants.result]
+      print(results)
       return results
 
   def searchNodeCount(object_type) -> Dict[Text, Any]:
@@ -44,7 +48,7 @@ class DbCall():
       search_request = json.loads(query, encoding="utf-8")
       answer = requests.post('https://semanticsearch.x-navi.de/get-nodes-count',search_request)
       answer = json.loads(answer.text,encoding="utf-8")
-      results = answer["result"]
+      results = answer[Constants.result]
       return results
 
   def semanticSearch(searchquery) -> Dict[Text, Any]:
@@ -53,10 +57,9 @@ class DbCall():
     searchquery = Eingabe fuer die semantische Suche,
                   sollte folgenden Aufbaue haben: {"searchquery":" .... "}
     """
-    print("Start der semantischen Suche in DB-CALL")
     answer = requests.post('https://semanticsearch.x-navi.de/semantic-search',searchquery)
     answer = json.loads(answer.text,encoding="utf-8")
-    results = answer["result"]
+    results = answer[Constants.result]
     return results
 
   def validationPerson(name) -> bool:
@@ -80,4 +83,10 @@ class DbCall():
     answer = requests.post('https://semanticsearch.x-navi.de/get-nodes-by-filter', search_request)
     print(answer.text)
 
-
+  def searchForEntitesFromTheNode(nodeID) -> Dict[Text, Any]:
+      query= '{"node_id": "'+nodeID+'"}'
+      search_request = json.loads(query, encoding="utf-8")
+      answer = requests.post('https://semanticsearch.x-navi.de/get-entities-by-id', search_request)
+      answer = json.loads(answer.text,encoding="utf-8")
+      results = answer[Constants.result]
+      return results

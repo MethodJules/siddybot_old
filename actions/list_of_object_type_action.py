@@ -5,6 +5,8 @@ from rasa_sdk.executor import CollectingDispatcher
 import json
 from actions.semantic_search import SemanticSearch
 from actions.db_call import DbCall
+from actions.constants import Constants
+from rasa_sdk.events import SlotSet, EventType
 #import base64,cv2
 
 class ListOfObjecttype(Action):
@@ -14,17 +16,17 @@ class ListOfObjecttype(Action):
 
   def run(self, dispatcher: CollectingDispatcher,
         tracker: Tracker,
-        domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        domain: Dict[Text, Any]) -> List[EventType]:
     print("start action_list_of")
-    object_type = tracker.get_slot("object_type")
+    object_type = tracker.get_slot(Constants.slot_object_type)
     print(object_type)
-    number = tracker.get_slot("NUMBER")
+    number = tracker.get_slot(Constants.slot_cardinal)
     print(number)
-    attribute = tracker.get_slot("attribute")
-    if (object_type == "ORG"):
+    attribute = tracker.get_slot(Constants.slot_attribute)
+    if (object_type == Constants.organization):
       self.searchOrganizations(dispatcher, tracker)
     else: 
-      if ((attribute is None) & (not(object_type is None))):
+      if (not(object_type is None)):
         answer =  DbCall.searchForEntitiy(object_type)
         objects = []
         objects = answer[object_type]
@@ -32,6 +34,7 @@ class ListOfObjecttype(Action):
       else: 
         intent = tracker.latest_message["text"]
         SemanticSearch.searchSemanticSearchIntent(dispatcher, intent)
+    return [SlotSet(Constants.slot_cardinal, None)]
 
   def searchOrganizations(self, dispatcher: CollectingDispatcher, tracker: Tracker):
       """
@@ -39,37 +42,43 @@ class ListOfObjecttype(Action):
       Wenn der Anwender in dem Intent eine Person, eine Stadt oder ein Land mitgibt, dann werden nur die Organisationen zurueck gegeben,
       die auf irgendeine Art und Weise mit der Person, der Stadt oder dem Land verbunden sind.
       """
-      answer = DbCall.searchForEntitiy("ORGANIZATION")
-      person = tracker.get_slot("PERSON")
-      gpe = tracker.get_slot("GPE")
+      answer = DbCall.searchForEntitiy(Constants.organization)
+      person = tracker.get_slot(Constants.slot_person)
+      gpe = tracker.get_slot(Constants.slot_place)
       ausgabe_entities = []
       if ((not(person is None)) | (not(gpe is None))):
-        for x in answer["ORGANIZATION"]:
-          entities = DbCall.searchForEntityRelationship(x, "ORGANIZATION")
-          entities = entities["entities_relations"]
+        for x in answer[Constants.organization]:
+          entities = DbCall.searchForEntityRelationship(x, Constants.organization)
+          entities = entities[Constants.entities_relation]
           for y in entities:
-              if (y["ent_text"] == x):
-                if ((not(person is None)) & (y["ent2_ner"] == "PERSON") & (y["ent2_text"] == person)):
+              if (y[Constants.ent_text] == x):
+                if ((not(person is None)) & (y[Constants.ent2_ner] == Constants.slot_person) & (y[Constants.ent2_text] == person)):
                   ausgabe_entities.append(x)
-                elif ((not(person is None)) & ((y["ent2_ner"] == "COUNTRY")|(y["ent2_ner"] == "CITY")) & ((y["ent2_text"] == gpe)|(y["ent2_text"] == gpe))):
+                elif ((not(person is None)) & ((y[Constants.ent2_ner] == Constants.slot_country)|(y[Constants.ent2_ner] == Constants.slot_city)) & ((y[Constants.ent2_text] == gpe)|(y[Constants.ent2_text] == gpe))):
                   ausgabe_entities.append(x)
       else: 
-          ausgabe_entities = answer["ORGANIZATION"]
+          ausgabe_entities = answer[Constants.organization]
       print(ausgabe_entities)
       self.utter_objects(dispatcher, tracker, ausgabe_entities)
 
 
   def utter_objects(self, dispatcher: CollectingDispatcher, tracker: Tracker, objects):
-      count = tracker.get_slot("NUMBER")
-      count = int(count)
-      print(count)
-      if(len(objects) > 0):
-        if (count is None):
-          for x in answer[object_type]:
-            dispatcher.utter_message(text=f""+x)
-        else: 
+      """ 
+      Gibt Objekte aus der gelesenen Liste aus. 
+      Wenn aus dem Slot "CARDINAL" eine Zahl ermittelt werden kann, dann wird nur diese Anzahl ausgegeben
+      """
+      count = tracker.get_slot(Constants.slot_cardinal)
+      if (count is None):
+        for x in objects:
+          dispatcher.utter_message(text=f""+x)
+      else:
+        try:   
+          count = int(count)
+          print(count)
           while int(count) > 0:
             dispatcher.utter_message(text=f""+objects[0])
             objects.remove(objects[0])
             count = count - 1
+        except ValueError: 
+            dispatcher.utter_message(text=f"I can't handle the text-version of the number. Please write it in a numeric version.")
 

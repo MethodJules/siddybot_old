@@ -1,23 +1,16 @@
 {
-  "searchtype": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 8,
-    "confused_with": {}
-  },
   "ORG": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 105,
+    "support": 164,
     "confused_with": {}
   },
-  "object_type": {
+  "year": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 29,
+    "support": 4,
     "confused_with": {}
   },
   "contacttype": {
@@ -31,14 +24,21 @@
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 13,
+    "support": 20,
     "confused_with": {}
   },
-  "attribute": {
-    "precision": 0.993006993006993,
+  "RELIGION": {
+    "precision": 1.0,
     "recall": 1.0,
-    "f1-score": 0.9964912280701755,
-    "support": 284,
+    "f1-score": 1.0,
+    "support": 11,
+    "confused_with": {}
+  },
+  "searchtype": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 2,
     "confused_with": {}
   },
   "maptype": {
@@ -48,43 +48,57 @@
     "support": 19,
     "confused_with": {}
   },
-  "RELIGION": {
+  "attribute": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 3,
+    "support": 335,
+    "confused_with": {}
+  },
+  "object_type": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 33,
+    "confused_with": {}
+  },
+  "CARDINAL": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 8,
     "confused_with": {}
   },
   "PERSON": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 251,
+    "support": 275,
     "confused_with": {}
   },
-  "year": {
+  "informationtype": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 4,
+    "support": 24,
     "confused_with": {}
   },
   "micro avg": {
-    "precision": 0.9972337482710927,
+    "precision": 1.0,
     "recall": 1.0,
-    "f1-score": 0.9986149584487535,
-    "support": 721
+    "f1-score": 1.0,
+    "support": 900
   },
   "macro avg": {
-    "precision": 0.9993006993006993,
+    "precision": 1.0,
     "recall": 1.0,
-    "f1-score": 0.9996491228070175,
-    "support": 721
+    "f1-score": 1.0,
+    "support": 900
   },
   "weighted avg": {
-    "precision": 0.9972454729736283,
+    "precision": 1.0,
     "recall": 1.0,
-    "f1-score": 0.998617903983259,
-    "support": 721
+    "f1-score": 1.0,
+    "support": 900
   }
 }

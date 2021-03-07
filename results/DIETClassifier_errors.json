@@ -20,7 +20,7 @@
         "entity": "attribute",
         "start": 25,
         "end": 48,
-        "confidence_entity": 0.8172696828842163,
+        "confidence_entity": 0.5262103080749512,
         "value": "city the headquarter of",
         "extractor": "DIETClassifier"
       },
@@ -28,51 +28,9 @@
         "entity": "ORG",
         "start": 49,
         "end": 82,
-        "confidence_entity": 0.966056227684021,
+        "confidence_entity": 0.9691126346588135,
         "value": "Organization of German Immigrants",
         "extractor": "DIETClassifier"
-      }
-    ]
-  },
-  {
-    "text": "Who worked at at the Jewish National Party?",
-    "entities": [
-      {
-        "start": 4,
-        "end": 13,
-        "value": "employee_or_member_of",
-        "entity": "attribute"
-      },
-      {
-        "start": 21,
-        "end": 42,
-        "value": "Jewish National Party",
-        "entity": "ORG"
-      }
-    ],
-    "predicted_entities": [
-      {
-        "entity": "attribute",
-        "start": 4,
-        "end": 16,
-        "confidence_entity": 0.6034597158432007,
-        "value": "worked at at",
-        "extractor": "DIETClassifier"
-      },
-      {
-        "entity": "ORG",
-        "start": 21,
-        "end": 42,
-        "confidence_entity": 0.9974334836006165,
-        "value": "Jewish National Party",
-        "extractor": "DIETClassifier"
-      },
-      {
-        "entity": "RELIGION",
-        "start": 21,
-        "end": 27,
-        "value": "Jewish",
-        "extractor": "RegexEntityExtractor"
       }
     ]
   }

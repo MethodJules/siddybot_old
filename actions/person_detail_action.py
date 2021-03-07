@@ -1,139 +1,138 @@
 from typing import Any, Text, Dict, List
 #
 from rasa_sdk import Action, Tracker
-from rasa_sdk.events import SlotSet
+from rasa_sdk.events import SlotSet, EventType
 from rasa_sdk.executor import CollectingDispatcher
 import json
 from actions.semantic_search import SemanticSearch
 from actions.general_methods import GeneralMethods
 from actions.db_call import DbCall
+from actions.constants import Constants
 #import base64,cv2
 
 class PersonDetailAction(Action):
-  person_attributes = ["age", "alternate_name", "cause_of_death", "children", "cities_of_residence",
-                       "city_of_birth", "city_of_death", "siblings", "countries_of_residence", "country_of_birth",
-                       "country_of_death", "date_of_birth", "date_of_death", "employee_or_member_of", "spouse",
-                       "founded_by", "origin", "other_family", "parents", "religion", "schools_attended", 
-                       "stateorprovince_of_residence", "title", "top_members_employees", "birthplace", "residences",
-                       "family", "member"]
-
-  residence = ["stateorprovince_of_residence", "countries_of_residence", "cities_of_residence"]
-  member = ["employee_or_member_of", "top_members_employees"]
 
   def name(self) -> Text:
       return "action_person_detail"
 
   def run(self, dispatcher: CollectingDispatcher,
         tracker: Tracker,
-        domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-      print("action_person_detail")
-      print(tracker.get_intent_of_latest_message())
+        domain: Dict[Text, Any]) -> List[EventType]:
+      print("Start action_person_detail")
       entity_person = None
       abfrage_attribute = None
-      entity_person = tracker.get_slot('PERSON')
-      abfrage_attribute = tracker.get_slot('attribute')
+      entity_person = tracker.get_slot(Constants.slot_person)
+      print(abfrage_attribute)
+      print(entity_person)
+      abfrage_attribute = tracker.get_slot(Constants.slot_attribute)
       print(entity_person)
       print(abfrage_attribute)
-      if ( (entity_person is None) | (abfrage_attribute is None) | (not(abfrage_attribute in self.person_attributes))):
-          intent = tracker.get_intent_of_latest_message()
-          SemanticSearch.searchSemanticSearchIntent(dispatcher, intent)
+      if ((entity_person is None) | (abfrage_attribute is None) | (not(abfrage_attribute in Constants.person_attributes))):
+          intent = tracker.latest_message["text"]
+          SemanticSearch.searchSemanticSearchIntent(dispatcher, intent, Constants.person)
           return
       personExist = DbCall.validationPerson(entity_person)
       if (personExist == True):
           print("Ja, die Person existiert")
-          self.searchForEntity(dispatcher, tracker, entity_person, abfrage_attribute)
+          return self.searchForEntity(dispatcher, tracker, entity_person, abfrage_attribute) + [SlotSet(Constants.slot_shall_explain_add_person, False)]
       else: 
-          if (abfrage_attribute is None):
-            intent = tracker.get_intent_of_latest_message()
-            SemanticSearch.searchSemanticSearchIntent(dispatcher, intent)
-          else:
-            SemanticSearch.searchSemanticSearchAttribute(dispatcher, entity_person, abfrage_attribute)
+        return SemanticSearch.returnPersonNotExist(dispatcher, tracker)
 
-      #TODO: Bevor die Methode genutzt werden kann, muss hier der richtige Node gefunden werden
-      #GeneralMethods.linkErstellen(dispatcher, entity_person)
-
-  def searchForEntity(self, dispatcher: CollectingDispatcher, tracker: Tracker, name, attribute):
-      answer = DbCall.searchForEntityRelationship(name, "PERSON")
-      entities = answer["entities_relations"]
+  def searchForEntity(self, dispatcher: CollectingDispatcher, tracker: Tracker, name, attribute) -> List[EventType]:
+      answer = DbCall.searchForEntityRelationship(name, Constants.slot_person)
+      entities = answer[Constants.entities_relation]
       print(answer)
       return_ok = False
-      if(attribute == "date_of_birth"):
+      if(attribute == Constants.date_of_birth):
           return_ok = self.utter_birthday(dispatcher, name, entities)
-      elif(attribute == "birthplace"):
+      elif(attribute == Constants.birthplace):
           return_ok = self.utter_birthplace(dispatcher, name, entities)
-      elif(attribute == "city_of_birth"):
+      elif(attribute == Constants.city_of_birth):
           return_ok = self.utter_city_of_birth(dispatcher, name, entities)
-      elif(attribute == "country_of_birth"):
+      elif(attribute == Constants.country_of_birth):
           return_ok = self.utter_country_of_birth(dispatcher, name, entities)
-      elif(attribute == "country_of_death"):
+      elif(attribute == Constants.country_of_death):
           return_ok = self.utter_country_of_death(dispatcher, name, entities)
-      elif(attribute == "city_of_death"):
+      elif(attribute == Constants.city_of_death):
           return_ok = self.utter_city_of_death(dispatcher, name, entities)
-      elif(attribute == "death_place"):
+      elif(attribute == Constants.deathplace):
           return_ok = self.utter_deathplace(dispatcher, name, entities)
-      elif(attribute == "date_of_death"):
+      elif(attribute == Constants.date_of_death):
           return_ok = self.utter_deathday(dispatcher, name, entities)
-      elif(attribute == "cause_of_death"):
+      elif(attribute == Constants.cause_of_death):
           return_ok = self.utter_cause_of_death(dispatcher, name, entities)
-      elif(attribute == "cities_of_residence"):
+      elif(attribute == Constants.cities_of_residence):
           return_ok = self.utter_cities_of_residence(dispatcher, name, entities)
-      elif(attribute == "countries_of_residence"):
+      elif(attribute == Constants.countries_of_residence):
           return_ok = self.utter_countries_of_residence(dispatcher, name, entities)
-      elif(attribute == "residences"):
+      elif(attribute == Constants.residences):
           return_ok = self.utter_residence(dispatcher, name, entities)
-      elif(attribute == "siblings"):
+      elif(attribute == Constants.sibling):
           return_ok = self.utter_siblings(dispatcher, name, entities)
-      elif(attribute == "children"):
+      elif(attribute == Constants.children):
           return_ok = self.utter_children(dispatcher, name, entities)
-      elif(attribute == "spouse"):
+      elif(attribute == Constants.spouse):
           return_ok = self.utter_spouse(dispatcher, name, entities)
-      elif(attribute == "other_family"):
+      elif(attribute == Constants.other_family):
           return_ok = self.utter_other_family(dispatcher, name, entities)
-      elif(attribute == "parents"):
+      elif(attribute == Constants.parents):
           return_ok = self.utter_parents(dispatcher, name, entities)
-      elif(attribute == "family"):
+      elif(attribute == Constants.family):
           return_ok = self.utter_family(dispatcher, name, entities)
-      elif(attribute == "title"):
+      elif(attribute == Constants.title):
           return_ok = self.utter_title(dispatcher, name, entities)
-      elif(attribute == "origin"):
+      elif(attribute == Constants.origin):
           return_ok = self.utter_origin(dispatcher, name, entities)
-      elif(attribute == "member"):
+      elif(attribute == Constants.members):
           return_ok = self.utter_member(dispatcher, name, entities)
-      elif(attribute == "employee_or_member_of"):
+      elif(attribute == Constants.employee_or_member):
           return_ok = self.utter_members_employees(dispatcher, name, entities)
-      elif(attribute == "top_members_employees"):
+      elif(attribute == Constants.top_employee_member):
           return_ok = self.utter_top_member(dispatcher, name, entities)
-      elif(attribute == "alternate_name"):
+      elif(attribute == Constants.alternate_name):
           return_ok = self.utter_alternate_name(dispatcher, name, entities)
-      elif(attribute == "schools_attended"):
+      elif(attribute == Constants.schools_attended):
           return_ok = self.utter_schools_attended(dispatcher, name, entities)
       else: 
         for x in entities:
-          if(x["rel"] == attribute):
-            dispatcher.utter_message(text=f""+x["ent2_text"])
+          if((x[Constants.relationship] == attribute) & (x[Constants.ent_text] == name)):
+            dispatcher.utter_message(text=f""+x[Constants.ent2_text])
         return_ok =  True
       print(return_ok)
       if (return_ok == False):
-          if (attribute is None):
-            intent = tracker.get_intent_of_latest_message()
-            SemanticSearch.searchSemanticSearchIntent(dispatcher, intent)
-          else:
-            SemanticSearch.searchSemanticSearchAttribute(dispatcher, name, attribute)
+        semantic_search_successful = SemanticSearch.searchSemanticSearchAttribute(dispatcher, name, attribute, Constants.person)
+        if (semantic_search_successful == True):
+          dispatcher.utter_message(text="I hope the result helps you further.")
+        dispatcher.utter_message(text="The correct answer is missing in the graph. Maybe you could add the entity.")
+        entity_explained = tracker.get_slot(Constants.slot_explained_add_entity)
+        if ((entity_explained is None)):
+          dispatcher.utter_message(template="utter_shall_how_add_entity")
+          return[SlotSet(Constants.slot_shall_explain_add_entity, True), SlotSet(Constants.slot_explained_add_entity, False)]
+        return[SlotSet(Constants.slot_shall_explain_add_entity, False)]
       else:
-          return SlotSet("entity_not_found", False)
-      #self.findNote(dispatcher, name)
-
-  def searchForEntitesFromTheNode(self, nodeID):
-      query1 = '{"node_id": "'+nodeID+'"}'
-      search_request1 = json.loads(query1, encoding="utf-8")
-      answer1 = requests.post('https://semanticsearch.x-navi.de/get-entities-by-id', search_request1)
-      print(answer1.text)
+        shall_explain_add_entity = SlotSet(Constants.slot_shall_explain_add_entity, False)
+        node_title = answer[Constants.root_nodes]
+        node = ""
+        for x in node_title:
+          node_title = x[Constants.node_title]
+          correct_node = GeneralMethods.findeRichtigenKnoten(name, node_title)
+          if (correct_node == True):
+            node = node_title
+            break
+        link = GeneralMethods.linkErstellen(dispatcher, node)
+        print(tracker.get_slot(Constants.slot_last_link))
+        if ((len(link) > 0) & (not(link == tracker.get_slot(Constants.slot_last_link)))):
+          dispatcher.utter_message(text=f"For more informations you can look here:")
+          dispatcher.utter_message(text=f"https://www.jigsaw-navi.net/de/content/"+link)
+          return[shall_explain_add_entity, SlotSet(Constants.slot_last_link, link)]
+        else:
+           return[shall_explain_add_entity]
 
   def utter_birthday(self, dispatcher: CollectingDispatcher, name, entities) -> bool:
     checked = False
     for x in entities:
-        if(x["rel"] == "date_of_birth"):
-          dispatcher.utter_message(text=f"The birthday were on the "+x["ent2_text"])
+        if((x[Constants.relationship] == Constants.date_of_birth) & (x[Constants.ent_text] == name)):
+          dispatcher.utter_message(text=f"The birthday were on the "+x[Constants.ent2_text])
           checked = True
           break
     return checked
@@ -144,12 +143,12 @@ class PersonDetailAction(Action):
       country = None
       city = None
       for x in entities:
-          if(x["rel"] == "city_of_birth"):
-              city = x["ent2_text"]
+          if((x[Constants.relationship] == Constants.city_of_birth) & (x[Constants.ent_text] == name)):
+              city = x[Constants.ent2_text]
               print(city)
               checked = True
-          elif (x["rel"] == "country_of_birth"):
-              country = x["ent2_text"]
+          elif ((x[Constants.relationship] == Constants.country_of_birth) & (x[Constants.ent_text] == name)):
+              country = x[Constants.ent2_text]
               print(country)
               checked = True
       if checked == True:
@@ -164,8 +163,8 @@ class PersonDetailAction(Action):
   def utter_city_of_birth(self, dispatcher: CollectingDispatcher, name, entities) -> bool:
       checked = False
       for x in entities:
-          if(x["rel"] == "city_of_birth"):
-              city = x["ent2_text"]
+          if((x[Constants.relationship] == Constants.city_of_birth) & (x[Constants.ent_text] == name)):
+              city = x[Constants.ent2_text]
               checked = True
               dispatcher.utter_message(text=f""+ entityPerson + " was born in " + city)
               break
@@ -174,8 +173,8 @@ class PersonDetailAction(Action):
   def utter_country_of_birth(self, dispatcher: CollectingDispatcher, name, entities) -> bool:
       checked = False
       for x in entities:
-          if(x["rel"] == "country_of_birth"):
-              country = x["ent2_text"]
+          if((x[Constants.relationship] == Constants.country_of_birth) & (x[Constants.ent_text] == name)):
+              country = x[Constants.ent2_text]
               checked = True
               dispatcher.utter_message(text=f""+ entityPerson + " was born in " + country)
               break
@@ -184,8 +183,8 @@ class PersonDetailAction(Action):
   def utter_country_of_death(self, dispatcher: CollectingDispatcher, name, entities) -> bool:
       checked = False
       for x in entities:
-          if(x["rel"] == "country_of_death"):
-              country = x["ent2_text"]
+          if((x[Constants.relationship] == Constants.country_of_death) & (x[Constants.ent_text] == name)):
+              country = x[Constants.ent2_text]
               checked = True
               dispatcher.utter_message(text=f""+ entityPerson + " died in " + country)
               break
@@ -194,8 +193,8 @@ class PersonDetailAction(Action):
   def utter_city_of_death(self, dispatcher: CollectingDispatcher, name, entities) -> bool:
       checked = False
       for x in entities:
-          if(x["rel"] == "city_of_death"):
-              country = x["ent2_text"]
+          if((x[Constants.relationship] == Constants.city_of_death) & (x[Constants.ent_text] == name)):
+              country = x[Constants.ent2_text]
               checked = True
               dispatcher.utter_message(text=f""+ entityPerson + " died in " + country)
               break
@@ -206,11 +205,11 @@ class PersonDetailAction(Action):
       country = None
       city = None
       for x in entities:
-          if(x["rel"] == "city_of_death"):
-              city = x["ent2_text"]
+          if((x[Constants.relationship] == Constants.city_of_death) & (x[Constants.ent_text] == name)):
+              city = x[Constants.ent2_text]
               checked = True
-          elif (x["rel"] == "country_of_death"):
-              country = x["ent2_text"]
+          elif ((x[Constants.relationship] == Constants.country_of_death) & (x[Constants.ent_text] == name)):
+              country = x[Constants.ent2_text]
               checked = True
       if checked == True:
           if ((not(city is None)) & (not(country is None))):
@@ -224,8 +223,8 @@ class PersonDetailAction(Action):
   def utter_deathday(self, dispatcher: CollectingDispatcher, name, entities) -> bool:
     checked = False
     for x in entities:
-        if(x["rel"] == "date_of_death"):
-          dispatcher.utter_message(text=f"The date of death were on the "+x["ent2_text"])
+        if((x[Constants.relationship] == "date_of_death") & (x[Constants.ent_text] == name)):
+          dispatcher.utter_message(text=f"The date of death were on the "+x[Constants.ent2_text])
           checked = True
           break
     return checked
@@ -233,8 +232,8 @@ class PersonDetailAction(Action):
   def utter_cause_of_death(self, dispatcher: CollectingDispatcher, name, entities) -> bool:
     checked = False
     for x in entities:
-        if(x["rel"] == "cause_of_death"):
-          dispatcher.utter_message(text=f""+name+" died because of "+x["ent2_text"])
+        if((x[Constants.relationship] == Constants.cause_of_death) & (x[Constants.ent_text] == name)):
+          dispatcher.utter_message(text=f""+name+" died because of "+x[Constants.ent2_text])
           checked = True
           break
     return checked
@@ -243,8 +242,8 @@ class PersonDetailAction(Action):
     checked = False
     cities = []
     for x in entities:
-        if(x["rel"] == "cities_of_residence"):
-          cities.append(x["ent2_text"])
+        if((x[Constants.relationship] == Constants.cities_of_residence) & (x[Constants.ent_text] == name)):
+          cities.append(x[Constants.ent2_text])
           checked = True
     if (checked == True):
         dispatcher.utter_message(text=f""+name+ " lived in:" + GeneralMethods.liste_ausgeben(cities))
@@ -254,8 +253,8 @@ class PersonDetailAction(Action):
     checked = False
     countries = []
     for x in entities:
-        if(x["rel"] == "countries_of_residence"):
-          countries.append(x["ent2_text"])
+        if((x[Constants.relationship] == Constants.countries_of_residence) & (x[Constants.ent_text] == name)):
+          countries.append(x[Constants.ent2_text])
           checked = True
     if (checked == True):
         dispatcher.utter_message(text=f""+name+ " lived in:" + GeneralMethods.liste_ausgeben(countries))
@@ -265,8 +264,8 @@ class PersonDetailAction(Action):
     checked = False
     stateorprovince = []
     for x in entities:
-        if(x["rel"] == "stateorprovince_of_residence"):
-          stateorprovince.append(x["ent2_text"])
+        if((x[Constants.relationship] == Constants.stateorprovince_of_residence) & (x[Constants.ent_text] == name)):
+          stateorprovince.append(x[Constants.ent2_text])
           checked = True
     if (checked == True):
         dispatcher.utter_message(text=f""+name+ " lived in:" + GeneralMethods.liste_ausgeben(stateorprovince))
@@ -276,8 +275,8 @@ class PersonDetailAction(Action):
     checked = False
     residences = []
     for x in entities:
-        if(x["rel"] in self.residence):
-          residences.append(x["ent2_text"])
+        if((x[Constants.relationship] in Constants.residence_attribute) & (x[Constants.ent_text] == name)):
+          residences.append(x[Constants.ent2_text])
           checked = True
     if (checked == True):
         dispatcher.utter_message(text=f""+name+ " lived in:" + GeneralMethods.liste_ausgeben(residences))
@@ -291,24 +290,24 @@ class PersonDetailAction(Action):
     children = []
     other_family = []
     for x in entities:
-        if(x["rel"] == "spouse"):
-          spouses.append(x["ent2_text"])
+        if((x[Constants.relationship] == Constants.spouse) & (x[Constants.ent_text] == name)):
+          spouses.append(x[Constants.ent2_text])
           checked = True
-        elif(x["rel"] == "parents"):
-          parents.append(x["ent2_text"])
+        elif((x[Constants.relationship] == Constants.parents) & (x[Constants.ent_text] == name)):
+          parents.append(x[Constants.ent2_text])
           checked = True
-        elif(x["rel"] == "siblings"):
-          siblings.append(x["ent2_text"])
+        elif((x[Constants.relationship] == Constants.sibling) & (x[Constants.ent_text] == name)):
+          siblings.append(x[Constants.ent2_text])
           checked = True
-        elif(x["rel"] == "children"):
-          children.append(x["ent2_text"])
+        elif((x[Constants.relationship] == Constants.children) & (x[Constants.ent_text] == name)):
+          children.append(x[Constants.ent2_text])
           checked = True
-        elif(x["rel"] == "other_family"):
-          other_family.append(x["ent2_text"])
+        elif((x[Constants.relationship] == Constants.other_family) & (x[Constants.ent_text] == name)):
+          other_family.append(x[Constants.ent2_text])
           checked = True
     if (checked == True):
         dispatcher.utter_message(text=f"I found these family members of" + name +":")
-        if (len(partens) > 0):
+        if (len(parents) > 0):
             dispatcher.utter_message(text=f"Parents: " + GeneralMethods.liste_ausgeben(parents))
         elif (len(siblings) > 0) :
             dispatcher.utter_message(text=f"Siblings: " + GeneralMethods.liste_ausgeben(siblings))
@@ -327,21 +326,22 @@ class PersonDetailAction(Action):
     checked = False
     parents = []
     for x in entities:
-        if(x["rel"] == "parents"):
-          parents.append(x["ent2_text"])
+        if((x[Constants.relationship] == Constants.parents) & (x[Constants.ent_text] == name)):
+          parents.append(x[Constants.ent2_text])
           checked = True
     if (checked == True):
       if (len(parents) == 1):
         dispatcher.utter_message(text=f"" + parents[0] + " was a parent of " + name)
       else: 
         dispatcher.utter_message(text=f"The parents of "+ name + " were: " + GeneralMethods.liste_ausgeben(children))
+    return checked
 
   def utter_children(self, dispatcher: CollectingDispatcher, name, entities) -> bool:
     checked = False
     children = []
     for x in entities:
-        if(x["rel"] == "children"):
-          children.append(x["ent2_text"])
+        if((x[Constants.relationship] == Constants.children) & (x[Constants.ent_text] == name)):
+          children.append(x[Constants.ent2_text])
           checked = True
     if (checked == True):
       if (len(children == 1)):
@@ -354,19 +354,22 @@ class PersonDetailAction(Action):
     checked = False
     siblings = []
     for x in entities:
-        if(x["rel"] == "siblings"):
-          siblings.append(x["ent2_text"])
+        if((x[Constants.relationship] == Constants.sibling) & (x[Constants.ent_text] == name)):
+          siblings.append(x[Constants.ent2_text])
           checked = True
     if (checked == True):
-      dispatcher.utter_message(text=f"Siblings: " + GeneralMethods.liste_ausgeben(siblings))
+      if (len(siblings) > 1):  
+        dispatcher.utter_message(text=f"The siblings of " + name + " were: " + GeneralMethods.liste_ausgeben(siblings))
+      else: 
+        dispatcher.utter_message(text=f"" + siblings[0] + " was the sibling of " + name)
     return checked
 
   def utter_other_family(self, dispatcher: CollectingDispatcher, name, entities) -> bool:
     checked = False
     other = []
     for x in entities:
-        if(x["rel"] == "other_family"):
-          other.append(x["ent2_text"])
+        if((x[Constants.relationship] == Constants.other_family) & (x[Constants.ent_text] == name)):
+          other.append(x[Constants.ent2_text])
           checked = True
     if (checked == True):
       dispatcher.utter_message(text=f"Other familymembers: " + GeneralMethods.liste_ausgeben(other))
@@ -376,30 +379,33 @@ class PersonDetailAction(Action):
     checked = False
     spouse = []
     for x in entities:
-        if(x["rel"] == "spouse"):
-          spouse.append(x["ent2_text"])
+        if((x[Constants.relationship] == Constants.spouse) & (x[Constants.ent_text] == name)):
+          spouse.append(x[Constants.ent2_text])
           checked = True
     if (checked == True):
-      dispatcher.utter_message(text=f"Spouses: " + GeneralMethods.liste_ausgeben(spouse))
+      if (len(spouse) < 2):
+        dispatcher.utter_message(text=f""+spouse[0] + " was the spouse of " + name)
+      else:
+        dispatcher.utter_message(text=f"" + name + " was married with: " + GeneralMethods.liste_ausgeben(spouse))
     return checked
 
   def utter_title(self, dispatcher: CollectingDispatcher, name, entities) -> bool:
     checked = False
     title = []
     for x in entities:
-        if(x["rel"] == "title"):
-          title.append(x["ent2_text"])
+        if((x[Constants.relationship] == Constants.title) & (x[Constants.ent_text] == name)):
+          title.append(x[Constants.ent2_text])
           checked = True
     if (checked == True):
-      dispatcher.utter_message(text=f"Titles: " + GeneralMethods.liste_ausgeben(title))
+      dispatcher.utter_message(text=f"" + GeneralMethods.liste_ausgeben(title))
     return checked
 
   def utter_alternate_name(self, dispatcher: CollectingDispatcher, name, entities) -> bool:
     checked = False
     alternate_names = []
     for x in entities:
-        if(x["rel"] == "alternate_name"):
-          alternate_names.append(x["ent2_text"])
+        if((x[Constants.relationship] == Constants.alternate_name) & (x[Constants.ent_text] == name)):
+          alternate_names.append(x[Constants.ent2_text])
           checked = True
     if (checked == True):
       dispatcher.utter_message(text=f"Alternative Names of "+name+": " + GeneralMethods.liste_ausgeben(alternate_names))
@@ -409,8 +415,8 @@ class PersonDetailAction(Action):
     checked = False
     origin = None
     for x in entities:
-        if(x["rel"] == "origin"):
-          origin = x["ent2_text"]
+        if((x[Constants.relationship] == Constants.origin) & (x[Constants.ent_text] == name)):
+          origin = x[Constants.ent2_text]
           checked = True
           break
     if (not(origin is None)):
@@ -421,8 +427,8 @@ class PersonDetailAction(Action):
     checked = False
     organizations = None
     for x in entities:
-        if(x["rel"] in self.member):
-          organizations = x["ent2_text"]
+        if((x[Constants.relationship] in self.member) & (x[Constants.ent_text] == name)):
+          organizations = x[Constants.ent2_text]
           checked = True
     if (checked == True):
       dispatcher.utter_message(text=f""+ name + " was a member of: " + GeneralMethods.liste_ausgeben(organizations))
@@ -432,8 +438,8 @@ class PersonDetailAction(Action):
     checked = False
     organizations = []
     for x in entities:
-        if(x["rel"] == "top_members_employees"):
-          organizations.append(x["ent2_text"])
+        if((x[Constants.relationship] == Constants.top_employee_member) & (x[Constants.ent_text] == name)):
+          organizations.append(x[Constants.ent2_text])
           checked = True
     if (checked == True):
       dispatcher.utter_message(text=f""+name+ " was top member of: " + GeneralMethods.liste_ausgeben(organizations))
@@ -443,8 +449,8 @@ class PersonDetailAction(Action):
     checked = False
     organizations = []
     for x in entities:
-        if(x["rel"] == "employee_or_member_of"):
-          organizations.append(x["ent2_text"])
+        if((x[Constants.relationship] == Constants.employee_or_member) & (x[Constants.ent_text] == name)):
+          organizations.append(x[Constants.ent2_text])
           checked = True
     if (checked == True):
       dispatcher.utter_message(text=f""+name+ " was member of these organizations: " + GeneralMethods.liste_ausgeben(organizations))
@@ -454,8 +460,8 @@ class PersonDetailAction(Action):
     checked = False
     organizations = []
     for x in entities:
-        if(x["rel"] == "schools_attended"):
-          organizations.append(x["ent2_text"])
+        if((x[Constants.relationship] == Constants.schools_attended) & (x[Constants.ent_text] == name)):
+          organizations.append(x[Constants.ent2_text])
           checked = True
     if (checked == True):
       if (len(organizations) > 1):

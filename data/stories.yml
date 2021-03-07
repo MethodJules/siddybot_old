@@ -12,10 +12,15 @@ stories:
   - intent: thanks
   - action: utter_answer_thanks
 
-- story: action
+- story: create account
   steps:
-  - intent: query_knowledge_base
-  - action: action_query_knowledge_base
+  - intent: create_account
+  - action: utter_user_account_menu
+  - intent: agree
+  - action: utter_create_account
+  - intent: agree
+  - action: utter_confirm_creation
+  - intent: agree
 
 -  story: information about people
    steps:
@@ -59,38 +64,76 @@ stories:
   - action: utter_add_person_check_account
   - intent:  denied
   - action: utter_user_account_menu
-  - intent:  agree
+  - intent: agree
   - action: utter_create_account
-  - intent:  accept
+  - intent: agree
   - action: utter_confirm_creation
-  - intent:  agree
+  - intent: agree
   - action: utter_please_login
-  - intent:  confirm
+  - intent: agree
   - action: utter_add_person
   - action: action_set_exlpained_add_person
-  - intent:  confirm
+  - intent: agree
   - action: utter_add_person_name
-  - intent:  accept
+  - intent: agree
   - action: utter_add_person_biography
-  - intent:  accept
+  - intent: agree
   - action: utter_add_person_family
-  - intent:  accept
+  - intent: agree
   - action: utter_add_person_chronic
-  - intent:  accept
+  - intent: agree
   - action: utter_add_person_network
-  - intent:  accept
+  - intent: agree
   - action: utter_add_person_domicil
-  - intent:  accept
+  - intent: agree
   - action: utter_add_person_bibliography
-  - intent:  accept
+  - intent: agree 
   - action: utter_add_person_picture
-  - intent:  accept
+  - intent: agree
   - action: utter_add_person_data
-  - intent:  accept   
+  - intent: agree 
   - action: utter_show_person_preview
-  - intent:  save_created_person
+  - or: 
+    - intent: agree
+    - intent: save_created_person
   - action:  utter_view_created_person
-  - intent:  thanks
+  - intent: thanks
+  - action: utter_answer_thanks
+
+- story: add missing person + create account
+  steps:
+  - intent: add_person
+  - action: utter_add_person_check_account
+  - intent: agree
+  - action: utter_please_login
+  - intent: agree 
+  - action: utter_add_person
+  - action: action_set_exlpained_add_person
+  - intent: agree
+  - action: utter_add_person_name
+  - intent: agree 
+  - action: utter_add_person_biography
+  - intent: agree
+  - action: utter_add_person_family
+  - intent: agree
+  - action: utter_add_person_chronic
+  - intent: agree 
+  - action: utter_add_person_network
+  - intent: agree 
+  - action: utter_add_person_domicil
+  - intent: agree
+  - action: utter_add_person_bibliography
+  - intent: agree
+  - action: utter_add_person_picture
+  - intent: agree 
+  - action: utter_add_person_data
+  - intent: agree
+  - action: utter_show_person_preview
+  - or: 
+    - intent: agree 
+    - intent: save_created_person
+  - action:  utter_view_created_person
+  - intent: thanks
   - action: utter_answer_thanks
 
 - story: use maps
@@ -250,84 +293,260 @@ stories:
   - action: action_list_of
   - intent: details_of_organizations
   - action: action_organization_details
+  - or:
+    - intent: questionsYesNoOrganization_attributes
+    - intent: questionsYesNoOrganization_connection_to_GPE
+    - intent: questionsYesNoOrganization_connection_to_RELIGION
+  - action: action_yes_no_questions_organization
 
-- story: questions persons + explain add missing person
+- story: questions for details of organizations
+  steps:
+  - intent: details_of_organizations
+  - action: action_organization_details
+
+- story: yes or no questions for organizations
+  steps:
+  - or:
+    - intent: questionsYesNoOrganization_attributes
+    - intent: questionsYesNoOrganization_connection_to_GPE
+    - intent: questionsYesNoOrganization_connection_to_RELIGION
+  - action: action_yes_no_questions_organization
+
+- story: show list + questions person + add entity + create account
   steps:
   - intent: list_of
   - action: action_list_of
   - intent: questions_detail_person
   - action: action_person_detail
   - slot_was_set:
-    - entity_not_found: true
-  - action: utter_data_not_found
+    - shall_explain_add_entity: true
+    - explained_add_entity: false
+  - intent: agree
+  - action: utter_add_entity_check_account
+  - intent: denied
+  - action: utter_user_account_menu
+  - intent: agree
+  - action: utter_create_account
+  - intent: agree
+  - action: utter_please_login
+  - intent: agree
+  - action: utter_add_entity
+  - intent: agree
+  - action: utter_add_entity_text_and_NER
+  - action: action_set_exlpained_add_entity
+  - intent: thanks
+  - action: utter_answer_thanks
+
+- story: show list + questions person + explained entity
+  steps:
+  - intent: list_of
+  - action: action_list_of
+  - intent: questions_detail_person
+  - action: action_person_detail
   - slot_was_set:
-    - explained_add_person: false
-  - action: utter_shall_explain_add_entity
-  - or: 
-    - intent: accept
-    - intent: agree
+    - shall_explain_add_entity: true
+    - explained_add_entity: true
+
+- story: questions person + add entity + create account
+  steps:
+  - intent: questions_detail_person
+  - action: action_person_detail
+  - slot_was_set:
+    - shall_explain_add_entity: true
+    - explained_add_entity: false
+  - intent: agree
+  - action: utter_add_entity_check_account
+  - intent: denied
+  - action: utter_user_account_menu
+  - intent: agree
+  - action: utter_create_account
+  - intent: agree
+  - action: utter_please_login
+  - intent: agree
+  - action: utter_add_entity
+  - intent: agree
+  - action: utter_add_entity_text_and_NER
+  - action: action_set_exlpained_add_entity
+  - intent: thanks
+  - action: utter_answer_thanks
+
+- story: show list + questions person + add entity
+  steps:
+  - intent: list_of
+  - action: action_list_of
+  - intent: questions_detail_person
+  - action: action_person_detail
+  - slot_was_set:
+    - shall_explain_add_entity: true
+    - explained_add_entity: false
+  - intent: agree
+  - action: utter_add_entity_check_account
+  - intent: agree
+  - action: utter_please_login
+  - intent: agree
+  - action: utter_add_entity
+  - intent: agree
+  - action: utter_add_entity_text_and_NER
+  - action: action_set_exlpained_add_entity
+  - intent: thanks
+  - action: utter_answer_thanks
+
+- story: questions person + add entity
+  steps:
+  - intent: questions_detail_person
+  - action: action_person_detail
+  - slot_was_set:
+    - shall_explain_add_entity: true
+    - explained_add_entity: false
+  - intent: agree
+  - action: utter_add_entity_check_account
+  - intent: agree
+  - action: utter_please_login
+  - intent: agree
+  - action: utter_add_entity
+  - intent: agree
+  - action: utter_add_entity_text_and_NER
+  - action: action_set_exlpained_add_entity
+  - intent: thanks
+  - action: utter_answer_thanks
+
+- story: questions person + explained entity
+  steps:
+  - intent: questions_detail_person
+  - action: action_person_detail
+  - slot_was_set:
+    - shall_explain_add_entity: true
+    - explained_add_entity: true
+
+- story: questions persons + explain add missing person + create account
+  steps:
+  - intent: questions_detail_person
+  - action: action_person_detail
+  - slot_was_set:
+    - shall_explain_add_person: true
+  - intent: agree
   - action: utter_add_person_check_account
   - intent:  denied
   - action: utter_user_account_menu
-  - intent:  agree
+  - intent: agree
   - action: utter_create_account
-  - intent:  accept
+  - intent: agree
   - action: utter_confirm_creation
-  - intent:  agree
+  - intent: agree
   - action: utter_please_login
-  - intent:  confirm
+  - intent: agree
   - action: utter_add_person
   - action: action_set_exlpained_add_person
-  - intent:  confirm
+  - intent: agree
   - action: utter_add_person_name
-  - intent:  accept
+  - intent: agree
   - action: utter_add_person_biography
-  - intent:  accept
+  - intent: agree
   - action: utter_add_person_family
-  - intent:  accept
+  - intent: agree
   - action: utter_add_person_chronic
-  - intent:  accept
+  - intent: agree
   - action: utter_add_person_network
-  - intent:  accept
+  - intent: agree
   - action: utter_add_person_domicil
-  - intent:  accept
+  - intent: agree
   - action: utter_add_person_bibliography
-  - intent:  accept
+  - intent: agree
   - action: utter_add_person_picture
-  - intent:  accept
+  - intent: agree
   - action: utter_add_person_data
-  - intent:  accept   
+  - intent: agree
   - action: utter_show_person_preview
-  - intent:  save_created_person
+  - or: 
+    - intent: agree
+    - intent:  save_created_person
   - action:  utter_view_created_person
-  - intent:  thanks
+  - intent: thanks
   - action: utter_answer_thanks
     
-- story: questions persons + entity not found but explained
-  steps:
-  - intent: list_of
-  - action: action_list_of
-  - intent: questions_detail_person
-  - action: action_person_detail
-  - slot_was_set:
-    - entity_not_found: true
-  - action: utter_data_not_found
-  - slot_was_set:
-    - explained_add_person: true
 
-- story: questions persons + entity not found + not explain
+- story: questions persons + explain add missing person 
+  steps:
+  - intent: questions_detail_person
+  - action: action_person_detail
+  - slot_was_set:
+    - shall_explain_add_person: true
+  - intent: agree
+  - action: utter_add_person_check_account
+  - intent: agree
+  - action: utter_please_login
+  - intent: agree
+  - action: utter_add_person
+  - action: action_set_exlpained_add_person
+  - intent: agree
+  - action: utter_add_person_name
+  - intent: agree
+  - action: utter_add_person_biography
+  - intent: agree
+  - action: utter_add_person_family
+  - intent: agree
+  - action: utter_add_person_chronic
+  - intent: agree 
+  - action: utter_add_person_network
+  - intent: agree
+  - action: utter_add_person_domicil
+  - intent: agree
+  - action: utter_add_person_bibliography
+  - intent: agree
+  - action: utter_add_person_picture
+  - intent: agree
+  - action: utter_add_person_data
+  - intent: agree   
+  - action: utter_show_person_preview
+  - or: 
+    - intent: agree
+    - intent: save_created_person
+  - action:  utter_view_created_person
+  - or:
+    - intent: thanks
+    - intent:  save_created_person
+  - action: utter_answer_thanks
+
+- story: questions persons + person or entity not found but explained
+  steps:
+  - intent: list_of
+  - action: action_list_of
+  - intent: questions_detail_person
+  - action: action_person_detail
+
+- story: questions persons + person not found + not explain
   steps:
   - intent: list_of
   - action: action_list_of
   - intent: questions_detail_person
   - action: action_person_detail
   - slot_was_set:
-    - entity_not_found: true
-  - action: utter_data_not_found
-  - slot_was_set:
-    - explained_add_person: false
-  - action: utter_shall_explain_add_entity
+    - shall_explain_add_person: true
   - intent: denied
+  - action: utter_ok
+
+- story: questions persons + Entity not found + not explain
+  steps:
+  - intent: list_of
+  - action: action_list_of
+  - intent: questions_detail_person
+  - action: action_person_detail
+  - slot_was_set:
+    - shall_explain_add_entity: true
+    - explained_add_entity: false
+  - action: utter_shall_how_add_entity
+  - intent: denied
+  - action: utter_ok
+
+- story: questions persons + Entity not found + explained add entity
+  steps:
+  - intent: list_of
+  - action: action_list_of
+  - intent: questions_detail_person
+  - action: action_person_detail
+  - slot_was_set:
+    - shall_explain_add_entity: true
+    - explained_add_entity: true
 
 - story: count + list objects
   steps: 
@@ -342,6 +561,8 @@ stories:
   - action: action_list_of
   - intent: questions_detail_person
   - action: action_person_detail
+  - slot_was_set:
+      - last_link: last_link
   - or:
     - intent: questionsYesNoPerson_connection_to_RELIGION
     - intent: questionsYesNoPerson_connection_to_ORG
@@ -349,7 +570,28 @@ stories:
     - intent: questionsYesNoPerson_attributes
   - action: action_yes_no_questions_person
 
-- story: yes or no questions
+- story: yes/no question and details of persons
+  steps: 
+  - or:
+    - intent: questionsYesNoPerson_connection_to_RELIGION
+    - intent: questionsYesNoPerson_connection_to_ORG
+    - intent: questionsYesNoPerson_connection_to_GPE
+    - intent: questionsYesNoPerson_attributes
+  - action: action_yes_no_questions_person
+  - intent: questions_detail_person
+  - action: action_person_detail
+  - slot_was_set:
+      - last_link: last_link
+
+
+- story: questions for details of persons
+  steps:
+  - intent: questions_detail_person
+  - action: action_person_detail
+  - slot_was_set:
+      - last_link: last_link
+
+- story: yes or no questions persons
   steps:
   - or:
     - intent: questionsYesNoPerson_connection_to_RELIGION

@@ -3,6 +3,7 @@ from rasa_sdk.executor import CollectingDispatcher
 import json
 from typing import Any, Text, Dict, List
 from actions.semantic_search import SemanticSearch
+from actions.constants import Constants
 
 class SemanticSearchAction(Action):
 
@@ -12,7 +13,12 @@ class SemanticSearchAction(Action):
   def run(self, dispatcher: CollectingDispatcher,
     tracker: Tracker,
     domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-    #self.semanticSearch(dispatcher, name, attribute)
-    dispatcher.utter_message(text=f"Hier soll die semantische Suche mit dem Satz der eingegeben wurde ausgefuehrt werden")
-    intent = tracker.latest_message["text"]
-    SemanticSearch.searchSemanticSearchIntent(dispatcher, intent)
+    print("action_semantic_search")
+    entities = tracker.latest_message[Constants.entities]
+    print(entities)
+    successfull = SemanticSearch.searchSemanticSearchListOfEntities(dispatcher, entities, tracker)
+    print(successfull)
+    if ((successfull is None) | (successfull == False)):
+        dispatcher.utter_message(template="utter_ask_rephrase")
+ #   intent = tracker.latest_message["text"]
+ #   SemanticSearch.searchSemanticSearchIntent(dispatcher, intent)

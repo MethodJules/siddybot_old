@@ -5,6 +5,9 @@ from rasa_sdk.executor import CollectingDispatcher
 import json
 from actions.semantic_search import SemanticSearch
 from actions.db_call import DbCall
+from actions.general_methods import GeneralMethods
+from actions.constants import Constants
+from rasa_sdk.events import SlotSet, EventType
 #import base64,cv2
 
 class YesNoQuestionsPersonAction(Action):
@@ -14,58 +17,48 @@ class YesNoQuestionsPersonAction(Action):
 
   def run(self, dispatcher: CollectingDispatcher,
         tracker: Tracker,
-        domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        domain: Dict[Text, Any]) -> List[EventType]:
     print("start action_yes_no_questions")
-    person = tracker.get_slot("PERSON")
-    object_type = "PERSON"
-    print(person)
+    person = tracker.get_slot(Constants.slot_person)
     person_exist = DbCall.validationPerson(person)
     intent = tracker.get_intent_of_latest_message()
     attribute = tracker.get_slot("attribute")
-    if (person_exist == "false"):
-      if (attribute is None):
-        SemanticSearch.searchSemanticSearchIntent(dispatcher, intent)
-      else:
-        SemanticSearch.searchSemanticSearchAttribute(dispatcher, person, attribute)
-      return
+    checked_bool = False
+    if (person_exist == False):
+      return SemanticSearch.returnPersonNotExist(dispatcher, tracker)
     if (tracker.get_intent_of_latest_message() == "questionsYesNoPerson_attributes"):
-      if (not(attribute is None)):
-        answer = DbCall.searchForEntityRelationship(person, object_type)
-
+      if ((not(attribute is None))):
+        answer = DbCall.searchForEntityRelationship(person, Constants.person)
         checked = "No"
-        for x in answer["entities_relations"]:
-            if (x["rel"] == attribute):
-                checked = "Yes"
+        for x in answer[Constants.entities_relation]:
+            if (x[Constants.relationship] == attribute):
+                checked_bool = True
                 break
-        dispatcher.utter_message(text=f""+checked)
       else:
-        SemanticSearch.searchSemanticSearchIntent(dispatcher, intent)
+        SemanticSearch.searchSemanticSearchIntent(dispatcher, tracker.latest_message["text"])
+        return
     elif (tracker.get_intent_of_latest_message() == "questionsYesNoPerson_connection_to_GPE"):
-        value_gpe = tracker.get_slot("GPE")
-        print(value_gpe)
-        answer = DbCall.searchForEntityRelationship(person, object_type)
-        print(answer)
-        checked = "No"
-        for x in answer["entities_relations"]:
-            if (x["ent2_text"] == value_gpe):
-                checked = "Yes"
-                break
-        dispatcher.utter_message(text=f""+checked)
+        value_gpe = tracker.get_slot(Constants.slot_place)
+        if ((not(attribute is None))):
+          checked_bool = GeneralMethods.checkAttributeAndEntity(person,  Constants.person, attribute, value_gpe)
+        else:
+          checked_bool = GeneralMethods.checkEntity(person,  Constants.person, value_gpe)
     elif (tracker.get_intent_of_latest_message() == "questionsYesNoPerson_connection_to_ORG"):
-        value_org = tracker.get_slot("ORG")
-        answer = DbCall.searchForEntityRelationship(person, object_type)
-        checked = "No"
-        for x in answer["entites-relationships"]:
-            if (x["ent2_text"] == value_org):
-                checked = "Yes"
-                break
-        dispatcher.utter_message(text=f""+checked)
+        value_org = tracker.get_slot(Constants.slot_org)
+        if ((not(attribute is None))):
+          checked_bool = GeneralMethods.checkAttributeAndEntity(person,  Constants.person, attribute, value_org)
+        else:
+          checked_bool = GeneralMethods.checkEntity(person,  Constants.person, value_org)
     elif (tracker.get_intent_of_latest_message() == "questionsYesNoPerson_connection_to_RELIGION"):
-        value_rel = tracker.get_slot("RELIGION")
-        answer = DbCall.searchForEntityRelationship(person, object_type)
-        checked = "No"
-        for x in answer["entities_relations"]:
-            if (x["ent2_text"] == value_rel):
-                checked = "Yes"
-                break
-        dispatcher.utter_message(text=f""+checked)
+        value_rel = tracker.get_slot(Constants.slot_religion)
+        if ((not(attribute is None))):
+          checked_bool = GeneralMethods.checkAttributeAndEntity(person,  Constants.person, attribute, value_rel)
+        else:
+          checked_bool = GeneralMethods.checkEntity(person,  Constants.person, value_rel)
+    else: 
+        dispatcher.utter_message(template="utter_ask_rephrase")
+        return
+    if (checked_bool == True):
+      dispatcher.utter_message(text=f"Yes")
+    else: 
+      dispatcher.utter_message(text=f"No")

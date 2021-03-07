@@ -30,10 +30,13 @@ nlu:
 
 - intent: agree
   examples: |
-    - yes
     - oh yeah
     - yep
+    - Yes
     - of course
+    - I understand
+    - Ok
+    - Check
 
 - intent: denied
   examples: |
@@ -42,15 +45,8 @@ nlu:
     - Nope
     - Not at all
     - Not a chance
-
-- intent: accept
-  examples: |
-    - Ok
-    - Check
-
-- intent: confirm
-  examples: |
-    - I understand
+    - I don't have an account 
+    - I do not have an account
 
 - intent: website_information
   examples: |
@@ -109,6 +105,12 @@ nlu:
     - I want to do a custom search.
     - I search a custom search function.
     - Where can I do a custom search?
+
+- intent: create_account
+  examples: |
+    - How can I create an account?
+    - Please show me, how I can create a new account.
+    - I want to create a new account.
 
 - intent: found_error
   examples: |
@@ -300,25 +302,26 @@ nlu:
     - I would like to see some [people]{"entity": "object_type", "value": "PERSON"} who worked by [WIZO](ORG)
     - I would like to get suggested some [people]{"entity": "object_type", "value": "PERSON"} who worked by [WIZO](ORG)
     - Can you show me a list of some [people]{"entity": "object_type", "value": "PERSON"} who worked at [WIZO](ORG)
-    - Show me [10]{"entity": "NUMBER", "value": 10} [people]{"entity": "object_type", "value": "PERSON"}
-    - Could you tell me [twenty]{"entity": "NUMBER", "value": 20} examples of [people]{"entity": "object_type", "value": "PERSON"}
+    - Show me [10](CARDINAL) [people]{"entity": "object_type", "value": "PERSON"}
+    - Could you tell me [twenty](CARDINAL) examples of [people]{"entity": "object_type", "value": "PERSON"}
     - Show me some [people]{"entity": "object_type", "value": "PERSON"}
-    - I want to see [15]{"entity": "NUMBER", "value": 15} examples from your website
+    - I want to see [15](CARDINAL) examples from your website
 
 - intent: list_of/organizations
   examples: |
-    - Could you tell me in which [organizations]{"entity": "object_type", "value": "ORG"} worked the people?
-    - Show me in which [companys]{"entity": "object_type", "value": "ORG"} the social workers worked?
-    - Which [organizations]{"entity": "object_type", "value": "ORG"} are saved on these website?
-    - [Organizations]{"entity": "object_type", "value": "ORG"}, please
-    - I want to know [10]{"entity": "NUMBER", "value": 10} examples of [companies]{"entity": "object_type", "value": "ORG"}
-    - Could you tell me some [companys]{"entity": "object_type", "value": "ORG"} in [Zurich](GPE)?
-    - Show me [15]{"entity": "NUMBER", "value": 15} [organization](object_type) where [Ruth Barak]{"entity": "object_type", "value": "ORG"} was working
-    - Some [organizations]{"entity": "object_type", "value": "ORG"} in [Germany](GPE)
-    - List some [orgs]({"entity": "object_type", "value": "ORG"}
+    - Could you tell me in which [organizations]{"entity": "object_type", "value": "ORGANIZATION"} worked the people?
+    - Show me in which [companys]{"entity": "object_type", "value": "ORGANIZATION"} the social workers worked?
+    - Which [organizations]{"entity": "object_type", "value": "ORGANIZATION"} are saved on these website?
+    - [Organizations]{"entity": "object_type", "value": "ORGANIZATION"}, please
+    - I want to know [10](CARDINAL) examples of [companies]{"entity": "object_type", "value": "ORGANIZATION"}
+    - Could you tell me some [companys]{"entity": "object_type", "value": "ORGANIZATION"} in [Zurich](GPE)?
+    - Show me [15](CARDINAL) [organization]{"entity": "object_type", "value": "ORGANIZATION"} was working
+    - Some [organizations]{"entity": "object_type", "value": "ORGANIZATION"} in [Germany](GPE)
+    - Can you give me [18](CARDINAL) [organizations]{"entity": "object_type", "value": "ORGANIZATION"}?
+    - List some [orgs]{"entity": "object_type", "value": "ORGANIZATION"}
     - Could you show me some? 
-    - List [20]{"entity": "NUMBER", "value": 20} 
-    - List [30]{"entity": "NUMBER", "value": 30} from your website
+    - List [five](CARDINAL)
+    - List [30](CARDINAL) from your website
 
 
 - intent: questions_detail_person/birthday
@@ -341,6 +344,8 @@ nlu:
     - When was the [deathday]{"entity": "attribute", "value": "date_of_death"} of [Esther Apfelberg](PERSON)?
     - Could you show me the [deathday]{"entity": "attribute", "value": "date_of_death"} of her?
     - When was his [deathday]{"entity": "attribute", "value": "date_of_death"}?
+    - When did [Benjamin Jonas](PERSON) [died]{"entity": "attribute", "value": "date_of_death"}?
+    - [When was the death]{"entity": "attribute", "value": "date_of_death"} of [Benjamin Jonas](PERSON)?
 
 - intent: questions_detail_person/death_place
   examples: |
@@ -400,11 +405,14 @@ nlu:
 
 - intent: questions_detail_person/cause_of_death
   examples: |
-    - Why did [Esther Apfelberg](PERSON) [died]{"entity": "attribute", "value": "cause_of_death"}?
+    - Why did [Esther Apfelberg](PERSON) [die]{"entity": "attribute", "value": "cause_of_death"}?
     - Could you show me the [cause of death]{"entity": "attribute", "value": "cause_of_death"} of [Natalie Jarecki](PERSON)
     - [Cause of death]{"entity": "attribute", "value": "cause_of_death"} of [Irene Gaster](PERSON), please
     - What was the [cause of death]{"entity": "attribute", "value": "cause_of_death"} ?
     - Could you told me the [cause of death]{"entity": "attribute", "value": "cause_of_death"} 
+    - [Why die]{"entity": "attribute", "value": "cause_of_death"} [Natalie Jarecki](PERSON)?
+    - [Why did she die]{"entity": "attribute", "value": "cause_of_death"}?
+    - [Death]{"entity": "attribute", "value": "cause_of_death"} [Natalie Jarecki](PERSON)
 
 - intent: questions_detail_person/residences
   examples: |
@@ -412,7 +420,7 @@ nlu:
     - What [domiciles]{"entity": "attribute", "value": "residences"} did [Esther Apfelberg](PERSON) have?
     - [residences]{"entity": "attribute", "value": "residences"} of [Esther Apfelberg](PERSON), please
     - Which [residences]{"entity": "attribute", "value": "residences"} had [Esther Apfelberg](PERSON)?
-    - Show some [residences](attribute) from [Esther Apfelberg](PERSON)
+    - Show some [residences]{"entity": "attribute", "value": "residences"} from [Esther Apfelberg](PERSON)
     - Can you show me where [Esther Apfelberg](PERSON) [lived]{"entity":"attribute","value":"residences"}?
     - Where did [Rachel Ellern](PERSON) [lived]{"entity":"attribute","value":"residences"}? 
     - I liked to know where she [lived]{"entity":"attribute","value":"residences"}
@@ -420,11 +428,11 @@ nlu:
 
 - intent: questions_detail_person/cities_of_residence
   examples: |
-    - In [which cities did]{"entity": "attribute", "value": "cities_of_residence"} [Esther Apfelberg](PERSON) live?
-    - Show me [some cities were]{"entity": "attribute", "value": "cities_of_residence"} [Esther Apfelberg](PERSON) lived 
-    - Tell me some [cities of residence]{"entity": "attribute", "value": "cities_of_residence"} of [Irene Gaster](PERSON)
+    - [In which cities did]{"entity": "attribute", "value": "cities_of_residence"} [Esther Apfelberg](PERSON) live?
+    - Show me some [cities were]{"entity": "attribute", "value": "cities_of_residence"} [Esther Apfelberg](PERSON) lived 
+    - Tell me some [cities of residence]{"entity": "attribute", "value": "cities_of_residence"} from [Irene Gaster](PERSON)
     - Could you show me some [cities of residence]{"entity": "attribute", "value": "cities_of_residence"} of [Benjamin Jonas](PERSON)
-    - I like to know in [which city was]{"entity":"attribute","value":"cities_of_residence"} was [Esther Apfelberg](PERSON)?
+    - I like to know [in which city was]{"entity":"attribute","value":"cities_of_residence"} [Esther Apfelberg](PERSON)?
     - 
 
 - intent: questions_detail_person/countries_of_residence
@@ -479,7 +487,8 @@ nlu:
     - [Parents]{"entity":"attribute","value":"parents"} of [Esther Apfelberg](PERSON)
     - Call me the [father]{"entity":"attribute","value":"parents"} of [Esther Apfelberg](PERSON)
     - Who was the [mother]]{"entity":"attribute","value":"parents"} of [Esther Apfelberg](PERSON)?
-    - How was the [mother]{"entity":"attribute","value":"parents"} of [Esther Apfelberg](PERSON) named?
+    - Who was the [mother]{"entity":"attribute","value":"parents"} of [Esther Apfelberg](PERSON) named?
+    - Who were [Bertha Pappenheim](PERSON)'s [parents]{"entity":"attribute","value":"parents"}?
 
 - intent: questions_detail_person/title
   examples: |
@@ -489,6 +498,8 @@ nlu:
     - Please show me which [title]{"entity": "attribute", "value": "title"} [Ruth Barak](PERSON) had learn
     - What was his [title]{"entity": "attribute", "value": "title"}?
     - Could you show me her [job]{"entity": "attribute", "value": "title"}?
+    - What did [Bertha Pappenheim](PERSON) [do]{"entity": "attribute", "value": "title"}?
+    - What did [Bertha Pappenheim](PERSON) [do for work]{"entity": "attribute", "value": "title"}?
 
 - intent: questions_detail_person/origin
   examples: |
@@ -517,22 +528,33 @@ nlu:
     - Where was [Benjamin Jonas](PERSON) a [member]{"entity": "attribute", "value": "member"}?
     - Could you show me the companys where [Benjamin Jonas](PERSON) was a [member]{"entity": "attribute", "value": "member"}?
     - Could you tell me the organizations where [Esther Apfelberg](PERSON) [worked]{"entity": "attribute", "value": "member"}?
+    - Show me where he was a [member]{"entity": "attribute", "value": "member"}
+    - Please tell me where did [Benjamin Jonas](PERSON) had a [membership]{"entity": "attribute", "value": "member"}
 
 
 - intent: questions_detail_person/school_attended
   examples: |
     - Which [schools did]{"entity": "attribute", "value": "schools_attended"} [Esther Apfelberg](PERSON) attended? 
     - Where was [Esther Apfelberg](PERSON) [student]{"entity": "attribute", "value": "schools_attended"}?
+    - Where did he [studied]{"entity":"attribute","value":"schools_attended"}?
     - Show me the schools where [Esther Apfelberg](PERSON) was a [student]{"entity": "attribute", "value": "schools_attended"}
     - Could you tell me the [schools]{"entity": "attribute", "value": "schools_attended"} which [Esther Apfelberg](PERSON) visited?
     - At which [school]{"entity":"attribute","value":"schools_attended"} was [Esther Apfelberg](PERSON)?
     - At which [university]{"entity":"attribute","value":"schools_attended"} did [Esther Apfelberg](PERSON) studied?
+    - Where did [Esther Apfelberg](PERSON) [studied]{"entity":"attribute","value":"schools_attended"}?
+    - Please show me the [schools]{"entity": "attribute", "value": "schools_attended"} where she studied
 
 - intent: questions_detail_person/general
   examples: |
     - Show me the [religion](attribute) of [Esther Apfelberg](PERSON)
+    - Which [religion](attribute) did he had?
     - I want to know the [title](attribute) of [Esther Apfelberg](PERSON)
     - What was the [religion](attribute) of [Esther Apfelberg](PERSON)?
+    - What [religion](attribute) is [Esther Apfelberg](PERSON)?
+    - To what [religion](attribute) did [Beate Berger] belong to?
+    - I want to know [something]{"entity":"attribute","value":"biographie"} of her
+    - Please show me the [biographie]{"entity":"attribute","value":"biographie"} of [Ruth Barak](PERSON)
+
 
 - intent: details_of_organizations/city_of_headquarter
   examples: |
@@ -548,6 +570,7 @@ nlu:
     - Show me where the [headquarter]{"entity": "attribute", "value": "headquarter"} of [Institute for Applied Psychology](ORG) is
     - Where is the [headquarter]{"entity": "attribute", "value": "headquarter"} of [Institute for Applied Psychology](ORG)
     - Where was the [headquarter]{"entity": "attribute", "value": "headquarter"}?
+    - Where are the [headquarters]{"entity": "attribute", "value": "headquarter"} of [International Save the Children Union](ORG)?
 
 - intent: details_of_organizations/top members
   examples: |
@@ -567,15 +590,15 @@ nlu:
 
 - intent: details_of_organizations/employee_members
   examples: |
-    - Show me who [worked at]{"entity": "attribute", "value": "employee_or_member_of"} at the [Jewish National Party](ORG)?
+    - Show me who [worked at]{"entity": "attribute", "value": "employee_or_member_of"} the [Jewish National Party](ORG)?
     - Could you tell me the [workers]{"entity": "attribute", "value": "employee_or_member_of"} of the [Childrens Service](ORG)? 
-    - Who [worked at]{"entity": "attribute", "value": "employee_or_member_of"} at the [Jewish National Party](ORG)? 
+    - Who [worked at]{"entity": "attribute", "value": "employee_or_member_of"} the [Jewish National Party](ORG)? 
     - Who [wokred by]{"entity": "attribute", "value": "employee_or_member_of"} these organization?
 
 - intent: details_of_organizations/students
   examples: |
     - Who visit [Jewish National Party](ORG) as a [student]{"entity": "attribute", "value": "school_attended"}?
-    - Show me some the [student]{"entity": "attribute", "value": "school_attended"} of [Mizrahi Womens Organization](ORG)?
+    - Show me some the [students]{"entity": "attribute", "value": "school_attended"} of [Mizrahi Womens Organization](ORG)?
     - Which [students]{"entity": "attribute", "value": "school_attended"} visit the [Spiritual Hygiene](ORG)?
     - [Students]{"entity": "attribute", "value": "school_attended"} of [Zentralwohlfahrtsstelle](ORG), please
     - Who was a [student]{"entity": "attribute", "value": "school_attended"} there?
@@ -609,42 +632,81 @@ nlu:
 - intent: details_of_organizations/subsidiares
   examples: |
     - I like to know the [subsidiares](attribute) of the [Zentralwohlfahrtsstelle](ORG)?
-    - Could you show me the [subsidiares](attribute) of the [Zentralwohlfahrtsstelle](ORG)?
+    - Could you show me the [subsidiares](attribute) of the [Vaad Leumi](ORG)?
     - [Subsidiares](attribute) of the [Zentralwohlfahrtsstelle](ORG)?
+    - Please show me the [subsidiares](attribute) of the [Leo Baeck Institute](ORG)!
+    - Show me the [subsidiares](attribute)
+    - Want to know the [subsidiares](attribute).
+
 
 - intent: details_of_organizations/affiliation
   examples: |
-    - Which [affiliation]{"entity": "attribute", "value": "political_religious_affiliation"} had the [Jewish National Party](ORG)?
-    - Can you show me the [affiliation]{"entity": "attribute", "value": "political_religious_affiliation"} of the [Jewish National Party](ORG)?
-    - I like to know the [affiliation]{"entity": "attribute", "value": "political_religious_affiliation"} of the [Jewish National Party](ORG)?
+    - Which [political affiliation]{"entity": "attribute", "value": "political_religious_affiliation"} had the [Youth Aliyah](ORG)?
+    - Can you show me the [religious affiliation]{"entity": "attribute", "value": "political_religious_affiliation"} of the [Jewish National Party](ORG)?
+    - I like to know the [affiliation]{"entity": "attribute", "value": "political_religious_affiliation"} of the [Jewish Agency Central Bureau](ORG)?
 
 - intent: questionsYesNoPerson_attributes
   examples: |
      - Did [Ruth Barak](PERSON) had a [spouse](attribute)?
      - Was [Ruth Barak](PERSON) [married]{"entity": "attribute", "value": "spouse"}
      - Did [RuthBarak](PERSON) had a [husband]{"entity": "attribute", "value": "spouse"}?
-     - Could yo tell me, if [Ruth Barak](PERSON) had [children](attribute)?
-     - I would be happy, if you can tell me if [Ruth Barak](PERSON) had [children](attribute)
+     - Could yo tell me, if [Ruth Barak](PERSON) had [children]{"entity": "attribute", "value": "children"}?
+     - I would be happy, if you can tell me if [Ruth Barak](PERSON) had [children]{"entity": "attribute", "value": "children"}
      - Do you know if [Ruth Barak](PERSON) had a [job]{"entity": "attribute", "value": "title"}
-     - Could you tell me, if [Ruth Barak](PERSON) had [siblings](attribute)?
+     - Could you tell me, if [Beate Berger](PERSON) had [siblings]{"entity": "attribute", "value": "siblings"}?
+     - Did she had [siblings]{"entity": "attribute", "value": "siblings"}?
+     - I like to know if he had a [spouse](attribute)
 
 - intent: questionsYesNoPerson_connection_to_GPE
   examples: | 
      - Did [Ruth Barak](PERSON) ever lived in [Berlin](GPE)?
      - Could you tell me if [Ruth Barak](PERSON) was in [Jerusalem](GPE) active?
      - I like to know if [Ruth Barak](PERSON) lived in [Vienna](GPE)
+     - Did she lived in [Berlin](GPE)?
+     - I want to know if he had a connection to [Palestina](GPE)
 
 - intent: questionsYesNoPerson_connection_to_ORG
   examples: |
      - Is it true, that [Ruth Barak](PERSON) was at the [Hebrew Gymnasium Herzliya](ORG) active?
+     - Was he at the [Hebrew Gymnasium Herzliya](ORG)?
      - I want to know, if [Ruth Barak](PERSON) worked at the [Hebrew Gymnasium Herzliya](ORG)?
      - Could you show me if [Ruth Barak](PERSON) was by the [Jewish National Party](ORG)?
+     - Please show me if [Esther Apfelberg](PERSON) had a connection to the [Zentralwohlfahrtsstelle](ORG)
+     - Could you show me if she had a connection to [Collection of Welfare Legislation](ORG)?
 
 - intent: questionsYesNoPerson_connection_to_RELIGION
   examples: |
     - Had [Ruth Barak](PERSON) the religion [jewish]{"entity": "RELIGION", "value": "Jewish"}?
     - Was [Ruth Barak](PERSON) a [Jewess]{"entity": "RELIGION", "value": "Jewish"}
     - Could you tell me the if [Ruth Barak](PERSON) was a [christian]{"entity": "RELIGION", "value": "Christian"}
+    - Was she a [Jewess]{"entity": "RELIGION", "value": "Jewish"}?
+    - Could you tell me if he was a [christian]{"entity": "RELIGION", "value": "Christian"}?
+
+
+- intent: questionsYesNoOrganization_attributes
+  examples: |
+     - Did you know the [religious affiliation]{"entity": "attribute", "value": "political_religious_affiliation"} of the [Zentralwohlfahrtsstelle](ORG)?
+     - Could you show me the [political affiliation]{"entity": "attribute", "value": "political_religious_affiliation"} of the [Hebrew University](ORG)?
+     - Please tell me if the [political affiliation]{"entity": "attribute", "value": "political_religious_affiliation"} of the [Hebrew University](ORG) 
+     - Did the [Hebrew University](ORG) had a [political affiliation]{"entity": "attribute", "value": "political_religious_affiliation"}?
+     - Please tell me if you know the [religious affiliation]{"entity": "attribute", "value": "political_religious_affiliation"} of the [Zentralwohlfahrtsstelle](ORG)
+
+- intent: questionsYesNoOrganization_connection_to_GPE
+  examples: | 
+     - I like to know if the [Hebrew University](ORG) has a connection to [Jerusalem](GPE)
+     - Can you tell me whether the [headquarters]{"entity": "attribute", "value": "headquarter"} of the [Viktoria-Luisen School](ORG) was in [Berlin](GPE)?
+     - Did [German Association of Zionist Women](ORG) had the [headquarter]{"entity": "attribute", "value": "headquarter"} in [Israel](GPE)?
+     - Was the [headquarter]{"entity": "attribute", "value": "headquarter"} of the [Zentralewohlfahrtsstelle](ORG) in [Berlin](GPE)?
+     - Did the [International Conference of Jewish Social Work](ORG) had a connection to [Palestina](GPE)?
+
+- intent: questionsYesNoOrganization_connection_to_RELIGION
+  examples: |
+    - Had the [Hebrew University](ORG) the religion affiliation [jewish]{"entity": "RELIGION", "value": "Jewish"}?
+    - Please tell me if the religion of the [Jewish National Party](ORG) was [jewish]{"entity": "RELIGION", "value": "Jewish"}?
+    - Could you tell me if the [Hebrew University](ORG) a  [jewish]{"entity": "RELIGION", "value": "Jewish"} organization?
+    - I like to know if the [National Committe](ORG) was a [christian]{"entity": "RELIGION", "value": "Christian"} organization?
+    - Was the religion of the [International Conference of Jewish Social Work](ORG) [christian]{"entity": "RELIGION", "value": "Christian"}?
+    - I like to know if the [religious affiliation]{"entity": "attribute", "value": "political_religious_affiliation"} of the [Zentralwohlfahrtsstelle](ORG) was [jewish]{"entity": "RELIGION", "value": "jewish"}?
 
 - intent: information_search_with_chatbot
   examples: |
@@ -654,6 +716,7 @@ nlu:
     - Can you tell me what information I can look for you with you?
     - What can you give me information for?
     - Could you tell me what kind of information you can give me for?
+    - What kind of information are you searching?
 
 - intent: how_search_with_chatbot
   examples: |
@@ -664,6 +727,7 @@ nlu:
     - Can you show me how I can search for informations?
     - Show me how I can search with you
     - What do I have to do to look for information with you?
+    - How can I serach for those information?
 
 - intent: ask_for_information_type
   examples: |
@@ -684,7 +748,6 @@ nlu:
 - lookup: object_type
   examples: |
     - CITY
-    - year
     - PERSON
     - DATE
     - COUNTRY
@@ -695,14 +758,11 @@ nlu:
     - RELIGION
     - DURATION
     - ORDINAL
-    - NUMBER
     - IDEOLOGY
     - STATE_OR_PROVINCE
     - CAUSE_OF_DEATH
     - ORGANIZATION
-    - ORG
-
-
+ 
 - lookup: maptype
   examples: |
     - activity
@@ -784,6 +844,7 @@ nlu:
   examples: |
     - affiliation
     - membership
+    - background
 
 - synonym: schools_attended
   examples: |
@@ -791,6 +852,7 @@ nlu:
     - students
     - scholar
     - pupil
+    - study
 
 - synonym: death_place
   examples: |
@@ -884,7 +946,7 @@ nlu:
     - informations
     - infos
 
-- synonym: ORG
+- synonym: ORGANIZATION
   examples: |
     - organization
     - orga 
@@ -914,12 +976,6 @@ nlu:
   examples: |
     - husband
     - wife
-
-- synonym: cities_of_residence
-  examples: |
-    - residence
-    - domicil
-    - domicils
    
 - synonym: children
   examples: |
@@ -933,7 +989,87 @@ nlu:
     - sisters
     - brothers
 
-- synonym: CAUSE_OF_DEATH
+- synonym: headquarter
   examples: |
-    - cause of death
-    - why someone died
+    - office
+    - offices
+
+- synonym: '1'
+  examples: |
+    - one
+
+- synonym: '2'
+  examples: |
+    - two
+
+- synonym: '3'
+  examples: |
+    - three
+
+- synonym: '4'
+  examples: |
+    - four
+
+- synonym: '5'
+  examples: |
+    - five
+
+- synonym: '6'
+  examples: |
+    - six
+
+- synonym: '7'
+  examples: |
+    - seven
+
+- synonym: '8'
+  examples: |
+    - eight
+
+- synonym: '9'
+  examples: |
+    - nine
+
+- synonym: '10'
+  examples: |
+    - ten
+
+- synonym: '11'
+  examples: |
+    - eleven
+
+- synonym: '12'
+  examples: |
+    - twelve
+
+- synonym: '13'
+  examples: |
+    - thirteen
+
+- synonym: '14'
+  examples: |
+    - fourteen
+
+- synonym: '15'
+  examples: |
+    - fifteen
+
+- synonym: '16'
+  examples: |
+    - sixteen
+
+- synonym: '17'
+  examples: |
+    - seventeen
+
+- synonym: '18'
+  examples: |
+    - eightteen
+
+- synonym: '19'
+  examples: |
+    - nineteen
+
+- synonym: '20'
+  examples: |
+    - twenty

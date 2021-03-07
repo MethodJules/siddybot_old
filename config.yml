@@ -21,7 +21,7 @@ pipeline:
      min_ngram: 1
      max_ngram: 4
    - name: "SpacyEntityExtractor"
-     dimensions: ["PERSON", "DATE", "ORG", "GPE"]
+     dimensions: ["PERSON", "ORG", "GPE", "CARDINAL"]
    - name: DIETClassifier
      epochs: 300
    - name: EntitySynonymMapper

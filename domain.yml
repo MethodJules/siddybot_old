@@ -48,6 +48,10 @@ intents:
   - how_search_with_chatbot
   - ask_for_information_type
   - information_search_with_chatbot
+  - questionsYesNoOrganization_attributes
+  - questionsYesNoOrganization_connection_to_GPE
+  - questionsYesNoOrganization_connection_to_RELIGION
+  - create_account
 
 entities:
   - maptype
@@ -55,12 +59,10 @@ entities:
   - searchtype
   - object_type
   - attribute
-  - mention
   - residence
   - CITY
   - year
   - PERSON
-  - DATE
   - COUNTRY
   - NATIONALITY
   - LOCATION
@@ -69,13 +71,18 @@ entities:
   - RELIGION
   - DURATION
   - ORDINAL
-  - NUMBER
+  - CARDINAL
   - IDEOLOGY
   - STATE_OR_PROVINCE
   - CAUSE_OF_DEATH
   - GPE
   - ORG
   - informationtype
+  - explained_add_entity
+  - shall_explain_add_person
+  - explained_add_person
+  - shall_explain_add_entity
+  - last_link
 
 slots:
   maptype:
@@ -113,7 +120,6 @@ slots:
       - STATE_OR_PROVINCE
       - CAUSE_OF_DEATH
       - ORGANIZATION
-      - ORG
     influence_conversation: false
   mention:
     type: text
@@ -155,9 +161,7 @@ slots:
       - residences
       - family
       - death_place
-    influence_conversation: false
-  DATE: 
-    type: text
+      - headquarter
     influence_conversation: false
   PERSON: 
     type: text
@@ -183,11 +187,9 @@ slots:
   ORDINAL:
     type: text
     influence_conversation: false
-  NUMBER:
+  CARDINAL:
     type: float
     influence_conversation: false
-    min_value: 0
-    max_value: 100000.0
   IDEOLOGY:
     type: text
     influence_conversation: false
@@ -203,9 +205,6 @@ slots:
   ORG:
     type: text
     influence_conversation: false
-  entity_not_found:
-    type: bool
-    influence_conversation: true
   explained_add_person:
     type: bool
     influence_conversation: true
@@ -216,6 +215,19 @@ slots:
       - organization-detail
       - list-of
     influence_conversation: true
+  last_link:
+    type: text
+    influence_conversation: true
+  explained_add_entity:
+    type: bool
+    influence_conversation: true
+  shall_explain_add_person:
+    type: bool
+    influence_conversation: true
+  shall_explain_add_entity:
+    type: bool
+    influence_conversation: true
+
   
 responses:
   utter_welcome:
@@ -226,15 +238,30 @@ responses:
   
   utter_goodbye:
   - text: "Goodbye."
+
+  utter_ok:
+  - text: "Ok"
   
   utter_website_information:
   - text: "Jigsaw, is a research and contributor website for researchers and individuals interested in the biographies of Jewish social workers."
   
   utter_answer_thanks:
   - text: "You are welcome."
+
+  utter_shall_how_add_entity:
+  - text: "Shall I show you how you can add the missing entity?"
   
   utter_add_person_check_account:
   - text: "If you have an account, you have the option to add a person. Do you have an account?"
+
+  utter_add_entity_check_account:
+  - text: "If you have an account, you have the option to add a entity at the website of the specific person. Do you have an account?"
+
+  utter_add_entity_text_and_NER:
+  - text: "Now you can set the text of the new entity and choose the type (NER). After these you can press the button save and you can the new entity in the graph."
+
+  utter_add_entity:
+  - text: "Now you can go to the specific person. Here you have the option \"Add Entity\" at the top of the website."
   
   utter_user_account_menu:
   - text: "Please create an account in the User Account Menu. Did you found the Menu?"
@@ -435,9 +462,6 @@ responses:
   - text: "What is the name of the person?"
   - text: "How is the name of the person?"
 
-  utter_dummy:
-  - text: "Dies ist erstmal eine Dummy-Antwort."
-
   utter_submit:
   - text: "Thank you! I am going to search for your information."
 
@@ -448,10 +472,13 @@ responses:
   - text: "Shall I show you how to create entities?"
 
   utter_data_not_found:
-  - text: "I'm sorry but I don't have a answer for your question. Maybe the mistake is that the entity or relationship is missing."
+  - text: "I'm sorry but I don't have a answer for your question. Maybe the mistake is that the entity is missing."
 
   utter_shall_explain_add_entity:
   - text: "Shall I tell you how to create the entity?"
+
+  utter_shall_explain_add_person:
+  - text: "Shall I tell you how to create the person?"
 
   utter_information_of_website:
   - text: "I can give you informations about the persons and the organizations which are saved at these website."
@@ -488,9 +515,9 @@ actions:
   - action_organization_details
   - action_count_object_type
   - action_yes_no_questions_person
+  - action_yes_no_questions_organization
   - action_set_exlpained_add_person
-
-
+  - action_set_exlpained_add_entity
 
 session_config:
   session_expiration_time: 60

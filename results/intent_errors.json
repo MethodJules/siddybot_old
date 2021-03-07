@@ -1,0 +1,10 @@
+[
+  {
+    "text": "How can I get the information?",
+    "intent": "how_search_with_chatbot",
+    "intent_prediction": {
+      "name": "get_information",
+      "confidence": 0.5318079590797424
+    }
+  }
+]
