@@ -70,7 +70,9 @@ stories:
   - action: utter_confirm_creation
   - intent: agree
   - action: utter_please_login
-  - intent: agree
+  - or:
+    - intent: agree
+    - intent: successfully_login
   - action: utter_add_person
   - action: action_set_exlpained_add_person
   - intent: agree
@@ -100,13 +102,15 @@ stories:
   - intent: thanks
   - action: utter_answer_thanks
 
-- story: add missing person + create account
+- story: add missing person
   steps:
   - intent: add_person
   - action: utter_add_person_check_account
   - intent: agree
   - action: utter_please_login
-  - intent: agree 
+  - or:
+    - intent: agree 
+    - intent: successfully_login
   - action: utter_add_person
   - action: action_set_exlpained_add_person
   - intent: agree
@@ -362,7 +366,9 @@ stories:
   - action: utter_create_account
   - intent: agree
   - action: utter_please_login
-  - intent: agree
+  - or:
+    - intent: agree 
+    - intent: successfully_login
   - action: utter_add_entity
   - intent: agree
   - action: utter_add_entity_text_and_NER
@@ -383,7 +389,9 @@ stories:
   - action: utter_add_entity_check_account
   - intent: agree
   - action: utter_please_login
-  - intent: agree
+  - or:
+    - intent: agree 
+    - intent: successfully_login
   - action: utter_add_entity
   - intent: agree
   - action: utter_add_entity_text_and_NER
@@ -402,13 +410,32 @@ stories:
   - action: utter_add_entity_check_account
   - intent: agree
   - action: utter_please_login
-  - intent: agree
+  - or:
+    - intent: agree 
+    - intent: successfully_login
   - action: utter_add_entity
   - intent: agree
   - action: utter_add_entity_text_and_NER
   - action: action_set_exlpained_add_entity
   - intent: thanks
   - action: utter_answer_thanks
+
+- story: add missing enitity
+  steps:
+  - intent: add_missing_entity
+  - action: utter_add_entity_check_account
+  - intent: agree
+  - action: utter_please_login
+  - or:
+    - intent: agree 
+    - intent: successfully_login
+  - action: utter_add_entity
+  - intent: agree
+  - action: utter_add_entity_text_and_NER
+  - action: action_set_exlpained_add_entity
+  - intent: thanks
+  - action: utter_answer_thanks
+
 
 - story: questions person + explained entity
   steps:
@@ -434,7 +461,9 @@ stories:
   - action: utter_confirm_creation
   - intent: agree
   - action: utter_please_login
-  - intent: agree
+  - or:
+    - intent: agree 
+    - intent: successfully_login
   - action: utter_add_person
   - action: action_set_exlpained_add_person
   - intent: agree
@@ -475,7 +504,9 @@ stories:
   - action: utter_add_person_check_account
   - intent: agree
   - action: utter_please_login
-  - intent: agree
+  - or:
+    - intent: agree 
+    - intent: successfully_login
   - action: utter_add_person
   - action: action_set_exlpained_add_person
   - intent: agree

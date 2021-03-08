@@ -38,6 +38,12 @@ nlu:
     - I understand
     - Ok
     - Check
+    - I did
+
+- intent: successfully_login
+  examples: |
+    - I loged in
+    - I successfully loged in my account
 
 - intent: denied
   examples: |
@@ -307,6 +313,10 @@ nlu:
     - Could you tell me [twenty](CARDINAL) examples of [people]{"entity": "object_type", "value": "PERSON"}
     - Show me some [people]{"entity": "object_type", "value": "PERSON"}
     - I want to see [15](CARDINAL) examples from your website
+    - [Who]{"entity": "object_type", "value": "PERSON"} did you saved in your list?
+    - About [who]{"entity": "object_type", "value": "PERSON"} did you have information?
+    - Can you name some [people]{"entity": "object_type", "value": "PERSON"}
+    - Can you say the names of a few [people]{"entity": "object_type", "value": "PERSON"} you have information about
 
 - intent: list_of/organizations
   examples: |
@@ -330,7 +340,7 @@ nlu:
     - Tell me in which year was the  [birthday]{"entity": "attribute", "value": "date_of_birth"} of [Esther Apfelberg](PERSON)
     - I would like to know when the [birthday]{"entity": "attribute", "value": "date_of_birth"} of [Esther Apfelberg](PERSON) was
     - Can you tell me the [birthday]{"entity": "attribute", "value": "date_of_birth"} of [Esther Apfelberg](PERSON)?
-    - [When was [Esther Apfelberg](PERSON) was born]{"entity": "attribute", "value": "date_of_birth"}?  
+    - [When]{"entity": "object_type", "value": "DATE"} was [Esther Apfelberg](PERSON) [born]{"entity": "attribute", "value": "birth"}?  
     - Tell me her [birthday]{"entity": "attribute", "value": "date_of_birth"}
     - When is his [birthday]{"entity": "attribute", "value": "date_of_birth"}?
     - I would like to know his [birthday]{"entity": "attribute", "value": "date_of_birth"}
@@ -339,28 +349,44 @@ nlu:
     - Tell me in which year was the  [birthday]{"entity": "attribute", "value": "date_of_birth"} of [Esther Apfelberg](PERSON)
     - I would like to know when the [birthday]{"entity": "attribute", "value": "date_of_birth"} of [Esther Apfelberg](PERSON) was
     - Can you tell me the [birthday]{"entity": "attribute", "value": "date_of_birth"} of [Esther Apfelberg](PERSON)?
+    - Please show me [when]{"entity": "object_type", "value": "DATE"} was [Esther Apfelberg](PERSON) [born]{"entity": "attribute", "value": "birth"}?  
+    - [birthday]{"entity": "attribute", "value": "date_of_birth"} of [Esther Apfelberg](PERSON)
 
 - intent: questions_detail_person/deathday
   examples: |
-    - When was the [deathday]{"entity": "attribute", "value": "date_of_death"} of [Esther Apfelberg](PERSON)?
-    - Could you tell me [when [Ruth Barak](PERSON) died]{"entity": "attribute", "value": "date_of_death"}?
+    - [When]{"entity": "object_type", "value": "DATE"} was the [deathday]{"entity": "attribute", "value": "date_of_death"} of [Esther Apfelberg](PERSON)?
+    - Could you tell me [when]{"entity": "object_type", "value": "DATE"} [Ruth Barak](PERSON) [died]{"entity": "attribute", "value": "death"}?
     - Show me the [deathday]{"entity": "attribute", "value": "date_of_death"} of [Benjamin Jonas](PERSON)?
     - On which [day died]{"entity": "attribute", "value": "date_of_death"}  [Benjamin Jonas](PERSON)? 
     - When was the [deathday]{"entity": "attribute", "value": "date_of_death"} of [Esther Apfelberg](PERSON)?
     - Could you show me the [deathday]{"entity": "attribute", "value": "date_of_death"} of her?
     - When was his [deathday]{"entity": "attribute", "value": "date_of_death"}?
     - [Benjamin Jonas](PERSON)'s [day of death]{"entity": "attribute", "value": "date_of_death"}
-    - [When did [Benjamin Jonas](PERSON) died]{"entity": "attribute", "value": "date_of_death"}?
-    - [When was the death]{"entity": "attribute", "value": "date_of_death"} of [Benjamin Jonas](PERSON)?
+    - [When]{"entity": "object_type", "value": "DATE"} did [Benjamin Jonas](PERSON) [died]{"entity": "attribute", "value": "death"}?
+    - [When]{"entity": "object_type", "value": "DATE"} was the [death]{"entity": "attribute", "value": "death"} of [Benjamin Jonas](PERSON)?
+    - [When]{"entity": "object_type", "value": "DATE"} did [Benjamin Jonas](PERSON) [pass away]{"entity": "attribute", "value": "death"}
+
+- synonym: when
+  examples: |
+    - When
+    - At which date
+    - at which date
+    - which date
+
+- synonym: where
+  examples: |
+    - Where
+    - At which place
+    - at which place
 
 - intent: questions_detail_person/death_place
   examples: |
-    - [Where did [Ruth Barak](PERSON) died]{"entity": "attribute", "value": "death_place"}?
-    - Show me [where [Benjamin Jonas](PERSON) died]{"entity": "attribute", "value": "death_place"}
-    - Where was the [death_place]{"entity": "attribute", "value": "death_place"} of [Rachel Ellern](PERSON)?
-    - [Where did he died]{"entity": "attribute", "value": "death_place"}?
-    - [Where did she died]{"entity": "attribute", "value": "death_place"}?
-    - Could you show me his [death_place]{"entity": "attribute", "value": "death_place"}?
+    - [Where]{"entity": "object_type", "value": "PLACE"} did [Ruth Barak](PERSON) [died]{"entity": "attribute", "value": "death"}?
+    - Show me [where]{"entity": "object_type", "value": "PLACE"} [Benjamin Jonas](PERSON) [died]{"entity": "attribute", "value": "death"}
+    - Where was the [place of death]{"entity": "attribute", "value": "death_place"} of [Rachel Ellern](PERSON)?
+    - [Where]{"entity": "object_type", "value": "PLACE"} did he [died]{"entity": "attribute", "value": "death_place"}?
+    - [Where]{"entity": "object_type", "value": "PLACE"} did she [died]{"entity": "attribute", "value": "death_place"}?
+    - Could you show me the [place where]{"entity": "object_type", "value": "PLACE"} he [die]{"entity": "attribute", "value": "death_place"}?
     
 - intent: questions_detail_person/country_of_death
   examples: |
@@ -372,51 +398,53 @@ nlu:
 
 - intent: questions_detail_person/city_of_death
   examples: |
-    - What is the [name of the city where [Irene Gaster](PERSON) died]{"entity": "attribute", "value": "city_of_death"}?
+    - What is the name of the [city]{"entity": "object_type", "value": "CITY"} where [Irene Gaster](PERSON) [died]{"entity": "attribute", "value": "death"}?
     - [City of death]{"entity": "attribute", "value": "city_of_death"} of [Ruth Barak](PERSON), please 
-    - Show me in [which city [Irene Gaster](PERSON) die]{"entity": "attribute", "value": "city_of_death"}? 
-    - In [which city [Else Cohn](PERSON) died]{"entity":"attribute","value":"city_of_death"}?
-    - In which [city he died]{"entity": "attribute", "value": "city_of_death"}?
-    - Could you tell me in which [city she died]{"entity": "attribute", "value": "city_of_death"}?
+    - Show me in [which city [Irene Gaster](PERSON) [die]{"entity": "attribute", "value": "death"}? 
+    - In which [city]{"entity": "object_type", "value": "CITY"} [Else Cohn](PERSON) [died]{"entity":"attribute","value":"death"}?
+    - In which [city]{"entity": "object_type", "value": "CITY"} [Else Cohn](PERSON) [died]{"entity":"attribute","value":"death"}?
+    - In which [city]{"entity": "object_type", "value": "CITY"} he [died]{"entity": "attribute", "value": "death"}?
+    - Could you tell me in which [city]{"entity": "object_type", "value": "CITY"} she [died]{"entity": "attribute", "value": "death"}?
 
 - intent: questions_detail_person/city_of_birth
   examples: |
     - What is the [birthtown]{"entity": "attribute", "value": "city_of_birth"} [Natalie Jarecki](PERSON)?
     - Show me the [city of birth]{"entity": "attribute", "value": "city_of_birth" } of [Natalie Jarecki](PERSON)
-    - Could you tell me [where [Natalie Jarecki](PERSON) was born]{"entity": "attribute", "value": "city_of_birth" }?
+    - Could you tell me [where]{"entity": "object_type", "value": "PLACE"} [Natalie Jarecki](PERSON) [was born]{"entity": "attribute", "value": "birth" }?
     - I would like to know in [which city [Esther Apfelberg](PERSON) was born]{"entity":"attribute","value":"city_of_birth"}
     - Where is the [birthtown]{"entity": "attribute", "value": "city_of_birth"}?
-    - Show me his [city of birth]{"entity": "attribute", "value": "city_of_birth" }
+    - Show me his [city of birth]{"entity": "attribute", "value": "city_of_birth"}
 
 - intent: questions_detail_person/country_of_birth
   examples: |
-    - In which [country was [Natalie Jarecki](PERSON) born]{"entity": "attribute", "value": "country_of_birth"}? 
+    - In which [country]{"entity": "object_type", "value": "COUNTRY"} was [Natalie Jarecki](PERSON) born]{"entity": "attribute", "value": "country_of_birth"}? 
     - Show me the [country where [Irene Gaster](PERSON) was born]{"entity": "attribute", "value": "city_of_birth"} 
     - [Country of birth]{"entity": "attribute", "value": "country_of_birth"} of [Benjamin Jonas](PERSON)
     - Could you tell me the [country of birth]{"entity": "attribute", "value": "country_of_birth"}?
-    - I liked to know in which [country he was born]{"entity": "attribute", "value": "country_of_birth"}
+    - I liked to know in which [country][country]{"entity": "object_type", "value": "COUNTRY"} he [was born]{"entity": "attribute", "value": "birth"}
 
 - intent: questions_detail_person/birthplace
   examples: |
-    - [Where was [Natalie Jarecki](PERSON) born]{"entity": "attribute", "value": "birthplace"}? 
-    - Could you show me, [where [Irene Gaster](PERSON) was born]{"entity": "attribute", "value": "birthplace"}?
+    - [Where]{"entity": "object_type", "value": "PLACE"} was [Natalie Jarecki](PERSON) [born]{"entity": "attribute", "value": "birth"}? 
+    - Could you show me, [where]{"entity": "object_type", "value": "PLACE"} [Irene Gaster](PERSON) was [born]{"entity": "attribute", "value": "birth"}?
     - What is the [birthplace]{"entity": "attribute", "value": "birthplace"} of [Natalie Jarecki](PERSON)?
     - Show me the [place of birth]{"entity": "attribute", "value": "birthplace"} of [Irene Gaster](PERSON)
-    - [Where was [Esther Apfelberg](PERSON) born]{"entity":"attribute","value":"birthplace"}?
+    - [Where]{"entity": "object_type", "value": "PLACE"} was [Esther Apfelberg](PERSON) [born]{"entity":"attribute","value":"birth"}?
     - Could you tell me where the [birthplace]{"entity": "attribute", "value": "birthplace"} is?
     - I liked to know the [birthplace]{"entity": "attribute", "value": "birthplace"} of her
     - [birthplace]{"entity": "attribute", "value": "birthplace"}, please
+    - [Where]{"entity": "object_type", "value": "PLACE"} was she [born]{"entity":"attribute","value":"birth"}?
 
 - intent: questions_detail_person/cause_of_death
   examples: |
-    - [Why did [Esther Apfelberg](PERSON) die]{"entity": "attribute", "value": "cause_of_death"}?
+    - [Why]{"entity": "object_type", "value": "CAUSE"} did [Esther Apfelberg](PERSON) [die]{"entity": "attribute", "value": "death"}?
     - Could you show me the [cause of death]{"entity": "attribute", "value": "cause_of_death"} of [Natalie Jarecki](PERSON)
     - [Cause of death]{"entity": "attribute", "value": "cause_of_death"} of [Irene Gaster](PERSON), please
     - What was the [cause of death]{"entity": "attribute", "value": "cause_of_death"} ?
     - Could you told me the [cause of death]{"entity": "attribute", "value": "cause_of_death"} 
-    - [Why die]{"entity": "attribute", "value": "cause_of_death"} [Natalie Jarecki](PERSON)?
-    - [Why did she die]{"entity": "attribute", "value": "cause_of_death"}?
-    - [Death]{"entity": "attribute", "value": "cause_of_death"} [Natalie Jarecki](PERSON)
+    - [Why]{"entity": "object_type", "value": "CAUSE"} [die]{"entity": "attribute", "value": "death"} [Natalie Jarecki](PERSON)?
+    - [Why]{"entity": "object_type", "value": "CAUSE"} did she [die]{"entity": "attribute", "value": "death"}?
+    - [Deathcause]{"entity": "attribute", "value": "cause_of_death"} [Natalie Jarecki](PERSON)
 
 - intent: questions_detail_person/residences
   examples: |
@@ -464,6 +492,7 @@ nlu:
     - Tell me who were the [children]{"entity":"attribute","value":"children"} of [Rachel Ellern](PERSON)
     - What are the names of the [children](attribute) of [Benjamin Jonas](PERSON)?
     - Name the [children](attribute) of [Rachel Ellen](PERSON)
+
 - intent: questions_detail_person/spouse
   examples: |
     - Who was the [spouse]{"entity": "attribute", "value": "spouse"} of [Rachel Ellern](PERSON)?
@@ -578,6 +607,12 @@ nlu:
     - Show me the [city where the headquarter]{"entity": "attribute", "value": "city_of_headquarters"} was?
     - I like to know the [city where the headquarter]{"entity": "attribute", "value": "city_of_headquarters"} is
 
+- intent: details_of_organizations/genereal
+  examples: |
+    - [Something]{"entity": "attribute", "value": "biographie"} of [Hebrew Gymnasium Herzliya](ORG), please
+    - Show me [something]{"entity": "attribute", "value": "biographie"} about [Institute for Applied Psychology](ORG)
+    - Tell me [something]{"entity": "attribute", "value": "biographie"} about [Institute for Applied Psychology](ORG)
+
 - intent: details_of_organizations/headquarter
   examples: |
     - [Headquarter]{"entity": "attribute", "value": "headquarter"} of [Hebrew Gymnasium Herzliya](ORG), please
@@ -672,6 +707,8 @@ nlu:
      - I like to know if he had a [spouse](attribute)
      - Was she part of any [religion](attribute)?
      - Could you tell me if she had [children](attribute)
+     - Was she [religious]{"entity": "attribute", "value": "religion"}?
+
 
 - intent: questionsYesNoPerson_connection_to_GPE
   examples: | 
@@ -758,6 +795,13 @@ nlu:
     - Looking for [person detail]{"entity": "informationtype", "value": "person-detail"}
     - I am looking for [person detail]{"entity": "informationtype", "value": "person-detail"}
     - Could you show me some [person detail]{"entity": "informationtype", "value": "person-detail"}?
+    - [to a person]{"entity": "informationtype", "value": "person-detail"}
+
+- intent: add_missing_entity
+  examples: |
+    - How can I add a missing enitity?
+    - Please show me how I can add these entity!
+    - Tell me how I can add it. 
 
 - regex: year
   examples: |
@@ -853,12 +897,19 @@ nlu:
     - residence
     - domiciles
     - domicil
+    - abode
+    - place of aboude
+    - places of aboude
 
 - synonym: religion
   examples: |
     - confession
     - religions
-
+    - faith
+    - belief
+    - trust
+    - credence
+    - persuasion
 
 - synonym: Jewish
   examples: |
@@ -930,12 +981,24 @@ nlu:
 
 - synonym: city_of_birth
   examples: |
+    - birthtown
     - birth town
     - city of birth
 
 - synonym: family
   examples: |
     - familymember
+
+- synonym: sibings
+  examples: |
+    - sister
+    - brother
+    - sisters
+    - brothers
+    - brother and sister
+    - sister and brother
+    - brothers and sisters
+    - sisters and brothers
 
 - synonym: title
   examples: |
@@ -1024,12 +1087,15 @@ nlu:
     - kids
     - child
 
-- synonym: siblings
+- synonym: parents
   examples: |
-    - sister
-    - brother
-    - sisters
-    - brothers
+    - mom
+    - mother
+    - dad
+    - father
+    - parent
+    - mommy
+    - daddy
 
 - synonym: headquarter
   examples: |
@@ -1038,6 +1104,7 @@ nlu:
     - main spot
     - main
     - headquarters
+    - head office
 
 - synonym: '1'
   examples: |
@@ -1668,7 +1735,7 @@ nlu:
     - Judaica
     - Jewish-National Womens Union
     - University of Wurzburg
-    -WIZO World Organization
+    - WIZO World Organization
     - Ministry of Social Affairs
     - Siddy Wronskys School for Social Service
     - Youth and Welfare Office

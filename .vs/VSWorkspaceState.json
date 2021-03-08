@@ -3,7 +3,6 @@
     "",
     "\\actions",
     "\\data",
-    "\\models",
     "\\results"
   ],
   "SelectedNode": "\\actions\\semantic_search.py",

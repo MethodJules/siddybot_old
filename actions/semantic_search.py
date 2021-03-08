@@ -16,7 +16,7 @@ from actions.constants import Constants
 # Funktionen zum Aufruf der semantischen Ausgabe. Hier werden die Daten dann auch ausgegeben
 class SemanticSearch():
 
-  def searchSemanticSearchAttribute(dispatcher: CollectingDispatcher, name, attribute, object_type = None) -> bool:
+  def searchSemanticSearchAttribute(dispatcher: CollectingDispatcher, name, attribute, object_type = None, checkForExplicitPerson=False)  -> bool:
     """
     Fuehrt eine semantische Suche mit den Eingaben attribute und name des Objektes durch
     """
@@ -25,7 +25,7 @@ class SemanticSearch():
     searchquery = json.loads(searchquery, encoding="utf-8")
     try:
       result = DbCall.semanticSearch(searchquery)
-      call_successful = SemanticSearch.readSemanticSearchResult(dispatcher, result, name)
+      call_successful = SemanticSearch.readSemanticSearchResult(dispatcher, result, name, object_type, checkForExplicitPerson)
       return call_successful
     except: 
       dispatcher.utter_message(templeate="utter_ask_rephrase")
@@ -40,57 +40,67 @@ class SemanticSearch():
     call_successful = False
     try:
       result = DbCall.semanticSearch(searchquery)
-      call_successful = SemanticSearch.readSemanticSearchResult(dispatcher, result)
+      call_successful = SemanticSearch.readSemanticSearchResult(dispatcher, result, None, object_type)
       return call_successful
     except: 
       dispatcher.utter_message(templeate="utter_ask_rephrase")
 
-  def searchSemanticSearchListOfEntities(dispatcher: CollectingDispatcher, entities, tracker: Tracker)  -> bool:
+  def searchSemanticSearchListOfEntities(dispatcher: CollectingDispatcher, entities, tracker: Tracker, checkForExplicitPerson=False)  -> bool:
     """
     Fuehrt eine semantische Suche mit den gespeicherten Slots der letzten Eingabe durch
     """
     try:
       search = ""
+      name = None
+      object_type = None
       for x in entities:
-        entity = tracker.get_slot[x]
-        search = search + " " + x
+        entity = tracker.get_slot[x["entity"]]
+        if ((checkForExplicitPerson == True) & (x["entity"] == Constants.person)):
+            object_type = Constants.person
+            name = entity
+        search = search + " " + entity
       searchquery = '{"search_query":"'+search+'"}'
       print(searchquery)
       searchquery = json.loads(searchquery, encoding="utf-8")
       call_successful = False
       result = DbCall.semanticSearch(searchquery)
-      call_successful = SemanticSearch.readSemanticSearchResult(dispatcher, result)
+      call_successful = SemanticSearch.readSemanticSearchResult(dispatcher, result, name, object_type, checkForExplicitPerson)
       return call_successful
     except: 
       dispatcher.utter_message(templeate="utter_ask_rephrase")
 
-  def readSemanticSearchResult(dispatcher: CollectingDispatcher, result, name= None, object_type = None) -> bool:
+  def readSemanticSearchResult(dispatcher: CollectingDispatcher, result, name= None, object_type = None, checkForExplicitPerson=False) -> bool:
     """
     Verarbeitung und Ausgabe des Ergebnisses der semantischen Suche 
     """
     print(result)
     print(name)
     max_results = 15
+    successful = False
     if (len(result) > 0):
       node_equal_name = None
-      for y in result:
-        if (max_results == 0):
-          dispatcher.utter_message(text=f"...")
-          dispatcher.utter_message(text=f"I found some more results. If you don't find the right information here, please use the search at the website.")
-          return True
-        max_results = max_results - 1
-        if ((object_type == Constants.person) & (not(name is None))):
-            node_equal_name = GeneralMethods.findeRichtigenKnoten(name, y[Constants.node_title])
-            if (node_equal_name == True):
-              dispatcher.utter_message(text=f"I have found these results for your question:")
-              SemanticSearch.ausgabeNode(dispatcher, y)
-              return True
-        else:
-          dispatcher.utter_message(text=f"I have found these results for your question:")
-          for y in result:
-            print(y)
+      print(name)
+      print(object_type)
+      if ((checkForExplicitPerson == True) & (object_type == Constants.person) & (not(name is None))):
+        for y in result:
+          node_equal_name = GeneralMethods.findeRichtigenKnoten(name, y[Constants.node_title])
+          print(node_equal_name)
+          if (node_equal_name == True):
+            dispatcher.utter_message(text=f"I have found these results for your question:")
             SemanticSearch.ausgabeNode(dispatcher, y)
-          return True
+            successful = True
+            return successful
+      else:
+        for y in result:
+          if (max_results == 0):
+            dispatcher.utter_message(text=f"...")
+            dispatcher.utter_message(text=f"I found some more results. If you don't find the right information here, please use the search at the website.")
+            return True
+          max_results = max_results - 1
+          dispatcher.utter_message(text=f"I have found these results for your question:")
+          print(y)
+          SemanticSearch.ausgabeNode(dispatcher, y)
+        return True
     else: 
       return False
  

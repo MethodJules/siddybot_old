@@ -3,7 +3,7 @@ class Constants():
 
    # Attribute der Organisationen:
    organization_attributes = ["city_of_headquarters","employee_or_member_of", "top_members_employee", "schools_attended", "member", "country_of_headquarters",
-                               "date_founded", "founded_by", "political_religious_affiliation", "stateorprovince_of_headquarters", "subsidiares", "headquarter", "founded"]
+                               "date_founded", "founded_by", "political_religious_affiliation", "stateorprovince_of_headquarters", "subsidiares", "headquarter", "founded", "biographie"]
    headquarter_attribute = ["city_of_headquarters", "stateorprovince_of_headquarters", "country_of_headquarters", "biographie"]
    subsidiares = "subsidiares" 
    political_religious_affiliation = "political_religious_affiliation"
@@ -18,6 +18,7 @@ class Constants():
    founded = "founded"
    member = "member"
    headquarter = "headquarter"
+   biographie = "biographie"
 
    #Attribute Personen
    person_attributes = ["age", "alternate_name", "cause_of_death", "children", "cities_of_residence",
@@ -25,7 +26,7 @@ class Constants():
                        "country_of_death", "date_of_birth", "date_of_death", "employee_or_member_of", "spouse",
                        "founded_by", "origin", "other_family", "parents", "religion", "schools_attended", 
                        "stateorprovince_of_residence", "title", "top_members_employees", "birthplace", "residences",
-                       "family", "member"]
+                       "family", "member", "biographie", "death", "birth"]
    residence_attribute = ["stateorprovince_of_residence", "countries_of_residence", "cities_of_residence"]
    members = ["employee_or_member_of", "top_members_employees", "schools_attended"]
    residences = "residences"
@@ -51,6 +52,8 @@ class Constants():
    alternate_name = "alternate_name"
    stateorprovince_of_residence = "stateorprovince_of_residence"
    religion = "religion"
+   death = "death"
+   birth = "birth"
 
    # 2. Knoten der Rueckgabe:
    ent2_text = "ent2_text"
@@ -88,5 +91,11 @@ class Constants():
    # Objekttypen
    organization = "ORGANIZATION"
    person = "PERSON"
+   cause = "CAUSE"
+   city = "CITY"
+   country = "COUNTRY"
+   place = "PLACE"
+   date = "DATE"
+
 
 

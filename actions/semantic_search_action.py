@@ -15,6 +15,8 @@ class SemanticSearchAction(Action):
     domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
     print("action_semantic_search")
     entities = tracker.latest_message[Constants.entities]
+    if ((entities == None) | (len(entities) == 0)):
+       dispatcher.utter_message(template="utter_ask_rephrase")
     print(entities)
     successfull = SemanticSearch.searchSemanticSearchListOfEntities(dispatcher, entities, tracker)
     print(successfull)

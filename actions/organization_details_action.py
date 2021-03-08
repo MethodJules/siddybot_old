@@ -66,16 +66,29 @@ class OrganizationDetailsAction(Action):
           checked = self.utterutter_subsidiares(dispatcher, name, entities)
       elif(attribute == Constants.political_religious_affiliation):
           checked = self.utter_political_religiouse_affiliation(dispatcher, name, entities)
+      elif(attribute == Constants.biographie):
+          checked = self.utter_biographie(dispatcher, name, entities)
       else: 
         for x in entities:
           if(x[Constants.relationship] == attribute):
             dispatcher.utter_message(text=f""+x[Constants.ent2_text])
             checked = True
       if (checked == False):
+        print("Daten nicht gefunden")
         successful = SemanticSearch.searchSemanticSearchAttribute(dispatcher, name, attribute, Constants.organization)
         print(successful)
         if (successful == False):
           dispatcher.utter_message(template="utter_ask_rephrase")
+
+  def utter_biographie(self, dispatcher: CollectingDispatcher, name, entities) -> bool:
+    """
+    Ausgabe von headquarter, members und affiliaton
+    """
+    checked_headquarter = self.utter_headquarters(dispatcher, name, entities)
+    checked_member = self.utter_member(dispatcher, name, entities)
+    checked_affiliation = self.utter_political_religiouse_affiliation(dispatcher, name, entities)
+    checked_founded = self.utter_founded(dispatcher, name, entities)
+    return (checked_headquarter | checked_member | checked_affiliation | checked_founded)
 
   def utter_city_of_headquarter(self, dispatcher: CollectingDispatcher, name, entities) -> bool:
     """

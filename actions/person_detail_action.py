@@ -27,16 +27,20 @@ class PersonDetailAction(Action):
       abfrage_attribute = tracker.get_slot(Constants.slot_attribute)
       print(entity_person)
       print(abfrage_attribute)
-      if ((entity_person is None) | (abfrage_attribute is None) | (not(abfrage_attribute in Constants.person_attributes))):
-          intent = tracker.latest_message["text"]
-          SemanticSearch.searchSemanticSearchIntent(dispatcher, intent, Constants.person)
-          return
-      personExist = DbCall.validationPerson(entity_person)
-      if (personExist == True):
-          print("Ja, die Person existiert")
-          return self.searchForEntity(dispatcher, tracker, entity_person, abfrage_attribute) + [SlotSet(Constants.slot_shall_explain_add_person, False)]
-      else: 
-        return SemanticSearch.returnPersonNotExist(dispatcher, tracker)
+      if ((entity_person is None)):
+          entities = tracker.latest_message[Constants.entities] 
+          SemanticSearch.searchSemanticSearchListOfEntities(dispatcher, entities, tracker)
+      else:
+        personExist = DbCall.validationPerson(entity_person)
+        if (personExist == True):
+          if ((abfrage_attribute is None) | (not(abfrage_attribute in Constants.person_attributes))):
+            intent = tracker.latest_message["text"]
+            SemanticSearch.searchSemanticSearchIntent(dispatcher, intent, Constants.person)
+            return
+          else: 
+            return self.searchForEntity(dispatcher, tracker, entity_person, abfrage_attribute) + [SlotSet(Constants.slot_shall_explain_add_person, False)]
+        else: 
+          return SemanticSearch.returnPersonNotExist(dispatcher, tracker)
 
   def searchForEntity(self, dispatcher: CollectingDispatcher, tracker: Tracker, name, attribute) -> List[EventType]:
       answer = DbCall.searchForEntityRelationship(name, Constants.slot_person)
@@ -93,6 +97,10 @@ class PersonDetailAction(Action):
           return_ok = self.utter_alternate_name(dispatcher, name, entities)
       elif(attribute == Constants.schools_attended):
           return_ok = self.utter_schools_attended(dispatcher, name, entities)
+      elif(attribute == Constants.birth):
+          return_ok = self.utter_birth(dispatcher, tracker, name, entities)
+      elif(attribute == Constants.death):
+          return_ok = self.utter_death(dispatcher, tracker, name, entities)
       else:
         output = []  
         for x in entities:
@@ -130,6 +138,42 @@ class PersonDetailAction(Action):
           return[shall_explain_add_entity, SlotSet(Constants.slot_last_link, link)]
         else:
            return[shall_explain_add_entity]
+
+  def utter_birth(self, dispatcher: CollectingDispatcher, tracker: Tracker, name, entities) -> bool:
+      object_type = tracker.get_slot("object_type")
+      print(object_type)
+      if (object_type == Constants.city):
+        return self.utter_city_of_birth(dispatcher, name, entities)
+      elif (object_type == Constants.country):
+        return self.utter_country_of_birth(dispatcher, name, entities)
+      elif (object_type == Constants.place):
+        return self.utter_birthplace(dispatcher, name, entities)
+      elif (object_type == Constants.date):
+        return self.utter_birthday(dispatcher, name, entities)
+      else: 
+        birthday = self.utter_birthday(dispatcher, name, entities)
+        birthplace = self.utter_birthplace(dispatcher, name, entities)
+        return (birthday | birthplace)
+
+
+  def utter_death(self, dispatcher: CollectingDispatcher, tracker: Tracker, name, entities) -> bool:
+      object_type = tracker.get_slot("object_type")
+      print(object_type)
+      if (object_type == Constants.city):
+        return self.utter_city_of_death(dispatcher, name, entities)
+      elif (object_type == Constants.country):
+        return self.utter_country_of_death(dispatcher, name, entities)
+      elif (object_type == Constants.place):
+        return self.utter_deathplace(dispatcher, name, entities)
+      elif (object_type == Constants.date):
+        return self.utter_deathday(dispatcher, name, entities)
+      elif (object_type == Constants.cause):
+        return self.utter_cause_of_death(dispatcher, name, entities)
+      else: 
+        deathday = self.utter_deathday(dispatcher, name, entities)
+        deathplace = self.utter_deathplace(dispatcher, name, entities)
+        deathcause = self.utter_cause_of_death(dispatcher, name, entities)
+        return (deathday | deathplace | deathcause)
 
   def utter_birthday(self, dispatcher: CollectingDispatcher, name, entities) -> bool:
     checked = False

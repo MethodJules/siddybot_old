@@ -52,6 +52,7 @@ intents:
   - questionsYesNoOrganization_connection_to_GPE
   - questionsYesNoOrganization_connection_to_RELIGION
   - create_account
+  - add_missing_entity
 
 entities:
   - maptype
@@ -120,6 +121,7 @@ slots:
       - STATE_OR_PROVINCE
       - CAUSE_OF_DEATH
       - ORGANIZATION
+      - PLACE
     influence_conversation: false
   mention:
     type: text
@@ -478,7 +480,7 @@ responses:
   - text: "Shall I tell you how to create the entity?"
 
   utter_shall_explain_add_person:
-  - text: "Shall I tell you how to create the person?"
+  - text: "For these person I don't have a page or a entity. Shall I tell you how to create a page for these person?"
 
   utter_information_of_website:
   - text: "I can give you informations about the persons and the organizations which are saved at these website."
