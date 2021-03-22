@@ -702,4 +702,17 @@ stories:
     - informationtype: "list-of"
   - action: utter_explain_ask_for_list_of_object_type
 
+- story: start with chatbot
+  steps: 
+  - intent: chatbot_name
+  - action: utter_name_of_chatbot
+  - intent: chatbot_functions
+  - action: utter_chatbot_functions
+
+- story: start with chatbot short 
+  steps:
+  - intent: chatbot_general
+  - action: utter_name_of_chatbot
+  - action: utter_chatbot_functions
+
 

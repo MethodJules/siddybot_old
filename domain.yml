@@ -53,6 +53,9 @@ intents:
   - questionsYesNoOrganization_connection_to_RELIGION
   - create_account
   - add_missing_entity
+  - chatbot_functions
+  - chatbot_general
+  - chatbot_name
 
 entities:
   - maptype
@@ -234,6 +237,15 @@ slots:
 responses:
   utter_welcome:
   - text: "Hi! I'm Jiggy and you can ask me FAQ-Questions or something to persons on this websites"
+
+  utter_name_of_chatbot:
+  - text: "My name is Jiggy."
+  - text: "I'm Jiggy!"
+
+  utter_chatbot_functions:
+  - text: "You can ask me FAQ-Questions or something to persons on this websites"
+  - text: "I can show you some informations about persons or organizations and you can ask me FAQ-Questions."
+  - text: "I can help to find informations about persons or organizations or the answer for FAQ-Questions."
 
   utter_greet:
   - text: "Welcome, how can i help you?"

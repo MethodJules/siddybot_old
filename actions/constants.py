@@ -2,7 +2,7 @@
 class Constants():
 
    # Attribute der Organisationen:
-   organization_attributes = ["city_of_headquarters","employee_or_member_of", "top_members_employee", "schools_attended", "member", "country_of_headquarters",
+   organization_attributes = ["city_of_headquarters","employee_or_member_of", "top_members_employees", "schools_attended", "member", "country_of_headquarters",
                                "date_founded", "founded_by", "political_religious_affiliation", "stateorprovince_of_headquarters", "subsidiares", "headquarter", "founded", "biographie"]
    headquarter_attribute = ["city_of_headquarters", "stateorprovince_of_headquarters", "country_of_headquarters", "biographie"]
    subsidiares = "subsidiares" 
@@ -12,7 +12,7 @@ class Constants():
    stateorprovince_of_headquarter = "stateorprovinces_of_headquarters"
    employee_or_member = "employee_or_member_of"
    top_employee_member = "top_members_employees"
-   schools_attended = "school_attended"
+   schools_attended = "schools_attended"
    date_founded = "date_founded"
    founded_by = "founded_by"
    founded = "founded"
@@ -25,7 +25,7 @@ class Constants():
                        "city_of_birth", "city_of_death", "siblings", "countries_of_residence", "country_of_birth",
                        "country_of_death", "date_of_birth", "date_of_death", "employee_or_member_of", "spouse",
                        "founded_by", "origin", "other_family", "parents", "religion", "schools_attended", 
-                       "stateorprovince_of_residence", "title", "top_members_employees", "birthplace", "residences",
+                       "stateorprovince_of_residence", "title", "top_members_employees", "birthplace",  "death_place", "residences",
                        "family", "member", "biographie", "death", "birth"]
    residence_attribute = ["stateorprovince_of_residence", "countries_of_residence", "cities_of_residence"]
    members = ["employee_or_member_of", "top_members_employees", "schools_attended"]
@@ -58,6 +58,7 @@ class Constants():
    # 2. Knoten der Rueckgabe:
    ent2_text = "ent2_text"
    ent2_ner = "ent2_ner"
+   ent_ner = "ent_ner"
    entities_relation = "entities_relations"
    relationship = "rel"
    ent_text = "ent_text"

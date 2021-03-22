@@ -7,6 +7,8 @@ from actions.db_call import DbCall
 from actions.semantic_search import SemanticSearch
 from actions.general_methods import GeneralMethods
 from actions.constants import Constants
+from rasa_sdk.events import SlotSet, EventType
+from actions.search_return import Search_return
 
 class OrganizationDetailsAction(Action):
 
@@ -15,7 +17,7 @@ class OrganizationDetailsAction(Action):
 
   def run(self, dispatcher: CollectingDispatcher,
         tracker: Tracker,
-        domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        domain: Dict[Text, Any]) -> List[EventType]:
     print("start action_organization_details")
     organization = tracker.get_slot(Constants.slot_org)
     print(organization)
@@ -25,13 +27,15 @@ class OrganizationDetailsAction(Action):
         print("Hier sollte die semantische Suche durchgefuert werden")
         intent = tracker.latest_message["text"]
         print(intent)
-        successful = SemanticSearch.searchSemanticSearchIntent(dispatcher, intent)
-        if (successful == False):
+        return_search = Search_return.__init__(Search_return, False)
+        return_search = SemanticSearch.searchSemanticSearchIntent(dispatcher, tracker, intent)
+        if (return_search.successfull == False):
           dispatcher.utter_message(template="utter_ask_rephrase")
+        return return_search.events      
     else:
-        self.searchSepcificDetailsToOrganization(dispatcher, organization, attribute)
+        return self.searchSepcificDetailsToOrganization(tracker, dispatcher, organization, attribute)
 
-  def searchSepcificDetailsToOrganization(self, dispatcher: CollectingDispatcher, name, attribute):
+  def searchSepcificDetailsToOrganization(self, tracker: Tracker, dispatcher: CollectingDispatcher, name, attribute) -> List[EventType]:
       """
       Mappt das ermittelte Attribute zu der passenden Ausgabemethode. 
       Wird keine passende Ausgabemethode ermittelt, werden die Attribute aus der Datenbank ohne besondere Methode ausgegeben.
@@ -45,7 +49,7 @@ class OrganizationDetailsAction(Action):
       elif(attribute == Constants.employee_or_member):
           checked = self.utter_employee_or_member_of(dispatcher, name, entities)
       elif(attribute == Constants.top_employee_member):
-          checked = self.utter_employee_or_member_of(dispatcher, name, entities)
+          checked = self.utter_top_members_employee(dispatcher, name, entities)
       elif(attribute == Constants.member):
           checked = self.utter_member(dispatcher, name, entities)
       elif(attribute == Constants.schools_attended):
@@ -75,10 +79,12 @@ class OrganizationDetailsAction(Action):
             checked = True
       if (checked == False):
         print("Daten nicht gefunden")
-        successful = SemanticSearch.searchSemanticSearchAttribute(dispatcher, name, attribute, Constants.organization)
-        print(successful)
-        if (successful == False):
+        return_search = Search_return.__init__(Search_return, False)
+        return_search = SemanticSearch.searchSemanticSearchAttribute(dispatcher, tracker, name, attribute, Constants.organization)
+        print(return_search.successfull)
+        if (return_search.successfull == False):
           dispatcher.utter_message(template="utter_ask_rephrase")
+        return return_search.events
 
   def utter_biographie(self, dispatcher: CollectingDispatcher, name, entities) -> bool:
     """

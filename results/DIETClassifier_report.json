@@ -1,9 +1,72 @@
 {
+  "maptype": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 19,
+    "confused_with": {}
+  },
+  "searchtype": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 2,
+    "confused_with": {}
+  },
+  "attribute": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 354,
+    "confused_with": {}
+  },
+  "CARDINAL": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 8,
+    "confused_with": {}
+  },
+  "GPE": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 21,
+    "confused_with": {}
+  },
   "ORG": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 164,
+    "support": 175,
+    "confused_with": {}
+  },
+  "PERSON": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 337,
+    "confused_with": {}
+  },
+  "informationtype": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 27,
+    "confused_with": {}
+  },
+  "object_type": {
+    "precision": 0.990909090909091,
+    "recall": 1.0,
+    "f1-score": 0.995433789954338,
+    "support": 109,
+    "confused_with": {}
+  },
+  "RELIGION": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 11,
     "confused_with": {}
   },
   "year": {
@@ -20,85 +83,22 @@
     "support": 5,
     "confused_with": {}
   },
-  "GPE": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 20,
-    "confused_with": {}
-  },
-  "RELIGION": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 11,
-    "confused_with": {}
-  },
-  "searchtype": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 2,
-    "confused_with": {}
-  },
-  "maptype": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 19,
-    "confused_with": {}
-  },
-  "attribute": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 335,
-    "confused_with": {}
-  },
-  "object_type": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 33,
-    "confused_with": {}
-  },
-  "CARDINAL": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 8,
-    "confused_with": {}
-  },
-  "PERSON": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 275,
-    "confused_with": {}
-  },
-  "informationtype": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 24,
-    "confused_with": {}
-  },
   "micro avg": {
-    "precision": 1.0,
+    "precision": 0.9990680335507922,
     "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 900
+    "f1-score": 0.9995337995337995,
+    "support": 1072
   },
   "macro avg": {
-    "precision": 1.0,
+    "precision": 0.9992424242424242,
     "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 900
+    "f1-score": 0.9996194824961949,
+    "support": 1072
   },
   "weighted avg": {
-    "precision": 1.0,
+    "precision": 0.999075644504749,
     "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 900
+    "f1-score": 0.9995357118517004,
+    "support": 1072
   }
 }

@@ -8,6 +8,7 @@ from actions.semantic_search import SemanticSearch
 from actions.general_methods import GeneralMethods
 from actions.db_call import DbCall
 from actions.constants import Constants
+from actions.search_return import Search_return
 #import base64,cv2
 
 class PersonDetailAction(Action):
@@ -22,27 +23,83 @@ class PersonDetailAction(Action):
       entity_person = None
       abfrage_attribute = None
       entity_person = tracker.get_slot(Constants.slot_person)
-      print(abfrage_attribute)
-      print(entity_person)
       abfrage_attribute = tracker.get_slot(Constants.slot_attribute)
       print(entity_person)
       print(abfrage_attribute)
+      print(tracker.get_slot(Constants.slot_object_type))
+      return_search = Search_return.__init__(Search_return, False)
       if ((entity_person is None)):
           entities = tracker.latest_message[Constants.entities] 
-          SemanticSearch.searchSemanticSearchListOfEntities(dispatcher, entities, tracker)
+          return SemanticSearch.searchSemanticSearchListOfEntities(dispatcher, entities, tracker).events
       else:
         personExist = DbCall.validationPerson(entity_person)
         if (personExist == True):
           if ((abfrage_attribute is None) | (not(abfrage_attribute in Constants.person_attributes))):
-            intent = tracker.latest_message["text"]
-            SemanticSearch.searchSemanticSearchIntent(dispatcher, intent, Constants.person)
-            return
-          else: 
-            return self.searchForEntity(dispatcher, tracker, entity_person, abfrage_attribute) + [SlotSet(Constants.slot_shall_explain_add_person, False)]
+            if (not(tracker.get_slot(Constants.slot_object_type) is None)):
+              self.searchForEntityWithObjecttype(dispatcher, tracker, entity_person, tracker.get_slot(Constants.slot_object_type))
+              return [SlotSet(Constants.slot_object_type, "")]
+            else:
+              intent = tracker.latest_message["text"]
+              return_search = SemanticSearch.searchSemanticSearchIntent(dispatcher, tracker, intent, Constants.person)
+              print(return_search.successfull)
+              return return_search.events
+          return self.searchForEntityWithAttribut(dispatcher, tracker, entity_person, abfrage_attribute) + [SlotSet(Constants.slot_shall_explain_add_person, False), SlotSet(Constants.slot_attribute, "")]
         else: 
-          return SemanticSearch.returnPersonNotExist(dispatcher, tracker)
+          return SemanticSearch.returnPersonNotExist(dispatcher, tracker) + [SlotSet(Constants.slot_attribute, ""), SlotSet(Constants.slot_object_type, "")]
 
-  def searchForEntity(self, dispatcher: CollectingDispatcher, tracker: Tracker, name, attribute) -> List[EventType]:
+
+  def searchForEntityWithObjecttype(self, dispatcher: CollectingDispatcher, tracker: Tracker, name, object_type) -> List[EventType]:
+    """
+    Hier werden die Entiaeten eines bestimmten Objekttyps zu einer gegebenen Peron zurueck gegeben
+    """
+    answer = DbCall.searchForEntityRelationship(name, Constants.person)
+    checked = False
+    root_nodes = answer[Constants.root_nodes]
+    node_title = ""
+    objects = []
+    print(name)
+    print(object_type)
+    for x in root_nodes: 
+      print(x)
+      node_checked = GeneralMethods.findeRichtigenKnoten(name, x[Constants.node_title])
+      if (node_checked == True):
+        entities = DbCall.searchForEntitesFromTheNode(x[Constants.node_id])
+        print(entities)
+        for x in entities:
+            print(x)
+            print(x[Constants.ent_ner] == object_type)
+            if (x[Constants.ent_ner] == object_type):
+                objects.append(x[Constants.ent_text])
+        break
+    print(len(objects))
+    if (len(objects) == 0):
+        intent = tracker.latest_message["text"]
+        search_return = SemanticSearch.searchSemanticSearchIntent(dispatcher, tracker, intent, Constants.person)
+        if (search_return.successfull == True):
+          dispatcher.utter_message(text=f"I hope the result helps you further.")
+        dispatcher.utter_message(text=f"The correct answer is missing in the graph. Maybe you could add the entity.")
+        entity_explained = tracker.get_slot(Constants.slot_explained_add_entity)
+        if ((entity_explained is None)):
+          dispatcher.utter_message(template="utter_shall_how_add_entity")
+          return[SlotSet(Constants.slot_shall_explain_add_entity, True), SlotSet(Constants.slot_explained_add_entity, False)] + search_return.events
+        return[SlotSet(Constants.slot_shall_explain_add_entity, False)] + search_return.events
+    else:
+       if (object_type == Constants.person):
+           if (len(objects) == 1):
+              dispatcher.utter_message(text=f"I only found " + objects[0] + " with a connection to " + name)
+           else: 
+              dispatcher.utter_message(text=f"I found these persons who had a connection to " + name + " :")
+              dispatcher.utter_message(text=f""+ GeneralMethods.liste_ausgeben(objects))
+       elif (object_type == Constants.organization):
+           if (len(objects) == 1):
+              dispatcher.utter_message(text=f"I only the organization " + objects[0] + " with a connection to " + name)
+           else: 
+              dispatcher.utter_message(text=f"I found these organizations who had a connection to " + name + " :")
+              dispatcher.utter_message(text=f""+ GeneralMethods.liste_ausgeben(objects))
+       else: 
+          dispatcher.utter_message(text=f""+ GeneralMethods.liste_ausgeben(objects))
+
+  def searchForEntityWithAttribut(self, dispatcher: CollectingDispatcher, tracker: Tracker, name, attribute) -> List[EventType]:
       answer = DbCall.searchForEntityRelationship(name, Constants.slot_person)
       entities = answer[Constants.entities_relation]
       print(answer)
@@ -111,15 +168,19 @@ class PersonDetailAction(Action):
           dispatcher.utter_message(text=f""+x)
       print(return_ok)
       if (return_ok == False):
-        semantic_search_successful = SemanticSearch.searchSemanticSearchAttribute(dispatcher, name, attribute, Constants.person)
-        if (semantic_search_successful == True):
+        return_search = SemanticSearch.searchSemanticSearchAttribute(dispatcher, tracker, name, attribute, Constants.person)
+        print(return_search.events)
+        if ((return_search.successfull == True) & (attribute != Constants.biographie)):
           dispatcher.utter_message(text=f"I hope the result helps you further.")
-        dispatcher.utter_message(text=f"The correct answer is missing in the graph. Maybe you could add the entity.")
-        entity_explained = tracker.get_slot(Constants.slot_explained_add_entity)
-        if ((entity_explained is None)):
-          dispatcher.utter_message(template="utter_shall_how_add_entity")
-          return[SlotSet(Constants.slot_shall_explain_add_entity, True), SlotSet(Constants.slot_explained_add_entity, False)]
-        return[SlotSet(Constants.slot_shall_explain_add_entity, False)]
+          dispatcher.utter_message(text=f"The correct answer is missing in the graph. Maybe you could add the entity.")
+          entity_explained = tracker.get_slot(Constants.slot_explained_add_entity)
+          if ((entity_explained is None)):
+            dispatcher.utter_message(template="utter_shall_how_add_entity")
+            return_events = [SlotSet(Constants.slot_shall_explain_add_entity, True), SlotSet(Constants.slot_explained_add_entity, False)] + return_search.events
+            return return_events
+        return_events =  [SlotSet(Constants.slot_shall_explain_add_entity, False)] + return_search.events
+        print(return_events)
+        return return_events
       else:
         shall_explain_add_entity = SlotSet(Constants.slot_shall_explain_add_entity, False)
         node_title = answer[Constants.root_nodes]
@@ -132,12 +193,7 @@ class PersonDetailAction(Action):
             break
         link = GeneralMethods.linkErstellen(dispatcher, node)
         print(tracker.get_slot(Constants.slot_last_link))
-        if ((len(link) > 0) & (not(link == tracker.get_slot(Constants.slot_last_link)))):
-          dispatcher.utter_message(text=f"For more informations you can look here:")
-          dispatcher.utter_message(text=f"https://www.jigsaw-navi.net/de/content/"+link)
-          return[shall_explain_add_entity, SlotSet(Constants.slot_last_link, link)]
-        else:
-           return[shall_explain_add_entity]
+        return [shall_explain_add_entity] + GeneralMethods.linkAusgeben(dispatcher, tracker, link)
 
   def utter_birth(self, dispatcher: CollectingDispatcher, tracker: Tracker, name, entities) -> bool:
       object_type = tracker.get_slot("object_type")
@@ -213,7 +269,7 @@ class PersonDetailAction(Action):
           if((x[Constants.relationship] == Constants.city_of_birth) & (x[Constants.ent_text] == name)):
               city = x[Constants.ent2_text]
               checked = True
-              dispatcher.utter_message(text=f""+ entityPerson + " was born in " + city)
+              dispatcher.utter_message(text=f""+ name + " was born in " + city)
               break
       return checked
 
@@ -223,7 +279,7 @@ class PersonDetailAction(Action):
           if((x[Constants.relationship] == Constants.religion) & (x[Constants.ent_text] == name)):
               religion = x[Constants.ent2_text]
               checked = True
-              dispatcher.utter_message(text=f"The religion of "+ entityPerson + " was " + religion)
+              dispatcher.utter_message(text=f"The religion of "+ name + " was " + religion)
               break
       return checked
 
@@ -233,7 +289,7 @@ class PersonDetailAction(Action):
           if((x[Constants.relationship] == Constants.country_of_birth) & (x[Constants.ent_text] == name)):
               country = x[Constants.ent2_text]
               checked = True
-              dispatcher.utter_message(text=f""+ entityPerson + " was born in " + country)
+              dispatcher.utter_message(text=f""+ name + " was born in " + country)
               break
       return checked
 
@@ -243,7 +299,7 @@ class PersonDetailAction(Action):
           if((x[Constants.relationship] == Constants.country_of_death) & (x[Constants.ent_text] == name)):
               country = x[Constants.ent2_text]
               checked = True
-              dispatcher.utter_message(text=f""+ entityPerson + " died in " + country)
+              dispatcher.utter_message(text=f""+ name + " died in " + country)
               break
       return checked
           
@@ -253,7 +309,7 @@ class PersonDetailAction(Action):
           if((x[Constants.relationship] == Constants.city_of_death) & (x[Constants.ent_text] == name)):
               country = x[Constants.ent2_text]
               checked = True
-              dispatcher.utter_message(text=f""+ entityPerson + " died in " + country)
+              dispatcher.utter_message(text=f""+ name + " died in " + country)
               break
       return checked
 

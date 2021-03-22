@@ -7,6 +7,7 @@ from actions.semantic_search import SemanticSearch
 from actions.db_call import DbCall
 from actions.constants import Constants
 from rasa_sdk.events import SlotSet, EventType
+from actions.search_return import Search_return
 #import base64,cv2
 
 class ListOfObjecttype(Action):
@@ -23,6 +24,7 @@ class ListOfObjecttype(Action):
     number = tracker.get_slot(Constants.slot_cardinal)
     print(number)
     attribute = tracker.get_slot(Constants.slot_attribute)
+    return_search = Search_return.__init__(Search_return, False)
     if (object_type == Constants.organization):
       self.searchOrganizations(dispatcher, tracker)
     else: 
@@ -33,8 +35,8 @@ class ListOfObjecttype(Action):
         self.utter_objects(dispatcher, tracker, objects)
       else: 
         intent = tracker.latest_message["text"]
-        SemanticSearch.searchSemanticSearchIntent(dispatcher, intent)
-    return [SlotSet(Constants.slot_cardinal, None)]
+        return_search = SemanticSearch.searchSemanticSearchIntent(dispatcher, tracker, intent)
+    return [SlotSet(Constants.slot_cardinal, None)] + return_search.events
 
   def searchOrganizations(self, dispatcher: CollectingDispatcher, tracker: Tracker):
       """

@@ -65,6 +65,29 @@ nlu:
     - Jigsaw?
     - Where am i?
 
+- intent: chatbot_name
+  examples: |
+    - Who are you?
+    - What's your name?
+
+- intent: chatbot_general
+    - Tell me something about you
+    - Could you tell me who you are?
+
+- synonym: you
+  examples: |
+    - u
+
+- intent: chatbot_functions
+  examples: |
+    - What can I do with you?
+    - Show me your functions!
+    - Could you show me what I can do with u?
+    - Please tell me your functions
+    - How can you help me?
+    - How can I use you?
+    - How can I do this?
+
 - intent: add_person
   examples: |
     - How can i add a person to the list?
@@ -400,8 +423,7 @@ nlu:
   examples: |
     - What is the name of the [city]{"entity": "object_type", "value": "CITY"} where [Irene Gaster](PERSON) [died]{"entity": "attribute", "value": "death"}?
     - [City of death]{"entity": "attribute", "value": "city_of_death"} of [Ruth Barak](PERSON), please 
-    - Show me in [which city [Irene Gaster](PERSON) [die]{"entity": "attribute", "value": "death"}? 
-    - In which [city]{"entity": "object_type", "value": "CITY"} [Else Cohn](PERSON) [died]{"entity":"attribute","value":"death"}?
+    - Show me in [which city]{"entity": "object_type", "value": "CITY"} [Irene Gaster](PERSON) [die]{"entity": "attribute", "value": "death"}? 
     - In which [city]{"entity": "object_type", "value": "CITY"} [Else Cohn](PERSON) [died]{"entity":"attribute","value":"death"}?
     - In which [city]{"entity": "object_type", "value": "CITY"} he [died]{"entity": "attribute", "value": "death"}?
     - Could you tell me in which [city]{"entity": "object_type", "value": "CITY"} she [died]{"entity": "attribute", "value": "death"}?
@@ -421,7 +443,7 @@ nlu:
     - Show me the [country where [Irene Gaster](PERSON) was born]{"entity": "attribute", "value": "city_of_birth"} 
     - [Country of birth]{"entity": "attribute", "value": "country_of_birth"} of [Benjamin Jonas](PERSON)
     - Could you tell me the [country of birth]{"entity": "attribute", "value": "country_of_birth"}?
-    - I liked to know in which [country][country]{"entity": "object_type", "value": "COUNTRY"} he [was born]{"entity": "attribute", "value": "birth"}
+    - I liked to know in which [country]{"entity": "object_type", "value": "COUNTRY"} he [was born]{"entity": "attribute", "value": "birth"}
 
 - intent: questions_detail_person/birthplace
   examples: |
@@ -495,12 +517,12 @@ nlu:
 
 - intent: questions_detail_person/spouse
   examples: |
-    - Who was the [spouse]{"entity": "attribute", "value": "spouse"} of [Rachel Ellern](PERSON)?
+    - [Who]{"entity": "object_type", "value": "PERSON"} was the [spouse]{"entity": "attribute", "value": "spouse"} of [Rachel Ellern](PERSON)?
     - Could you show me who [Rachel Ellern](PERSON) [married]{"entity": "attribute", "value": "spouse"}?
     - [Spouse]{"entity":"attribute","value":"spouse"} of [Rachel Ellen](PERSON), please
     - Please, show me the [spouse]{"entity": "attribute", "value": "spouse"} of [Rachel Ellen](PERSON)
     - I want to know the name of the [spouse]{"entity":"attribute","value":"spouse"} of [Esther Apfelberg](PERSON)
-    - Who was the [husband]{"entity":"attribute","value":"spouse"} of [Esther Apfelberg](PERSON)?
+    - [Who]{"entity": "object_type", "value": "PERSON"} was the [husband]{"entity":"attribute","value":"spouse"} of [Esther Apfelberg](PERSON)?
     - To whom was [Benjamin Jonas](PERSON) [married]{"entity": "attribute", "value": "spouse"}?
     - To whom?
     - Who was the [spouse](attribute)?
@@ -522,13 +544,13 @@ nlu:
 
 - intent: questions_detail_person/parents
   examples: |
-    - Who were the [parents]{"entity":"attribute","value":"parents"} of [Rachel Barak](PERSON)?
+    - [Who]{"entity": "object_type", "value": "PERSON"} were the [parents]{"entity":"attribute","value":"parents"} of [Rachel Barak](PERSON)?
     - Can you show me the [parents]{"entity":"attribute","value":"parents"} of [Benjamin Jonas](PERSON)?
     - [Parents]{"entity":"attribute","value":"parents"} of [Esther Apfelberg](PERSON)
     - Call me the [father]{"entity":"attribute","value":"parents"} of [Esther Apfelberg](PERSON)
-    - Who was the [mother]]{"entity":"attribute","value":"parents"} of [Esther Apfelberg](PERSON)?
-    - Who was the [mother]{"entity":"attribute","value":"parents"} of [Esther Apfelberg](PERSON) named?
-    - Who were [Bertha Pappenheim](PERSON)'s [parents]{"entity":"attribute","value":"parents"}?
+    - [Who]{"entity": "object_type", "value": "PERSON"} was the [mother]]{"entity":"attribute","value":"parents"} of [Esther Apfelberg](PERSON)?
+    - [Who]{"entity": "object_type", "value": "PERSON"} was the [mother]{"entity":"attribute","value":"parents"} of [Esther Apfelberg](PERSON) named?
+    - [Who]{"entity": "object_type", "value": "PERSON"} were [Bertha Pappenheim](PERSON)'s [parents]{"entity":"attribute","value":"parents"}?
 
 - intent: questions_detail_person/title
   examples: |
@@ -540,6 +562,8 @@ nlu:
     - Could you show me her [job]{"entity": "attribute", "value": "title"}?
     - What did [Bertha Pappenheim](PERSON) [do]{"entity": "attribute", "value": "title"}?
     - What did [Bertha Pappenheim](PERSON) [do for work]{"entity": "attribute", "value": "title"}?
+    - What did she [do]{"entity": "attribute", "value": "title"}?
+    - What was he [working as]{"entity": "attribute", "value": "title"}?
 
 - intent: questions_detail_person/origin
   examples: |
@@ -597,7 +621,35 @@ nlu:
     - Tell me [something]{"entity":"attribute","value":"biographie"} about [Ruth Barak](PERSON)
     - Can you give me [some information about]{"entity":"attribute","value":"biographie"} about [Ruth Barak](PERSON)
     - [What can you tell me about]{"entity":"attribute","value":"biographie"} of [Ruth Barak](PERSON)
+    - [Who was]{"entity":"attribute","value":"biographie"} [Siddy Wronsky](PERSON)
+    - Tell me [who was]{"entity":"attribute","value":"biographie"} [Siddy Wronsky](PERSON)
+    - Could you tell me [something]{"entity":"attribute","value":"biographie"} about [Benjamin Jonas](PERSON)
 
+- intent: questions_detail_person/connection_to_persons
+  examples: |
+    - Who was [Benjamin Jonas](PERSON) [in contact with]{"entity": "object_type", "value": "PERSON"}?
+    - [To whom]{"entity": "object_type", "value": "PERSON"} had [Esther Apfelberg](PERSON) contact?
+    - Please show me [people with whom]{"entity": "object_type", "value": "PERSON"} [Ruth Barak](PERSON) was in contact
+    - Show me some [people with whom]{"entity": "object_type", "value": "PERSON"} [Ruth Barak](PERSON) was in contact
+    - Could you show [people]{"entity": "object_type", "value": "PERSON"} who had a connection to [Esther Apfelberg](PERSON)?
+    - [With whom]{"entity": "object_type", "value": "PERSON"} had he contact?
+    - [contactpersons]{"entity": "object_type", "value": "PERSON"} from her?
+    - [To whom]{"entity": "object_type", "value": "PERSON"} had she contact?
+    - Tell me some [people with whom]{"entity": "object_type", "value": "PERSON"} she was in contact
+    - Show me some [persons]{"entity": "object_type", "value": "PERSON"} of the network of [Ruth Barak](PERSON)
+    - Could you tell me some [perssons]{"entity": "object_type", "value": "PERSON"} of the network of [Ruth Barak](PERSON)
+    - I like to know [who in the network]{"entity": "object_type", "value": "PERSON"} of [Ruth Barak](PERSON)
+    - I like to know with [who was he connected]{"entity": "object_type", "value": "PERSON"}?
+
+- intent: questions_detail_person/connection_to_organizations
+  examples: |
+    - Show me some [organizations]{"entity": "object_type", "value": "ORGANIZATION"} with a connection to [Esther Apfelberg](PERSON)
+    - Could you tell me some [organizations]{"entity": "object_type", "value": "ORGANIZATION"} with a connection to [Esther Apfelberg](PERSON)
+    - I like to know the [organizations]{"entity": "object_type", "value": "ORGANIZATION"} which had a connection to [Esther Apfelberg](PERSON)
+    - Some [organizations]{"entity": "object_type", "value": "ORGANIZATION"} with a connection to her
+    - [organizations]{"entity": "object_type", "value": "ORGANIZATION"} of her please
+    - Which [organizations]{"entity": "object_type", "value": "ORGANIZATION"} were in the network of [Esther Apfelberg](PERSON)
+    - I like to know the [organizations]{"entity": "object_type", "value": "ORGANIZATION"} of the network of [Ruth Barak](PERSON)
 
 - intent: details_of_organizations/city_of_headquarter
   examples: |
@@ -646,12 +698,12 @@ nlu:
 
 - intent: details_of_organizations/students
   examples: |
-    - Who visit [Jewish National Party](ORG) as a [student]{"entity": "attribute", "value": "school_attended"}?
-    - Show me some the [students]{"entity": "attribute", "value": "school_attended"} of [Mizrahi Womens Organization](ORG)?
-    - Which [students]{"entity": "attribute", "value": "school_attended"} visit the [Spiritual Hygiene](ORG)?
-    - [Students]{"entity": "attribute", "value": "school_attended"} of [Zentralwohlfahrtsstelle](ORG), please
-    - Who was a [student]{"entity": "attribute", "value": "school_attended"} there?
-    - Could you show me some [students]{"entity": "attribute", "value": "school_attended"}?
+    - Who visit [Jewish National Party](ORG) as a [student]{"entity": "attribute", "value": "schools_attended"}?
+    - Show me some the [students]{"entity": "attribute", "value": "schools_attended"} of [Mizrahi Womens Organization](ORG)?
+    - Which [students]{"entity": "attribute", "value": "schools_attended"} visit the [Spiritual Hygiene](ORG)?
+    - [Students]{"entity": "attribute", "value": "schools_attended"} of [Zentralwohlfahrtsstelle](ORG), please
+    - Who was a [student]{"entity": "attribute", "value": "schools_attended"} there?
+    - Could you show me some [students]{"entity": "attribute", "value": "schools_attended"}?
 
 - intent: details_of_organizations/date_founded
   examples: |
@@ -717,6 +769,7 @@ nlu:
      - I like to know if [Ruth Barak](PERSON) lived in [Vienna](GPE)
      - Did she lived in [Berlin](GPE)?
      - I want to know if he had a connection to [Palestina](GPE)
+     - Did [Benjamin Jonas](PERSON) had a connection to [Germany](GPE)?
 
 - intent: questionsYesNoPerson_connection_to_ORG
   examples: |
@@ -956,6 +1009,8 @@ nlu:
     - details
     - detail
     - informations
+    - info 
+    - infos
 
 - synonym: PERSON
   examples: |
@@ -1027,6 +1082,7 @@ nlu:
     - chief
     - top member
     - top employees
+    - top employee
 
 - synonym: member
   examples: |
@@ -1491,6 +1547,127 @@ nlu:
     - Johannah Oppenheim
     - Richard Neter
     - Ina Britschgi-Schimmer
+    - Siegfried Margolinski
+    - Givat Brenner
+    - Kurt Lowitsch
+    - Ilse Cohn
+    - David Reifen
+    - Bertha Bracha Mainz
+    - Jenny Schloss
+    - Michael Lob Mainz
+    - Gisela Mamout
+    - Gad Mamout
+    - Gila Maor
+    - Harry Maor
+    - Karl Marxs
+    - Kate Kathe Meyer
+    - Irene Nahmani
+    - Gerhart Gabriel Nahmani
+    - Sophie Nathan
+    - Jung-Judischer Wanderbund
+    - Irma Neumark
+    - Gerda Zippora Ochs
+    - Heinz Rau
+    - David Ochs
+    - Paula Burt
+    - Yad Sarah
+    - Hildegard Lotan
+    - Georg Lubinski
+    - Fanny Ollendorf
+    - Sophie Pinkhof
+    - Menachem Herman Pinkhof
+    - Adeline de Beer
+    - Bella Preuss-Porat
+    - Blau Weiss
+    - Giora Lotan
+    - Walter Preuss
+    - Prof Grushke
+    - Leah Roos
+    - Mirjam Rosenblum
+    - Gertrud Rosenthal
+    - Erich Rosenthal
+    - Hermann Rosenblum
+    - Alexander Rosenblum
+    - Eva Thea Perls
+    - Kibbutz Giwath Brenner
+    - Michael Wolff
+    - Ben Schemen
+    - Helmut Zwi Rosenstein
+    - Ruth Rosenthal
+    - Eduard Hirsch
+    - Moshe Max Rosenthal
+    - Bella Schlesinger
+    - Yaakov Schlesinger
+    - Benek Shapiro
+    - Ilse Nannette Stern
+    - Hermann Stern
+    - Paul Hirsch
+    - Elsa Belah Sternberg
+    - Samuel Rosenbluth
+    - Etschi Stern-Horowitz
+    - Yacoov Horowitz
+    - Rahel Straus
+    - Henriette Ida Goitein
+    - Gabor Gedalya Goitein
+    - Elias Straus
+    - Abraham Spiegel
+    - Dora Strauss-Weigert
+    - Salomon Adler-Rudel
+    - Fritz Mordechai Kauffmann
+    - Genia Szwedron
+    - Clara Tanne
+    - Shmuel Tanne
+    - Yemima Tchernovitz-Avidar
+    - Charlotte Buhler
+    - Alfred Adler
+    - Yosef Rochel
+    - Merkaz Yemima
+    - Hannah Helena Thon
+    - Arthur Ruppin
+    - Victor Jacobson
+    - Yaakov Thon
+    - Histadrut Nashim Ivriot
+    - Palestine Hannah
+    - Margarete Turnowsky-Pinner
+    - Walter Turnowsky
+    - Salman Schocken
+    - Eva Unger
+    - Fritz Warburg
+    - Kibbutz Halsinggarden
+    - Naftali Unger
+    - Netzer Sereni
+    - Rachel Lina Wagner-Tauber
+    - Wolf Tauber
+    - Frieda Ryfka Schumacher
+    - Jacob H. Wagner
+    - Moses Mosche Wagner
+    - Bertha Falkenberg
+    - Benjamin Jonas
+    - David Jonas
+    - Jeschajahu Leibowitz Benjamin
+    - Ruth Binth
+    - Rachel Kagan
+    - Dora Zirker
+    - Mirjam Ziemles
+    - Yekuthiel Nachmanzon
+    - Yoel-Wollf Ziemles
+    - Ish-Tov Livnat
+    - Zipporah Bloch
+    - Regina Schechter
+    - Ora Nami
+    - Max Frank"
+    - Eliezer Ernst Weihl
+    - Pnina Ezeria Rosolio
+    - Chaim Guri
+    - Paula Ruth Lichtenstein
+    - Samuel Lichtenstein
+    - Beth Zerah
+    - Alisa Elisa Bolag
+    - Mia Neter
+    - Gumpert Thalmann
+    - Nyuta Arzichovski
+    - Leo Baeck
+
 
 - lookup: ORG
   examples: |
