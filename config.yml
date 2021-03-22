@@ -10,8 +10,8 @@ pipeline:
      model: "en_core_web_md"
      case_sensitive: False
 #   - name: WhitespaceTokenizer
-   - name: "SpacyTokenizer"
-   - name: "SpacyFeaturizer"
+   - name: SpacyTokenizer
+   - name: SpacyFeaturizer
      pooling: "mean"
    - name: RegexFeaturizer
 #   - name: LexicalSyntacticFeaturizer
@@ -20,7 +20,7 @@ pipeline:
      analyzer: char_wb
      min_ngram: 1
      max_ngram: 4
-   - name: "SpacyEntityExtractor"
+   - name: SpacyEntityExtractor
      dimensions: ["PERSON", "ORG", "GPE", "CARDINAL"]
    - name: DIETClassifier
      epochs: 300

@@ -1,7 +1,9 @@
 from rasa_sdk.executor import CollectingDispatcher
 from actions.db_call import DbCall
 from actions.constants import Constants
-
+from rasa_sdk.events import SlotSet, EventType
+from typing import Any, Text, Dict, List
+from rasa_sdk import Action, Tracker
 
 class GeneralMethods():
 
@@ -39,6 +41,8 @@ class GeneralMethods():
     word = word.replace(".","")
     word = word.replace(",","")
     word = word.replace("/","")
+    word = word.replace("(","")
+    word = word.replace(")","")
     return word
 
   def checkAttributeAndEntity(object, object_type, attribute_to_check, entity_to_check) -> bool:
@@ -94,3 +98,15 @@ class GeneralMethods():
           return False
       return True
 
+  def linkAusgeben(dispatcher: CollectingDispatcher, tracker: Tracker, link) -> List[EventType]:
+    """
+    Gibt den Link aus, wenn dies nicht der gleiche wie der zuletzt ausgegebene
+    """
+    print(link)
+    if ((len(link) > 0) & (not(link == tracker.get_slot(Constants.slot_last_link)))):
+      dispatcher.utter_message(text=f"For more informations you can look here:")
+      dispatcher.utter_message(text=f"https://www.jigsaw-navi.net/de/content/"+link)
+      set_slot_link = [SlotSet(Constants.slot_last_link, link)]
+      return set_slot_link
+    else: 
+      return []

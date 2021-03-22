@@ -10,3 +10,8 @@ rules:
   steps:
   - intent: greet
   - action: utter_welcome
+
+- rule: chatbot name
+  steps: 
+  - intent: chatbot_name
+  - action: utter_name_of_chatbot

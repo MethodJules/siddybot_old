@@ -7,6 +7,7 @@ from actions.semantic_search import SemanticSearch
 from actions.db_call import DbCall
 from actions.general_methods import GeneralMethods
 from actions.constants import Constants
+from rasa_sdk.events import SlotSet, EventType
 #import base64,cv2
 
 class YesNoQuestionsOrganizationAction(Action):
@@ -16,7 +17,7 @@ class YesNoQuestionsOrganizationAction(Action):
 
   def run(self, dispatcher: CollectingDispatcher,
         tracker: Tracker,
-        domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        domain: Dict[Text, Any]) -> List[EventType]:
     print("start action_yes_no_questions_organization")
     intent = tracker.latest_message["text"]
     attribute = tracker.get_slot(Constants.slot_attribute)
@@ -31,8 +32,7 @@ class YesNoQuestionsOrganizationAction(Action):
                 break
       else:
         intent = tracker.latest_message["text"]
-        SemanticSearch.searchSemanticSearchIntent(dispatcher, intent)
-        return
+        return SemanticSearch.searchSemanticSearchIntent(dispatcher, tracker, intent).events
     elif (intent == "questionsYesNoOrganization_connection_to_GPE"):
       value_gpe = tracker.get_slot[Constants.slot_place]
       if ((not(attribute is None))):
