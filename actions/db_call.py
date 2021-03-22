@@ -2,7 +2,7 @@ from typing import Any, Text, Dict, List
 #
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
-from flask import Flask, render_template, request, jsonify, Response
+#from flask import Flask, render_template, request, jsonify, Response
 import requests
 import json
 from actions.constants import Constants
@@ -12,7 +12,7 @@ from actions.constants import Constants
 # Klasse mit allen Aufrufen zur Datenbank ueber Flask
 class DbCall():
 
-  app=Flask(__name__)
+  #app=Flask(__name__)
 
   def searchForEntitiy(object_type) -> Dict[Text, Any]:
       """

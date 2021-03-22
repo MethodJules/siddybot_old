@@ -3,7 +3,7 @@ from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet, EventType
-from flask import Flask, render_template, request, jsonify, Response
+#from flask import Flask, render_template, request, jsonify, Response
 import requests
 import json
 import types
