@@ -29,6 +29,7 @@ class Constants():
                        "family", "member", "biographie", "death", "birth"]
    residence_attribute = ["stateorprovince_of_residence", "countries_of_residence", "cities_of_residence"]
    members = ["employee_or_member_of", "top_members_employees", "schools_attended"]
+   family_attribute = ["parents", "other_family", "spouse", "siblings", "children"]
    residences = "residences"
    date_of_birth = "date_of_birth"
    birthplace = "birthplace"

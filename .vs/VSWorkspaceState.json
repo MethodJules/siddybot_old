@@ -3,8 +3,8 @@
     "",
     "\\actions",
     "\\data",
-    "\\results"
+    "\\docker"
   ],
-  "SelectedNode": "\\actions\\person_detail_action.py",
+  "SelectedNode": "\\actions\\semantic_search.py",
   "PreviewInSolutionExplorer": false
 }

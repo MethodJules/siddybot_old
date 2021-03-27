@@ -24,7 +24,7 @@ class YesNoQuestionsOrganizationAction(Action):
     organization = tracker.get_slot(Constants.slot_org)
     checked_bool = False
     if (intent == "questionsYesNoOrganization_attributes") :
-      if ((not(attribute is None))):
+      if ((not(attribute is None)) & (attribute in Constants.organization_attributes)):
         answer = DbCall.searchForEntityRelationship(organization, Constants.organization)
         for x in answer[Constants.entities_relation]:
             if (x[Constants.relationship] == attribute):

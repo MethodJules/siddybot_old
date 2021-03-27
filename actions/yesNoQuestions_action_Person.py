@@ -28,7 +28,7 @@ class YesNoQuestionsPersonAction(Action):
     if (person_exist == False):
       return SemanticSearch.returnPersonNotExist(dispatcher, tracker)
     if (tracker.get_intent_of_latest_message() == "questionsYesNoPerson_attributes"):
-      if ((not(attribute is None))):
+      if ((not(attribute is None)) & (attribute in Constants.person_attributes)): 
         answer = DbCall.searchForEntityRelationship(person, Constants.person)
         checked = "No"
         for x in answer[Constants.entities_relation]:

@@ -63,6 +63,18 @@ class GeneralMethods():
             if (x[Constants.relationship] in Constants.residence_attribute):
               if((x[Constants.ent_text] == entity_to_check) | (x[Constants.ent2_text] == entity_to_check)):
                 return true
+        elif (attribute_to_check == Constants.birthplace):
+            if ((x[Constants.relationship] == Constants.city_of_birth) | (x[Constants.relationship] == Constants.country_of_birth)):
+              if((x[Constants.ent_text] == entity_to_check) | (x[Constants.ent2_text] == entity_to_check)):
+                return true
+        elif (attribute_to_check == Constants.deathplace):
+            if ((x[Constants.relationship] == Constants.city_of_death) | (x[Constants.relationship] == Constants.country_of_death)):
+              if((x[Constants.ent_text] == entity_to_check) | (x[Constants.ent2_text] == entity_to_check)):
+                return true
+        elif (attribute_to_check == Constants.family):
+            if (x[Constants.relationship] in Constants.family_attribute):
+              if((x[Constants.ent_text] == entity_to_check) | (x[Constants.ent2_text] == entity_to_check)):
+                return true
         else:
           if (x[Constants.relationship] == attribute_to_check):
             if((x[Constants.ent_text] == entity_to_check) | (x[Constants.ent2_text] == entity_to_check)):

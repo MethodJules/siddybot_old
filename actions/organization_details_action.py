@@ -23,8 +23,11 @@ class OrganizationDetailsAction(Action):
     print(organization)
     attribute = tracker.get_slot(Constants.slot_attribute)
     print(attribute)
-    # Abfrage wie bei Person ob Organisation ermittelt werden konnte
-    if ((attribute is None) | (not(attribute in Constants.organization_attributes))):
+    if ((organization is None)):
+      entities = tracker.latest_message[Constants.entities] 
+      return SemanticSearch.searchSemanticSearchListOfEntities(dispatcher, entities, tracker).events
+    else:
+      if ((attribute is None) | (not(attribute in Constants.organization_attributes))):
         print("Hier sollte die semantische Suche durchgefuert werden")
         intent = tracker.latest_message["text"]
         print(intent)
@@ -33,7 +36,7 @@ class OrganizationDetailsAction(Action):
         if (return_search.successfull == False):
           dispatcher.utter_message(template="utter_ask_rephrase")
         return return_search.events      
-    else:
+      else:
         return self.searchSepcificDetailsToOrganization(tracker, dispatcher, organization, attribute)
 
   def searchSepcificDetailsToOrganization(self, tracker: Tracker, dispatcher: CollectingDispatcher, name, attribute) -> List[EventType]:
