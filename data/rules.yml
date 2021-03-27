@@ -6,7 +6,6 @@ rules:
   - action: action_semantic_search
 
 - rule: welcome user
-  conversation_start: true
   steps:
   - intent: greet
   - action: utter_welcome
@@ -15,3 +14,8 @@ rules:
   steps: 
   - intent: chatbot_name
   - action: utter_name_of_chatbot
+
+- rule: restart
+  steps:
+  - intent: restart_chatbot
+  - action: action_restart

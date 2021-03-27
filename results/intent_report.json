@@ -1,75 +1,40 @@
 {
-  "data_check_time": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 2,
-    "confused_with": {}
-  },
-  "requirements_author_to_site": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 6,
-    "confused_with": {}
-  },
-  "add_person": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 8,
-    "confused_with": {}
-  },
-  "who_is_possible_user": {
+  "use_map": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
     "support": 7,
     "confused_with": {}
   },
-  "question_detail_person": {
+  "chatbot_functions": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 6,
+    "support": 7,
     "confused_with": {}
   },
-  "questionsYesNoPerson_attributes": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 12,
-    "confused_with": {}
-  },
-  "show_source_of_information": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 6,
-    "confused_with": {}
-  },
-  "ask_for_access_type_for_facilities": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 2,
-    "confused_with": {}
-  },
-  "ask_voluntary_verify_as_author": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 4,
-    "confused_with": {}
-  },
-  "questionsYesNoOrganization_attributes": {
+  "ask_for_data_check": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
     "support": 5,
     "confused_with": {}
   },
-  "questionsYesNoOrganization_connection_to_GPE": {
+  "questionsYesNoOrganization_connection_to_RELIGION": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 6,
+    "confused_with": {}
+  },
+  "show_involved_universities": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 4,
+    "confused_with": {}
+  },
+  "thanks": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
@@ -83,6 +48,20 @@
     "support": 7,
     "confused_with": {}
   },
+  "questions_detail_person": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 188,
+    "confused_with": {}
+  },
+  "requirements_author_to_site": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 6,
+    "confused_with": {}
+  },
   "show_involved_persons": {
     "precision": 1.0,
     "recall": 1.0,
@@ -90,28 +69,42 @@
     "support": 8,
     "confused_with": {}
   },
-  "goodbye": {
+  "create_account": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 7,
+    "support": 3,
     "confused_with": {}
   },
-  "ask_duty_verify_as_author": {
+  "successfully_login": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 5,
-    "confused_with": {}
-  },
-  "thanks": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 5,
+    "support": 2,
     "confused_with": {}
   },
   "people_expand_website": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 4,
+    "confused_with": {}
+  },
+  "agree": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 8,
+    "confused_with": {}
+  },
+  "get_information": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 4,
+    "confused_with": {}
+  },
+  "count_object_type": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
@@ -125,32 +118,32 @@
     "support": 37,
     "confused_with": {}
   },
-  "create_account": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 3,
-    "confused_with": {}
-  },
-  "details_of_organizations": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 55,
-    "confused_with": {}
-  },
-  "found_error": {
+  "questionsYesNoPerson_connection_to_ORG": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
     "support": 6,
     "confused_with": {}
   },
-  "questions_detail_person": {
+  "show_list_of_facilities_and_schools": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 188,
+    "support": 7,
+    "confused_with": {}
+  },
+  "questionsYesNoOrganization_connection_to_GPE": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 5,
+    "confused_with": {}
+  },
+  "restart_chatbot": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 4,
     "confused_with": {}
   },
   "ask_for_information_type": {
@@ -160,32 +153,18 @@
     "support": 10,
     "confused_with": {}
   },
-  "get_information": {
+  "chatbot_name": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 4,
+    "support": 2,
     "confused_with": {}
   },
-  "greet": {
+  "ask_for_access_type_for_facilities": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 7,
-    "confused_with": {}
-  },
-  "agree": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 8,
-    "confused_with": {}
-  },
-  "ask_for_data_check": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 5,
+    "support": 2,
     "confused_with": {}
   },
   "offer_support": {
@@ -195,25 +174,32 @@
     "support": 6,
     "confused_with": {}
   },
-  "requirements_site_to_author": {
+  "data_check_time": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 5,
+    "support": 2,
     "confused_with": {}
   },
-  "questionsYesNoPerson_connection_to_ORG": {
+  "add_person": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 6,
+    "support": 8,
     "confused_with": {}
   },
-  "show_involved_universities": {
+  "greet": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 4,
+    "support": 7,
+    "confused_with": {}
+  },
+  "information_search_with_chatbot": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 7,
     "confused_with": {}
   },
   "how_search_with_chatbot": {
@@ -230,28 +216,84 @@
     "support": 15,
     "confused_with": {}
   },
-  "chatbot_functions": {
+  "who_is_possible_user": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
     "support": 7,
     "confused_with": {}
   },
-  "show_list_of_facilities_and_schools": {
+  "save_created_person": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 7,
+    "support": 4,
     "confused_with": {}
   },
-  "questionsYesNoPerson_connection_to_RELIGION": {
+  "ask_for_access_types": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
     "support": 5,
     "confused_with": {}
   },
-  "information_search_with_chatbot": {
+  "question_detail_person": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 6,
+    "confused_with": {}
+  },
+  "website_information": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 7,
+    "confused_with": {}
+  },
+  "ask_voluntary_verify_as_author": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 4,
+    "confused_with": {}
+  },
+  "found_error": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 6,
+    "confused_with": {}
+  },
+  "goodbye": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 7,
+    "confused_with": {}
+  },
+  "requirements_site_to_author": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 5,
+    "confused_with": {}
+  },
+  "choose_map": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 11,
+    "confused_with": {}
+  },
+  "questionsYesNoPerson_connection_to_GPE": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 6,
+    "confused_with": {}
+  },
+  "denied": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
@@ -265,81 +307,46 @@
     "support": 3,
     "confused_with": {}
   },
-  "choose_map": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 11,
-    "confused_with": {}
-  },
-  "count_object_type": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 4,
-    "confused_with": {}
-  },
-  "save_created_person": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 4,
-    "confused_with": {}
-  },
-  "questionsYesNoOrganization_connection_to_RELIGION": {
+  "show_source_of_information": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
     "support": 6,
     "confused_with": {}
   },
-  "questionsYesNoPerson_connection_to_GPE": {
+  "details_of_organizations": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 6,
+    "support": 55,
     "confused_with": {}
   },
-  "ask_for_access_types": {
+  "ask_duty_verify_as_author": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
     "support": 5,
     "confused_with": {}
   },
-  "chatbot_name": {
+  "questionsYesNoPerson_attributes": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 2,
+    "support": 12,
     "confused_with": {}
   },
-  "use_map": {
+  "questionsYesNoOrganization_attributes": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 7,
+    "support": 5,
     "confused_with": {}
   },
-  "successfully_login": {
+  "questionsYesNoPerson_connection_to_RELIGION": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 2,
-    "confused_with": {}
-  },
-  "website_information": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 7,
-    "confused_with": {}
-  },
-  "denied": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 7,
+    "support": 5,
     "confused_with": {}
   },
   "accuracy": 1.0,
@@ -347,12 +354,12 @@
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 558
+    "support": 562
   },
   "weighted avg": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 558
+    "support": 562
   }
 }

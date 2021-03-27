@@ -56,6 +56,7 @@ intents:
   - chatbot_functions
   - chatbot_general
   - chatbot_name
+  - restart_chatbot
 
 entities:
   - maptype

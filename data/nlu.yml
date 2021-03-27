@@ -21,6 +21,13 @@ nlu:
     - See you later
     - Ciao
 
+- intent: restart_chatbot
+  examples: |
+    - Restart!
+    - Please restart
+    - Could you restart yourself, please?
+    - You should restart yourself
+
 - intent: thanks
   examples: |
     - Thanks
