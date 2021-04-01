@@ -15,14 +15,11 @@ class SemanticSearchAction(Action):
     tracker: Tracker,
     domain: Dict[Text, Any]) -> List[EventType]:
     print("action_semantic_search")
+    print(tracker.latest_message)
     entities = tracker.latest_message[Constants.entities]
     if ((entities == None) | (len(entities) == 0)):
        dispatcher.utter_message(template="utter_ask_rephrase")
-    print(entities)
     search_return = SemanticSearch.searchSemanticSearchListOfEntities(dispatcher, entities, tracker)
-    print(search_return.successfull)
     if ((search_return.successfull is None) | (search_return.successfull == False)):
         dispatcher.utter_message(template="utter_ask_rephrase")
     return search_return.events
- #   intent = tracker.latest_message["text"]
- #   SemanticSearch.searchSemanticSearchIntent(dispatcher, intent)

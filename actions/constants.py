@@ -88,7 +88,13 @@ class Constants():
    slot_shall_explain_add_entity = "shall_explain_add_entity"
    slot_last_link = "last_link"
    slot_explained_add_entity = "explained_add_entity"
-
+   slot_username = "username"
+   slot_age = "age"
+   slot_expert_value = "expert_value"
+   slot_gender = "gender"
+   slot_semantic_search_result = "semantic_search_result"
+   slot_shall_explain_add_entity = "shall_explain_add_entity"
+   slot_shall_explain_add_person = "shall_explain_add_person"
 
    # Objekttypen
    organization = "ORGANIZATION"

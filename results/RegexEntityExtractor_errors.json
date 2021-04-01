@@ -1,5 +1,367 @@
 [
   {
+    "text": "My name is Max",
+    "entities": [
+      {
+        "start": 11,
+        "end": 14,
+        "value": "Max",
+        "entity": "PERSON"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "PERSON",
+        "start": 11,
+        "end": 14,
+        "confidence_entity": 0.9947676658630371,
+        "value": "Max",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Max",
+    "entities": [
+      {
+        "start": 0,
+        "end": 3,
+        "value": "Max",
+        "entity": "PERSON"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "PERSON",
+        "start": 0,
+        "end": 3,
+        "confidence_entity": 0.9954132437705994,
+        "value": "Max",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Hi, I'm Max",
+    "entities": [
+      {
+        "start": 8,
+        "end": 11,
+        "value": "Max",
+        "entity": "PERSON"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "PERSON",
+        "start": 8,
+        "end": 11,
+        "confidence_entity": 0.9963268637657166,
+        "value": "Max",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I am Franziska",
+    "entities": [
+      {
+        "start": 5,
+        "end": 14,
+        "value": "Franziska",
+        "entity": "PERSON"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "PERSON",
+        "start": 5,
+        "end": 14,
+        "confidence_entity": 0.9973040819168091,
+        "value": "Franziska",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Call me Franziska",
+    "entities": [
+      {
+        "start": 8,
+        "end": 17,
+        "value": "Franziska",
+        "entity": "PERSON"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "PERSON",
+        "start": 8,
+        "end": 17,
+        "confidence_entity": 0.9971811771392822,
+        "value": "Franziska",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Hey, please call me Peter",
+    "entities": [
+      {
+        "start": 20,
+        "end": 25,
+        "value": "Peter",
+        "entity": "PERSON"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "PERSON",
+        "start": 20,
+        "end": 25,
+        "confidence_entity": 0.9974508881568909,
+        "value": "Peter",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "48",
+    "entities": [
+      {
+        "start": 0,
+        "end": 2,
+        "value": "48",
+        "entity": "CARDINAL"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "CARDINAL",
+        "start": 0,
+        "end": 2,
+        "confidence_entity": 0.9968302845954895,
+        "value": "48",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "twenty",
+    "entities": [
+      {
+        "start": 0,
+        "end": 6,
+        "value": "twenty",
+        "entity": "CARDINAL"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "CARDINAL",
+        "start": 0,
+        "end": 6,
+        "confidence_entity": 0.9958009123802185,
+        "value": "20",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "I am twenty",
+    "entities": [
+      {
+        "start": 5,
+        "end": 11,
+        "value": "twenty",
+        "entity": "CARDINAL"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "CARDINAL",
+        "start": 5,
+        "end": 11,
+        "confidence_entity": 0.9953891038894653,
+        "value": "20",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "My age is 45",
+    "entities": [
+      {
+        "start": 10,
+        "end": 12,
+        "value": "45",
+        "entity": "CARDINAL"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "CARDINAL",
+        "start": 10,
+        "end": 12,
+        "confidence_entity": 0.9962512850761414,
+        "value": "45",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "attribute",
+        "start": 3,
+        "end": 6,
+        "value": "age",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "I am twenty-three years old",
+    "entities": [
+      {
+        "start": 5,
+        "end": 17,
+        "value": "twenty-three",
+        "entity": "CARDINAL"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "CARDINAL",
+        "start": 5,
+        "end": 17,
+        "confidence_entity": 0.9548671245574951,
+        "value": "twenty-three",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I don't want to tell you my age",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "attribute",
+        "start": 28,
+        "end": 31,
+        "value": "age",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "I am a 5",
+    "entities": [
+      {
+        "start": 7,
+        "end": 8,
+        "value": "5",
+        "entity": "CARDINAL"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "CARDINAL",
+        "start": 7,
+        "end": 8,
+        "confidence_entity": 0.999168872833252,
+        "value": "5",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I think it is a 5",
+    "entities": [
+      {
+        "start": 16,
+        "end": 17,
+        "value": "5",
+        "entity": "CARDINAL"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "CARDINAL",
+        "start": 16,
+        "end": 17,
+        "confidence_entity": 0.9993714690208435,
+        "value": "5",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "4",
+    "entities": [
+      {
+        "start": 0,
+        "end": 1,
+        "value": "4",
+        "entity": "CARDINAL"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "CARDINAL",
+        "start": 0,
+        "end": 1,
+        "confidence_entity": 0.9975000023841858,
+        "value": "4",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "My knowledge about the topic is a 2",
+    "entities": [
+      {
+        "start": 34,
+        "end": 35,
+        "value": "2",
+        "entity": "CARDINAL"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "CARDINAL",
+        "start": 34,
+        "end": 35,
+        "confidence_entity": 0.9980621933937073,
+        "value": "2",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "It is a 5",
+    "entities": [
+      {
+        "start": 8,
+        "end": 9,
+        "value": "5",
+        "entity": "CARDINAL"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "CARDINAL",
+        "start": 8,
+        "end": 9,
+        "confidence_entity": 0.9994094371795654,
+        "value": "5",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
     "text": "Activity map",
     "entities": [
       {
@@ -14,7 +376,7 @@
         "entity": "maptype",
         "start": 0,
         "end": 8,
-        "confidence_entity": 0.9979068040847778,
+        "confidence_entity": 0.9972779154777527,
         "value": "Activity",
         "extractor": "DIETClassifier"
       }
@@ -87,7 +449,7 @@
         "entity": "object_type",
         "start": 32,
         "end": 38,
-        "confidence_entity": 0.9995585083961487,
+        "confidence_entity": 0.9996508359909058,
         "value": "PERSON",
         "extractor": "DIETClassifier",
         "processors": [
@@ -111,7 +473,7 @@
         "entity": "object_type",
         "start": 9,
         "end": 21,
-        "confidence_entity": 0.9996323585510254,
+        "confidence_entity": 0.9999023675918579,
         "value": "ORGANIZATION",
         "extractor": "DIETClassifier",
         "processors": [
@@ -135,7 +497,7 @@
         "entity": "object_type",
         "start": 27,
         "end": 39,
-        "confidence_entity": 0.9997736811637878,
+        "confidence_entity": 0.9998964071273804,
         "value": "ORGANIZATION",
         "extractor": "DIETClassifier",
         "processors": [
@@ -159,7 +521,7 @@
         "entity": "object_type",
         "start": 0,
         "end": 7,
-        "confidence_entity": 0.9977377653121948,
+        "confidence_entity": 0.9948863387107849,
         "value": "PERSON",
         "extractor": "DIETClassifier",
         "processors": [
@@ -183,7 +545,7 @@
         "entity": "object_type",
         "start": 18,
         "end": 24,
-        "confidence_entity": 0.9997933506965637,
+        "confidence_entity": 0.9996461868286133,
         "value": "PERSON",
         "extractor": "DIETClassifier",
         "processors": [
@@ -207,7 +569,7 @@
         "entity": "object_type",
         "start": 21,
         "end": 27,
-        "confidence_entity": 0.9989582300186157,
+        "confidence_entity": 0.9997605681419373,
         "value": "PERSON",
         "extractor": "DIETClassifier",
         "processors": [
@@ -231,7 +593,7 @@
         "entity": "object_type",
         "start": 31,
         "end": 37,
-        "confidence_entity": 0.9998199343681335,
+        "confidence_entity": 0.999922513961792,
         "value": "PERSON",
         "extractor": "DIETClassifier",
         "processors": [
@@ -255,7 +617,7 @@
         "entity": "object_type",
         "start": 31,
         "end": 37,
-        "confidence_entity": 0.9998262524604797,
+        "confidence_entity": 0.9996274709701538,
         "value": "PERSON",
         "extractor": "DIETClassifier",
         "processors": [
@@ -285,7 +647,7 @@
         "entity": "object_type",
         "start": 18,
         "end": 24,
-        "confidence_entity": 0.9999654293060303,
+        "confidence_entity": 0.9997169375419617,
         "value": "PERSON",
         "extractor": "DIETClassifier",
         "processors": [
@@ -296,7 +658,7 @@
         "entity": "GPE",
         "start": 38,
         "end": 47,
-        "confidence_entity": 0.9993357062339783,
+        "confidence_entity": 0.9995755553245544,
         "value": "Jerusalem",
         "extractor": "DIETClassifier"
       }
@@ -323,7 +685,7 @@
         "entity": "object_type",
         "start": 25,
         "end": 31,
-        "confidence_entity": 0.9999227523803711,
+        "confidence_entity": 0.9996992349624634,
         "value": "PERSON",
         "extractor": "DIETClassifier",
         "processors": [
@@ -334,7 +696,7 @@
         "entity": "GPE",
         "start": 45,
         "end": 54,
-        "confidence_entity": 0.9996106028556824,
+        "confidence_entity": 0.9995824694633484,
         "value": "Jerusalem",
         "extractor": "DIETClassifier"
       }
@@ -361,7 +723,7 @@
         "entity": "object_type",
         "start": 35,
         "end": 41,
-        "confidence_entity": 0.9999376535415649,
+        "confidence_entity": 0.9997046589851379,
         "value": "PERSON",
         "extractor": "DIETClassifier",
         "processors": [
@@ -372,7 +734,7 @@
         "entity": "GPE",
         "start": 55,
         "end": 63,
-        "confidence_entity": 0.9693846702575684,
+        "confidence_entity": 0.9707080721855164,
         "value": "New York",
         "extractor": "DIETClassifier"
       }
@@ -399,7 +761,7 @@
         "entity": "object_type",
         "start": 31,
         "end": 37,
-        "confidence_entity": 0.9999637603759766,
+        "confidence_entity": 0.9997926354408264,
         "value": "PERSON",
         "extractor": "DIETClassifier",
         "processors": [
@@ -410,7 +772,7 @@
         "entity": "GPE",
         "start": 51,
         "end": 60,
-        "confidence_entity": 0.9995712637901306,
+        "confidence_entity": 0.9995930790901184,
         "value": "Jerusalem",
         "extractor": "DIETClassifier"
       }
@@ -437,7 +799,7 @@
         "entity": "object_type",
         "start": 31,
         "end": 37,
-        "confidence_entity": 0.9999288320541382,
+        "confidence_entity": 0.9999635219573975,
         "value": "PERSON",
         "extractor": "DIETClassifier",
         "processors": [
@@ -448,16 +810,9 @@
         "entity": "year",
         "start": 61,
         "end": 65,
-        "confidence_entity": 0.9941790103912354,
+        "confidence_entity": 0.9934529066085815,
         "value": "1945",
         "extractor": "DIETClassifier"
-      },
-      {
-        "entity": "year",
-        "start": 61,
-        "end": 65,
-        "value": "1945",
-        "extractor": "RegexEntityExtractor"
       }
     ]
   },
@@ -488,7 +843,7 @@
         "entity": "object_type",
         "start": 35,
         "end": 41,
-        "confidence_entity": 0.9999486207962036,
+        "confidence_entity": 0.9999046325683594,
         "value": "PERSON",
         "extractor": "DIETClassifier",
         "processors": [
@@ -499,7 +854,7 @@
         "entity": "GPE",
         "start": 55,
         "end": 64,
-        "confidence_entity": 0.9995611310005188,
+        "confidence_entity": 0.9996249675750732,
         "value": "Jerusalem",
         "extractor": "DIETClassifier"
       },
@@ -507,16 +862,9 @@
         "entity": "year",
         "start": 68,
         "end": 72,
-        "confidence_entity": 0.9939818978309631,
+        "confidence_entity": 0.9936495423316956,
         "value": "1945",
         "extractor": "DIETClassifier"
-      },
-      {
-        "entity": "year",
-        "start": 68,
-        "end": 72,
-        "value": "1945",
-        "extractor": "RegexEntityExtractor"
       }
     ]
   },
@@ -547,7 +895,7 @@
         "entity": "object_type",
         "start": 25,
         "end": 31,
-        "confidence_entity": 0.9999196529388428,
+        "confidence_entity": 0.9999090433120728,
         "value": "PERSON",
         "extractor": "DIETClassifier",
         "processors": [
@@ -558,7 +906,7 @@
         "entity": "GPE",
         "start": 45,
         "end": 51,
-        "confidence_entity": 0.99924635887146,
+        "confidence_entity": 0.9993584752082825,
         "value": "Berlin",
         "extractor": "DIETClassifier"
       },
@@ -566,16 +914,9 @@
         "entity": "year",
         "start": 55,
         "end": 59,
-        "confidence_entity": 0.9936439990997314,
+        "confidence_entity": 0.99355548620224,
         "value": "1945",
         "extractor": "DIETClassifier"
-      },
-      {
-        "entity": "year",
-        "start": 55,
-        "end": 59,
-        "value": "1945",
-        "extractor": "RegexEntityExtractor"
       }
     ]
   },
@@ -606,7 +947,7 @@
         "entity": "object_type",
         "start": 18,
         "end": 24,
-        "confidence_entity": 0.9999485015869141,
+        "confidence_entity": 0.9998936653137207,
         "value": "PERSON",
         "extractor": "DIETClassifier",
         "processors": [
@@ -617,7 +958,7 @@
         "entity": "GPE",
         "start": 38,
         "end": 47,
-        "confidence_entity": 0.9994428753852844,
+        "confidence_entity": 0.9996576309204102,
         "value": "Jerusalem",
         "extractor": "DIETClassifier"
       },
@@ -625,16 +966,9 @@
         "entity": "year",
         "start": 51,
         "end": 55,
-        "confidence_entity": 0.9935678839683533,
+        "confidence_entity": 0.994078516960144,
         "value": "1945",
         "extractor": "DIETClassifier"
-      },
-      {
-        "entity": "year",
-        "start": 51,
-        "end": 55,
-        "value": "1945",
-        "extractor": "RegexEntityExtractor"
       }
     ]
   },
@@ -659,7 +993,7 @@
         "entity": "object_type",
         "start": 18,
         "end": 24,
-        "confidence_entity": 0.9998537302017212,
+        "confidence_entity": 0.9999066591262817,
         "value": "PERSON",
         "extractor": "DIETClassifier",
         "processors": [
@@ -670,7 +1004,7 @@
         "entity": "ORG",
         "start": 36,
         "end": 40,
-        "confidence_entity": 0.999189555644989,
+        "confidence_entity": 0.9992056488990784,
         "value": "WIZO",
         "extractor": "DIETClassifier"
       },
@@ -704,7 +1038,7 @@
         "entity": "object_type",
         "start": 25,
         "end": 31,
-        "confidence_entity": 0.9999018907546997,
+        "confidence_entity": 0.9998797178268433,
         "value": "PERSON",
         "extractor": "DIETClassifier",
         "processors": [
@@ -715,7 +1049,7 @@
         "entity": "ORG",
         "start": 46,
         "end": 50,
-        "confidence_entity": 0.9993910789489746,
+        "confidence_entity": 0.9994425177574158,
         "value": "WIZO",
         "extractor": "DIETClassifier"
       },
@@ -749,7 +1083,7 @@
         "entity": "object_type",
         "start": 35,
         "end": 41,
-        "confidence_entity": 0.9999163150787354,
+        "confidence_entity": 0.9998682737350464,
         "value": "PERSON",
         "extractor": "DIETClassifier",
         "processors": [
@@ -760,7 +1094,7 @@
         "entity": "ORG",
         "start": 56,
         "end": 60,
-        "confidence_entity": 0.9990535378456116,
+        "confidence_entity": 0.9994158744812012,
         "value": "WIZO",
         "extractor": "DIETClassifier"
       },
@@ -794,7 +1128,7 @@
         "entity": "object_type",
         "start": 31,
         "end": 37,
-        "confidence_entity": 0.9998689889907837,
+        "confidence_entity": 0.9998207688331604,
         "value": "PERSON",
         "extractor": "DIETClassifier",
         "processors": [
@@ -805,7 +1139,7 @@
         "entity": "ORG",
         "start": 52,
         "end": 56,
-        "confidence_entity": 0.998578667640686,
+        "confidence_entity": 0.9991623163223267,
         "value": "WIZO",
         "extractor": "DIETClassifier"
       },
@@ -839,7 +1173,7 @@
         "entity": "CARDINAL",
         "start": 8,
         "end": 10,
-        "confidence_entity": 0.9986929297447205,
+        "confidence_entity": 0.9988439083099365,
         "value": "10",
         "extractor": "DIETClassifier"
       },
@@ -847,7 +1181,7 @@
         "entity": "object_type",
         "start": 11,
         "end": 17,
-        "confidence_entity": 0.9997630715370178,
+        "confidence_entity": 0.9999117851257324,
         "value": "PERSON",
         "extractor": "DIETClassifier",
         "processors": [
@@ -877,7 +1211,7 @@
         "entity": "CARDINAL",
         "start": 18,
         "end": 24,
-        "confidence_entity": 0.9970276951789856,
+        "confidence_entity": 0.9949361085891724,
         "value": "20",
         "extractor": "DIETClassifier",
         "processors": [
@@ -888,7 +1222,7 @@
         "entity": "object_type",
         "start": 37,
         "end": 43,
-        "confidence_entity": 0.9999417066574097,
+        "confidence_entity": 0.9991971850395203,
         "value": "PERSON",
         "extractor": "DIETClassifier",
         "processors": [
@@ -912,7 +1246,7 @@
         "entity": "object_type",
         "start": 13,
         "end": 19,
-        "confidence_entity": 0.9988773465156555,
+        "confidence_entity": 0.9996985197067261,
         "value": "PERSON",
         "extractor": "DIETClassifier",
         "processors": [
@@ -936,7 +1270,7 @@
         "entity": "CARDINAL",
         "start": 14,
         "end": 16,
-        "confidence_entity": 0.9991023540496826,
+        "confidence_entity": 0.9992035031318665,
         "value": "15",
         "extractor": "DIETClassifier"
       }
@@ -957,7 +1291,7 @@
         "entity": "object_type",
         "start": 0,
         "end": 3,
-        "confidence_entity": 0.9994615912437439,
+        "confidence_entity": 0.9992676377296448,
         "value": "PERSON",
         "extractor": "DIETClassifier",
         "processors": [
@@ -981,7 +1315,7 @@
         "entity": "object_type",
         "start": 6,
         "end": 9,
-        "confidence_entity": 0.9999206066131592,
+        "confidence_entity": 0.9973580241203308,
         "value": "PERSON",
         "extractor": "DIETClassifier",
         "processors": [
@@ -1005,7 +1339,7 @@
         "entity": "object_type",
         "start": 18,
         "end": 24,
-        "confidence_entity": 0.999874472618103,
+        "confidence_entity": 0.9998365640640259,
         "value": "PERSON",
         "extractor": "DIETClassifier",
         "processors": [
@@ -1029,7 +1363,7 @@
         "entity": "object_type",
         "start": 31,
         "end": 37,
-        "confidence_entity": 0.9999600648880005,
+        "confidence_entity": 0.9998562335968018,
         "value": "PERSON",
         "extractor": "DIETClassifier",
         "processors": [
@@ -1053,7 +1387,7 @@
         "entity": "object_type",
         "start": 27,
         "end": 40,
-        "confidence_entity": 0.9982731342315674,
+        "confidence_entity": 0.9996956586837769,
         "value": "ORGANIZATION",
         "extractor": "DIETClassifier",
         "processors": [
@@ -1077,7 +1411,7 @@
         "entity": "object_type",
         "start": 17,
         "end": 25,
-        "confidence_entity": 0.9997773766517639,
+        "confidence_entity": 0.9997472167015076,
         "value": "ORGANIZATION",
         "extractor": "DIETClassifier",
         "processors": [
@@ -1101,7 +1435,7 @@
         "entity": "object_type",
         "start": 6,
         "end": 19,
-        "confidence_entity": 0.9996862411499023,
+        "confidence_entity": 0.9998310804367065,
         "value": "ORGANIZATION",
         "extractor": "DIETClassifier",
         "processors": [
@@ -1125,7 +1459,7 @@
         "entity": "object_type",
         "start": 0,
         "end": 13,
-        "confidence_entity": 0.9996358156204224,
+        "confidence_entity": 0.998238205909729,
         "value": "ORGANIZATION",
         "extractor": "DIETClassifier",
         "processors": [
@@ -1155,7 +1489,7 @@
         "entity": "CARDINAL",
         "start": 15,
         "end": 17,
-        "confidence_entity": 0.9987149238586426,
+        "confidence_entity": 0.9991438388824463,
         "value": "10",
         "extractor": "DIETClassifier"
       },
@@ -1163,7 +1497,7 @@
         "entity": "object_type",
         "start": 30,
         "end": 39,
-        "confidence_entity": 0.9997137188911438,
+        "confidence_entity": 0.9996798038482666,
         "value": "ORGANIZATION",
         "extractor": "DIETClassifier",
         "processors": [
@@ -1193,7 +1527,7 @@
         "entity": "object_type",
         "start": 23,
         "end": 31,
-        "confidence_entity": 0.9998598098754883,
+        "confidence_entity": 0.9996262788772583,
         "value": "ORGANIZATION",
         "extractor": "DIETClassifier",
         "processors": [
@@ -1204,7 +1538,7 @@
         "entity": "GPE",
         "start": 35,
         "end": 41,
-        "confidence_entity": 0.9980292916297913,
+        "confidence_entity": 0.9984336495399475,
         "value": "Zurich",
         "extractor": "DIETClassifier"
       }
@@ -1231,7 +1565,7 @@
         "entity": "CARDINAL",
         "start": 8,
         "end": 10,
-        "confidence_entity": 0.9987951517105103,
+        "confidence_entity": 0.9986573457717896,
         "value": "15",
         "extractor": "DIETClassifier"
       },
@@ -1239,7 +1573,7 @@
         "entity": "object_type",
         "start": 11,
         "end": 23,
-        "confidence_entity": 0.9996237754821777,
+        "confidence_entity": 0.9999167919158936,
         "value": "ORGANIZATION",
         "extractor": "DIETClassifier",
         "processors": [
@@ -1269,7 +1603,7 @@
         "entity": "object_type",
         "start": 5,
         "end": 18,
-        "confidence_entity": 0.9998694658279419,
+        "confidence_entity": 0.9985141158103943,
         "value": "ORGANIZATION",
         "extractor": "DIETClassifier",
         "processors": [
@@ -1280,7 +1614,7 @@
         "entity": "GPE",
         "start": 22,
         "end": 29,
-        "confidence_entity": 0.998553454875946,
+        "confidence_entity": 0.9990411400794983,
         "value": "Germany",
         "extractor": "DIETClassifier"
       }
@@ -1307,7 +1641,7 @@
         "entity": "CARDINAL",
         "start": 16,
         "end": 18,
-        "confidence_entity": 0.998223602771759,
+        "confidence_entity": 0.9990662932395935,
         "value": "18",
         "extractor": "DIETClassifier"
       },
@@ -1315,7 +1649,7 @@
         "entity": "object_type",
         "start": 19,
         "end": 32,
-        "confidence_entity": 0.999776303768158,
+        "confidence_entity": 0.9999271631240845,
         "value": "ORGANIZATION",
         "extractor": "DIETClassifier",
         "processors": [
@@ -1339,7 +1673,7 @@
         "entity": "object_type",
         "start": 10,
         "end": 14,
-        "confidence_entity": 0.9995922446250916,
+        "confidence_entity": 0.9987565279006958,
         "value": "ORGANIZATION",
         "extractor": "DIETClassifier",
         "processors": [
@@ -1363,7 +1697,7 @@
         "entity": "CARDINAL",
         "start": 5,
         "end": 9,
-        "confidence_entity": 0.9968612194061279,
+        "confidence_entity": 0.9969122409820557,
         "value": "5",
         "extractor": "DIETClassifier",
         "processors": [
@@ -1387,7 +1721,7 @@
         "entity": "CARDINAL",
         "start": 5,
         "end": 7,
-        "confidence_entity": 0.9987125396728516,
+        "confidence_entity": 0.9983299374580383,
         "value": "30",
         "extractor": "DIETClassifier"
       }
@@ -1414,7 +1748,7 @@
         "entity": "attribute",
         "start": 31,
         "end": 39,
-        "confidence_entity": 0.999975323677063,
+        "confidence_entity": 0.9999756813049316,
         "value": "date_of_birth",
         "extractor": "DIETClassifier",
         "processors": [
@@ -1425,7 +1759,7 @@
         "entity": "PERSON",
         "start": 43,
         "end": 59,
-        "confidence_entity": 0.9997022747993469,
+        "confidence_entity": 0.9999150037765503,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       }
@@ -1452,7 +1786,7 @@
         "entity": "attribute",
         "start": 30,
         "end": 38,
-        "confidence_entity": 0.9999717473983765,
+        "confidence_entity": 0.9999791383743286,
         "value": "date_of_birth",
         "extractor": "DIETClassifier",
         "processors": [
@@ -1463,7 +1797,7 @@
         "entity": "PERSON",
         "start": 42,
         "end": 58,
-        "confidence_entity": 0.9995488524436951,
+        "confidence_entity": 0.999879002571106,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       }
@@ -1490,7 +1824,7 @@
         "entity": "attribute",
         "start": 20,
         "end": 28,
-        "confidence_entity": 0.9999823570251465,
+        "confidence_entity": 0.9999842643737793,
         "value": "date_of_birth",
         "extractor": "DIETClassifier",
         "processors": [
@@ -1501,7 +1835,7 @@
         "entity": "PERSON",
         "start": 32,
         "end": 48,
-        "confidence_entity": 0.9998950958251953,
+        "confidence_entity": 0.9999306201934814,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       }
@@ -1534,7 +1868,7 @@
         "entity": "object_type",
         "start": 0,
         "end": 4,
-        "confidence_entity": 0.999832034111023,
+        "confidence_entity": 0.9995040893554688,
         "value": "DATE",
         "extractor": "DIETClassifier",
         "processors": [
@@ -1545,7 +1879,7 @@
         "entity": "PERSON",
         "start": 9,
         "end": 25,
-        "confidence_entity": 0.9999289512634277,
+        "confidence_entity": 0.9999117851257324,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       },
@@ -1553,7 +1887,7 @@
         "entity": "attribute",
         "start": 26,
         "end": 30,
-        "confidence_entity": 0.9999780654907227,
+        "confidence_entity": 0.9999812841415405,
         "value": "birth",
         "extractor": "DIETClassifier",
         "processors": [
@@ -1577,7 +1911,7 @@
         "entity": "attribute",
         "start": 12,
         "end": 20,
-        "confidence_entity": 0.9999879598617554,
+        "confidence_entity": 0.99994957447052,
         "value": "date_of_birth",
         "extractor": "DIETClassifier",
         "processors": [
@@ -1601,7 +1935,7 @@
         "entity": "attribute",
         "start": 12,
         "end": 20,
-        "confidence_entity": 0.9999676942825317,
+        "confidence_entity": 0.999983549118042,
         "value": "date_of_birth",
         "extractor": "DIETClassifier",
         "processors": [
@@ -1625,7 +1959,7 @@
         "entity": "attribute",
         "start": 25,
         "end": 33,
-        "confidence_entity": 0.9999058246612549,
+        "confidence_entity": 0.9998530149459839,
         "value": "date_of_birth",
         "extractor": "DIETClassifier",
         "processors": [
@@ -1649,7 +1983,7 @@
         "entity": "attribute",
         "start": 13,
         "end": 21,
-        "confidence_entity": 0.9999845027923584,
+        "confidence_entity": 0.9999790191650391,
         "value": "date_of_birth",
         "extractor": "DIETClassifier",
         "processors": [
@@ -1679,7 +2013,7 @@
         "entity": "PERSON",
         "start": 15,
         "end": 29,
-        "confidence_entity": 0.9987480640411377,
+        "confidence_entity": 0.9976323843002319,
         "value": "Max Mustermann",
         "extractor": "DIETClassifier"
       },
@@ -1687,7 +2021,7 @@
         "entity": "attribute",
         "start": 32,
         "end": 40,
-        "confidence_entity": 0.9999397993087769,
+        "confidence_entity": 0.9999063014984131,
         "value": "date_of_birth",
         "extractor": "DIETClassifier",
         "processors": [
@@ -1723,7 +2057,7 @@
         "entity": "object_type",
         "start": 15,
         "end": 19,
-        "confidence_entity": 0.9996849298477173,
+        "confidence_entity": 0.9994117021560669,
         "value": "DATE",
         "extractor": "DIETClassifier",
         "processors": [
@@ -1734,7 +2068,7 @@
         "entity": "PERSON",
         "start": 24,
         "end": 40,
-        "confidence_entity": 0.9999092817306519,
+        "confidence_entity": 0.9999499320983887,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       },
@@ -1742,7 +2076,7 @@
         "entity": "attribute",
         "start": 41,
         "end": 45,
-        "confidence_entity": 0.9998806715011597,
+        "confidence_entity": 0.9997105002403259,
         "value": "birth",
         "extractor": "DIETClassifier",
         "processors": [
@@ -1772,7 +2106,7 @@
         "entity": "attribute",
         "start": 0,
         "end": 8,
-        "confidence_entity": 0.9999504089355469,
+        "confidence_entity": 0.9998666048049927,
         "value": "date_of_birth",
         "extractor": "DIETClassifier",
         "processors": [
@@ -1783,7 +2117,7 @@
         "entity": "PERSON",
         "start": 12,
         "end": 28,
-        "confidence_entity": 0.999823272228241,
+        "confidence_entity": 0.9999423027038574,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       }
@@ -1816,7 +2150,7 @@
         "entity": "attribute",
         "start": 13,
         "end": 21,
-        "confidence_entity": 0.9998435974121094,
+        "confidence_entity": 0.9998927116394043,
         "value": "date_of_death",
         "extractor": "DIETClassifier",
         "processors": [
@@ -1827,7 +2161,7 @@
         "entity": "PERSON",
         "start": 25,
         "end": 41,
-        "confidence_entity": 0.9999231100082397,
+        "confidence_entity": 0.9999516010284424,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       }
@@ -1860,7 +2194,7 @@
         "entity": "object_type",
         "start": 18,
         "end": 22,
-        "confidence_entity": 0.9995368719100952,
+        "confidence_entity": 0.9996113181114197,
         "value": "DATE",
         "extractor": "DIETClassifier",
         "processors": [
@@ -1871,7 +2205,7 @@
         "entity": "PERSON",
         "start": 23,
         "end": 33,
-        "confidence_entity": 0.9998747110366821,
+        "confidence_entity": 0.9997418522834778,
         "value": "Ruth Barak",
         "extractor": "DIETClassifier"
       },
@@ -1879,7 +2213,7 @@
         "entity": "attribute",
         "start": 34,
         "end": 38,
-        "confidence_entity": 0.9997833371162415,
+        "confidence_entity": 0.9999500513076782,
         "value": "death",
         "extractor": "DIETClassifier",
         "processors": [
@@ -1916,7 +2250,7 @@
         "entity": "attribute",
         "start": 12,
         "end": 20,
-        "confidence_entity": 0.9999122619628906,
+        "confidence_entity": 0.9999403953552246,
         "value": "date_of_death",
         "extractor": "DIETClassifier",
         "processors": [
@@ -1927,7 +2261,7 @@
         "entity": "PERSON",
         "start": 24,
         "end": 38,
-        "confidence_entity": 0.9999194145202637,
+        "confidence_entity": 0.9998855590820312,
         "value": "Benjamin Jonas",
         "extractor": "DIETClassifier"
       },
@@ -1961,7 +2295,7 @@
         "entity": "attribute",
         "start": 9,
         "end": 17,
-        "confidence_entity": 0.9992971420288086,
+        "confidence_entity": 0.9986912608146667,
         "value": "date_of_death",
         "extractor": "DIETClassifier",
         "processors": [
@@ -1972,7 +2306,7 @@
         "entity": "PERSON",
         "start": 19,
         "end": 33,
-        "confidence_entity": 0.9998958110809326,
+        "confidence_entity": 0.9999070167541504,
         "value": "Benjamin Jonas",
         "extractor": "DIETClassifier"
       },
@@ -2006,7 +2340,7 @@
         "entity": "attribute",
         "start": 13,
         "end": 21,
-        "confidence_entity": 0.9998435974121094,
+        "confidence_entity": 0.9998927116394043,
         "value": "date_of_death",
         "extractor": "DIETClassifier",
         "processors": [
@@ -2017,7 +2351,7 @@
         "entity": "PERSON",
         "start": 25,
         "end": 41,
-        "confidence_entity": 0.9999231100082397,
+        "confidence_entity": 0.9999516010284424,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       }
@@ -2038,7 +2372,7 @@
         "entity": "attribute",
         "start": 22,
         "end": 30,
-        "confidence_entity": 0.9999020099639893,
+        "confidence_entity": 0.9998694658279419,
         "value": "date_of_death",
         "extractor": "DIETClassifier",
         "processors": [
@@ -2062,7 +2396,7 @@
         "entity": "attribute",
         "start": 13,
         "end": 21,
-        "confidence_entity": 0.9997909665107727,
+        "confidence_entity": 0.9999245405197144,
         "value": "date_of_death",
         "extractor": "DIETClassifier",
         "processors": [
@@ -2092,7 +2426,7 @@
         "entity": "PERSON",
         "start": 0,
         "end": 14,
-        "confidence_entity": 0.9998822212219238,
+        "confidence_entity": 0.9997640252113342,
         "value": "Benjamin Jonas",
         "extractor": "DIETClassifier"
       },
@@ -2100,7 +2434,7 @@
         "entity": "attribute",
         "start": 17,
         "end": 29,
-        "confidence_entity": 0.9899763464927673,
+        "confidence_entity": 0.9873136878013611,
         "value": "date_of_death",
         "extractor": "DIETClassifier",
         "processors": [
@@ -2143,7 +2477,7 @@
         "entity": "object_type",
         "start": 0,
         "end": 4,
-        "confidence_entity": 0.9998935461044312,
+        "confidence_entity": 0.9999175071716309,
         "value": "DATE",
         "extractor": "DIETClassifier",
         "processors": [
@@ -2154,7 +2488,7 @@
         "entity": "PERSON",
         "start": 9,
         "end": 23,
-        "confidence_entity": 0.9999289512634277,
+        "confidence_entity": 0.9997720122337341,
         "value": "Benjamin Jonas",
         "extractor": "DIETClassifier"
       },
@@ -2162,7 +2496,7 @@
         "entity": "attribute",
         "start": 24,
         "end": 28,
-        "confidence_entity": 0.9999610185623169,
+        "confidence_entity": 0.9999843835830688,
         "value": "death",
         "extractor": "DIETClassifier",
         "processors": [
@@ -2205,7 +2539,7 @@
         "entity": "object_type",
         "start": 0,
         "end": 4,
-        "confidence_entity": 0.9980350136756897,
+        "confidence_entity": 0.9937805533409119,
         "value": "DATE",
         "extractor": "DIETClassifier",
         "processors": [
@@ -2216,7 +2550,7 @@
         "entity": "attribute",
         "start": 13,
         "end": 18,
-        "confidence_entity": 0.9999456405639648,
+        "confidence_entity": 0.9998792409896851,
         "value": "death",
         "extractor": "DIETClassifier"
       },
@@ -2224,7 +2558,7 @@
         "entity": "PERSON",
         "start": 22,
         "end": 36,
-        "confidence_entity": 0.9999357461929321,
+        "confidence_entity": 0.9999163150787354,
         "value": "Benjamin Jonas",
         "extractor": "DIETClassifier"
       },
@@ -2264,7 +2598,7 @@
         "entity": "object_type",
         "start": 0,
         "end": 4,
-        "confidence_entity": 0.9992488026618958,
+        "confidence_entity": 0.9977484345436096,
         "value": "DATE",
         "extractor": "DIETClassifier",
         "processors": [
@@ -2275,7 +2609,7 @@
         "entity": "PERSON",
         "start": 9,
         "end": 23,
-        "confidence_entity": 0.9999270439147949,
+        "confidence_entity": 0.9998120665550232,
         "value": "Benjamin Jonas",
         "extractor": "DIETClassifier"
       },
@@ -2283,7 +2617,7 @@
         "entity": "attribute",
         "start": 24,
         "end": 33,
-        "confidence_entity": 0.999789297580719,
+        "confidence_entity": 0.9992559552192688,
         "value": "death",
         "extractor": "DIETClassifier",
         "processors": [
@@ -2326,7 +2660,7 @@
         "entity": "object_type",
         "start": 0,
         "end": 5,
-        "confidence_entity": 0.999868631362915,
+        "confidence_entity": 0.9998887777328491,
         "value": "PLACE",
         "extractor": "DIETClassifier",
         "processors": [
@@ -2337,7 +2671,7 @@
         "entity": "PERSON",
         "start": 10,
         "end": 20,
-        "confidence_entity": 0.9999048709869385,
+        "confidence_entity": 0.9998816251754761,
         "value": "Ruth Barak",
         "extractor": "DIETClassifier"
       },
@@ -2345,7 +2679,7 @@
         "entity": "attribute",
         "start": 21,
         "end": 25,
-        "confidence_entity": 0.9999297857284546,
+        "confidence_entity": 0.9999717473983765,
         "value": "death",
         "extractor": "DIETClassifier",
         "processors": [
@@ -2388,7 +2722,7 @@
         "entity": "object_type",
         "start": 8,
         "end": 13,
-        "confidence_entity": 0.9997625946998596,
+        "confidence_entity": 0.9992491602897644,
         "value": "PLACE",
         "extractor": "DIETClassifier",
         "processors": [
@@ -2399,7 +2733,7 @@
         "entity": "PERSON",
         "start": 14,
         "end": 28,
-        "confidence_entity": 0.9997990727424622,
+        "confidence_entity": 0.999855637550354,
         "value": "Benjamin Jonas",
         "extractor": "DIETClassifier"
       },
@@ -2407,7 +2741,7 @@
         "entity": "attribute",
         "start": 29,
         "end": 33,
-        "confidence_entity": 0.9998972415924072,
+        "confidence_entity": 0.9999648332595825,
         "value": "death",
         "extractor": "DIETClassifier",
         "processors": [
@@ -2444,7 +2778,7 @@
         "entity": "attribute",
         "start": 14,
         "end": 28,
-        "confidence_entity": 0.8244678378105164,
+        "confidence_entity": 0.8403440117835999,
         "value": "death_place",
         "extractor": "DIETClassifier",
         "processors": [
@@ -2455,7 +2789,7 @@
         "entity": "PERSON",
         "start": 32,
         "end": 45,
-        "confidence_entity": 0.9999217987060547,
+        "confidence_entity": 0.9998763799667358,
         "value": "Rachel Ellern",
         "extractor": "DIETClassifier"
       }
@@ -2482,7 +2816,7 @@
         "entity": "object_type",
         "start": 0,
         "end": 5,
-        "confidence_entity": 0.99992835521698,
+        "confidence_entity": 0.9997451901435852,
         "value": "PLACE",
         "extractor": "DIETClassifier",
         "processors": [
@@ -2493,7 +2827,7 @@
         "entity": "attribute",
         "start": 13,
         "end": 17,
-        "confidence_entity": 0.9999662637710571,
+        "confidence_entity": 0.9999908208847046,
         "value": "death",
         "extractor": "DIETClassifier",
         "processors": [
@@ -2523,7 +2857,7 @@
         "entity": "object_type",
         "start": 0,
         "end": 5,
-        "confidence_entity": 0.9999394416809082,
+        "confidence_entity": 0.9998393058776855,
         "value": "PLACE",
         "extractor": "DIETClassifier",
         "processors": [
@@ -2534,7 +2868,7 @@
         "entity": "attribute",
         "start": 14,
         "end": 18,
-        "confidence_entity": 0.9999608993530273,
+        "confidence_entity": 0.9999922513961792,
         "value": "death",
         "extractor": "DIETClassifier",
         "processors": [
@@ -2564,7 +2898,7 @@
         "entity": "object_type",
         "start": 22,
         "end": 33,
-        "confidence_entity": 0.9935252666473389,
+        "confidence_entity": 0.9888862371444702,
         "value": "PLACE",
         "extractor": "DIETClassifier",
         "processors": [
@@ -2575,7 +2909,7 @@
         "entity": "attribute",
         "start": 37,
         "end": 40,
-        "confidence_entity": 0.999816358089447,
+        "confidence_entity": 0.9998918771743774,
         "value": "death",
         "extractor": "DIETClassifier",
         "processors": [
@@ -2605,7 +2939,7 @@
         "entity": "attribute",
         "start": 9,
         "end": 16,
-        "confidence_entity": 0.9991458654403687,
+        "confidence_entity": 0.9988296627998352,
         "value": "COUNTRY",
         "extractor": "DIETClassifier",
         "processors": [
@@ -2616,7 +2950,7 @@
         "entity": "PERSON",
         "start": 21,
         "end": 31,
-        "confidence_entity": 0.9998416900634766,
+        "confidence_entity": 0.9999101161956787,
         "value": "Ruth Barak",
         "extractor": "DIETClassifier"
       },
@@ -2650,7 +2984,7 @@
         "entity": "attribute",
         "start": 12,
         "end": 19,
-        "confidence_entity": 0.9992203712463379,
+        "confidence_entity": 0.9994631409645081,
         "value": "COUNTRY",
         "extractor": "DIETClassifier",
         "processors": [
@@ -2661,7 +2995,7 @@
         "entity": "PERSON",
         "start": 26,
         "end": 36,
-        "confidence_entity": 0.9998897314071655,
+        "confidence_entity": 0.9998644590377808,
         "value": "Ruth Barak",
         "extractor": "DIETClassifier"
       },
@@ -2695,7 +3029,7 @@
         "entity": "attribute",
         "start": 0,
         "end": 7,
-        "confidence_entity": 0.9995530247688293,
+        "confidence_entity": 0.9996191263198853,
         "value": "COUNTRY",
         "extractor": "DIETClassifier",
         "processors": [
@@ -2706,7 +3040,7 @@
         "entity": "PERSON",
         "start": 14,
         "end": 24,
-        "confidence_entity": 0.9998748302459717,
+        "confidence_entity": 0.9997828602790833,
         "value": "Ruth Barak",
         "extractor": "DIETClassifier"
       },
@@ -2734,7 +3068,7 @@
         "entity": "attribute",
         "start": 19,
         "end": 35,
-        "confidence_entity": 0.9960238933563232,
+        "confidence_entity": 0.9982580542564392,
         "value": "country_of_death",
         "extractor": "DIETClassifier",
         "processors": [
@@ -2758,7 +3092,7 @@
         "entity": "attribute",
         "start": 27,
         "end": 42,
-        "confidence_entity": 0.9686049222946167,
+        "confidence_entity": 0.9909524917602539,
         "value": "country_of_death",
         "extractor": "DIETClassifier",
         "processors": [
@@ -2794,7 +3128,7 @@
         "entity": "object_type",
         "start": 24,
         "end": 28,
-        "confidence_entity": 0.9992411136627197,
+        "confidence_entity": 0.999086856842041,
         "value": "CITY",
         "extractor": "DIETClassifier",
         "processors": [
@@ -2805,7 +3139,7 @@
         "entity": "PERSON",
         "start": 35,
         "end": 47,
-        "confidence_entity": 0.9995561242103577,
+        "confidence_entity": 0.9995156526565552,
         "value": "Irene Gaster",
         "extractor": "DIETClassifier"
       },
@@ -2813,7 +3147,7 @@
         "entity": "attribute",
         "start": 48,
         "end": 52,
-        "confidence_entity": 0.9998223185539246,
+        "confidence_entity": 0.999902606010437,
         "value": "death",
         "extractor": "DIETClassifier",
         "processors": [
@@ -2850,7 +3184,7 @@
         "entity": "attribute",
         "start": 0,
         "end": 13,
-        "confidence_entity": 0.6839569211006165,
+        "confidence_entity": 0.8907383680343628,
         "value": "city_of_death",
         "extractor": "DIETClassifier",
         "processors": [
@@ -2861,7 +3195,7 @@
         "entity": "PERSON",
         "start": 17,
         "end": 27,
-        "confidence_entity": 0.9998779296875,
+        "confidence_entity": 0.9998867511749268,
         "value": "Ruth Barak",
         "extractor": "DIETClassifier"
       },
@@ -2901,7 +3235,7 @@
         "entity": "object_type",
         "start": 11,
         "end": 21,
-        "confidence_entity": 0.9877498745918274,
+        "confidence_entity": 0.9928277134895325,
         "value": "CITY",
         "extractor": "DIETClassifier",
         "processors": [
@@ -2912,7 +3246,7 @@
         "entity": "PERSON",
         "start": 22,
         "end": 34,
-        "confidence_entity": 0.9991760849952698,
+        "confidence_entity": 0.9992068409919739,
         "value": "Irene Gaster",
         "extractor": "DIETClassifier"
       },
@@ -2920,7 +3254,7 @@
         "entity": "attribute",
         "start": 35,
         "end": 38,
-        "confidence_entity": 0.999573290348053,
+        "confidence_entity": 0.9997373223304749,
         "value": "death",
         "extractor": "DIETClassifier",
         "processors": [
@@ -2963,7 +3297,7 @@
         "entity": "object_type",
         "start": 9,
         "end": 13,
-        "confidence_entity": 0.9994300007820129,
+        "confidence_entity": 0.9997324347496033,
         "value": "CITY",
         "extractor": "DIETClassifier",
         "processors": [
@@ -2974,7 +3308,7 @@
         "entity": "PERSON",
         "start": 14,
         "end": 23,
-        "confidence_entity": 0.9988070726394653,
+        "confidence_entity": 0.9992524981498718,
         "value": "Else Cohn",
         "extractor": "DIETClassifier"
       },
@@ -2982,7 +3316,7 @@
         "entity": "attribute",
         "start": 24,
         "end": 28,
-        "confidence_entity": 0.9995887875556946,
+        "confidence_entity": 0.9999392032623291,
         "value": "death",
         "extractor": "DIETClassifier",
         "processors": [
@@ -3012,7 +3346,7 @@
         "entity": "object_type",
         "start": 9,
         "end": 13,
-        "confidence_entity": 0.9995594620704651,
+        "confidence_entity": 0.9996021389961243,
         "value": "CITY",
         "extractor": "DIETClassifier",
         "processors": [
@@ -3023,7 +3357,7 @@
         "entity": "attribute",
         "start": 17,
         "end": 21,
-        "confidence_entity": 0.999866247177124,
+        "confidence_entity": 0.9999524354934692,
         "value": "death",
         "extractor": "DIETClassifier",
         "processors": [
@@ -3053,7 +3387,7 @@
         "entity": "object_type",
         "start": 27,
         "end": 31,
-        "confidence_entity": 0.9992178678512573,
+        "confidence_entity": 0.9986140727996826,
         "value": "CITY",
         "extractor": "DIETClassifier",
         "processors": [
@@ -3064,7 +3398,7 @@
         "entity": "attribute",
         "start": 36,
         "end": 40,
-        "confidence_entity": 0.9990664124488831,
+        "confidence_entity": 0.9991512298583984,
         "value": "death",
         "extractor": "DIETClassifier",
         "processors": [
@@ -3094,7 +3428,7 @@
         "entity": "attribute",
         "start": 12,
         "end": 21,
-        "confidence_entity": 0.999961256980896,
+        "confidence_entity": 0.9999911785125732,
         "value": "city_of_birth",
         "extractor": "DIETClassifier",
         "processors": [
@@ -3105,7 +3439,7 @@
         "entity": "PERSON",
         "start": 22,
         "end": 37,
-        "confidence_entity": 0.9998449087142944,
+        "confidence_entity": 0.9998140931129456,
         "value": "Natalie Jarecki",
         "extractor": "DIETClassifier"
       },
@@ -3139,7 +3473,7 @@
         "entity": "attribute",
         "start": 12,
         "end": 25,
-        "confidence_entity": 0.7806743383407593,
+        "confidence_entity": 0.8036746978759766,
         "value": "city_of_birth",
         "extractor": "DIETClassifier",
         "processors": [
@@ -3150,7 +3484,7 @@
         "entity": "PERSON",
         "start": 29,
         "end": 44,
-        "confidence_entity": 0.9994435906410217,
+        "confidence_entity": 0.9998632669448853,
         "value": "Natalie Jarecki",
         "extractor": "DIETClassifier"
       },
@@ -3190,7 +3524,7 @@
         "entity": "object_type",
         "start": 18,
         "end": 23,
-        "confidence_entity": 0.999840497970581,
+        "confidence_entity": 0.9999244213104248,
         "value": "PLACE",
         "extractor": "DIETClassifier",
         "processors": [
@@ -3201,7 +3535,7 @@
         "entity": "PERSON",
         "start": 24,
         "end": 39,
-        "confidence_entity": 0.9989264607429504,
+        "confidence_entity": 0.9998476505279541,
         "value": "Natalie Jarecki",
         "extractor": "DIETClassifier"
       },
@@ -3209,7 +3543,7 @@
         "entity": "attribute",
         "start": 40,
         "end": 48,
-        "confidence_entity": 0.9634822010993958,
+        "confidence_entity": 0.9948853850364685,
         "value": "birth",
         "extractor": "DIETClassifier",
         "processors": [
@@ -3240,7 +3574,7 @@
         "entity": "PERSON",
         "start": 24,
         "end": 52,
-        "confidence_entity": 0.9831473231315613,
+        "confidence_entity": 0.9868055582046509,
         "value": "which city [Esther Apfelberg",
         "extractor": "DIETClassifier"
       },
@@ -3268,7 +3602,7 @@
         "entity": "attribute",
         "start": 13,
         "end": 22,
-        "confidence_entity": 0.9999642372131348,
+        "confidence_entity": 0.9999810457229614,
         "value": "city_of_birth",
         "extractor": "DIETClassifier",
         "processors": [
@@ -3292,7 +3626,7 @@
         "entity": "attribute",
         "start": 12,
         "end": 25,
-        "confidence_entity": 0.979462206363678,
+        "confidence_entity": 0.9918652176856995,
         "value": "city_of_birth",
         "extractor": "DIETClassifier",
         "processors": [
@@ -3322,7 +3656,7 @@
         "entity": "object_type",
         "start": 9,
         "end": 16,
-        "confidence_entity": 0.9972227811813354,
+        "confidence_entity": 0.9983469247817993,
         "value": "COUNTRY",
         "extractor": "DIETClassifier",
         "processors": [
@@ -3333,7 +3667,7 @@
         "entity": "PERSON",
         "start": 21,
         "end": 36,
-        "confidence_entity": 0.9981563687324524,
+        "confidence_entity": 0.9995496869087219,
         "value": "Natalie Jarecki",
         "extractor": "DIETClassifier"
       },
@@ -3368,7 +3702,7 @@
         "entity": "PERSON",
         "start": 12,
         "end": 39,
-        "confidence_entity": 0.9666383266448975,
+        "confidence_entity": 0.9857139587402344,
         "value": "country where [Irene Gaster",
         "extractor": "DIETClassifier"
       },
@@ -3409,7 +3743,7 @@
         "entity": "attribute",
         "start": 0,
         "end": 16,
-        "confidence_entity": 0.7772095799446106,
+        "confidence_entity": 0.7013735175132751,
         "value": "country_of_birth",
         "extractor": "DIETClassifier",
         "processors": [
@@ -3420,7 +3754,7 @@
         "entity": "PERSON",
         "start": 20,
         "end": 34,
-        "confidence_entity": 0.9998903274536133,
+        "confidence_entity": 0.9998438358306885,
         "value": "Benjamin Jonas",
         "extractor": "DIETClassifier"
       },
@@ -3448,7 +3782,7 @@
         "entity": "attribute",
         "start": 22,
         "end": 38,
-        "confidence_entity": 0.9524882435798645,
+        "confidence_entity": 0.953018844127655,
         "value": "country_of_birth",
         "extractor": "DIETClassifier",
         "processors": [
@@ -3478,7 +3812,7 @@
         "entity": "object_type",
         "start": 25,
         "end": 32,
-        "confidence_entity": 0.9913783073425293,
+        "confidence_entity": 0.9988370537757874,
         "value": "COUNTRY",
         "extractor": "DIETClassifier",
         "processors": [
@@ -3489,7 +3823,7 @@
         "entity": "attribute",
         "start": 36,
         "end": 44,
-        "confidence_entity": 0.9926353096961975,
+        "confidence_entity": 0.9960944056510925,
         "value": "birth",
         "extractor": "DIETClassifier",
         "processors": [
@@ -3525,7 +3859,7 @@
         "entity": "object_type",
         "start": 0,
         "end": 5,
-        "confidence_entity": 0.9999172687530518,
+        "confidence_entity": 0.9999755620956421,
         "value": "PLACE",
         "extractor": "DIETClassifier",
         "processors": [
@@ -3536,7 +3870,7 @@
         "entity": "PERSON",
         "start": 10,
         "end": 25,
-        "confidence_entity": 0.9998700618743896,
+        "confidence_entity": 0.9998326301574707,
         "value": "Natalie Jarecki",
         "extractor": "DIETClassifier"
       },
@@ -3544,7 +3878,7 @@
         "entity": "attribute",
         "start": 26,
         "end": 30,
-        "confidence_entity": 0.9958270192146301,
+        "confidence_entity": 0.9984419941902161,
         "value": "birth",
         "extractor": "DIETClassifier",
         "processors": [
@@ -3587,7 +3921,7 @@
         "entity": "object_type",
         "start": 19,
         "end": 24,
-        "confidence_entity": 0.9995250701904297,
+        "confidence_entity": 0.9997941851615906,
         "value": "PLACE",
         "extractor": "DIETClassifier",
         "processors": [
@@ -3598,7 +3932,7 @@
         "entity": "PERSON",
         "start": 25,
         "end": 37,
-        "confidence_entity": 0.9988048076629639,
+        "confidence_entity": 0.9994333386421204,
         "value": "Irene Gaster",
         "extractor": "DIETClassifier"
       },
@@ -3606,7 +3940,7 @@
         "entity": "attribute",
         "start": 42,
         "end": 46,
-        "confidence_entity": 0.9993901252746582,
+        "confidence_entity": 0.9993112087249756,
         "value": "birth",
         "extractor": "DIETClassifier",
         "processors": [
@@ -3643,7 +3977,7 @@
         "entity": "attribute",
         "start": 12,
         "end": 22,
-        "confidence_entity": 0.9999542236328125,
+        "confidence_entity": 0.9999302625656128,
         "value": "birthplace",
         "extractor": "DIETClassifier"
       },
@@ -3651,7 +3985,7 @@
         "entity": "PERSON",
         "start": 26,
         "end": 41,
-        "confidence_entity": 0.9999276399612427,
+        "confidence_entity": 0.9999065399169922,
         "value": "Natalie Jarecki",
         "extractor": "DIETClassifier"
       },
@@ -3685,7 +4019,7 @@
         "entity": "attribute",
         "start": 12,
         "end": 26,
-        "confidence_entity": 0.7171319127082825,
+        "confidence_entity": 0.7840765118598938,
         "value": "birthplace",
         "extractor": "DIETClassifier",
         "processors": [
@@ -3696,7 +4030,7 @@
         "entity": "PERSON",
         "start": 30,
         "end": 42,
-        "confidence_entity": 0.9995201826095581,
+        "confidence_entity": 0.9996963739395142,
         "value": "Irene Gaster",
         "extractor": "DIETClassifier"
       },
@@ -3736,7 +4070,7 @@
         "entity": "object_type",
         "start": 0,
         "end": 5,
-        "confidence_entity": 0.9998432397842407,
+        "confidence_entity": 0.9999518394470215,
         "value": "PLACE",
         "extractor": "DIETClassifier",
         "processors": [
@@ -3747,7 +4081,7 @@
         "entity": "PERSON",
         "start": 10,
         "end": 26,
-        "confidence_entity": 0.9999185800552368,
+        "confidence_entity": 0.9999089241027832,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       },
@@ -3755,7 +4089,7 @@
         "entity": "attribute",
         "start": 27,
         "end": 31,
-        "confidence_entity": 0.9999771118164062,
+        "confidence_entity": 0.9999839067459106,
         "value": "birth",
         "extractor": "DIETClassifier",
         "processors": [
@@ -3779,7 +4113,7 @@
         "entity": "attribute",
         "start": 28,
         "end": 38,
-        "confidence_entity": 0.9999654293060303,
+        "confidence_entity": 0.9999467134475708,
         "value": "birthplace",
         "extractor": "DIETClassifier"
       }
@@ -3800,7 +4134,7 @@
         "entity": "attribute",
         "start": 20,
         "end": 30,
-        "confidence_entity": 0.9998759031295776,
+        "confidence_entity": 0.9999045133590698,
         "value": "birthplace",
         "extractor": "DIETClassifier"
       }
@@ -3821,7 +4155,7 @@
         "entity": "attribute",
         "start": 0,
         "end": 10,
-        "confidence_entity": 0.9999264478683472,
+        "confidence_entity": 0.9999074935913086,
         "value": "birthplace",
         "extractor": "DIETClassifier"
       }
@@ -3848,7 +4182,7 @@
         "entity": "object_type",
         "start": 0,
         "end": 5,
-        "confidence_entity": 0.9999207258224487,
+        "confidence_entity": 0.9999743700027466,
         "value": "PLACE",
         "extractor": "DIETClassifier",
         "processors": [
@@ -3859,7 +4193,7 @@
         "entity": "attribute",
         "start": 14,
         "end": 18,
-        "confidence_entity": 0.9998952150344849,
+        "confidence_entity": 0.9999792575836182,
         "value": "birth",
         "extractor": "DIETClassifier",
         "processors": [
@@ -3895,7 +4229,7 @@
         "entity": "object_type",
         "start": 0,
         "end": 3,
-        "confidence_entity": 0.9997226595878601,
+        "confidence_entity": 0.9997299313545227,
         "value": "CAUSE",
         "extractor": "DIETClassifier",
         "processors": [
@@ -3906,7 +4240,7 @@
         "entity": "PERSON",
         "start": 8,
         "end": 24,
-        "confidence_entity": 0.9999098777770996,
+        "confidence_entity": 0.9998277425765991,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       },
@@ -3914,7 +4248,7 @@
         "entity": "attribute",
         "start": 25,
         "end": 28,
-        "confidence_entity": 0.9999325275421143,
+        "confidence_entity": 0.9999806880950928,
         "value": "death",
         "extractor": "DIETClassifier",
         "processors": [
@@ -3944,7 +4278,7 @@
         "entity": "attribute",
         "start": 22,
         "end": 36,
-        "confidence_entity": 0.916660726070404,
+        "confidence_entity": 0.9134950637817383,
         "value": "cause_of_death",
         "extractor": "DIETClassifier",
         "processors": [
@@ -3955,7 +4289,7 @@
         "entity": "PERSON",
         "start": 40,
         "end": 55,
-        "confidence_entity": 0.9998613595962524,
+        "confidence_entity": 0.9998779296875,
         "value": "Natalie Jarecki",
         "extractor": "DIETClassifier"
       },
@@ -3989,7 +4323,7 @@
         "entity": "attribute",
         "start": 0,
         "end": 14,
-        "confidence_entity": 0.7036380171775818,
+        "confidence_entity": 0.8786430954933167,
         "value": "cause_of_death",
         "extractor": "DIETClassifier",
         "processors": [
@@ -4000,7 +4334,7 @@
         "entity": "PERSON",
         "start": 18,
         "end": 30,
-        "confidence_entity": 0.9998111128807068,
+        "confidence_entity": 0.9996521472930908,
         "value": "Irene Gaster",
         "extractor": "DIETClassifier"
       },
@@ -4028,7 +4362,7 @@
         "entity": "attribute",
         "start": 13,
         "end": 27,
-        "confidence_entity": 0.9488935470581055,
+        "confidence_entity": 0.9802365899085999,
         "value": "cause_of_death",
         "extractor": "DIETClassifier",
         "processors": [
@@ -4052,7 +4386,7 @@
         "entity": "attribute",
         "start": 22,
         "end": 36,
-        "confidence_entity": 0.9934438467025757,
+        "confidence_entity": 0.9974918365478516,
         "value": "cause_of_death",
         "extractor": "DIETClassifier",
         "processors": [
@@ -4088,7 +4422,7 @@
         "entity": "object_type",
         "start": 0,
         "end": 3,
-        "confidence_entity": 0.9998236298561096,
+        "confidence_entity": 0.9998346567153931,
         "value": "CAUSE",
         "extractor": "DIETClassifier",
         "processors": [
@@ -4099,7 +4433,7 @@
         "entity": "attribute",
         "start": 4,
         "end": 7,
-        "confidence_entity": 0.9997592568397522,
+        "confidence_entity": 0.9999077320098877,
         "value": "death",
         "extractor": "DIETClassifier",
         "processors": [
@@ -4110,7 +4444,7 @@
         "entity": "PERSON",
         "start": 8,
         "end": 23,
-        "confidence_entity": 0.9998065829277039,
+        "confidence_entity": 0.9997606873512268,
         "value": "Natalie Jarecki",
         "extractor": "DIETClassifier"
       },
@@ -4144,7 +4478,7 @@
         "entity": "object_type",
         "start": 0,
         "end": 3,
-        "confidence_entity": 0.999681830406189,
+        "confidence_entity": 0.9975366592407227,
         "value": "CAUSE",
         "extractor": "DIETClassifier",
         "processors": [
@@ -4155,7 +4489,7 @@
         "entity": "attribute",
         "start": 12,
         "end": 15,
-        "confidence_entity": 0.999923586845398,
+        "confidence_entity": 0.9999630451202393,
         "value": "death",
         "extractor": "DIETClassifier",
         "processors": [
@@ -4185,7 +4519,7 @@
         "entity": "attribute",
         "start": 0,
         "end": 10,
-        "confidence_entity": 0.9992967844009399,
+        "confidence_entity": 0.9999629259109497,
         "value": "cause_of_death",
         "extractor": "DIETClassifier",
         "processors": [
@@ -4196,7 +4530,7 @@
         "entity": "PERSON",
         "start": 11,
         "end": 26,
-        "confidence_entity": 0.9996570348739624,
+        "confidence_entity": 0.9996448755264282,
         "value": "Natalie Jarecki",
         "extractor": "DIETClassifier"
       },
@@ -4230,7 +4564,7 @@
         "entity": "PERSON",
         "start": 10,
         "end": 26,
-        "confidence_entity": 0.9999074935913086,
+        "confidence_entity": 0.9998562335968018,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       },
@@ -4238,7 +4572,7 @@
         "entity": "attribute",
         "start": 27,
         "end": 31,
-        "confidence_entity": 0.9995720982551575,
+        "confidence_entity": 0.999971866607666,
         "value": "residences",
         "extractor": "DIETClassifier",
         "processors": [
@@ -4268,7 +4602,7 @@
         "entity": "attribute",
         "start": 5,
         "end": 14,
-        "confidence_entity": 0.9999721050262451,
+        "confidence_entity": 0.9999687671661377,
         "value": "residences",
         "extractor": "DIETClassifier",
         "processors": [
@@ -4279,7 +4613,7 @@
         "entity": "PERSON",
         "start": 19,
         "end": 35,
-        "confidence_entity": 0.9999210834503174,
+        "confidence_entity": 0.9999200105667114,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       }
@@ -4306,7 +4640,7 @@
         "entity": "attribute",
         "start": 0,
         "end": 10,
-        "confidence_entity": 0.9996708631515503,
+        "confidence_entity": 0.9999080896377563,
         "value": "residences",
         "extractor": "DIETClassifier"
       },
@@ -4314,7 +4648,7 @@
         "entity": "PERSON",
         "start": 14,
         "end": 30,
-        "confidence_entity": 0.9999147653579712,
+        "confidence_entity": 0.999956488609314,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       },
@@ -4348,7 +4682,7 @@
         "entity": "attribute",
         "start": 6,
         "end": 16,
-        "confidence_entity": 0.9999396800994873,
+        "confidence_entity": 0.9999680519104004,
         "value": "residences",
         "extractor": "DIETClassifier"
       },
@@ -4356,7 +4690,7 @@
         "entity": "PERSON",
         "start": 21,
         "end": 37,
-        "confidence_entity": 0.9999061822891235,
+        "confidence_entity": 0.9999452829360962,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       },
@@ -4390,7 +4724,7 @@
         "entity": "attribute",
         "start": 10,
         "end": 20,
-        "confidence_entity": 0.9997718930244446,
+        "confidence_entity": 0.999962329864502,
         "value": "residences",
         "extractor": "DIETClassifier"
       },
@@ -4398,7 +4732,7 @@
         "entity": "PERSON",
         "start": 26,
         "end": 42,
-        "confidence_entity": 0.9998681545257568,
+        "confidence_entity": 0.9999525547027588,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       },
@@ -4432,7 +4766,7 @@
         "entity": "PERSON",
         "start": 22,
         "end": 38,
-        "confidence_entity": 0.9999016523361206,
+        "confidence_entity": 0.9999375343322754,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       },
@@ -4440,7 +4774,7 @@
         "entity": "attribute",
         "start": 39,
         "end": 44,
-        "confidence_entity": 0.9999579191207886,
+        "confidence_entity": 0.9999839067459106,
         "value": "residences",
         "extractor": "DIETClassifier",
         "processors": [
@@ -4470,7 +4804,7 @@
         "entity": "PERSON",
         "start": 10,
         "end": 23,
-        "confidence_entity": 0.9999277591705322,
+        "confidence_entity": 0.9998902082443237,
         "value": "Rachel Ellern",
         "extractor": "DIETClassifier"
       },
@@ -4478,7 +4812,7 @@
         "entity": "attribute",
         "start": 24,
         "end": 29,
-        "confidence_entity": 0.9999758005142212,
+        "confidence_entity": 0.9999741315841675,
         "value": "residences",
         "extractor": "DIETClassifier",
         "processors": [
@@ -4502,7 +4836,7 @@
         "entity": "attribute",
         "start": 26,
         "end": 31,
-        "confidence_entity": 0.9999631643295288,
+        "confidence_entity": 0.9999406337738037,
         "value": "residences",
         "extractor": "DIETClassifier",
         "processors": [
@@ -4526,7 +4860,7 @@
         "entity": "attribute",
         "start": 41,
         "end": 46,
-        "confidence_entity": 0.9999524354934692,
+        "confidence_entity": 0.9999227523803711,
         "value": "residences",
         "extractor": "DIETClassifier",
         "processors": [
@@ -4556,7 +4890,7 @@
         "entity": "attribute",
         "start": 14,
         "end": 23,
-        "confidence_entity": 0.9988119602203369,
+        "confidence_entity": 0.9998800754547119,
         "value": "residences",
         "extractor": "DIETClassifier",
         "processors": [
@@ -4567,7 +4901,7 @@
         "entity": "PERSON",
         "start": 27,
         "end": 41,
-        "confidence_entity": 0.9999392032623291,
+        "confidence_entity": 0.9997914433479309,
         "value": "Benjamin Jonas",
         "extractor": "DIETClassifier"
       },
@@ -4601,7 +4935,7 @@
         "entity": "attribute",
         "start": 14,
         "end": 18,
-        "confidence_entity": 0.9991734623908997,
+        "confidence_entity": 0.9999690055847168,
         "value": "residences",
         "extractor": "DIETClassifier",
         "processors": [
@@ -4612,7 +4946,7 @@
         "entity": "PERSON",
         "start": 22,
         "end": 36,
-        "confidence_entity": 0.9999420642852783,
+        "confidence_entity": 0.9998971223831177,
         "value": "Benjamin Jonas",
         "extractor": "DIETClassifier"
       },
@@ -4646,7 +4980,7 @@
         "entity": "attribute",
         "start": 0,
         "end": 19,
-        "confidence_entity": 0.9622648358345032,
+        "confidence_entity": 0.9891912341117859,
         "value": "cities_of_residence",
         "extractor": "DIETClassifier",
         "processors": [
@@ -4657,7 +4991,7 @@
         "entity": "PERSON",
         "start": 20,
         "end": 36,
-        "confidence_entity": 0.9998843669891357,
+        "confidence_entity": 0.999761164188385,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       }
@@ -4684,7 +5018,7 @@
         "entity": "attribute",
         "start": 13,
         "end": 24,
-        "confidence_entity": 0.9920352101325989,
+        "confidence_entity": 0.994460940361023,
         "value": "cities_of_residence",
         "extractor": "DIETClassifier",
         "processors": [
@@ -4695,7 +5029,7 @@
         "entity": "PERSON",
         "start": 25,
         "end": 41,
-        "confidence_entity": 0.9998289346694946,
+        "confidence_entity": 0.9999135732650757,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       }
@@ -4722,7 +5056,7 @@
         "entity": "attribute",
         "start": 13,
         "end": 32,
-        "confidence_entity": 0.9341998100280762,
+        "confidence_entity": 0.9549184441566467,
         "value": "cities_of_residence",
         "extractor": "DIETClassifier",
         "processors": [
@@ -4733,7 +5067,7 @@
         "entity": "PERSON",
         "start": 38,
         "end": 50,
-        "confidence_entity": 0.9996091723442078,
+        "confidence_entity": 0.99964439868927,
         "value": "Irene Gaster",
         "extractor": "DIETClassifier"
       },
@@ -4767,7 +5101,7 @@
         "entity": "attribute",
         "start": 23,
         "end": 42,
-        "confidence_entity": 0.8435844779014587,
+        "confidence_entity": 0.9258185029029846,
         "value": "cities_of_residence",
         "extractor": "DIETClassifier",
         "processors": [
@@ -4778,7 +5112,7 @@
         "entity": "PERSON",
         "start": 46,
         "end": 60,
-        "confidence_entity": 0.9998807907104492,
+        "confidence_entity": 0.9998829364776611,
         "value": "Benjamin Jonas",
         "extractor": "DIETClassifier"
       },
@@ -4812,7 +5146,7 @@
         "entity": "attribute",
         "start": 15,
         "end": 32,
-        "confidence_entity": 0.9465112090110779,
+        "confidence_entity": 0.9789495468139648,
         "value": "cities_of_residence",
         "extractor": "DIETClassifier",
         "processors": [
@@ -4823,7 +5157,7 @@
         "entity": "PERSON",
         "start": 33,
         "end": 49,
-        "confidence_entity": 0.9990249872207642,
+        "confidence_entity": 0.9980220794677734,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       }
@@ -4850,7 +5184,7 @@
         "entity": "attribute",
         "start": 9,
         "end": 18,
-        "confidence_entity": 0.9991325736045837,
+        "confidence_entity": 0.9996944665908813,
         "value": "countries_of_residence",
         "extractor": "DIETClassifier",
         "processors": [
@@ -4861,7 +5195,7 @@
         "entity": "PERSON",
         "start": 23,
         "end": 39,
-        "confidence_entity": 0.9999139308929443,
+        "confidence_entity": 0.9998780488967896,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       }
@@ -4888,7 +5222,7 @@
         "entity": "attribute",
         "start": 13,
         "end": 22,
-        "confidence_entity": 0.9997072815895081,
+        "confidence_entity": 0.9998722076416016,
         "value": "countries_of_residence",
         "extractor": "DIETClassifier",
         "processors": [
@@ -4899,7 +5233,7 @@
         "entity": "PERSON",
         "start": 29,
         "end": 45,
-        "confidence_entity": 0.9998769760131836,
+        "confidence_entity": 0.9999434947967529,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       }
@@ -4926,7 +5260,7 @@
         "entity": "attribute",
         "start": 5,
         "end": 27,
-        "confidence_entity": 0.7115285396575928,
+        "confidence_entity": 0.8561336398124695,
         "value": "countries_of_residence",
         "extractor": "DIETClassifier",
         "processors": [
@@ -4937,7 +5271,7 @@
         "entity": "PERSON",
         "start": 31,
         "end": 43,
-        "confidence_entity": 0.9997372031211853,
+        "confidence_entity": 0.9994623064994812,
         "value": "Irene Gaster",
         "extractor": "DIETClassifier"
       },
@@ -4971,7 +5305,7 @@
         "entity": "attribute",
         "start": 23,
         "end": 45,
-        "confidence_entity": 0.8792409300804138,
+        "confidence_entity": 0.9366385340690613,
         "value": "countries_of_residence",
         "extractor": "DIETClassifier",
         "processors": [
@@ -4982,7 +5316,7 @@
         "entity": "PERSON",
         "start": 49,
         "end": 63,
-        "confidence_entity": 0.9998815059661865,
+        "confidence_entity": 0.9998716115951538,
         "value": "Benjamin Jonas",
         "extractor": "DIETClassifier"
       },
@@ -5016,7 +5350,7 @@
         "entity": "attribute",
         "start": 13,
         "end": 21,
-        "confidence_entity": 0.9999780654907227,
+        "confidence_entity": 0.9999924898147583,
         "value": "siblings",
         "extractor": "DIETClassifier",
         "processors": [
@@ -5027,7 +5361,7 @@
         "entity": "PERSON",
         "start": 25,
         "end": 38,
-        "confidence_entity": 0.9998658895492554,
+        "confidence_entity": 0.9999216794967651,
         "value": "Rachel Ellern",
         "extractor": "DIETClassifier"
       },
@@ -5061,7 +5395,7 @@
         "entity": "attribute",
         "start": 12,
         "end": 20,
-        "confidence_entity": 0.9999716281890869,
+        "confidence_entity": 0.9999902248382568,
         "value": "siblings",
         "extractor": "DIETClassifier",
         "processors": [
@@ -5072,7 +5406,7 @@
         "entity": "PERSON",
         "start": 24,
         "end": 37,
-        "confidence_entity": 0.9998869895935059,
+        "confidence_entity": 0.999924898147583,
         "value": "Rachel Ellern",
         "extractor": "DIETClassifier"
       },
@@ -5106,7 +5440,7 @@
         "entity": "attribute",
         "start": 0,
         "end": 8,
-        "confidence_entity": 0.9999594688415527,
+        "confidence_entity": 0.9999659061431885,
         "value": "siblings",
         "extractor": "DIETClassifier",
         "processors": [
@@ -5117,7 +5451,7 @@
         "entity": "PERSON",
         "start": 12,
         "end": 25,
-        "confidence_entity": 0.9999313354492188,
+        "confidence_entity": 0.9999340772628784,
         "value": "Rachel Ellern",
         "extractor": "DIETClassifier"
       }
@@ -5144,7 +5478,7 @@
         "entity": "attribute",
         "start": 22,
         "end": 30,
-        "confidence_entity": 0.9999594688415527,
+        "confidence_entity": 0.9999879598617554,
         "value": "siblings",
         "extractor": "DIETClassifier",
         "processors": [
@@ -5155,7 +5489,7 @@
         "entity": "PERSON",
         "start": 34,
         "end": 47,
-        "confidence_entity": 0.999893069267273,
+        "confidence_entity": 0.9999178647994995,
         "value": "Rachel Ellern",
         "extractor": "DIETClassifier"
       },
@@ -5189,7 +5523,7 @@
         "entity": "attribute",
         "start": 33,
         "end": 41,
-        "confidence_entity": 0.9999872446060181,
+        "confidence_entity": 0.9999816417694092,
         "value": "siblings",
         "extractor": "DIETClassifier",
         "processors": [
@@ -5200,7 +5534,7 @@
         "entity": "PERSON",
         "start": 45,
         "end": 61,
-        "confidence_entity": 0.9997515082359314,
+        "confidence_entity": 0.999909520149231,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       },
@@ -5234,7 +5568,7 @@
         "entity": "attribute",
         "start": 19,
         "end": 27,
-        "confidence_entity": 0.9997888207435608,
+        "confidence_entity": 0.9999778270721436,
         "value": "children",
         "extractor": "DIETClassifier"
       },
@@ -5242,7 +5576,7 @@
         "entity": "PERSON",
         "start": 31,
         "end": 44,
-        "confidence_entity": 0.999945878982544,
+        "confidence_entity": 0.9999241828918457,
         "value": "Rachel Ellern",
         "extractor": "DIETClassifier"
       },
@@ -5276,7 +5610,7 @@
         "entity": "attribute",
         "start": 13,
         "end": 21,
-        "confidence_entity": 0.999862551689148,
+        "confidence_entity": 0.9999634027481079,
         "value": "children",
         "extractor": "DIETClassifier"
       },
@@ -5284,7 +5618,7 @@
         "entity": "PERSON",
         "start": 25,
         "end": 38,
-        "confidence_entity": 0.9999229907989502,
+        "confidence_entity": 0.9999179840087891,
         "value": "Rachel Ellern",
         "extractor": "DIETClassifier"
       },
@@ -5318,7 +5652,7 @@
         "entity": "attribute",
         "start": 22,
         "end": 30,
-        "confidence_entity": 0.9997060894966125,
+        "confidence_entity": 0.9999730587005615,
         "value": "children",
         "extractor": "DIETClassifier"
       },
@@ -5326,7 +5660,7 @@
         "entity": "PERSON",
         "start": 34,
         "end": 47,
-        "confidence_entity": 0.9999299049377441,
+        "confidence_entity": 0.9999178647994995,
         "value": "Rachel Ellern",
         "extractor": "DIETClassifier"
       },
@@ -5360,7 +5694,7 @@
         "entity": "attribute",
         "start": 21,
         "end": 29,
-        "confidence_entity": 0.9997095465660095,
+        "confidence_entity": 0.9999557733535767,
         "value": "children",
         "extractor": "DIETClassifier"
       },
@@ -5368,7 +5702,7 @@
         "entity": "PERSON",
         "start": 33,
         "end": 46,
-        "confidence_entity": 0.99985671043396,
+        "confidence_entity": 0.9999091625213623,
         "value": "Rachel Ellern",
         "extractor": "DIETClassifier"
       },
@@ -5402,7 +5736,7 @@
         "entity": "attribute",
         "start": 9,
         "end": 17,
-        "confidence_entity": 0.9998334646224976,
+        "confidence_entity": 0.9999767541885376,
         "value": "children",
         "extractor": "DIETClassifier"
       },
@@ -5410,7 +5744,7 @@
         "entity": "PERSON",
         "start": 21,
         "end": 33,
-        "confidence_entity": 0.9999024868011475,
+        "confidence_entity": 0.999884843826294,
         "value": "Rachel Ellen",
         "extractor": "DIETClassifier"
       },
@@ -5450,7 +5784,7 @@
         "entity": "object_type",
         "start": 0,
         "end": 3,
-        "confidence_entity": 0.9965403079986572,
+        "confidence_entity": 0.9996418952941895,
         "value": "PERSON",
         "extractor": "DIETClassifier",
         "processors": [
@@ -5461,7 +5795,7 @@
         "entity": "attribute",
         "start": 12,
         "end": 18,
-        "confidence_entity": 0.9999499320983887,
+        "confidence_entity": 0.9998598098754883,
         "value": "spouse",
         "extractor": "DIETClassifier",
         "processors": [
@@ -5472,7 +5806,7 @@
         "entity": "PERSON",
         "start": 22,
         "end": 35,
-        "confidence_entity": 0.9999127388000488,
+        "confidence_entity": 0.9999146461486816,
         "value": "Rachel Ellern",
         "extractor": "DIETClassifier"
       },
@@ -5506,7 +5840,7 @@
         "entity": "PERSON",
         "start": 22,
         "end": 35,
-        "confidence_entity": 0.9998072981834412,
+        "confidence_entity": 0.9997302889823914,
         "value": "Rachel Ellern",
         "extractor": "DIETClassifier"
       },
@@ -5514,7 +5848,7 @@
         "entity": "attribute",
         "start": 36,
         "end": 43,
-        "confidence_entity": 0.9997549653053284,
+        "confidence_entity": 0.9998496770858765,
         "value": "spouse",
         "extractor": "DIETClassifier",
         "processors": [
@@ -5544,7 +5878,7 @@
         "entity": "attribute",
         "start": 0,
         "end": 6,
-        "confidence_entity": 0.9998717308044434,
+        "confidence_entity": 0.9995840191841125,
         "value": "spouse",
         "extractor": "DIETClassifier",
         "processors": [
@@ -5555,7 +5889,7 @@
         "entity": "PERSON",
         "start": 10,
         "end": 22,
-        "confidence_entity": 0.9999226331710815,
+        "confidence_entity": 0.9997848868370056,
         "value": "Rachel Ellen",
         "extractor": "DIETClassifier"
       }
@@ -5582,7 +5916,7 @@
         "entity": "attribute",
         "start": 20,
         "end": 26,
-        "confidence_entity": 0.9998940229415894,
+        "confidence_entity": 0.9998427629470825,
         "value": "spouse",
         "extractor": "DIETClassifier",
         "processors": [
@@ -5593,7 +5927,7 @@
         "entity": "PERSON",
         "start": 30,
         "end": 42,
-        "confidence_entity": 0.9998774528503418,
+        "confidence_entity": 0.9998898506164551,
         "value": "Rachel Ellen",
         "extractor": "DIETClassifier"
       },
@@ -5627,7 +5961,7 @@
         "entity": "attribute",
         "start": 31,
         "end": 37,
-        "confidence_entity": 0.9999407529830933,
+        "confidence_entity": 0.9998291730880737,
         "value": "spouse",
         "extractor": "DIETClassifier",
         "processors": [
@@ -5638,7 +5972,7 @@
         "entity": "PERSON",
         "start": 41,
         "end": 57,
-        "confidence_entity": 0.9997486472129822,
+        "confidence_entity": 0.9995995163917542,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       },
@@ -5678,7 +6012,7 @@
         "entity": "object_type",
         "start": 0,
         "end": 3,
-        "confidence_entity": 0.9973658919334412,
+        "confidence_entity": 0.9995761513710022,
         "value": "PERSON",
         "extractor": "DIETClassifier",
         "processors": [
@@ -5689,7 +6023,7 @@
         "entity": "attribute",
         "start": 12,
         "end": 19,
-        "confidence_entity": 0.9983927607536316,
+        "confidence_entity": 0.9999558925628662,
         "value": "spouse",
         "extractor": "DIETClassifier",
         "processors": [
@@ -5700,7 +6034,7 @@
         "entity": "PERSON",
         "start": 23,
         "end": 39,
-        "confidence_entity": 0.9999217987060547,
+        "confidence_entity": 0.9999432563781738,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       }
@@ -5727,7 +6061,7 @@
         "entity": "PERSON",
         "start": 12,
         "end": 26,
-        "confidence_entity": 0.9999021291732788,
+        "confidence_entity": 0.9998956918716431,
         "value": "Benjamin Jonas",
         "extractor": "DIETClassifier"
       },
@@ -5735,7 +6069,7 @@
         "entity": "attribute",
         "start": 27,
         "end": 34,
-        "confidence_entity": 0.9998880624771118,
+        "confidence_entity": 0.9999192953109741,
         "value": "spouse",
         "extractor": "DIETClassifier",
         "processors": [
@@ -5772,7 +6106,7 @@
         "entity": "attribute",
         "start": 13,
         "end": 32,
-        "confidence_entity": 0.9998340606689453,
+        "confidence_entity": 0.9996116757392883,
         "value": "other_family",
         "extractor": "DIETClassifier",
         "processors": [
@@ -5783,7 +6117,7 @@
         "entity": "PERSON",
         "start": 36,
         "end": 48,
-        "confidence_entity": 0.9997884631156921,
+        "confidence_entity": 0.9998281002044678,
         "value": "Rachel Ellen",
         "extractor": "DIETClassifier"
       }
@@ -5810,7 +6144,7 @@
         "entity": "attribute",
         "start": 23,
         "end": 42,
-        "confidence_entity": 0.9998273253440857,
+        "confidence_entity": 0.9989697933197021,
         "value": "other_family",
         "extractor": "DIETClassifier",
         "processors": [
@@ -5821,7 +6155,7 @@
         "entity": "PERSON",
         "start": 46,
         "end": 58,
-        "confidence_entity": 0.9998600482940674,
+        "confidence_entity": 0.9998643398284912,
         "value": "Rachel Ellen",
         "extractor": "DIETClassifier"
       }
@@ -5848,7 +6182,7 @@
         "entity": "attribute",
         "start": 20,
         "end": 39,
-        "confidence_entity": 0.9998331069946289,
+        "confidence_entity": 0.9995367527008057,
         "value": "other_family",
         "extractor": "DIETClassifier",
         "processors": [
@@ -5859,7 +6193,7 @@
         "entity": "PERSON",
         "start": 43,
         "end": 55,
-        "confidence_entity": 0.9998683929443359,
+        "confidence_entity": 0.9998605251312256,
         "value": "Rachel Ellen",
         "extractor": "DIETClassifier"
       }
@@ -5886,7 +6220,7 @@
         "entity": "attribute",
         "start": 0,
         "end": 18,
-        "confidence_entity": 0.999695897102356,
+        "confidence_entity": 0.9998821020126343,
         "value": "other_family",
         "extractor": "DIETClassifier",
         "processors": [
@@ -5897,7 +6231,7 @@
         "entity": "PERSON",
         "start": 22,
         "end": 34,
-        "confidence_entity": 0.9998286962509155,
+        "confidence_entity": 0.9997859597206116,
         "value": "Rachel Ellen",
         "extractor": "DIETClassifier"
       }
@@ -5924,7 +6258,7 @@
         "entity": "attribute",
         "start": 12,
         "end": 18,
-        "confidence_entity": 0.9999805688858032,
+        "confidence_entity": 0.9999959468841553,
         "value": "family",
         "extractor": "DIETClassifier",
         "processors": [
@@ -5935,7 +6269,7 @@
         "entity": "PERSON",
         "start": 22,
         "end": 38,
-        "confidence_entity": 0.9998995065689087,
+        "confidence_entity": 0.9999268054962158,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       },
@@ -5969,7 +6303,7 @@
         "entity": "attribute",
         "start": 23,
         "end": 36,
-        "confidence_entity": 0.9988011121749878,
+        "confidence_entity": 0.999725878238678,
         "value": "family",
         "extractor": "DIETClassifier",
         "processors": [
@@ -5980,7 +6314,7 @@
         "entity": "PERSON",
         "start": 40,
         "end": 52,
-        "confidence_entity": 0.9999052286148071,
+        "confidence_entity": 0.9998791217803955,
         "value": "Rachel Barak",
         "extractor": "DIETClassifier"
       }
@@ -6007,7 +6341,7 @@
         "entity": "attribute",
         "start": 20,
         "end": 33,
-        "confidence_entity": 0.9980611205101013,
+        "confidence_entity": 0.9997442364692688,
         "value": "family",
         "extractor": "DIETClassifier",
         "processors": [
@@ -6018,7 +6352,7 @@
         "entity": "PERSON",
         "start": 37,
         "end": 49,
-        "confidence_entity": 0.9999063014984131,
+        "confidence_entity": 0.9998793601989746,
         "value": "Rachel Barak",
         "extractor": "DIETClassifier"
       }
@@ -6045,7 +6379,7 @@
         "entity": "attribute",
         "start": 0,
         "end": 6,
-        "confidence_entity": 0.9998693466186523,
+        "confidence_entity": 0.9999740123748779,
         "value": "family",
         "extractor": "DIETClassifier",
         "processors": [
@@ -6056,7 +6390,7 @@
         "entity": "PERSON",
         "start": 10,
         "end": 24,
-        "confidence_entity": 0.9999189376831055,
+        "confidence_entity": 0.9997715353965759,
         "value": "Benjamin Jonas",
         "extractor": "DIETClassifier"
       },
@@ -6096,7 +6430,7 @@
         "entity": "object_type",
         "start": 0,
         "end": 3,
-        "confidence_entity": 0.9993168115615845,
+        "confidence_entity": 0.9997743964195251,
         "value": "PERSON",
         "extractor": "DIETClassifier",
         "processors": [
@@ -6107,7 +6441,7 @@
         "entity": "attribute",
         "start": 13,
         "end": 20,
-        "confidence_entity": 0.9996808767318726,
+        "confidence_entity": 0.9999760389328003,
         "value": "parents",
         "extractor": "DIETClassifier",
         "processors": [
@@ -6118,7 +6452,7 @@
         "entity": "PERSON",
         "start": 24,
         "end": 36,
-        "confidence_entity": 0.9999189376831055,
+        "confidence_entity": 0.9999098777770996,
         "value": "Rachel Barak",
         "extractor": "DIETClassifier"
       },
@@ -6152,7 +6486,7 @@
         "entity": "attribute",
         "start": 0,
         "end": 7,
-        "confidence_entity": 0.9998565912246704,
+        "confidence_entity": 0.9997051358222961,
         "value": "parents",
         "extractor": "DIETClassifier",
         "processors": [
@@ -6163,7 +6497,7 @@
         "entity": "PERSON",
         "start": 11,
         "end": 27,
-        "confidence_entity": 0.9997718930244446,
+        "confidence_entity": 0.9999390840530396,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       }
@@ -6190,7 +6524,7 @@
         "entity": "attribute",
         "start": 12,
         "end": 18,
-        "confidence_entity": 0.9999027252197266,
+        "confidence_entity": 0.9999464750289917,
         "value": "parents",
         "extractor": "DIETClassifier",
         "processors": [
@@ -6201,7 +6535,7 @@
         "entity": "PERSON",
         "start": 22,
         "end": 38,
-        "confidence_entity": 0.9998706579208374,
+        "confidence_entity": 0.9999381303787231,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       }
@@ -6228,7 +6562,7 @@
         "entity": "object_type",
         "start": 0,
         "end": 3,
-        "confidence_entity": 0.9984346032142639,
+        "confidence_entity": 0.9997528195381165,
         "value": "PERSON",
         "extractor": "DIETClassifier",
         "processors": [
@@ -6239,7 +6573,7 @@
         "entity": "PERSON",
         "start": 65,
         "end": 81,
-        "confidence_entity": 0.9958378076553345,
+        "confidence_entity": 0.9996548891067505,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       },
@@ -6279,7 +6613,7 @@
         "entity": "object_type",
         "start": 0,
         "end": 3,
-        "confidence_entity": 0.9977484345436096,
+        "confidence_entity": 0.9992547631263733,
         "value": "PERSON",
         "extractor": "DIETClassifier",
         "processors": [
@@ -6290,7 +6624,7 @@
         "entity": "attribute",
         "start": 12,
         "end": 18,
-        "confidence_entity": 0.9997310042381287,
+        "confidence_entity": 0.999954342842102,
         "value": "parents",
         "extractor": "DIETClassifier",
         "processors": [
@@ -6301,7 +6635,7 @@
         "entity": "PERSON",
         "start": 22,
         "end": 38,
-        "confidence_entity": 0.9999127388000488,
+        "confidence_entity": 0.9999313354492188,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       }
@@ -6334,7 +6668,7 @@
         "entity": "object_type",
         "start": 0,
         "end": 3,
-        "confidence_entity": 0.999495267868042,
+        "confidence_entity": 0.9995829463005066,
         "value": "PERSON",
         "extractor": "DIETClassifier",
         "processors": [
@@ -6345,7 +6679,7 @@
         "entity": "PERSON",
         "start": 9,
         "end": 26,
-        "confidence_entity": 0.9998052716255188,
+        "confidence_entity": 0.9998806715011597,
         "value": "Bertha Pappenheim",
         "extractor": "DIETClassifier"
       },
@@ -6353,7 +6687,7 @@
         "entity": "attribute",
         "start": 29,
         "end": 36,
-        "confidence_entity": 0.9995903372764587,
+        "confidence_entity": 0.9999698400497437,
         "value": "parents",
         "extractor": "DIETClassifier",
         "processors": [
@@ -6397,7 +6731,7 @@
         "entity": "attribute",
         "start": 12,
         "end": 17,
-        "confidence_entity": 0.9999614953994751,
+        "confidence_entity": 0.9999761581420898,
         "value": "title",
         "extractor": "DIETClassifier"
       },
@@ -6405,7 +6739,7 @@
         "entity": "PERSON",
         "start": 21,
         "end": 37,
-        "confidence_entity": 0.9999287128448486,
+        "confidence_entity": 0.9999268054962158,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       },
@@ -6433,7 +6767,7 @@
         "entity": "attribute",
         "start": 22,
         "end": 25,
-        "confidence_entity": 0.9994502663612366,
+        "confidence_entity": 0.9999752044677734,
         "value": "title",
         "extractor": "DIETClassifier",
         "processors": [
@@ -6463,7 +6797,7 @@
         "entity": "PERSON",
         "start": 9,
         "end": 26,
-        "confidence_entity": 0.9997976422309875,
+        "confidence_entity": 0.9998536109924316,
         "value": "Bertha Pappenheim",
         "extractor": "DIETClassifier"
       },
@@ -6471,7 +6805,7 @@
         "entity": "attribute",
         "start": 27,
         "end": 29,
-        "confidence_entity": 0.994220495223999,
+        "confidence_entity": 0.9997993111610413,
         "value": "title",
         "extractor": "DIETClassifier",
         "processors": [
@@ -6508,7 +6842,7 @@
         "entity": "PERSON",
         "start": 9,
         "end": 26,
-        "confidence_entity": 0.9998289346694946,
+        "confidence_entity": 0.9998354911804199,
         "value": "Bertha Pappenheim",
         "extractor": "DIETClassifier"
       },
@@ -6516,7 +6850,7 @@
         "entity": "attribute",
         "start": 27,
         "end": 38,
-        "confidence_entity": 0.9867715239524841,
+        "confidence_entity": 0.959801435470581,
         "value": "title",
         "extractor": "DIETClassifier",
         "processors": [
@@ -6547,7 +6881,7 @@
         "entity": "attribute",
         "start": 13,
         "end": 15,
-        "confidence_entity": 0.9990873336791992,
+        "confidence_entity": 0.998349666595459,
         "value": "title",
         "extractor": "DIETClassifier",
         "processors": [
@@ -6571,7 +6905,7 @@
         "entity": "attribute",
         "start": 12,
         "end": 22,
-        "confidence_entity": 0.9931614398956299,
+        "confidence_entity": 0.9587357640266418,
         "value": "title",
         "extractor": "DIETClassifier",
         "processors": [
@@ -6601,7 +6935,7 @@
         "entity": "PERSON",
         "start": 10,
         "end": 22,
-        "confidence_entity": 0.9997707009315491,
+        "confidence_entity": 0.9998120665550232,
         "value": "Rachel Barak",
         "extractor": "DIETClassifier"
       },
@@ -6609,7 +6943,7 @@
         "entity": "attribute",
         "start": 27,
         "end": 33,
-        "confidence_entity": 0.9999097585678101,
+        "confidence_entity": 0.9999675750732422,
         "value": "origin",
         "extractor": "DIETClassifier",
         "processors": [
@@ -6646,7 +6980,7 @@
         "entity": "PERSON",
         "start": 24,
         "end": 40,
-        "confidence_entity": 0.9998708963394165,
+        "confidence_entity": 0.9998760223388672,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       },
@@ -6654,7 +6988,7 @@
         "entity": "attribute",
         "start": 49,
         "end": 55,
-        "confidence_entity": 0.9999768733978271,
+        "confidence_entity": 0.9999759197235107,
         "value": "origin",
         "extractor": "DIETClassifier",
         "processors": [
@@ -6691,7 +7025,7 @@
         "entity": "attribute",
         "start": 0,
         "end": 6,
-        "confidence_entity": 0.9999257326126099,
+        "confidence_entity": 0.9996436834335327,
         "value": "origin",
         "extractor": "DIETClassifier",
         "processors": [
@@ -6702,7 +7036,7 @@
         "entity": "PERSON",
         "start": 11,
         "end": 27,
-        "confidence_entity": 0.9999161958694458,
+        "confidence_entity": 0.9999102354049683,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       }
@@ -6729,7 +7063,7 @@
         "entity": "attribute",
         "start": 6,
         "end": 21,
-        "confidence_entity": 0.9984525442123413,
+        "confidence_entity": 0.9619479179382324,
         "value": "alternate_name",
         "extractor": "DIETClassifier",
         "processors": [
@@ -6740,7 +7074,7 @@
         "entity": "PERSON",
         "start": 26,
         "end": 42,
-        "confidence_entity": 0.9999001026153564,
+        "confidence_entity": 0.9998655319213867,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       }
@@ -6767,7 +7101,7 @@
         "entity": "attribute",
         "start": 12,
         "end": 27,
-        "confidence_entity": 0.9999703168869019,
+        "confidence_entity": 0.9999271631240845,
         "value": "alternate_name",
         "extractor": "DIETClassifier",
         "processors": [
@@ -6778,7 +7112,7 @@
         "entity": "PERSON",
         "start": 31,
         "end": 45,
-        "confidence_entity": 0.9999237060546875,
+        "confidence_entity": 0.9998804330825806,
         "value": "Benjamin Jonas",
         "extractor": "DIETClassifier"
       },
@@ -6812,7 +7146,7 @@
         "entity": "attribute",
         "start": 20,
         "end": 34,
-        "confidence_entity": 0.9999532699584961,
+        "confidence_entity": 0.9997844099998474,
         "value": "alternate_name",
         "extractor": "DIETClassifier"
       },
@@ -6820,7 +7154,7 @@
         "entity": "PERSON",
         "start": 38,
         "end": 48,
-        "confidence_entity": 0.9999064207077026,
+        "confidence_entity": 0.9998664855957031,
         "value": "Ruth Barak",
         "extractor": "DIETClassifier"
       },
@@ -6854,7 +7188,7 @@
         "entity": "PERSON",
         "start": 21,
         "end": 37,
-        "confidence_entity": 0.9999234676361084,
+        "confidence_entity": 0.9998685121536255,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       },
@@ -6862,7 +7196,7 @@
         "entity": "attribute",
         "start": 40,
         "end": 50,
-        "confidence_entity": 0.9998849630355835,
+        "confidence_entity": 0.9998125433921814,
         "value": "top_members_employees",
         "extractor": "DIETClassifier",
         "processors": [
@@ -6899,7 +7233,7 @@
         "entity": "PERSON",
         "start": 25,
         "end": 41,
-        "confidence_entity": 0.9999051094055176,
+        "confidence_entity": 0.9998934268951416,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       },
@@ -6907,7 +7241,7 @@
         "entity": "attribute",
         "start": 48,
         "end": 58,
-        "confidence_entity": 0.9998410940170288,
+        "confidence_entity": 0.9998806715011597,
         "value": "top_members_employees",
         "extractor": "DIETClassifier",
         "processors": [
@@ -6944,7 +7278,7 @@
         "entity": "PERSON",
         "start": 27,
         "end": 43,
-        "confidence_entity": 0.999920129776001,
+        "confidence_entity": 0.9999175071716309,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       },
@@ -6952,7 +7286,7 @@
         "entity": "attribute",
         "start": 46,
         "end": 56,
-        "confidence_entity": 0.9996809959411621,
+        "confidence_entity": 0.9997671246528625,
         "value": "top_members_employees",
         "extractor": "DIETClassifier",
         "processors": [
@@ -6989,7 +7323,7 @@
         "entity": "PERSON",
         "start": 40,
         "end": 54,
-        "confidence_entity": 0.9998717308044434,
+        "confidence_entity": 0.999849796295166,
         "value": "Benjamin Jonas",
         "extractor": "DIETClassifier"
       },
@@ -6997,7 +7331,7 @@
         "entity": "attribute",
         "start": 61,
         "end": 71,
-        "confidence_entity": 0.9964337348937988,
+        "confidence_entity": 0.9991281628608704,
         "value": "top_members_employees",
         "extractor": "DIETClassifier",
         "processors": [
@@ -7041,7 +7375,7 @@
         "entity": "PERSON",
         "start": 21,
         "end": 35,
-        "confidence_entity": 0.9999150037765503,
+        "confidence_entity": 0.9999021291732788,
         "value": "Benjamin Jonas",
         "extractor": "DIETClassifier"
       },
@@ -7049,7 +7383,7 @@
         "entity": "attribute",
         "start": 36,
         "end": 42,
-        "confidence_entity": 0.9989385008811951,
+        "confidence_entity": 0.9983807802200317,
         "value": "member",
         "extractor": "DIETClassifier",
         "processors": [
@@ -7086,7 +7420,7 @@
         "entity": "PERSON",
         "start": 42,
         "end": 58,
-        "confidence_entity": 0.9998713731765747,
+        "confidence_entity": 0.9999148845672607,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       },
@@ -7094,7 +7428,7 @@
         "entity": "attribute",
         "start": 59,
         "end": 65,
-        "confidence_entity": 0.9998175501823425,
+        "confidence_entity": 0.999948263168335,
         "value": "member",
         "extractor": "DIETClassifier",
         "processors": [
@@ -7124,7 +7458,7 @@
         "entity": "PERSON",
         "start": 25,
         "end": 39,
-        "confidence_entity": 0.9998719692230225,
+        "confidence_entity": 0.9998606443405151,
         "value": "Benjamin Jonas",
         "extractor": "DIETClassifier"
       },
@@ -7132,7 +7466,7 @@
         "entity": "attribute",
         "start": 46,
         "end": 56,
-        "confidence_entity": 0.9999356269836426,
+        "confidence_entity": 0.999903678894043,
         "value": "member",
         "extractor": "DIETClassifier",
         "processors": [
@@ -7169,7 +7503,7 @@
         "entity": "attribute",
         "start": 6,
         "end": 17,
-        "confidence_entity": 0.9972327351570129,
+        "confidence_entity": 0.9946387410163879,
         "value": "schools_attended",
         "extractor": "DIETClassifier",
         "processors": [
@@ -7180,7 +7514,7 @@
         "entity": "PERSON",
         "start": 18,
         "end": 34,
-        "confidence_entity": 0.9998643398284912,
+        "confidence_entity": 0.9998573064804077,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       }
@@ -7207,7 +7541,7 @@
         "entity": "PERSON",
         "start": 10,
         "end": 26,
-        "confidence_entity": 0.9999527931213379,
+        "confidence_entity": 0.999854564666748,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       },
@@ -7215,7 +7549,7 @@
         "entity": "attribute",
         "start": 27,
         "end": 34,
-        "confidence_entity": 0.999988317489624,
+        "confidence_entity": 0.9999899864196777,
         "value": "schools_attended",
         "extractor": "DIETClassifier",
         "processors": [
@@ -7239,7 +7573,7 @@
         "entity": "attribute",
         "start": 13,
         "end": 20,
-        "confidence_entity": 0.9999402761459351,
+        "confidence_entity": 0.9999622106552124,
         "value": "schools_attended",
         "extractor": "DIETClassifier",
         "processors": [
@@ -7269,7 +7603,7 @@
         "entity": "PERSON",
         "start": 26,
         "end": 42,
-        "confidence_entity": 0.9998853206634521,
+        "confidence_entity": 0.9999189376831055,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       },
@@ -7277,7 +7611,7 @@
         "entity": "attribute",
         "start": 49,
         "end": 56,
-        "confidence_entity": 0.9999877214431763,
+        "confidence_entity": 0.9999785423278809,
         "value": "schools_attended",
         "extractor": "DIETClassifier",
         "processors": [
@@ -7307,7 +7641,7 @@
         "entity": "attribute",
         "start": 22,
         "end": 29,
-        "confidence_entity": 0.9995567202568054,
+        "confidence_entity": 0.9992402791976929,
         "value": "schools_attended",
         "extractor": "DIETClassifier",
         "processors": [
@@ -7318,7 +7652,7 @@
         "entity": "PERSON",
         "start": 36,
         "end": 52,
-        "confidence_entity": 0.9993495345115662,
+        "confidence_entity": 0.9997376799583435,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       }
@@ -7345,7 +7679,7 @@
         "entity": "attribute",
         "start": 9,
         "end": 15,
-        "confidence_entity": 0.9998685121536255,
+        "confidence_entity": 0.9998331069946289,
         "value": "schools_attended",
         "extractor": "DIETClassifier",
         "processors": [
@@ -7356,7 +7690,7 @@
         "entity": "PERSON",
         "start": 20,
         "end": 36,
-        "confidence_entity": 0.9999254941940308,
+        "confidence_entity": 0.9998669624328613,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       }
@@ -7383,7 +7717,7 @@
         "entity": "attribute",
         "start": 9,
         "end": 19,
-        "confidence_entity": 0.9995201826095581,
+        "confidence_entity": 0.999909520149231,
         "value": "schools_attended",
         "extractor": "DIETClassifier",
         "processors": [
@@ -7394,7 +7728,7 @@
         "entity": "PERSON",
         "start": 24,
         "end": 40,
-        "confidence_entity": 0.9999319314956665,
+        "confidence_entity": 0.9999041557312012,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       }
@@ -7421,7 +7755,7 @@
         "entity": "PERSON",
         "start": 10,
         "end": 26,
-        "confidence_entity": 0.9999096393585205,
+        "confidence_entity": 0.9998360872268677,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       },
@@ -7429,7 +7763,7 @@
         "entity": "attribute",
         "start": 27,
         "end": 34,
-        "confidence_entity": 0.9999489784240723,
+        "confidence_entity": 0.999970555305481,
         "value": "schools_attended",
         "extractor": "DIETClassifier",
         "processors": [
@@ -7453,7 +7787,7 @@
         "entity": "attribute",
         "start": 19,
         "end": 26,
-        "confidence_entity": 0.9995612502098083,
+        "confidence_entity": 0.9998677968978882,
         "value": "schools_attended",
         "extractor": "DIETClassifier",
         "processors": [
@@ -7483,7 +7817,7 @@
         "entity": "attribute",
         "start": 12,
         "end": 20,
-        "confidence_entity": 0.9993200302124023,
+        "confidence_entity": 0.9996022582054138,
         "value": "religion",
         "extractor": "DIETClassifier"
       },
@@ -7491,7 +7825,7 @@
         "entity": "PERSON",
         "start": 24,
         "end": 40,
-        "confidence_entity": 0.9999051094055176,
+        "confidence_entity": 0.9999270439147949,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       },
@@ -7525,7 +7859,7 @@
         "entity": "attribute",
         "start": 19,
         "end": 24,
-        "confidence_entity": 0.9999125003814697,
+        "confidence_entity": 0.9999464750289917,
         "value": "title",
         "extractor": "DIETClassifier"
       },
@@ -7533,7 +7867,7 @@
         "entity": "PERSON",
         "start": 28,
         "end": 44,
-        "confidence_entity": 0.9998732805252075,
+        "confidence_entity": 0.9998325109481812,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       },
@@ -7567,7 +7901,7 @@
         "entity": "attribute",
         "start": 13,
         "end": 21,
-        "confidence_entity": 0.999687671661377,
+        "confidence_entity": 0.9998342990875244,
         "value": "religion",
         "extractor": "DIETClassifier"
       },
@@ -7575,7 +7909,7 @@
         "entity": "PERSON",
         "start": 25,
         "end": 41,
-        "confidence_entity": 0.9999333620071411,
+        "confidence_entity": 0.999907374382019,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       },
@@ -7609,7 +7943,7 @@
         "entity": "attribute",
         "start": 5,
         "end": 13,
-        "confidence_entity": 0.9997217059135437,
+        "confidence_entity": 0.999929666519165,
         "value": "religion",
         "extractor": "DIETClassifier"
       },
@@ -7617,7 +7951,7 @@
         "entity": "PERSON",
         "start": 17,
         "end": 33,
-        "confidence_entity": 0.9999297857284546,
+        "confidence_entity": 0.9997344613075256,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       },
@@ -7645,7 +7979,7 @@
         "entity": "attribute",
         "start": 8,
         "end": 16,
-        "confidence_entity": 0.9998255372047424,
+        "confidence_entity": 0.9998397827148438,
         "value": "religion",
         "extractor": "DIETClassifier"
       },
@@ -7680,7 +8014,7 @@
         "entity": "attribute",
         "start": 15,
         "end": 24,
-        "confidence_entity": 0.9993215799331665,
+        "confidence_entity": 0.9998745918273926,
         "value": "biographie",
         "extractor": "DIETClassifier",
         "processors": [
@@ -7710,7 +8044,7 @@
         "entity": "attribute",
         "start": 19,
         "end": 29,
-        "confidence_entity": 0.9999480247497559,
+        "confidence_entity": 0.9999697208404541,
         "value": "biographie",
         "extractor": "DIETClassifier"
       },
@@ -7718,7 +8052,7 @@
         "entity": "PERSON",
         "start": 33,
         "end": 43,
-        "confidence_entity": 0.9999330043792725,
+        "confidence_entity": 0.9998804330825806,
         "value": "Ruth Barak",
         "extractor": "DIETClassifier"
       },
@@ -7752,7 +8086,7 @@
         "entity": "attribute",
         "start": 8,
         "end": 17,
-        "confidence_entity": 0.9997914433479309,
+        "confidence_entity": 0.9999288320541382,
         "value": "biographie",
         "extractor": "DIETClassifier",
         "processors": [
@@ -7763,7 +8097,7 @@
         "entity": "PERSON",
         "start": 24,
         "end": 34,
-        "confidence_entity": 0.999876856803894,
+        "confidence_entity": 0.9997374415397644,
         "value": "Ruth Barak",
         "extractor": "DIETClassifier"
       },
@@ -7797,7 +8131,7 @@
         "entity": "attribute",
         "start": 16,
         "end": 38,
-        "confidence_entity": 0.8642627596855164,
+        "confidence_entity": 0.8866731524467468,
         "value": "biographie",
         "extractor": "DIETClassifier",
         "processors": [
@@ -7808,7 +8142,7 @@
         "entity": "PERSON",
         "start": 45,
         "end": 55,
-        "confidence_entity": 0.9999027252197266,
+        "confidence_entity": 0.9998859167098999,
         "value": "Ruth Barak",
         "extractor": "DIETClassifier"
       },
@@ -7842,7 +8176,7 @@
         "entity": "attribute",
         "start": 0,
         "end": 26,
-        "confidence_entity": 0.9831110239028931,
+        "confidence_entity": 0.9823545217514038,
         "value": "biographie",
         "extractor": "DIETClassifier",
         "processors": [
@@ -7853,7 +8187,7 @@
         "entity": "PERSON",
         "start": 30,
         "end": 40,
-        "confidence_entity": 0.9999040365219116,
+        "confidence_entity": 0.999796450138092,
         "value": "Ruth Barak",
         "extractor": "DIETClassifier"
       },
@@ -7887,7 +8221,7 @@
         "entity": "attribute",
         "start": 0,
         "end": 7,
-        "confidence_entity": 0.9962527751922607,
+        "confidence_entity": 0.9921265840530396,
         "value": "biographie",
         "extractor": "DIETClassifier",
         "processors": [
@@ -7898,7 +8232,7 @@
         "entity": "PERSON",
         "start": 8,
         "end": 21,
-        "confidence_entity": 0.9995313882827759,
+        "confidence_entity": 0.9995675683021545,
         "value": "Siddy Wronsky",
         "extractor": "DIETClassifier"
       },
@@ -7932,7 +8266,7 @@
         "entity": "attribute",
         "start": 8,
         "end": 15,
-        "confidence_entity": 0.9954788088798523,
+        "confidence_entity": 0.9960101842880249,
         "value": "biographie",
         "extractor": "DIETClassifier",
         "processors": [
@@ -7943,7 +8277,7 @@
         "entity": "PERSON",
         "start": 16,
         "end": 29,
-        "confidence_entity": 0.9996465444564819,
+        "confidence_entity": 0.9995771050453186,
         "value": "Siddy Wronsky",
         "extractor": "DIETClassifier"
       },
@@ -7977,7 +8311,7 @@
         "entity": "attribute",
         "start": 18,
         "end": 27,
-        "confidence_entity": 0.9996546506881714,
+        "confidence_entity": 0.9998539686203003,
         "value": "biographie",
         "extractor": "DIETClassifier",
         "processors": [
@@ -7988,7 +8322,7 @@
         "entity": "PERSON",
         "start": 34,
         "end": 48,
-        "confidence_entity": 0.9998635053634644,
+        "confidence_entity": 0.9998582601547241,
         "value": "Benjamin Jonas",
         "extractor": "DIETClassifier"
       },
@@ -8022,7 +8356,7 @@
         "entity": "PERSON",
         "start": 8,
         "end": 22,
-        "confidence_entity": 0.9999183416366577,
+        "confidence_entity": 0.999903678894043,
         "value": "Benjamin Jonas",
         "extractor": "DIETClassifier"
       },
@@ -8030,7 +8364,7 @@
         "entity": "object_type",
         "start": 23,
         "end": 38,
-        "confidence_entity": 0.9412416219711304,
+        "confidence_entity": 0.9352730512619019,
         "value": "PERSON",
         "extractor": "DIETClassifier",
         "processors": [
@@ -8067,7 +8401,7 @@
         "entity": "object_type",
         "start": 0,
         "end": 7,
-        "confidence_entity": 0.9948641657829285,
+        "confidence_entity": 0.9970149993896484,
         "value": "PERSON",
         "extractor": "DIETClassifier",
         "processors": [
@@ -8078,7 +8412,7 @@
         "entity": "PERSON",
         "start": 12,
         "end": 28,
-        "confidence_entity": 0.9998986721038818,
+        "confidence_entity": 0.9998168349266052,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       }
@@ -8105,7 +8439,7 @@
         "entity": "object_type",
         "start": 15,
         "end": 31,
-        "confidence_entity": 0.9955766201019287,
+        "confidence_entity": 0.9851086735725403,
         "value": "PERSON",
         "extractor": "DIETClassifier",
         "processors": [
@@ -8116,7 +8450,7 @@
         "entity": "PERSON",
         "start": 32,
         "end": 42,
-        "confidence_entity": 0.9999028444290161,
+        "confidence_entity": 0.9999035596847534,
         "value": "Ruth Barak",
         "extractor": "DIETClassifier"
       },
@@ -8150,7 +8484,7 @@
         "entity": "object_type",
         "start": 13,
         "end": 29,
-        "confidence_entity": 0.9927196502685547,
+        "confidence_entity": 0.984675943851471,
         "value": "PERSON",
         "extractor": "DIETClassifier",
         "processors": [
@@ -8161,7 +8495,7 @@
         "entity": "PERSON",
         "start": 30,
         "end": 40,
-        "confidence_entity": 0.9998959302902222,
+        "confidence_entity": 0.9998981952667236,
         "value": "Ruth Barak",
         "extractor": "DIETClassifier"
       },
@@ -8195,7 +8529,7 @@
         "entity": "object_type",
         "start": 15,
         "end": 21,
-        "confidence_entity": 0.9986982345581055,
+        "confidence_entity": 0.9999353885650635,
         "value": "PERSON",
         "extractor": "DIETClassifier",
         "processors": [
@@ -8206,7 +8540,7 @@
         "entity": "PERSON",
         "start": 46,
         "end": 62,
-        "confidence_entity": 0.9995678067207336,
+        "confidence_entity": 0.999610960483551,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       }
@@ -8227,7 +8561,7 @@
         "entity": "object_type",
         "start": 0,
         "end": 9,
-        "confidence_entity": 0.988591730594635,
+        "confidence_entity": 0.9900891780853271,
         "value": "PERSON",
         "extractor": "DIETClassifier",
         "processors": [
@@ -8251,7 +8585,7 @@
         "entity": "object_type",
         "start": 0,
         "end": 14,
-        "confidence_entity": 0.9996629953384399,
+        "confidence_entity": 0.999309778213501,
         "value": "PERSON",
         "extractor": "DIETClassifier",
         "processors": [
@@ -8275,7 +8609,7 @@
         "entity": "object_type",
         "start": 0,
         "end": 7,
-        "confidence_entity": 0.9961274266242981,
+        "confidence_entity": 0.9980475902557373,
         "value": "PERSON",
         "extractor": "DIETClassifier",
         "processors": [
@@ -8299,7 +8633,7 @@
         "entity": "object_type",
         "start": 13,
         "end": 29,
-        "confidence_entity": 0.995660126209259,
+        "confidence_entity": 0.9808180332183838,
         "value": "PERSON",
         "extractor": "DIETClassifier",
         "processors": [
@@ -8329,7 +8663,7 @@
         "entity": "object_type",
         "start": 13,
         "end": 20,
-        "confidence_entity": 0.9982660412788391,
+        "confidence_entity": 0.998634397983551,
         "value": "PERSON",
         "extractor": "DIETClassifier",
         "processors": [
@@ -8340,7 +8674,7 @@
         "entity": "PERSON",
         "start": 39,
         "end": 49,
-        "confidence_entity": 0.9999321699142456,
+        "confidence_entity": 0.999839186668396,
         "value": "Ruth Barak",
         "extractor": "DIETClassifier"
       },
@@ -8374,7 +8708,7 @@
         "entity": "object_type",
         "start": 23,
         "end": 31,
-        "confidence_entity": 0.9998915195465088,
+        "confidence_entity": 0.9998418092727661,
         "value": "PERSON",
         "extractor": "DIETClassifier",
         "processors": [
@@ -8385,7 +8719,7 @@
         "entity": "PERSON",
         "start": 50,
         "end": 60,
-        "confidence_entity": 0.9999179840087891,
+        "confidence_entity": 0.9998825788497925,
         "value": "Ruth Barak",
         "extractor": "DIETClassifier"
       },
@@ -8419,7 +8753,7 @@
         "entity": "object_type",
         "start": 15,
         "end": 33,
-        "confidence_entity": 0.9778357148170471,
+        "confidence_entity": 0.9713010191917419,
         "value": "PERSON",
         "extractor": "DIETClassifier",
         "processors": [
@@ -8430,7 +8764,7 @@
         "entity": "PERSON",
         "start": 37,
         "end": 47,
-        "confidence_entity": 0.999925971031189,
+        "confidence_entity": 0.9998899698257446,
         "value": "Ruth Barak",
         "extractor": "DIETClassifier"
       },
@@ -8458,7 +8792,7 @@
         "entity": "object_type",
         "start": 20,
         "end": 40,
-        "confidence_entity": 0.9866010546684265,
+        "confidence_entity": 0.9785299897193909,
         "value": "PERSON",
         "extractor": "DIETClassifier",
         "processors": [
@@ -8488,7 +8822,7 @@
         "entity": "object_type",
         "start": 13,
         "end": 26,
-        "confidence_entity": 0.9998052716255188,
+        "confidence_entity": 0.9997033476829529,
         "value": "ORGANIZATION",
         "extractor": "DIETClassifier",
         "processors": [
@@ -8499,7 +8833,7 @@
         "entity": "PERSON",
         "start": 48,
         "end": 64,
-        "confidence_entity": 0.999735414981842,
+        "confidence_entity": 0.9997544884681702,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       }
@@ -8526,7 +8860,7 @@
         "entity": "object_type",
         "start": 23,
         "end": 36,
-        "confidence_entity": 0.9997425675392151,
+        "confidence_entity": 0.999603807926178,
         "value": "ORGANIZATION",
         "extractor": "DIETClassifier",
         "processors": [
@@ -8537,7 +8871,7 @@
         "entity": "PERSON",
         "start": 58,
         "end": 74,
-        "confidence_entity": 0.9995844960212708,
+        "confidence_entity": 0.9996657371520996,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       }
@@ -8564,7 +8898,7 @@
         "entity": "object_type",
         "start": 19,
         "end": 32,
-        "confidence_entity": 0.9999097585678101,
+        "confidence_entity": 0.9996102452278137,
         "value": "ORGANIZATION",
         "extractor": "DIETClassifier",
         "processors": [
@@ -8575,7 +8909,7 @@
         "entity": "PERSON",
         "start": 59,
         "end": 75,
-        "confidence_entity": 0.9995554089546204,
+        "confidence_entity": 0.9992715716362,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       }
@@ -8596,7 +8930,7 @@
         "entity": "object_type",
         "start": 5,
         "end": 18,
-        "confidence_entity": 0.9998667240142822,
+        "confidence_entity": 0.9997408986091614,
         "value": "ORGANIZATION",
         "extractor": "DIETClassifier",
         "processors": [
@@ -8620,7 +8954,7 @@
         "entity": "object_type",
         "start": 0,
         "end": 13,
-        "confidence_entity": 0.9998227953910828,
+        "confidence_entity": 0.9967592358589172,
         "value": "ORGANIZATION",
         "extractor": "DIETClassifier",
         "processors": [
@@ -8650,7 +8984,7 @@
         "entity": "object_type",
         "start": 6,
         "end": 19,
-        "confidence_entity": 0.9999394416809082,
+        "confidence_entity": 0.9999401569366455,
         "value": "ORGANIZATION",
         "extractor": "DIETClassifier",
         "processors": [
@@ -8661,7 +8995,7 @@
         "entity": "PERSON",
         "start": 43,
         "end": 59,
-        "confidence_entity": 0.999830961227417,
+        "confidence_entity": 0.9998853206634521,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       }
@@ -8688,7 +9022,7 @@
         "entity": "object_type",
         "start": 19,
         "end": 32,
-        "confidence_entity": 0.9991468191146851,
+        "confidence_entity": 0.9993404746055603,
         "value": "ORGANIZATION",
         "extractor": "DIETClassifier",
         "processors": [
@@ -8699,7 +9033,7 @@
         "entity": "PERSON",
         "start": 51,
         "end": 61,
-        "confidence_entity": 0.9999234676361084,
+        "confidence_entity": 0.9998480081558228,
         "value": "Ruth Barak",
         "extractor": "DIETClassifier"
       },
@@ -8733,7 +9067,7 @@
         "entity": "attribute",
         "start": 12,
         "end": 38,
-        "confidence_entity": 0.953600287437439,
+        "confidence_entity": 0.9952455163002014,
         "value": "city_of_headquarters",
         "extractor": "DIETClassifier",
         "processors": [
@@ -8744,7 +9078,7 @@
         "entity": "ORG",
         "start": 42,
         "end": 74,
-        "confidence_entity": 0.9993174076080322,
+        "confidence_entity": 0.9992827773094177,
         "value": "Institute for Applied Psychology",
         "extractor": "DIETClassifier"
       },
@@ -8778,7 +9112,7 @@
         "entity": "attribute",
         "start": 25,
         "end": 45,
-        "confidence_entity": 0.9728436470031738,
+        "confidence_entity": 0.996044397354126,
         "value": "city_of_headquarters",
         "extractor": "DIETClassifier",
         "processors": [
@@ -8789,7 +9123,7 @@
         "entity": "ORG",
         "start": 49,
         "end": 82,
-        "confidence_entity": 0.9821462035179138,
+        "confidence_entity": 0.9242467880249023,
         "value": "Organization of German Immigrants",
         "extractor": "DIETClassifier"
       },
@@ -8823,7 +9157,7 @@
         "entity": "attribute",
         "start": 0,
         "end": 19,
-        "confidence_entity": 0.5868697166442871,
+        "confidence_entity": 0.8265994191169739,
         "value": "city_of_headquarters",
         "extractor": "DIETClassifier",
         "processors": [
@@ -8834,7 +9168,7 @@
         "entity": "ORG",
         "start": 23,
         "end": 55,
-        "confidence_entity": 0.9994094371795654,
+        "confidence_entity": 0.9992794394493103,
         "value": "Institute for Applied Psychology",
         "extractor": "DIETClassifier"
       },
@@ -8862,7 +9196,7 @@
         "entity": "attribute",
         "start": 12,
         "end": 38,
-        "confidence_entity": 0.8363580703735352,
+        "confidence_entity": 0.9956106543540955,
         "value": "city_of_headquarters",
         "extractor": "DIETClassifier",
         "processors": [
@@ -8886,7 +9220,7 @@
         "entity": "attribute",
         "start": 19,
         "end": 45,
-        "confidence_entity": 0.8820046782493591,
+        "confidence_entity": 0.9958981871604919,
         "value": "city_of_headquarters",
         "extractor": "DIETClassifier",
         "processors": [
@@ -8916,7 +9250,7 @@
         "entity": "attribute",
         "start": 0,
         "end": 9,
-        "confidence_entity": 0.9997822642326355,
+        "confidence_entity": 0.9995673298835754,
         "value": "biographie",
         "extractor": "DIETClassifier",
         "processors": [
@@ -8927,7 +9261,7 @@
         "entity": "ORG",
         "start": 13,
         "end": 38,
-        "confidence_entity": 0.9998223185539246,
+        "confidence_entity": 0.999578058719635,
         "value": "Hebrew Gymnasium Herzliya",
         "extractor": "DIETClassifier"
       },
@@ -8961,7 +9295,7 @@
         "entity": "attribute",
         "start": 8,
         "end": 17,
-        "confidence_entity": 0.9997310042381287,
+        "confidence_entity": 0.9997068047523499,
         "value": "biographie",
         "extractor": "DIETClassifier",
         "processors": [
@@ -8972,7 +9306,7 @@
         "entity": "ORG",
         "start": 24,
         "end": 56,
-        "confidence_entity": 0.9992244243621826,
+        "confidence_entity": 0.9993705153465271,
         "value": "Institute for Applied Psychology",
         "extractor": "DIETClassifier"
       },
@@ -9006,7 +9340,7 @@
         "entity": "attribute",
         "start": 8,
         "end": 17,
-        "confidence_entity": 0.9997389912605286,
+        "confidence_entity": 0.9996926784515381,
         "value": "biographie",
         "extractor": "DIETClassifier",
         "processors": [
@@ -9017,7 +9351,7 @@
         "entity": "ORG",
         "start": 24,
         "end": 56,
-        "confidence_entity": 0.99922776222229,
+        "confidence_entity": 0.9993743300437927,
         "value": "Institute for Applied Psychology",
         "extractor": "DIETClassifier"
       },
@@ -9051,7 +9385,7 @@
         "entity": "attribute",
         "start": 0,
         "end": 11,
-        "confidence_entity": 0.9996213912963867,
+        "confidence_entity": 0.9997720122337341,
         "value": "headquarter",
         "extractor": "DIETClassifier",
         "processors": [
@@ -9062,7 +9396,7 @@
         "entity": "ORG",
         "start": 15,
         "end": 40,
-        "confidence_entity": 0.9997820258140564,
+        "confidence_entity": 0.9996516704559326,
         "value": "Hebrew Gymnasium Herzliya",
         "extractor": "DIETClassifier"
       },
@@ -9096,7 +9430,7 @@
         "entity": "attribute",
         "start": 18,
         "end": 29,
-        "confidence_entity": 0.9999517202377319,
+        "confidence_entity": 0.999954342842102,
         "value": "headquarter",
         "extractor": "DIETClassifier",
         "processors": [
@@ -9107,7 +9441,7 @@
         "entity": "ORG",
         "start": 33,
         "end": 65,
-        "confidence_entity": 0.9995946288108826,
+        "confidence_entity": 0.9994626641273499,
         "value": "Institute for Applied Psychology",
         "extractor": "DIETClassifier"
       },
@@ -9141,7 +9475,7 @@
         "entity": "attribute",
         "start": 13,
         "end": 24,
-        "confidence_entity": 0.9999327659606934,
+        "confidence_entity": 0.9999208450317383,
         "value": "headquarter",
         "extractor": "DIETClassifier",
         "processors": [
@@ -9152,7 +9486,7 @@
         "entity": "ORG",
         "start": 28,
         "end": 60,
-        "confidence_entity": 0.9995960593223572,
+        "confidence_entity": 0.9996285438537598,
         "value": "Institute for Applied Psychology",
         "extractor": "DIETClassifier"
       },
@@ -9180,7 +9514,7 @@
         "entity": "attribute",
         "start": 14,
         "end": 25,
-        "confidence_entity": 0.9999345541000366,
+        "confidence_entity": 0.9999256134033203,
         "value": "headquarter",
         "extractor": "DIETClassifier",
         "processors": [
@@ -9210,7 +9544,7 @@
         "entity": "attribute",
         "start": 14,
         "end": 26,
-        "confidence_entity": 0.9999464750289917,
+        "confidence_entity": 0.9999736547470093,
         "value": "headquarter",
         "extractor": "DIETClassifier",
         "processors": [
@@ -9221,7 +9555,7 @@
         "entity": "ORG",
         "start": 30,
         "end": 67,
-        "confidence_entity": 0.9985392093658447,
+        "confidence_entity": 0.9963665008544922,
         "value": "International Save the Children Union",
         "extractor": "DIETClassifier"
       },
@@ -9255,7 +9589,7 @@
         "entity": "attribute",
         "start": 13,
         "end": 24,
-        "confidence_entity": 0.9997907280921936,
+        "confidence_entity": 0.999832034111023,
         "value": "top_members_employees",
         "extractor": "DIETClassifier",
         "processors": [
@@ -9266,7 +9600,7 @@
         "entity": "ORG",
         "start": 28,
         "end": 55,
-        "confidence_entity": 0.9987016916275024,
+        "confidence_entity": 0.9988296627998352,
         "value": "Mizrahi Womens Organization",
         "extractor": "DIETClassifier"
       },
@@ -9300,7 +9634,7 @@
         "entity": "attribute",
         "start": 6,
         "end": 17,
-        "confidence_entity": 0.9995018243789673,
+        "confidence_entity": 0.9998480081558228,
         "value": "top_members_employees",
         "extractor": "DIETClassifier",
         "processors": [
@@ -9311,7 +9645,7 @@
         "entity": "ORG",
         "start": 23,
         "end": 40,
-        "confidence_entity": 0.9997538924217224,
+        "confidence_entity": 0.9996433258056641,
         "value": "Spiritual Hygiene",
         "extractor": "DIETClassifier"
       },
@@ -9345,7 +9679,7 @@
         "entity": "attribute",
         "start": 12,
         "end": 22,
-        "confidence_entity": 0.9996585845947266,
+        "confidence_entity": 0.9998261332511902,
         "value": "top_members_employees",
         "extractor": "DIETClassifier",
         "processors": [
@@ -9356,7 +9690,7 @@
         "entity": "ORG",
         "start": 26,
         "end": 39,
-        "confidence_entity": 0.9997367262840271,
+        "confidence_entity": 0.9994186162948608,
         "value": "Haaretz Davar",
         "extractor": "DIETClassifier"
       },
@@ -9397,7 +9731,7 @@
         "entity": "attribute",
         "start": 12,
         "end": 23,
-        "confidence_entity": 0.9996635913848877,
+        "confidence_entity": 0.9999078512191772,
         "value": "top_members_employees",
         "extractor": "DIETClassifier",
         "processors": [
@@ -9408,7 +9742,7 @@
         "entity": "ORG",
         "start": 27,
         "end": 50,
-        "confidence_entity": 0.9996945858001709,
+        "confidence_entity": 0.99955815076828,
         "value": "Zentralwohlfahrtsstelle",
         "extractor": "DIETClassifier"
       },
@@ -9436,7 +9770,7 @@
         "entity": "attribute",
         "start": 27,
         "end": 33,
-        "confidence_entity": 0.9998315572738647,
+        "confidence_entity": 0.9998834133148193,
         "value": "top_members_employees",
         "extractor": "DIETClassifier",
         "processors": [
@@ -9466,7 +9800,7 @@
         "entity": "attribute",
         "start": 23,
         "end": 30,
-        "confidence_entity": 0.9992170333862305,
+        "confidence_entity": 0.9999361038208008,
         "value": "member",
         "extractor": "DIETClassifier",
         "processors": [
@@ -9477,7 +9811,7 @@
         "entity": "ORG",
         "start": 34,
         "end": 55,
-        "confidence_entity": 0.9984079003334045,
+        "confidence_entity": 0.9992183446884155,
         "value": "Jewish National Party",
         "extractor": "DIETClassifier"
       },
@@ -9518,7 +9852,7 @@
         "entity": "attribute",
         "start": 8,
         "end": 15,
-        "confidence_entity": 0.9999251365661621,
+        "confidence_entity": 0.9999574422836304,
         "value": "member",
         "extractor": "DIETClassifier",
         "processors": [
@@ -9529,7 +9863,7 @@
         "entity": "ORG",
         "start": 23,
         "end": 46,
-        "confidence_entity": 0.9996957778930664,
+        "confidence_entity": 0.9995998740196228,
         "value": "Zentralwohlfahrtsstelle",
         "extractor": "DIETClassifier"
       },
@@ -9557,7 +9891,7 @@
         "entity": "attribute",
         "start": 13,
         "end": 20,
-        "confidence_entity": 0.9999279975891113,
+        "confidence_entity": 0.9999375343322754,
         "value": "member",
         "extractor": "DIETClassifier",
         "processors": [
@@ -9581,7 +9915,7 @@
         "entity": "attribute",
         "start": 20,
         "end": 27,
-        "confidence_entity": 0.9997190833091736,
+        "confidence_entity": 0.9998538494110107,
         "value": "member",
         "extractor": "DIETClassifier",
         "processors": [
@@ -9611,7 +9945,7 @@
         "entity": "attribute",
         "start": 12,
         "end": 21,
-        "confidence_entity": 0.9890450239181519,
+        "confidence_entity": 0.9963724613189697,
         "value": "employee_or_member_of",
         "extractor": "DIETClassifier",
         "processors": [
@@ -9622,7 +9956,7 @@
         "entity": "ORG",
         "start": 26,
         "end": 47,
-        "confidence_entity": 0.9987891316413879,
+        "confidence_entity": 0.9995055198669434,
         "value": "Jewish National Party",
         "extractor": "DIETClassifier"
       },
@@ -9663,7 +9997,7 @@
         "entity": "attribute",
         "start": 22,
         "end": 29,
-        "confidence_entity": 0.9998600482940674,
+        "confidence_entity": 0.9998760223388672,
         "value": "employee_or_member_of",
         "extractor": "DIETClassifier",
         "processors": [
@@ -9674,7 +10008,7 @@
         "entity": "ORG",
         "start": 37,
         "end": 54,
-        "confidence_entity": 0.9993579983711243,
+        "confidence_entity": 0.9995909333229065,
         "value": "Childrens Service",
         "extractor": "DIETClassifier"
       },
@@ -9708,7 +10042,7 @@
         "entity": "attribute",
         "start": 4,
         "end": 13,
-        "confidence_entity": 0.9940699338912964,
+        "confidence_entity": 0.9969111084938049,
         "value": "employee_or_member_of",
         "extractor": "DIETClassifier",
         "processors": [
@@ -9719,7 +10053,7 @@
         "entity": "ORG",
         "start": 18,
         "end": 39,
-        "confidence_entity": 0.9991543292999268,
+        "confidence_entity": 0.9994326233863831,
         "value": "Jewish National Party",
         "extractor": "DIETClassifier"
       },
@@ -9754,7 +10088,7 @@
         "entity": "attribute",
         "start": 4,
         "end": 13,
-        "confidence_entity": 0.9989746809005737,
+        "confidence_entity": 0.9985373020172119,
         "value": "employee_or_member_of",
         "extractor": "DIETClassifier",
         "processors": [
@@ -9784,7 +10118,7 @@
         "entity": "ORG",
         "start": 10,
         "end": 31,
-        "confidence_entity": 0.9993569254875183,
+        "confidence_entity": 0.9989867806434631,
         "value": "Jewish National Party",
         "extractor": "DIETClassifier"
       },
@@ -9792,7 +10126,7 @@
         "entity": "attribute",
         "start": 37,
         "end": 44,
-        "confidence_entity": 0.9994537234306335,
+        "confidence_entity": 0.9998421669006348,
         "value": "schools_attended",
         "extractor": "DIETClassifier",
         "processors": [
@@ -9836,7 +10170,7 @@
         "entity": "attribute",
         "start": 17,
         "end": 25,
-        "confidence_entity": 0.999954104423523,
+        "confidence_entity": 0.9999136924743652,
         "value": "schools_attended",
         "extractor": "DIETClassifier",
         "processors": [
@@ -9847,7 +10181,7 @@
         "entity": "ORG",
         "start": 29,
         "end": 56,
-        "confidence_entity": 0.9983311295509338,
+        "confidence_entity": 0.9985787868499756,
         "value": "Mizrahi Womens Organization",
         "extractor": "DIETClassifier"
       },
@@ -9881,7 +10215,7 @@
         "entity": "attribute",
         "start": 6,
         "end": 14,
-        "confidence_entity": 0.9997571110725403,
+        "confidence_entity": 0.9999442100524902,
         "value": "schools_attended",
         "extractor": "DIETClassifier",
         "processors": [
@@ -9892,7 +10226,7 @@
         "entity": "ORG",
         "start": 25,
         "end": 42,
-        "confidence_entity": 0.9997150301933289,
+        "confidence_entity": 0.9995974898338318,
         "value": "Spiritual Hygiene",
         "extractor": "DIETClassifier"
       },
@@ -9926,7 +10260,7 @@
         "entity": "attribute",
         "start": 0,
         "end": 8,
-        "confidence_entity": 0.9998700618743896,
+        "confidence_entity": 0.999927282333374,
         "value": "schools_attended",
         "extractor": "DIETClassifier",
         "processors": [
@@ -9937,7 +10271,7 @@
         "entity": "ORG",
         "start": 12,
         "end": 35,
-        "confidence_entity": 0.9998118281364441,
+        "confidence_entity": 0.9996238946914673,
         "value": "Zentralwohlfahrtsstelle",
         "extractor": "DIETClassifier"
       },
@@ -9965,7 +10299,7 @@
         "entity": "attribute",
         "start": 10,
         "end": 17,
-        "confidence_entity": 0.9998971223831177,
+        "confidence_entity": 0.9998760223388672,
         "value": "schools_attended",
         "extractor": "DIETClassifier",
         "processors": [
@@ -9989,7 +10323,7 @@
         "entity": "attribute",
         "start": 23,
         "end": 31,
-        "confidence_entity": 0.9999212026596069,
+        "confidence_entity": 0.9998080134391785,
         "value": "schools_attended",
         "extractor": "DIETClassifier",
         "processors": [
@@ -10019,7 +10353,7 @@
         "entity": "attribute",
         "start": 20,
         "end": 38,
-        "confidence_entity": 0.9996916055679321,
+        "confidence_entity": 0.9996745586395264,
         "value": "date_founded",
         "extractor": "DIETClassifier",
         "processors": [
@@ -10030,7 +10364,7 @@
         "entity": "ORG",
         "start": 42,
         "end": 59,
-        "confidence_entity": 0.9997939467430115,
+        "confidence_entity": 0.9997684359550476,
         "value": "Spiritual Hygiene",
         "extractor": "DIETClassifier"
       },
@@ -10064,7 +10398,7 @@
         "entity": "attribute",
         "start": 19,
         "end": 37,
-        "confidence_entity": 0.9995711445808411,
+        "confidence_entity": 0.9996374845504761,
         "value": "date_founded",
         "extractor": "DIETClassifier",
         "processors": [
@@ -10075,7 +10409,7 @@
         "entity": "ORG",
         "start": 41,
         "end": 58,
-        "confidence_entity": 0.9997654557228088,
+        "confidence_entity": 0.9997770190238953,
         "value": "Spiritual Hygiene",
         "extractor": "DIETClassifier"
       },
@@ -10109,7 +10443,7 @@
         "entity": "attribute",
         "start": 12,
         "end": 30,
-        "confidence_entity": 0.9997854828834534,
+        "confidence_entity": 0.9996675252914429,
         "value": "date_founded",
         "extractor": "DIETClassifier",
         "processors": [
@@ -10120,7 +10454,7 @@
         "entity": "ORG",
         "start": 34,
         "end": 51,
-        "confidence_entity": 0.9997753500938416,
+        "confidence_entity": 0.9997969269752502,
         "value": "Spiritual Hygiene",
         "extractor": "DIETClassifier"
       },
@@ -10154,7 +10488,7 @@
         "entity": "attribute",
         "start": 12,
         "end": 19,
-        "confidence_entity": 0.9999752044677734,
+        "confidence_entity": 0.9999468326568604,
         "value": "founded_by",
         "extractor": "DIETClassifier",
         "processors": [
@@ -10165,7 +10499,7 @@
         "entity": "ORG",
         "start": 27,
         "end": 50,
-        "confidence_entity": 0.9997962117195129,
+        "confidence_entity": 0.9998254179954529,
         "value": "Zentralwohlfahrtsstelle",
         "extractor": "DIETClassifier"
       },
@@ -10199,7 +10533,7 @@
         "entity": "attribute",
         "start": 12,
         "end": 19,
-        "confidence_entity": 0.9999822378158569,
+        "confidence_entity": 0.9999711513519287,
         "value": "founded_by",
         "extractor": "DIETClassifier",
         "processors": [
@@ -10210,7 +10544,7 @@
         "entity": "ORG",
         "start": 27,
         "end": 50,
-        "confidence_entity": 0.9998034834861755,
+        "confidence_entity": 0.9997426867485046,
         "value": "Zentralwohlfahrtsstelle",
         "extractor": "DIETClassifier"
       },
@@ -10244,7 +10578,7 @@
         "entity": "attribute",
         "start": 28,
         "end": 35,
-        "confidence_entity": 0.9999716281890869,
+        "confidence_entity": 0.9998786449432373,
         "value": "founded_by",
         "extractor": "DIETClassifier",
         "processors": [
@@ -10255,7 +10589,7 @@
         "entity": "ORG",
         "start": 43,
         "end": 66,
-        "confidence_entity": 0.9997742772102356,
+        "confidence_entity": 0.9998233914375305,
         "value": "Zentralwohlfahrtsstelle",
         "extractor": "DIETClassifier"
       },
@@ -10289,7 +10623,7 @@
         "entity": "ORG",
         "start": 31,
         "end": 54,
-        "confidence_entity": 0.9998088479042053,
+        "confidence_entity": 0.9997541308403015,
         "value": "Zentralwohlfahrtsstelle",
         "extractor": "DIETClassifier"
       },
@@ -10297,7 +10631,7 @@
         "entity": "attribute",
         "start": 59,
         "end": 66,
-        "confidence_entity": 0.9999539852142334,
+        "confidence_entity": 0.9999628067016602,
         "value": "founded",
         "extractor": "DIETClassifier"
       },
@@ -10331,7 +10665,7 @@
         "entity": "attribute",
         "start": 46,
         "end": 56,
-        "confidence_entity": 0.999907374382019,
+        "confidence_entity": 0.9999393224716187,
         "value": "founded",
         "extractor": "DIETClassifier",
         "processors": [
@@ -10342,7 +10676,7 @@
         "entity": "ORG",
         "start": 60,
         "end": 81,
-        "confidence_entity": 0.9991689920425415,
+        "confidence_entity": 0.9994099140167236,
         "value": "Jewish National Party",
         "extractor": "DIETClassifier"
       },
@@ -10383,7 +10717,7 @@
         "entity": "ORG",
         "start": 46,
         "end": 69,
-        "confidence_entity": 0.9998118281364441,
+        "confidence_entity": 0.9997878670692444,
         "value": "Zentralwohlfahrtsstelle",
         "extractor": "DIETClassifier"
       },
@@ -10391,7 +10725,7 @@
         "entity": "attribute",
         "start": 74,
         "end": 81,
-        "confidence_entity": 0.9999659061431885,
+        "confidence_entity": 0.9999693632125854,
         "value": "founded",
         "extractor": "DIETClassifier"
       },
@@ -10425,7 +10759,7 @@
         "entity": "attribute",
         "start": 31,
         "end": 41,
-        "confidence_entity": 0.9998941421508789,
+        "confidence_entity": 0.9999659061431885,
         "value": "founded",
         "extractor": "DIETClassifier",
         "processors": [
@@ -10436,7 +10770,7 @@
         "entity": "ORG",
         "start": 45,
         "end": 66,
-        "confidence_entity": 0.9989271759986877,
+        "confidence_entity": 0.9994781613349915,
         "value": "Jewish National Party",
         "extractor": "DIETClassifier"
       },
@@ -10477,7 +10811,7 @@
         "entity": "attribute",
         "start": 9,
         "end": 36,
-        "confidence_entity": 0.9814976453781128,
+        "confidence_entity": 0.9862154722213745,
         "value": "country_of_headquarters",
         "extractor": "DIETClassifier",
         "processors": [
@@ -10488,7 +10822,7 @@
         "entity": "ORG",
         "start": 40,
         "end": 61,
-        "confidence_entity": 0.998659610748291,
+        "confidence_entity": 0.9996131062507629,
         "value": "Jewish National Party",
         "extractor": "DIETClassifier"
       },
@@ -10529,7 +10863,7 @@
         "entity": "attribute",
         "start": 12,
         "end": 38,
-        "confidence_entity": 0.8291594386100769,
+        "confidence_entity": 0.9310360550880432,
         "value": "country_of_headquarters",
         "extractor": "DIETClassifier",
         "processors": [
@@ -10540,7 +10874,7 @@
         "entity": "ORG",
         "start": 42,
         "end": 63,
-        "confidence_entity": 0.9986874461174011,
+        "confidence_entity": 0.9996281862258911,
         "value": "Jewish National Party",
         "extractor": "DIETClassifier"
       },
@@ -10581,7 +10915,7 @@
         "entity": "attribute",
         "start": 24,
         "end": 51,
-        "confidence_entity": 0.9852746725082397,
+        "confidence_entity": 0.9947540760040283,
         "value": "country_of_headquarters",
         "extractor": "DIETClassifier",
         "processors": [
@@ -10592,7 +10926,7 @@
         "entity": "ORG",
         "start": 55,
         "end": 76,
-        "confidence_entity": 0.998371422290802,
+        "confidence_entity": 0.9996360540390015,
         "value": "Jewish National Party",
         "extractor": "DIETClassifier"
       },
@@ -10633,7 +10967,7 @@
         "entity": "attribute",
         "start": 19,
         "end": 30,
-        "confidence_entity": 0.9999831914901733,
+        "confidence_entity": 0.9999868869781494,
         "value": "subsidiares",
         "extractor": "DIETClassifier"
       },
@@ -10641,7 +10975,7 @@
         "entity": "ORG",
         "start": 38,
         "end": 61,
-        "confidence_entity": 0.9998235106468201,
+        "confidence_entity": 0.99972003698349,
         "value": "Zentralwohlfahrtsstelle",
         "extractor": "DIETClassifier"
       },
@@ -10675,7 +11009,7 @@
         "entity": "attribute",
         "start": 22,
         "end": 33,
-        "confidence_entity": 0.9999839067459106,
+        "confidence_entity": 0.9999964237213135,
         "value": "subsidiares",
         "extractor": "DIETClassifier"
       },
@@ -10683,7 +11017,7 @@
         "entity": "ORG",
         "start": 41,
         "end": 51,
-        "confidence_entity": 0.9996324777603149,
+        "confidence_entity": 0.9996222257614136,
         "value": "Vaad Leumi",
         "extractor": "DIETClassifier"
       },
@@ -10717,7 +11051,7 @@
         "entity": "attribute",
         "start": 0,
         "end": 11,
-        "confidence_entity": 0.9999809265136719,
+        "confidence_entity": 0.9999904632568359,
         "value": "Subsidiares",
         "extractor": "DIETClassifier"
       },
@@ -10725,7 +11059,7 @@
         "entity": "ORG",
         "start": 19,
         "end": 42,
-        "confidence_entity": 0.9998465776443481,
+        "confidence_entity": 0.9998557567596436,
         "value": "Zentralwohlfahrtsstelle",
         "extractor": "DIETClassifier"
       },
@@ -10759,7 +11093,7 @@
         "entity": "attribute",
         "start": 19,
         "end": 30,
-        "confidence_entity": 0.9999750852584839,
+        "confidence_entity": 0.999997615814209,
         "value": "subsidiares",
         "extractor": "DIETClassifier"
       },
@@ -10767,7 +11101,7 @@
         "entity": "ORG",
         "start": 38,
         "end": 57,
-        "confidence_entity": 0.998521625995636,
+        "confidence_entity": 0.9966174960136414,
         "value": "Leo Baeck Institute",
         "extractor": "DIETClassifier"
       },
@@ -10802,7 +11136,7 @@
         "entity": "attribute",
         "start": 12,
         "end": 23,
-        "confidence_entity": 0.9999829530715942,
+        "confidence_entity": 0.9999945163726807,
         "value": "subsidiares",
         "extractor": "DIETClassifier"
       }
@@ -10823,7 +11157,7 @@
         "entity": "attribute",
         "start": 17,
         "end": 28,
-        "confidence_entity": 0.9999727010726929,
+        "confidence_entity": 0.9999765157699585,
         "value": "subsidiares",
         "extractor": "DIETClassifier"
       }
@@ -10850,7 +11184,7 @@
         "entity": "attribute",
         "start": 6,
         "end": 27,
-        "confidence_entity": 0.9998220801353455,
+        "confidence_entity": 0.999785840511322,
         "value": "political_religious_affiliation",
         "extractor": "DIETClassifier",
         "processors": [
@@ -10861,7 +11195,7 @@
         "entity": "ORG",
         "start": 36,
         "end": 48,
-        "confidence_entity": 0.9988314509391785,
+        "confidence_entity": 0.9993977546691895,
         "value": "Youth Aliyah",
         "extractor": "DIETClassifier"
       },
@@ -10895,7 +11229,7 @@
         "entity": "attribute",
         "start": 20,
         "end": 41,
-        "confidence_entity": 0.999195396900177,
+        "confidence_entity": 0.9995167255401611,
         "value": "political_religious_affiliation",
         "extractor": "DIETClassifier",
         "processors": [
@@ -10906,7 +11240,7 @@
         "entity": "ORG",
         "start": 49,
         "end": 70,
-        "confidence_entity": 0.9992727637290955,
+        "confidence_entity": 0.9994691014289856,
         "value": "Jewish National Party",
         "extractor": "DIETClassifier"
       },
@@ -10947,7 +11281,7 @@
         "entity": "attribute",
         "start": 19,
         "end": 30,
-        "confidence_entity": 0.9996091723442078,
+        "confidence_entity": 0.9997742772102356,
         "value": "political_religious_affiliation",
         "extractor": "DIETClassifier",
         "processors": [
@@ -10958,7 +11292,7 @@
         "entity": "ORG",
         "start": 38,
         "end": 66,
-        "confidence_entity": 0.9987872242927551,
+        "confidence_entity": 0.9988731741905212,
         "value": "Jewish Agency Central Bureau",
         "extractor": "DIETClassifier"
       },
@@ -10999,7 +11333,7 @@
         "entity": "PERSON",
         "start": 4,
         "end": 14,
-        "confidence_entity": 0.9998382329940796,
+        "confidence_entity": 0.999842643737793,
         "value": "Ruth Barak",
         "extractor": "DIETClassifier"
       },
@@ -11007,7 +11341,7 @@
         "entity": "attribute",
         "start": 15,
         "end": 22,
-        "confidence_entity": 0.9999402761459351,
+        "confidence_entity": 0.9999167919158936,
         "value": "spouse",
         "extractor": "DIETClassifier",
         "processors": [
@@ -11044,7 +11378,7 @@
         "entity": "PERSON",
         "start": 4,
         "end": 13,
-        "confidence_entity": 0.9859709143638611,
+        "confidence_entity": 0.9970815777778625,
         "value": "RuthBarak",
         "extractor": "DIETClassifier"
       },
@@ -11052,7 +11386,7 @@
         "entity": "attribute",
         "start": 20,
         "end": 27,
-        "confidence_entity": 0.9968295693397522,
+        "confidence_entity": 0.9996891021728516,
         "value": "spouse",
         "extractor": "DIETClassifier",
         "processors": [
@@ -11082,7 +11416,7 @@
         "entity": "PERSON",
         "start": 15,
         "end": 25,
-        "confidence_entity": 0.9999196529388428,
+        "confidence_entity": 0.9998430013656616,
         "value": "Ruth Barak",
         "extractor": "DIETClassifier"
       },
@@ -11090,7 +11424,7 @@
         "entity": "attribute",
         "start": 32,
         "end": 35,
-        "confidence_entity": 0.9998216032981873,
+        "confidence_entity": 0.9999639987945557,
         "value": "title",
         "extractor": "DIETClassifier",
         "processors": [
@@ -11121,7 +11455,7 @@
         "entity": "attribute",
         "start": 8,
         "end": 17,
-        "confidence_entity": 0.9975723624229431,
+        "confidence_entity": 0.9993904829025269,
         "value": "religion",
         "extractor": "DIETClassifier",
         "processors": [
@@ -11151,7 +11485,7 @@
         "entity": "PERSON",
         "start": 4,
         "end": 14,
-        "confidence_entity": 0.9998934268951416,
+        "confidence_entity": 0.9999033212661743,
         "value": "Ruth Barak",
         "extractor": "DIETClassifier"
       },
@@ -11159,7 +11493,7 @@
         "entity": "GPE",
         "start": 29,
         "end": 35,
-        "confidence_entity": 0.9991961121559143,
+        "confidence_entity": 0.9977587461471558,
         "value": "Berlin",
         "extractor": "DIETClassifier"
       },
@@ -11193,7 +11527,7 @@
         "entity": "PERSON",
         "start": 21,
         "end": 31,
-        "confidence_entity": 0.9999208450317383,
+        "confidence_entity": 0.9998719692230225,
         "value": "Ruth Barak",
         "extractor": "DIETClassifier"
       },
@@ -11201,7 +11535,7 @@
         "entity": "GPE",
         "start": 39,
         "end": 48,
-        "confidence_entity": 0.9993523955345154,
+        "confidence_entity": 0.9992039799690247,
         "value": "Jerusalem",
         "extractor": "DIETClassifier"
       },
@@ -11235,7 +11569,7 @@
         "entity": "PERSON",
         "start": 18,
         "end": 28,
-        "confidence_entity": 0.9999357461929321,
+        "confidence_entity": 0.9998226761817932,
         "value": "Ruth Barak",
         "extractor": "DIETClassifier"
       },
@@ -11243,7 +11577,7 @@
         "entity": "GPE",
         "start": 38,
         "end": 44,
-        "confidence_entity": 0.9992043375968933,
+        "confidence_entity": 0.9981470108032227,
         "value": "Vienna",
         "extractor": "DIETClassifier"
       },
@@ -11271,7 +11605,7 @@
         "entity": "GPE",
         "start": 17,
         "end": 23,
-        "confidence_entity": 0.9992225170135498,
+        "confidence_entity": 0.9987672567367554,
         "value": "Berlin",
         "extractor": "DIETClassifier"
       }
@@ -11292,7 +11626,7 @@
         "entity": "GPE",
         "start": 41,
         "end": 50,
-        "confidence_entity": 0.9983230233192444,
+        "confidence_entity": 0.9985126852989197,
         "value": "Palestina",
         "extractor": "DIETClassifier"
       }
@@ -11319,7 +11653,7 @@
         "entity": "PERSON",
         "start": 4,
         "end": 18,
-        "confidence_entity": 0.9999279975891113,
+        "confidence_entity": 0.9998212456703186,
         "value": "Benjamin Jonas",
         "extractor": "DIETClassifier"
       },
@@ -11327,7 +11661,7 @@
         "entity": "GPE",
         "start": 39,
         "end": 46,
-        "confidence_entity": 0.9981696605682373,
+        "confidence_entity": 0.9983880519866943,
         "value": "Germany",
         "extractor": "DIETClassifier"
       },
@@ -11361,7 +11695,7 @@
         "entity": "PERSON",
         "start": 21,
         "end": 31,
-        "confidence_entity": 0.9999210834503174,
+        "confidence_entity": 0.9998682737350464,
         "value": "Ruth Barak",
         "extractor": "DIETClassifier"
       },
@@ -11369,7 +11703,7 @@
         "entity": "ORG",
         "start": 43,
         "end": 64,
-        "confidence_entity": 0.9993947744369507,
+        "confidence_entity": 0.9993200302124023,
         "value": "Jewish National Party",
         "extractor": "DIETClassifier"
       },
@@ -11417,7 +11751,7 @@
         "entity": "PERSON",
         "start": 18,
         "end": 34,
-        "confidence_entity": 0.9998773336410522,
+        "confidence_entity": 0.9999390840530396,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       },
@@ -11425,7 +11759,7 @@
         "entity": "ORG",
         "start": 59,
         "end": 82,
-        "confidence_entity": 0.9998558759689331,
+        "confidence_entity": 0.9998515844345093,
         "value": "Zentralwohlfahrtsstelle",
         "extractor": "DIETClassifier"
       },
@@ -11459,7 +11793,7 @@
         "entity": "PERSON",
         "start": 4,
         "end": 14,
-        "confidence_entity": 0.9998946189880371,
+        "confidence_entity": 0.9999089241027832,
         "value": "Ruth Barak",
         "extractor": "DIETClassifier"
       },
@@ -11467,7 +11801,7 @@
         "entity": "RELIGION",
         "start": 28,
         "end": 34,
-        "confidence_entity": 0.9971399307250977,
+        "confidence_entity": 0.9992390871047974,
         "value": "Jewish",
         "extractor": "DIETClassifier",
         "processors": [
@@ -11511,7 +11845,7 @@
         "entity": "PERSON",
         "start": 4,
         "end": 14,
-        "confidence_entity": 0.9998575448989868,
+        "confidence_entity": 0.9998200535774231,
         "value": "Ruth Barak",
         "extractor": "DIETClassifier"
       },
@@ -11519,7 +11853,7 @@
         "entity": "RELIGION",
         "start": 17,
         "end": 23,
-        "confidence_entity": 0.9962157607078552,
+        "confidence_entity": 0.9970967769622803,
         "value": "Jewish",
         "extractor": "DIETClassifier",
         "processors": [
@@ -11556,7 +11890,7 @@
         "entity": "PERSON",
         "start": 25,
         "end": 35,
-        "confidence_entity": 0.9999120235443115,
+        "confidence_entity": 0.9998550415039062,
         "value": "Ruth Barak",
         "extractor": "DIETClassifier"
       },
@@ -11564,7 +11898,7 @@
         "entity": "RELIGION",
         "start": 42,
         "end": 51,
-        "confidence_entity": 0.9976303577423096,
+        "confidence_entity": 0.9979469180107117,
         "value": "Christian",
         "extractor": "DIETClassifier",
         "processors": [
@@ -11595,7 +11929,7 @@
         "entity": "RELIGION",
         "start": 10,
         "end": 16,
-        "confidence_entity": 0.9958928823471069,
+        "confidence_entity": 0.9976444840431213,
         "value": "Jewish",
         "extractor": "DIETClassifier",
         "processors": [
@@ -11619,7 +11953,7 @@
         "entity": "RELIGION",
         "start": 30,
         "end": 39,
-        "confidence_entity": 0.9979662895202637,
+        "confidence_entity": 0.9983555674552917,
         "value": "Christian",
         "extractor": "DIETClassifier",
         "processors": [
@@ -11649,7 +11983,7 @@
         "entity": "attribute",
         "start": 17,
         "end": 38,
-        "confidence_entity": 0.9991771578788757,
+        "confidence_entity": 0.999239444732666,
         "value": "political_religious_affiliation",
         "extractor": "DIETClassifier",
         "processors": [
@@ -11660,7 +11994,7 @@
         "entity": "ORG",
         "start": 46,
         "end": 69,
-        "confidence_entity": 0.9998041987419128,
+        "confidence_entity": 0.9997386336326599,
         "value": "Zentralwohlfahrtsstelle",
         "extractor": "DIETClassifier"
       },
@@ -11694,7 +12028,7 @@
         "entity": "attribute",
         "start": 22,
         "end": 43,
-        "confidence_entity": 0.999677300453186,
+        "confidence_entity": 0.99981290102005,
         "value": "political_religious_affiliation",
         "extractor": "DIETClassifier",
         "processors": [
@@ -11705,7 +12039,7 @@
         "entity": "ORG",
         "start": 51,
         "end": 68,
-        "confidence_entity": 0.9993877410888672,
+        "confidence_entity": 0.9997788071632385,
         "value": "Hebrew University",
         "extractor": "DIETClassifier"
       },
@@ -11739,7 +12073,7 @@
         "entity": "attribute",
         "start": 22,
         "end": 43,
-        "confidence_entity": 0.9996898174285889,
+        "confidence_entity": 0.999869704246521,
         "value": "political_religious_affiliation",
         "extractor": "DIETClassifier",
         "processors": [
@@ -11750,7 +12084,7 @@
         "entity": "ORG",
         "start": 51,
         "end": 68,
-        "confidence_entity": 0.9995214939117432,
+        "confidence_entity": 0.9998260140419006,
         "value": "Hebrew University",
         "extractor": "DIETClassifier"
       },
@@ -11784,7 +12118,7 @@
         "entity": "ORG",
         "start": 8,
         "end": 25,
-        "confidence_entity": 0.999752938747406,
+        "confidence_entity": 0.9996844530105591,
         "value": "Hebrew University",
         "extractor": "DIETClassifier"
       },
@@ -11792,7 +12126,7 @@
         "entity": "attribute",
         "start": 32,
         "end": 53,
-        "confidence_entity": 0.9996473789215088,
+        "confidence_entity": 0.9997710585594177,
         "value": "political_religious_affiliation",
         "extractor": "DIETClassifier",
         "processors": [
@@ -11829,7 +12163,7 @@
         "entity": "attribute",
         "start": 31,
         "end": 52,
-        "confidence_entity": 0.9990234375,
+        "confidence_entity": 0.9991735816001892,
         "value": "political_religious_affiliation",
         "extractor": "DIETClassifier",
         "processors": [
@@ -11840,7 +12174,7 @@
         "entity": "ORG",
         "start": 60,
         "end": 83,
-        "confidence_entity": 0.999819815158844,
+        "confidence_entity": 0.9997707009315491,
         "value": "Zentralwohlfahrtsstelle",
         "extractor": "DIETClassifier"
       },
@@ -11874,7 +12208,7 @@
         "entity": "ORG",
         "start": 22,
         "end": 39,
-        "confidence_entity": 0.9977378845214844,
+        "confidence_entity": 0.9995620846748352,
         "value": "Hebrew University",
         "extractor": "DIETClassifier"
       },
@@ -11882,7 +12216,7 @@
         "entity": "GPE",
         "start": 60,
         "end": 69,
-        "confidence_entity": 0.999273955821991,
+        "confidence_entity": 0.9994656443595886,
         "value": "Jerusalem",
         "extractor": "DIETClassifier"
       },
@@ -11922,7 +12256,7 @@
         "entity": "attribute",
         "start": 28,
         "end": 40,
-        "confidence_entity": 0.9999575614929199,
+        "confidence_entity": 0.9998249411582947,
         "value": "headquarter",
         "extractor": "DIETClassifier",
         "processors": [
@@ -11933,7 +12267,7 @@
         "entity": "ORG",
         "start": 48,
         "end": 70,
-        "confidence_entity": 0.9983111619949341,
+        "confidence_entity": 0.9973370432853699,
         "value": "Viktoria-Luisen School",
         "extractor": "DIETClassifier"
       },
@@ -11941,7 +12275,7 @@
         "entity": "GPE",
         "start": 78,
         "end": 84,
-        "confidence_entity": 0.9994402527809143,
+        "confidence_entity": 0.9991083741188049,
         "value": "Berlin",
         "extractor": "DIETClassifier"
       },
@@ -11981,7 +12315,7 @@
         "entity": "ORG",
         "start": 4,
         "end": 39,
-        "confidence_entity": 0.9933215975761414,
+        "confidence_entity": 0.9985972046852112,
         "value": "German Association of Zionist Women",
         "extractor": "DIETClassifier"
       },
@@ -11989,7 +12323,7 @@
         "entity": "attribute",
         "start": 48,
         "end": 59,
-        "confidence_entity": 0.999890923500061,
+        "confidence_entity": 0.9993764758110046,
         "value": "headquarter",
         "extractor": "DIETClassifier",
         "processors": [
@@ -12000,7 +12334,7 @@
         "entity": "GPE",
         "start": 63,
         "end": 69,
-        "confidence_entity": 0.9975862503051758,
+        "confidence_entity": 0.9985629916191101,
         "value": "Israel",
         "extractor": "DIETClassifier"
       },
@@ -12040,7 +12374,7 @@
         "entity": "attribute",
         "start": 8,
         "end": 19,
-        "confidence_entity": 0.9998995065689087,
+        "confidence_entity": 0.9997017979621887,
         "value": "headquarter",
         "extractor": "DIETClassifier",
         "processors": [
@@ -12051,7 +12385,7 @@
         "entity": "ORG",
         "start": 27,
         "end": 51,
-        "confidence_entity": 0.9998366832733154,
+        "confidence_entity": 0.9998167157173157,
         "value": "Zentralewohlfahrtsstelle",
         "extractor": "DIETClassifier"
       },
@@ -12059,7 +12393,7 @@
         "entity": "GPE",
         "start": 55,
         "end": 61,
-        "confidence_entity": 0.9994814991950989,
+        "confidence_entity": 0.9992489218711853,
         "value": "Berlin",
         "extractor": "DIETClassifier"
       }
@@ -12086,7 +12420,7 @@
         "entity": "ORG",
         "start": 8,
         "end": 54,
-        "confidence_entity": 0.9921088814735413,
+        "confidence_entity": 0.9966694712638855,
         "value": "International Conference of Jewish Social Work",
         "extractor": "DIETClassifier"
       },
@@ -12094,7 +12428,7 @@
         "entity": "GPE",
         "start": 75,
         "end": 84,
-        "confidence_entity": 0.9984904527664185,
+        "confidence_entity": 0.9991165995597839,
         "value": "Palestina",
         "extractor": "DIETClassifier"
       },
@@ -12135,7 +12469,7 @@
         "entity": "ORG",
         "start": 8,
         "end": 25,
-        "confidence_entity": 0.9995748400688171,
+        "confidence_entity": 0.9993441700935364,
         "value": "Hebrew University",
         "extractor": "DIETClassifier"
       },
@@ -12143,7 +12477,7 @@
         "entity": "RELIGION",
         "start": 51,
         "end": 57,
-        "confidence_entity": 0.9941583871841431,
+        "confidence_entity": 0.9990843534469604,
         "value": "Jewish",
         "extractor": "DIETClassifier",
         "processors": [
@@ -12187,7 +12521,7 @@
         "entity": "ORG",
         "start": 38,
         "end": 59,
-        "confidence_entity": 0.9993090629577637,
+        "confidence_entity": 0.9949427247047424,
         "value": "Jewish National Party",
         "extractor": "DIETClassifier"
       },
@@ -12195,7 +12529,7 @@
         "entity": "RELIGION",
         "start": 64,
         "end": 70,
-        "confidence_entity": 0.9371564388275146,
+        "confidence_entity": 0.9757035374641418,
         "value": "Jewish",
         "extractor": "DIETClassifier",
         "processors": [
@@ -12246,7 +12580,7 @@
         "entity": "ORG",
         "start": 25,
         "end": 42,
-        "confidence_entity": 0.9964404702186584,
+        "confidence_entity": 0.999407172203064,
         "value": "Hebrew University",
         "extractor": "DIETClassifier"
       },
@@ -12254,7 +12588,7 @@
         "entity": "RELIGION",
         "start": 46,
         "end": 52,
-        "confidence_entity": 0.9950445890426636,
+        "confidence_entity": 0.9972319006919861,
         "value": "Jewish",
         "extractor": "DIETClassifier",
         "processors": [
@@ -12291,7 +12625,7 @@
         "entity": "ORG",
         "start": 22,
         "end": 39,
-        "confidence_entity": 0.9984322190284729,
+        "confidence_entity": 0.9973050355911255,
         "value": "National Committe",
         "extractor": "DIETClassifier"
       },
@@ -12299,7 +12633,7 @@
         "entity": "RELIGION",
         "start": 46,
         "end": 55,
-        "confidence_entity": 0.9984101057052612,
+        "confidence_entity": 0.9980751276016235,
         "value": "Christian",
         "extractor": "DIETClassifier",
         "processors": [
@@ -12329,7 +12663,7 @@
         "entity": "ORG",
         "start": 24,
         "end": 70,
-        "confidence_entity": 0.996830403804779,
+        "confidence_entity": 0.9936434030532837,
         "value": "International Conference of Jewish Social Work",
         "extractor": "DIETClassifier"
       },
@@ -12337,7 +12671,7 @@
         "entity": "RELIGION",
         "start": 71,
         "end": 80,
-        "confidence_entity": 0.9966291785240173,
+        "confidence_entity": 0.9988804459571838,
         "value": "Christian",
         "extractor": "DIETClassifier",
         "processors": [
@@ -12394,7 +12728,7 @@
         "entity": "attribute",
         "start": 22,
         "end": 43,
-        "confidence_entity": 0.9985300302505493,
+        "confidence_entity": 0.9992351531982422,
         "value": "political_religious_affiliation",
         "extractor": "DIETClassifier",
         "processors": [
@@ -12405,7 +12739,7 @@
         "entity": "ORG",
         "start": 51,
         "end": 74,
-        "confidence_entity": 0.9997496008872986,
+        "confidence_entity": 0.9998263716697693,
         "value": "Zentralwohlfahrtsstelle",
         "extractor": "DIETClassifier"
       },
@@ -12413,7 +12747,7 @@
         "entity": "RELIGION",
         "start": 79,
         "end": 85,
-        "confidence_entity": 0.9948509335517883,
+        "confidence_entity": 0.9993069171905518,
         "value": "Jewish",
         "extractor": "DIETClassifier",
         "processors": [
@@ -12444,7 +12778,7 @@
         "entity": "informationtype",
         "start": 15,
         "end": 34,
-        "confidence_entity": 0.9821444749832153,
+        "confidence_entity": 0.981389582157135,
         "value": "person-detail",
         "extractor": "DIETClassifier",
         "processors": [
@@ -12468,7 +12802,7 @@
         "entity": "informationtype",
         "start": 15,
         "end": 44,
-        "confidence_entity": 0.9894146919250488,
+        "confidence_entity": 0.9907163977622986,
         "value": "organization-detail",
         "extractor": "DIETClassifier",
         "processors": [
@@ -12492,7 +12826,7 @@
         "entity": "informationtype",
         "start": 0,
         "end": 15,
-        "confidence_entity": 0.9871643781661987,
+        "confidence_entity": 0.9836746454238892,
         "value": "list-of",
         "extractor": "DIETClassifier",
         "processors": [
@@ -12516,7 +12850,7 @@
         "entity": "informationtype",
         "start": 29,
         "end": 47,
-        "confidence_entity": 0.9847361445426941,
+        "confidence_entity": 0.9858431220054626,
         "value": "person-detail",
         "extractor": "DIETClassifier",
         "processors": [
@@ -12540,7 +12874,7 @@
         "entity": "informationtype",
         "start": 21,
         "end": 41,
-        "confidence_entity": 0.9847436547279358,
+        "confidence_entity": 0.9783518314361572,
         "value": "person-detail",
         "extractor": "DIETClassifier",
         "processors": [
@@ -12564,7 +12898,7 @@
         "entity": "informationtype",
         "start": 32,
         "end": 59,
-        "confidence_entity": 0.9812576770782471,
+        "confidence_entity": 0.9859490990638733,
         "value": "organization-detail",
         "extractor": "DIETClassifier",
         "processors": [
@@ -12588,7 +12922,7 @@
         "entity": "informationtype",
         "start": 12,
         "end": 25,
-        "confidence_entity": 0.9927349090576172,
+        "confidence_entity": 0.9908589720726013,
         "value": "person-detail",
         "extractor": "DIETClassifier",
         "processors": [
@@ -12619,7 +12953,7 @@
         "entity": "informationtype",
         "start": 17,
         "end": 30,
-        "confidence_entity": 0.9932148456573486,
+        "confidence_entity": 0.991413950920105,
         "value": "person-detail",
         "extractor": "DIETClassifier",
         "processors": [
@@ -12650,7 +12984,7 @@
         "entity": "informationtype",
         "start": 23,
         "end": 36,
-        "confidence_entity": 0.9899939894676208,
+        "confidence_entity": 0.9883795976638794,
         "value": "person-detail",
         "extractor": "DIETClassifier",
         "processors": [
@@ -12681,7 +13015,7 @@
         "entity": "informationtype",
         "start": 0,
         "end": 11,
-        "confidence_entity": 0.9628561735153198,
+        "confidence_entity": 0.9330329298973083,
         "value": "person-detail",
         "extractor": "DIETClassifier",
         "processors": [

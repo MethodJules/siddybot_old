@@ -9,6 +9,9 @@ rules:
   steps:
   - intent: greet
   - action: utter_welcome
+  - action: action_initial_explained_entitites
+  - action: utter_explain_need_of_information
+  - action: utter_ask_username
 
 - rule: chatbot name
   steps: 

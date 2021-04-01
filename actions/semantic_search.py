@@ -107,11 +107,12 @@ class SemanticSearch():
             dispatcher.utter_message(text=f"I found some more results. If you don't find the right information here, please use the search at the website.")
             Search_return.set_successfull(return_search, True)
           max_results = max_results - 1
-          dispatcher.utter_message(text=f"I have found these results for your question:")
           print(y)
-          Search_return.set_events(return_search, SemanticSearch.ausgabeNode(dispatcher, tracker, y))
+          Search_return.set_events(return_search, SemanticSearch.ausgabeNode(dispatcher, tracker, y) + [SlotSet(Constants.slot_semantic_search_result, True)])
           print(return_search.events)
         Search_return.set_successfull(return_search, True)
+    else: 
+        Search_return.set_events(return_search, [SlotSet(Constants.slot_semantic_search_result, False)])
     print(return_search.events)
     print(return_search.successfull)
     return return_search
@@ -134,7 +135,7 @@ class SemanticSearch():
     call_successfull = False
     if (tracker.get_slot(Constants.slot_attribute) is None):
       entities = tracker.latest_message["entities"]
-      call_successfull = SemanticSearch.searchSemanticSearchListOfEntities(entities, tracker)
+      call_successfull = SemanticSearch.searchSemanticSearchListOfEntities(dispatcher, entities, tracker)
     else:
       call_successfull = SemanticSearch.searchSemanticSearchAttribute(dispatcher, tracker.get_slot(Constants.slot_person), tracker.get_slot(Constants.slot_attribute), Constants.person)
     print(call_successfull)
@@ -142,6 +143,6 @@ class SemanticSearch():
       dispatcher.utter_message(template="utter_data_not_found")
     explained_add_person = tracker.get_slot(Constants.slot_explained_add_person) 
     if ((explained_add_person is None) | (explained_add_person  == False)):
-      dispatcher.utter_message(template="utter_shall_explain_add_person")
+      dispatcher.utter_message(template="utter_person_is_missing")
     return[SlotSet(Constants.slot_shall_explain_add_person, True)]
 

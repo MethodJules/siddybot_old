@@ -89,6 +89,8 @@ class OrganizationDetailsAction(Action):
         if (return_search.successfull == False):
           dispatcher.utter_message(template="utter_ask_rephrase")
         return return_search.events
+      else: 
+        return [SlotSet(Constants.slot_semantic_search_result, False)]
 
   def utter_biographie(self, dispatcher: CollectingDispatcher, name, entities) -> bool:
     """

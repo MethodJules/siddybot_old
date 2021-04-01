@@ -9,6 +9,7 @@ nlu:
     - Whats up?
     - Heya
     - Howdy
+    - Heyho
     - Hey there
 
 - intent: goodbye
@@ -36,6 +37,43 @@ nlu:
     - ok, thanks
     - thanks for the information
 
+- intent: add_username
+  examples: |
+    - My name is [Max](PERSON)
+    - [Max](PERSON)
+    - Hi, I'm [Max](PERSON)
+    - I am [Franziska](PERSON)
+    - Call me [Franziska](PERSON)
+    - Hey, please call me [Peter](PERSON)
+
+- intent: add_age
+  examples: |
+    - [48](CARDINAL)
+    - [twenty](CARDINAL)
+    - I am [twenty](CARDINAL)
+    - My age is [45](CARDINAL)
+    - I am [twenty-three](CARDINAL) years old
+    - I don't want to tell you my age
+
+- intent: add_gender
+  examples: |
+    - I am [female](gender)
+    - [male](gender)
+    - I do not want to tell you my gender
+
+- intent: add_expert_value
+  examples: |
+    - I am a [5](CARDINAL)
+    - I think it is a [5](CARDINAL)
+    - [4](CARDINAL)
+    - My knowledge about the topic is a [2](CARDINAL)
+    - It is a [5](CARDINAL)
+
+- intent: answer_thank_you
+  examples: |
+    - No problem!
+    - Your welcome
+
 - intent: agree
   examples: |
     - oh yeah
@@ -45,6 +83,7 @@ nlu:
     - I understand
     - Ok
     - Check
+    - okay
     - I did
 
 - intent: successfully_login
@@ -863,10 +902,6 @@ nlu:
     - Please show me how I can add these entity!
     - Tell me how I can add it. 
 
-- regex: year
-  examples: |
-    - \d{4}
-
 - lookup: object_type
   examples: |
     - CITY
@@ -1169,9 +1204,14 @@ nlu:
     - headquarters
     - head office
 
+- synonym: siblings
+  examples: |
+    - sibling
+
 - synonym: '1'
   examples: |
     - one
+    - no expert
 
 - synonym: '2'
   examples: |
@@ -1184,6 +1224,7 @@ nlu:
 - synonym: '4'
   examples: |
     - four
+    - middle
 
 - synonym: '5'
   examples: |
@@ -1196,6 +1237,7 @@ nlu:
 - synonym: '7'
   examples: |
     - seven
+    - full expert
 
 - synonym: '8'
   examples: |
@@ -1248,6 +1290,26 @@ nlu:
 - synonym: '20'
   examples: |
     - twenty
+
+- synonym: female
+  examples: |
+    - women
+    - feminine
+    - womanly
+
+- synonym: male
+  examples: |
+    - man
+    - masculine
+    - manly
+    - virile
+    - mannish
+
+- lookup: gender
+  examples: |
+    - female
+    - male
+    - divers
 
 - lookup: PERSON
   examples: |

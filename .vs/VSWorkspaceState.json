@@ -5,6 +5,6 @@
     "\\data",
     "\\docker"
   ],
-  "SelectedNode": "\\actions\\semantic_search.py",
+  "SelectedNode": "\\actions\\semantic_search_action.py",
   "PreviewInSolutionExplorer": false
 }

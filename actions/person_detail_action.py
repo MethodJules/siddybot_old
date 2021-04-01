@@ -9,7 +9,6 @@ from actions.general_methods import GeneralMethods
 from actions.db_call import DbCall
 from actions.constants import Constants
 from actions.search_return import Search_return
-#import base64,cv2
 
 class PersonDetailAction(Action):
 
@@ -37,15 +36,14 @@ class PersonDetailAction(Action):
           if ((abfrage_attribute is None) | (not(abfrage_attribute in Constants.person_attributes))):
             if (not(tracker.get_slot(Constants.slot_object_type) is None)):
               self.searchForEntityWithObjecttype(dispatcher, tracker, entity_person, tracker.get_slot(Constants.slot_object_type))
-              return [SlotSet(Constants.slot_object_type, "")]
+              return [SlotSet(Constants.slot_object_type, None)]
             else:
               intent = tracker.latest_message["text"]
               return_search = SemanticSearch.searchSemanticSearchIntent(dispatcher, tracker, intent, Constants.person)
-              print(return_search.successfull)
               return return_search.events
-          return self.searchForEntityWithAttribut(dispatcher, tracker, entity_person, abfrage_attribute) + [SlotSet(Constants.slot_shall_explain_add_person, False), SlotSet(Constants.slot_attribute, "")]
+          return self.searchForEntityWithAttribut(dispatcher, tracker, entity_person, abfrage_attribute) + [SlotSet(Constants.slot_shall_explain_add_person, False), SlotSet(Constants.slot_attribute, None) , SlotSet(Constants.slot_object_type, None)]
         else: 
-          return SemanticSearch.returnPersonNotExist(dispatcher, tracker) + [SlotSet(Constants.slot_attribute, ""), SlotSet(Constants.slot_object_type, "")]
+          return SemanticSearch.returnPersonNotExist(dispatcher, tracker) + [SlotSet(Constants.slot_attribute, ""), SlotSet(Constants.slot_object_type, None)]
 
 
   def searchForEntityWithObjecttype(self, dispatcher: CollectingDispatcher, tracker: Tracker, name, object_type) -> List[EventType]:
@@ -60,29 +58,20 @@ class PersonDetailAction(Action):
     print(name)
     print(object_type)
     for x in root_nodes: 
-      print(x)
       node_checked = GeneralMethods.findeRichtigenKnoten(name, x[Constants.node_title])
       if (node_checked == True):
         entities = DbCall.searchForEntitesFromTheNode(x[Constants.node_id])
         print(entities)
         for x in entities:
-            print(x)
-            print(x[Constants.ent_ner] == object_type)
             if (x[Constants.ent_ner] == object_type):
                 objects.append(x[Constants.ent_text])
         break
-    print(len(objects))
     if (len(objects) == 0):
         intent = tracker.latest_message["text"]
         search_return = SemanticSearch.searchSemanticSearchIntent(dispatcher, tracker, intent, Constants.person)
-        if (search_return.successfull == True):
-          dispatcher.utter_message(text=f"I hope the result helps you further.")
         dispatcher.utter_message(text=f"The correct answer is missing in the graph. Maybe you could add the entity.")
         entity_explained = tracker.get_slot(Constants.slot_explained_add_entity)
-        if ((entity_explained is None)):
-          dispatcher.utter_message(template="utter_shall_how_add_entity")
-          return[SlotSet(Constants.slot_shall_explain_add_entity, True), SlotSet(Constants.slot_explained_add_entity, False)] + search_return.events
-        return[SlotSet(Constants.slot_shall_explain_add_entity, False)] + search_return.events
+        return[SlotSet(Constants.slot_shall_explain_add_entity, True)] + search_return.events
     else:
        if (object_type == Constants.person):
            if (len(objects) == 1):
@@ -98,11 +87,11 @@ class PersonDetailAction(Action):
               dispatcher.utter_message(text=f""+ GeneralMethods.liste_ausgeben(objects))
        else: 
           dispatcher.utter_message(text=f""+ GeneralMethods.liste_ausgeben(objects))
+       return [SlotSet(Constants.slot_semantic_search_result, False), SlotSet(Constants.slot_shall_explain_add_entity, False), SlotSet(Constants.slot_object_type, None)]
 
   def searchForEntityWithAttribut(self, dispatcher: CollectingDispatcher, tracker: Tracker, name, attribute) -> List[EventType]:
       answer = DbCall.searchForEntityRelationship(name, Constants.slot_person)
       entities = answer[Constants.entities_relation]
-      print(answer)
       return_ok = False
       if(attribute == Constants.date_of_birth):
           return_ok = self.utter_birthday(dispatcher, name, entities)
@@ -166,23 +155,16 @@ class PersonDetailAction(Action):
             return_ok =  True
         for x in output:
           dispatcher.utter_message(text=f""+x)
-      print(return_ok)
       if (return_ok == False):
         return_search = SemanticSearch.searchSemanticSearchAttribute(dispatcher, tracker, name, attribute, Constants.person)
-        print(return_search.events)
         if ((return_search.successfull == True) & (attribute != Constants.biographie)):
-          dispatcher.utter_message(text=f"I hope the result helps you further.")
-          dispatcher.utter_message(text=f"The correct answer is missing in the graph. Maybe you could add the entity.")
-          entity_explained = tracker.get_slot(Constants.slot_explained_add_entity)
-          if ((entity_explained is None)):
-            dispatcher.utter_message(template="utter_shall_how_add_entity")
-            return_events = [SlotSet(Constants.slot_shall_explain_add_entity, True), SlotSet(Constants.slot_explained_add_entity, False)] + return_search.events
-            return return_events
-        return_events =  [SlotSet(Constants.slot_shall_explain_add_entity, False)] + return_search.events
+          dispatcher.utter_message(template="utter_entity_is_missing")
+        return_events =  [SlotSet(Constants.slot_shall_explain_add_entity, True)] + return_search.events
         print(return_events)
         return return_events
       else:
         shall_explain_add_entity = SlotSet(Constants.slot_shall_explain_add_entity, False)
+        semantic_search_result = SlotSet(Constants.slot_semantic_search_result, False)
         node_title = answer[Constants.root_nodes]
         node = ""
         for x in node_title:
@@ -192,12 +174,10 @@ class PersonDetailAction(Action):
             node = node_title
             break
         link = GeneralMethods.linkErstellen(dispatcher, node)
-        print(tracker.get_slot(Constants.slot_last_link))
-        return [shall_explain_add_entity] + GeneralMethods.linkAusgeben(dispatcher, tracker, link)
+        return [shall_explain_add_entity, semantic_search_result] + GeneralMethods.linkAusgeben(dispatcher, tracker, link)
 
   def utter_birth(self, dispatcher: CollectingDispatcher, tracker: Tracker, name, entities) -> bool:
       object_type = tracker.get_slot("object_type")
-      print(object_type)
       if (object_type == Constants.city):
         return self.utter_city_of_birth(dispatcher, name, entities)
       elif (object_type == Constants.country):

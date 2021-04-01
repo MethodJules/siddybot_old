@@ -6,6 +6,10 @@ intents:
   - goodbye
   - website_information
   - add_person
+  - add_username
+  - add_age
+  - add_gender
+  - add_expert_value
   - denied
   - agree
   - accept
@@ -88,6 +92,11 @@ entities:
   - explained_add_person
   - shall_explain_add_entity
   - last_link
+  - username
+  - age
+  - gender
+  - expert_value
+  - semantic_search_result
 
 slots:
   maptype:
@@ -233,15 +242,59 @@ slots:
   shall_explain_add_entity:
     type: bool
     influence_conversation: true
-
+  semantic_search_result:
+    type: bool
+    influence_conversation: true
+  username:
+    type: text
+    influence_conversation: false
+  age:
+    type: text
+    influence_conversation: true
+  gender:
+    type: categorical
+    values: 
+      - female
+      - male
+      - divers
+    influence_conversation: true
+  expert_value:
+    type: text
+    influence_conversation: true
   
 responses:
   utter_welcome:
-  - text: "Hi! I'm Jiggy and you can ask me FAQ-Questions or something to persons on this websites"
+  - text: "Hi! I'm Siddy and you can ask me FAQ-Questions or something about persons at this websites."
+  - text: "Hi! My name is Siddy. I can help you if you have some FAQ-Questions or if you want to know something about persons from these website."
+
+  utter_explain_need_of_information:
+  - text: "Because of I'm a prototype, I would like to know some information from yourself for analysis."
+  - text: "I like to know some information from yourself for analysis"
+
+  utter_ask_username:
+  - text: "Please tell me your name."
+  - text: "What's your name?"
+
+  utter_ask_for_gender:
+  - text: "Are you a female, male or divers?"
+  - text: "Could you tell me your gender?"
+
+  utter_ask_for_age:
+  - text: "How old are you?"
+  - text: "What's your age?"
+  - text: "And what is your age?"
+
+  utter_ask_for_expert:
+  - text: "Can you tell me to what extent you are an expert on the subject of this website on a scale of 1-7?"
+  - text: "Please tell me on a scale of 1-7 whether you are an expert on the subject matter of the website."
+
+  utter_meaning_if_expertskale:
+  - text: " 1 means no expert at all, 7 means full expert."
+  - text: "A 1 means no expert at all and a 7 means full expert."
 
   utter_name_of_chatbot:
-  - text: "My name is Jiggy."
-  - text: "I'm Jiggy!"
+  - text: "My name is Siddy."
+  - text: "I'm Siddy!"
 
   utter_chatbot_functions:
   - text: "You can ask me FAQ-Questions or something to persons on this websites"
@@ -256,6 +309,11 @@ responses:
 
   utter_ok:
   - text: "Ok"
+  - text: "Okay"
+
+  utter_thank_you:
+  - text: "Thank you!"
+  - text: "Thank you for your information!"
   
   utter_website_information:
   - text: "Jigsaw, is a research and contributor website for researchers and individuals interested in the biographies of Jewish social workers."
@@ -487,13 +545,18 @@ responses:
   - text: "Shall I show you how to create entities?"
 
   utter_data_not_found:
-  - text: "I'm sorry but I don't have a answer for your question. Maybe the mistake is that the entity is missing."
+  - text: "I'm sorry but I don't have a answer for your question. Maybe the mistake is that the person is missing."
 
   utter_shall_explain_add_entity:
   - text: "Shall I tell you how to create the entity?"
 
+  utter_person_is_missing:
+  - text: "Sorry, but I cannot find any data to these person."
+  - text: "For these person I don't have a page or a entity."
+
   utter_shall_explain_add_person:
-  - text: "For these person I don't have a page or a entity. Shall I tell you how to create a page for these person?"
+  - text: "Shall I tell you how to create a page for these person?"
+  - text: "Do you want that I explain you how to add a person?"
 
   utter_information_of_website:
   - text: "I can give you informations about the persons and the organizations which are saved at these website."
@@ -522,8 +585,14 @@ responses:
   utter_explain_ask_for_list_of_object_type:
   - text: "You can ask something like \"Show me a list of people of your website\" or \"Could you tell me 10 organizations?\""
 
+  utter_results_are_helpful:
+  - text: "Is the result helpful?"
+  - text: "Could I help you with these information?"
+
+  utter_entity_is_missing:
+  - text: "The correct answer is missing in the graph. Maybe you could add the entity."
+
 actions:
-  - action_query_knowledge_base
   - action_person_detail
   - action_semantic_search
   - action_list_of
@@ -533,6 +602,10 @@ actions:
   - action_yes_no_questions_organization
   - action_set_exlpained_add_person
   - action_set_exlpained_add_entity
+  - action_set_username
+  - action_set_expert_value
+  - action_set_age
+  - action_initial_explained_entitites
 
 session_config:
   session_expiration_time: 60
