@@ -48,26 +48,29 @@ nlu:
 
 - intent: add_age
   examples: |
-    - [48](CARDINAL)
-    - [twenty](CARDINAL)
-    - I am [twenty](CARDINAL)
     - My age is [45](CARDINAL)
     - I am [twenty-three](CARDINAL) years old
     - I don't want to tell you my age
+    - I am [5](CARDINAL)
 
 - intent: add_gender
   examples: |
-    - I am [female](gender)
-    - [male](gender)
+    - [male]{"entity": "gender", "value": "male"}
     - I do not want to tell you my gender
+    - [divers]{"entity": "gender", "value": "divers"}
+    - I am a [man]{"entity": "gender", "value": "male"}
+    - my gender is [female]{"entity": "gender", "value": "female"}
+    - I'm a [woman]{"entity": "gender", "value": "female"}
+    - I am a [woman]{"entity": "gender", "value": "female"}
+    - I am [female]{"entity": "gender", "value": "female"}
 
 - intent: add_expert_value
   examples: |
-    - I am a [5](CARDINAL)
     - I think it is a [5](CARDINAL)
-    - [4](CARDINAL)
     - My knowledge about the topic is a [2](CARDINAL)
     - It is a [5](CARDINAL)
+    - my level is [7](CARDINAL)
+    - It's [5](CARDINAL)
 
 - intent: answer_thank_you
   examples: |
@@ -435,19 +438,6 @@ nlu:
     - [When]{"entity": "object_type", "value": "DATE"} was the [death]{"entity": "attribute", "value": "death"} of [Benjamin Jonas](PERSON)?
     - [When]{"entity": "object_type", "value": "DATE"} did [Benjamin Jonas](PERSON) [pass away]{"entity": "attribute", "value": "death"}
 
-- synonym: when
-  examples: |
-    - When
-    - At which date
-    - at which date
-    - which date
-
-- synonym: where
-  examples: |
-    - Where
-    - At which place
-    - at which place
-
 - intent: questions_detail_person/death_place
   examples: |
     - [Where]{"entity": "object_type", "value": "PLACE"} did [Ruth Barak](PERSON) [died]{"entity": "attribute", "value": "death"}?
@@ -535,7 +525,6 @@ nlu:
     - Tell me some [cities of residence]{"entity": "attribute", "value": "cities_of_residence"} from [Irene Gaster](PERSON)
     - Could you show me some [cities of residence]{"entity": "attribute", "value": "cities_of_residence"} of [Benjamin Jonas](PERSON)
     - I like to know [in which city was]{"entity":"attribute","value":"cities_of_residence"} [Esther Apfelberg](PERSON)?
-    - 
 
 - intent: questions_detail_person/countries_of_residence
   examples: |
@@ -587,6 +576,7 @@ nlu:
     - Could you show me some [familymembers]{"entity": "attribute", "value": "family"} of [Rachel Barak](PERSON)
     - Please tell me some [familymembers]{"entity": "attribute", "value": "family"} of [Rachel Barak](PERSON)
     - [Family]{"entity": "attribute", "value": "family"} of [Benjamin Jonas](PERSON)
+    - Who where a [member at the family]{"entity": "attribute", "value": "family"} of [Benjamin Jonas](PERSON)
 
 - intent: questions_detail_person/parents
   examples: |
@@ -610,6 +600,7 @@ nlu:
     - What did [Bertha Pappenheim](PERSON) [do for work]{"entity": "attribute", "value": "title"}?
     - What did she [do]{"entity": "attribute", "value": "title"}?
     - What was he [working as]{"entity": "attribute", "value": "title"}?
+    - I want to know the [title](attribute) of [Esther Apfelberg](PERSON)
 
 - intent: questions_detail_person/origin
   examples: |
@@ -654,14 +645,17 @@ nlu:
     - Where did [Esther Apfelberg](PERSON) [studied]{"entity":"attribute","value":"schools_attended"}?
     - Please show me the [schools]{"entity": "attribute", "value": "schools_attended"} where she studied
 
-- intent: questions_detail_person/general
+- intent: questions_detail_person/religion
   examples: |
     - Show me the [religion](attribute) of [Esther Apfelberg](PERSON)
     - Which [religion](attribute) did he had?
-    - I want to know the [title](attribute) of [Esther Apfelberg](PERSON)
     - What was the [religion](attribute) of [Esther Apfelberg](PERSON)?
     - What [religion](attribute) is [Esther Apfelberg](PERSON)?
-    - To what [religion](attribute) did [Beate Berger] belong to?
+    - To what [religion](attribute) did [Beate Berger](PERSON) belong to?
+    - Could you tell me which [religion](attribute) hat [Beate Berger](PERSON)
+
+- intent: questions_detail_person/general
+  examples: |
     - I want to know [something]{"entity":"attribute","value":"biographie"} of her
     - Please show me the [biographie]{"entity":"attribute","value":"biographie"} of [Ruth Barak](PERSON)
     - Tell me [something]{"entity":"attribute","value":"biographie"} about [Ruth Barak](PERSON)
@@ -704,12 +698,14 @@ nlu:
     - [City of Headquarter]{"entity": "attribute", "value": "city_of_headquarters"} of [Institute for Applied Psychology](ORG), please 
     - Show me the [city where the headquarter]{"entity": "attribute", "value": "city_of_headquarters"} was?
     - I like to know the [city where the headquarter]{"entity": "attribute", "value": "city_of_headquarters"} is
+    - In which [city where the headquarter]{"entity": "attribute", "value": "city_of_headquarters"} of [Institute for Applied Psychology](ORG)?
 
 - intent: details_of_organizations/genereal
   examples: |
     - [Something]{"entity": "attribute", "value": "biographie"} of [Hebrew Gymnasium Herzliya](ORG), please
     - Show me [something]{"entity": "attribute", "value": "biographie"} about [Institute for Applied Psychology](ORG)
     - Tell me [something]{"entity": "attribute", "value": "biographie"} about [Institute for Applied Psychology](ORG)
+    - Could you tell me [something]{"entity": "attribute", "value": "biographie"} about the [Institute for Applied Psychology](ORG)
 
 - intent: details_of_organizations/headquarter
   examples: |
@@ -718,14 +714,16 @@ nlu:
     - Where is the [headquarter]{"entity": "attribute", "value": "headquarter"} of [Institute for Applied Psychology](ORG)
     - Where was the [headquarter]{"entity": "attribute", "value": "headquarter"}?
     - Where are the [headquarters]{"entity": "attribute", "value": "headquarter"} of [International Save the Children Union](ORG)?
+    - Could you tell me where the [headquarter](attribute) of the [International Save the Children Union](ORG) was?
 
-- intent: details_of_organizations/top members
+- intent: details_of_organizations/top_members
   examples: |
     - Show me some [top members]{"entity": "attribute", "value": "top_members_employees"} of [Mizrahi Womens Organization](ORG)?
     - Which [top members]{"entity": "attribute", "value": "top_members_employees"} had  [Spiritual Hygiene](ORG)?
     - Who was the [top member]{"entity": "attribute", "value": "top_members_employees"} of [Haaretz Davar](ORG)
     - Tell me the [top members]{"entity": "attribute", "value": "top_members_employees"} of [Zentralwohlfahrtsstelle](ORG)
     - Please tell me who was the [leader]{"entity": "attribute", "value": "top_members_employees"}
+    - Could you show me the [leader]{"entity": "attribute", "value": "top_members_employees"} of the [Zentralwohlfahrtsstelle](ORG)?
 
 - intent: details_of_organizations/members
   examples: |
@@ -756,6 +754,7 @@ nlu:
     - Can you show me the [establishment date]{"entity": "attribute", "value": "date_founded"} of [Spiritual Hygiene](ORG)?
     - I want to know the [establishment date]{"entity": "attribute", "value": "date_founded"} of [Spiritual Hygiene](ORG)?
     - Tell me the [establishment date]{"entity": "attribute", "value": "date_founded"} of [Spiritual Hygiene](ORG)!
+    - When was the [establishment date]{"entity": "attribute", "value": "date_founded"} of [Spiritual Hygiene](ORG)?
 
 - intent: details_of_organizations/founded_by
   examples: |
@@ -784,6 +783,7 @@ nlu:
     - Please show me the [subsidiares](attribute) of the [Leo Baeck Institute](ORG)!
     - Show me the [subsidiares](attribute)
     - Want to know the [subsidiares](attribute).
+    - Which orgas were the [subsidiares](attribute) of the [Leo Baeck Institute](ORG)?
 
 
 - intent: details_of_organizations/affiliation
@@ -791,6 +791,7 @@ nlu:
     - Which [political affiliation]{"entity": "attribute", "value": "political_religious_affiliation"} had the [Youth Aliyah](ORG)?
     - Can you show me the [religious affiliation]{"entity": "attribute", "value": "political_religious_affiliation"} of the [Jewish National Party](ORG)?
     - I like to know the [affiliation]{"entity": "attribute", "value": "political_religious_affiliation"} of the [Jewish Agency Central Bureau](ORG)?
+    - [political or religious affiliation]{"entity": "attribute", "value": "political_religious_affiliation"} please!
 
 - intent: questionsYesNoPerson_attributes
   examples: |
@@ -850,6 +851,7 @@ nlu:
      - Did [German Association of Zionist Women](ORG) had the [headquarter]{"entity": "attribute", "value": "headquarter"} in [Israel](GPE)?
      - Was the [headquarter]{"entity": "attribute", "value": "headquarter"} of the [Zentralewohlfahrtsstelle](ORG) in [Berlin](GPE)?
      - Did the [International Conference of Jewish Social Work](ORG) had a connection to [Palestina](GPE)?
+     - Tell me if the [headquarter] of the [German Association of Zionist Women](ORG) was in [Palestina](GPE)
 
 - intent: questionsYesNoOrganization_connection_to_RELIGION
   examples: |
@@ -901,6 +903,19 @@ nlu:
     - How can I add a missing enitity?
     - Please show me how I can add these entity!
     - Tell me how I can add it. 
+
+- synonym: DATE
+  examples: |
+    - When
+    - At which date
+    - at which date
+    - which date
+
+- synonym: PLACE
+  examples: |
+    - Where
+    - At which place
+    - at which place
 
 - lookup: object_type
   examples: |
@@ -996,7 +1011,7 @@ nlu:
     - place of aboude
     - places of aboude
 
-- synonym: religion
+- synonym: RELIGION
   examples: |
     - confession
     - religions
@@ -1294,12 +1309,14 @@ nlu:
 - synonym: female
   examples: |
     - women
+    - woman
     - feminine
     - womanly
 
 - synonym: male
   examples: |
     - man
+    - men
     - masculine
     - manly
     - virile

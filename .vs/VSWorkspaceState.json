@@ -3,8 +3,8 @@
     "",
     "\\actions",
     "\\data",
-    "\\docker"
+    "\\results"
   ],
-  "SelectedNode": "\\actions\\semantic_search_action.py",
+  "SelectedNode": "\\domain.yml",
   "PreviewInSolutionExplorer": false
 }

@@ -8,9 +8,6 @@ stories:
   - action: utter_welcome
   - action: action_initial_explained_entitites
   - action: utter_explain_need_of_information
-  - action: utter_ask_username
-  - intent: add_username
-  - action: action_set_username
   - action: utter_ask_for_gender
   - intent: add_gender
   - action: utter_ask_for_age
@@ -25,9 +22,6 @@ stories:
 
 - story: add_user_data
   steps:
-  - intent: add_username
-  - action: action_set_username
-  - action: utter_ask_for_gender
   - intent: add_gender
   - action: utter_ask_for_age
   - intent: add_age

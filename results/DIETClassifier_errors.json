@@ -26,7 +26,7 @@
         "entity": "attribute",
         "start": 13,
         "end": 21,
-        "confidence_entity": 0.9998927116394043,
+        "confidence_entity": 0.9999668598175049,
         "value": "date_of_death",
         "extractor": "DIETClassifier",
         "processors": [
@@ -37,7 +37,7 @@
         "entity": "PERSON",
         "start": 25,
         "end": 41,
-        "confidence_entity": 0.9999516010284424,
+        "confidence_entity": 0.9998573064804077,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       }
