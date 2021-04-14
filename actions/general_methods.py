@@ -172,6 +172,6 @@ class GeneralMethods():
       # Ausgabe des Links
       dispatcher.utter_message(text=f"For more informations you can look here:")
       dispatcher.utter_message(text=f"https://www.jigsaw-navi.net/de/content/"+link)
-      # Speichern des Links im dafuer vorgesehendem Slot
-      set_slot_link = [SlotSet(Constants.slot_last_link, link)]
-      return set_slot_link
+    # Speichern des Links im dafuer vorgesehendem Slot
+    set_slot_link = [SlotSet(Constants.slot_last_link, link)]
+    return set_slot_link

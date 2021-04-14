@@ -19,6 +19,7 @@ class SemanticSearchAction(Action):
     tracker: Tracker,
     domain: Dict[Text, Any]) -> List[EventType]:
     print("action_semantic_search")
+    print(tracker.latest_message)
     # Ermittlung alle Entitaeten
     entities = tracker.latest_message[Constants.entities]
     # Pruefung ob Entitaeten gefunden werden konnten

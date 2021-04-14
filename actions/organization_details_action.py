@@ -55,7 +55,7 @@ class OrganizationDetailsAction(Action):
       Wird keine passende Ausgabemethode ermittelt, werden die Attribute aus der Datenbank ohne besondere Methode ausgegeben.
       Wird nichts ausgegeben, weil z.B. kein Attribute aus den Daten ermittelt werden kann, wird die semantische Suche aufgerufen.
 
-      dispatcher = Disatcher
+      dispatcher = Dispatcher
       name = Name der Person zu der Daten erfragt werden sollen
       attribute = Attribut zu welchem Informationen ausgegeben werden sollen
       """

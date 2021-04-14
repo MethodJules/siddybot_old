@@ -21,12 +21,13 @@ class InitialExplainedEntititesAction(Action):
         domain: Dict[Text, Any]) -> List[EventType]:
       """
       Methode initialisiert die Werte der Slots mit False
-      Hier initalisierte Slots sind: 
+      Die hier initalisierte Slots sind: 
       explained_add_entity
       explained_add_person
       semantic_search_result
       shall_explain_add_entity
       shall_explain_add_person
       """
+      print("action_initial_explained_entitites")
       return [SlotSet(Constants.slot_explained_add_entity, False), SlotSet(Constants.slot_explained_add_person, False), SlotSet(Constants.slot_semantic_search_result, False),
               SlotSet(Constants.slot_shall_explain_add_entity, False), SlotSet(Constants.slot_shall_explain_add_person, False)]

@@ -3,12 +3,6 @@
     "text": "When was the deathday of Esther Apfelberg?",
     "entities": [
       {
-        "start": 0,
-        "end": 4,
-        "value": "DATE",
-        "entity": "object_type"
-      },
-      {
         "start": 13,
         "end": 21,
         "value": "date_of_death",
@@ -23,10 +17,21 @@
     ],
     "predicted_entities": [
       {
+        "entity": "object_type",
+        "start": 0,
+        "end": 4,
+        "confidence_entity": 0.7922849655151367,
+        "value": "DATE",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
         "entity": "attribute",
         "start": 13,
         "end": 21,
-        "confidence_entity": 0.9999668598175049,
+        "confidence_entity": 0.9999580383300781,
         "value": "date_of_death",
         "extractor": "DIETClassifier",
         "processors": [
@@ -37,9 +42,115 @@
         "entity": "PERSON",
         "start": 25,
         "end": 41,
-        "confidence_entity": 0.9998573064804077,
+        "confidence_entity": 0.9999632835388184,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Can you tell me in which city the headquarter of Organization of German Immigrants is",
+    "entities": [
+      {
+        "start": 25,
+        "end": 45,
+        "value": "city_of_headquarters",
+        "entity": "attribute"
+      },
+      {
+        "start": 49,
+        "end": 82,
+        "value": "Organization of German Immigrants",
+        "entity": "ORG"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "attribute",
+        "start": 25,
+        "end": 48,
+        "confidence_entity": 0.6212682723999023,
+        "value": "city the headquarter of",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "ORG",
+        "start": 49,
+        "end": 82,
+        "confidence_entity": 0.9790775179862976,
+        "value": "Organization of German Immigrants",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "object_type",
+        "start": 25,
+        "end": 29,
+        "value": "city",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "object_type",
+        "start": 49,
+        "end": 61,
+        "value": "Organization",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "ORG",
+        "start": 49,
+        "end": 82,
+        "value": "Organization of German Immigrants",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Tell me if the [headquarter] of the German Association of Zionist Women was in Palestina",
+    "entities": [
+      {
+        "start": 36,
+        "end": 71,
+        "value": "German Association of Zionist Women",
+        "entity": "ORG"
+      },
+      {
+        "start": 79,
+        "end": 88,
+        "value": "Palestina",
+        "entity": "GPE"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "ORG",
+        "start": 29,
+        "end": 31,
+        "confidence_entity": 0.6319345831871033,
+        "value": "of",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "ORG",
+        "start": 36,
+        "end": 71,
+        "confidence_entity": 0.9669874906539917,
+        "value": "German Association of Zionist Women",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "GPE",
+        "start": 79,
+        "end": 88,
+        "confidence_entity": 0.9990755319595337,
+        "value": "Palestina",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "ORG",
+        "start": 36,
+        "end": 71,
+        "value": "German Association of Zionist Women",
+        "extractor": "RegexEntityExtractor"
       }
     ]
   }

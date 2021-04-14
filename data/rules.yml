@@ -10,6 +10,12 @@ rules:
   - intent: greet
   - action: utter_welcome
   - action: action_initial_explained_entitites
+  - slot_was_set:
+    - shall_explain_add_entity: false
+    - shall_explain_add_person: false
+    - explained_add_entity: false
+    - explained_add_person: false
+    - semantic_search_result: false
   - action: utter_explain_need_of_information
   - action: utter_ask_for_gender
 

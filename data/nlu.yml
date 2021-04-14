@@ -46,15 +46,13 @@ nlu:
     - Call me [Franziska](PERSON)
     - Hey, please call me [Peter](PERSON)
 
-- intent: add_age
+- intent: add_information
   examples: |
     - My age is [45](CARDINAL)
     - I am [twenty-three](CARDINAL) years old
     - I don't want to tell you my age
     - I am [5](CARDINAL)
-
-- intent: add_gender
-  examples: |
+    - I am [36](CARDINAL)
     - [male]{"entity": "gender", "value": "male"}
     - I do not want to tell you my gender
     - [divers]{"entity": "gender", "value": "divers"}
@@ -63,14 +61,13 @@ nlu:
     - I'm a [woman]{"entity": "gender", "value": "female"}
     - I am a [woman]{"entity": "gender", "value": "female"}
     - I am [female]{"entity": "gender", "value": "female"}
-
-- intent: add_expert_value
-  examples: |
     - I think it is a [5](CARDINAL)
     - My knowledge about the topic is a [2](CARDINAL)
     - It is a [5](CARDINAL)
+    - I'm [35](CARDINAL)
     - my level is [7](CARDINAL)
     - It's [5](CARDINAL)
+    - [45](CARDINAL)
 
 - intent: answer_thank_you
   examples: |
@@ -973,7 +970,6 @@ nlu:
       - top_members_employees
       - parents
       - children
-      - age
       - statesorprovinces_of_residence
       - stateorprovince_of_headquarters
       - siblings

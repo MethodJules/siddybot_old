@@ -19,6 +19,7 @@ class SetAgeAction(Action):
   def run(self, dispatcher: CollectingDispatcher,
         tracker: Tracker,
         domain: Dict[Text, Any]) -> List[EventType]:
+      print("action_set_age")
       # Auslesen des Slots der Kardinalitaet
       age = tracker.get_slot(Constants.slot_cardinal)
       # Setzt den Wert des Alters in den passenden Slot 

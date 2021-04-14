@@ -3,8 +3,9 @@
     "",
     "\\actions",
     "\\data",
+    "\\docker",
     "\\results"
   ],
-  "SelectedNode": "\\domain.yml",
+  "SelectedNode": "\\actions\\initial_explaind_entities_action.py",
   "PreviewInSolutionExplorer": false
 }

@@ -35,7 +35,7 @@ class ListOfObjecttype(Action):
     else: 
       # Zunaechst wird geprueft ob ein Objekttyp gefunden wurde und 
       # ob dieser ein Objekttyp der Webseite ist
-      if (not(object_type is None) & (object_type in object_types)):
+      if (not(object_type is None) & (object_type in Constants.object_types)):
         # Suchen von allen Objekten der Jigsaw-Webseite
         answer =  DbCall.searchForEntitiy()
         objects = []
@@ -49,7 +49,9 @@ class ListOfObjecttype(Action):
         intent = tracker.latest_message["text"]
         return_search = SemanticSearch.searchSemanticSearchIntent(dispatcher, tracker, intent)
     # Rueckgabe der Events aus der semantischen Suche und setzen des Slots Cardinal auf None
-    return [SlotSet(Constants.slot_cardinal, None)] + return_search.events
+    return_events = return_search.events
+    return_events.append(SlotSet(Constants.slot_cardinal))
+    return return_events
 
   def searchOrganizations(self, dispatcher: CollectingDispatcher, tracker: Tracker):
       """

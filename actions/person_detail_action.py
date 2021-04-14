@@ -35,7 +35,7 @@ class PersonDetailAction(Action):
       if ((entity_person is None)):
           # Wenn keine Person gefunden wurde, dann wir mit allen Entitaeten der letzten Nachricht eine semantische Suche durchgefuehrt
           entities = tracker.latest_message[Constants.entities] 
-          events = events + SemanticSearch.searchSemanticSearchListOfEntities(dispatcher, entities, tracker).events
+          events.extend(SemanticSearch.searchSemanticSearchListOfEntities(dispatcher, entities, tracker).events)
       else:
         # Pruefung ob die gefundene Person in den Daten vorhanden ist
         personExist = DbCall.validationPerson(entity_person)
@@ -45,24 +45,26 @@ class PersonDetailAction(Action):
             # Pruefung ob ein Objekttyp in der Eingabe des Anwender erkannt werden konnte
             if (not(tracker.get_slot(Constants.slot_object_type) is None)):
               # Wenn kein Attribut aber ein Objekttyp identifiziert werden konnte, dann werden alle Entitaeten mit dem gewuenschten Objekttyp gesucht und ausgegeben
-              events = events + self.searchForEntityWithObjecttype(dispatcher, tracker, entity_person, tracker.get_slot(Constants.slot_object_type))
+              events.extend(self.searchForEntityWithObjecttype(dispatcher, tracker, entity_person, tracker.get_slot(Constants.slot_object_type)))
             else:
               # Konnte kein Attribut oder Objekttyp gefunden werden, 
               # dann wird mit dem gesamten Text der Eingabe eine semantische Suche durchgefuehrt um moegliche Verbindungen zu finden
               intent = tracker.latest_message["text"]
               return_search = SemanticSearch.searchSemanticSearchIntent(dispatcher, tracker, intent, Constants.person)
-              events = events + return_search.events
+              events.extend(return_search.events)
           else:
             # Da ein Attribut identifiziert werden konnte, wird zu diesem Attribut das die Entitaet gesucht
-            events = events + self.searchForEntityWithAttribut(dispatcher, tracker, entity_person, abfrage_attribute) + [SlotSet(Constants.slot_shall_explain_add_person, False)]
+            events.extend(self.searchForEntityWithAttribut(dispatcher, tracker, entity_person, abfrage_attribute))
+            events.append(SlotSet(Constants.slot_shall_explain_add_person, False))
         else:
           # Wenn keine konkrete Entitaet fuer die Person vorhanden ist, dann wird eine semantische Suche durchgefuehrt, 
           # ob der Name in den Steckbriefen der anderen Personen gefunden werden kann.
           # Ausserdem werden die Slots attribute und object_type zurueckgesetzt
           # In der Methode SemanticSearch.returnPersonNotExist wird ausserdem der Slot shall_explain_add_person auf true gesetzt, 
           # damit danach im Anschluss erklaert wird, wie die Person angelegt werden kann
-         events = events + SemanticSearch.returnPersonNotExist(dispatcher, tracker)
+         events.extend(SemanticSearch.returnPersonNotExist(dispatcher, tracker))
       # Rueckgabe aller gesammelten Events dieser Action
+      print(events)
       return events
 
 
@@ -101,7 +103,7 @@ class PersonDetailAction(Action):
         intent = tracker.latest_message["text"]
         search_return = SemanticSearch.searchSemanticSearchIntent(dispatcher, tracker, intent, Constants.person)
         dispatcher.utter_message(text=f"The correct answer is missing in the graph. Maybe you could add the entity.")
-        return[SlotSet(Constants.slot_shall_explain_add_entity, True)] + search_return.events
+        return[SlotSet(Constants.slot_shall_explain_add_entity, True)].extend(search_return.events)
     else:
        # Wenn Objekte gefunden wurden, dann sollen die Ergebnisse mit einem passenden Text zu dem Objekttyp
        # ausgegeben werden.
@@ -120,7 +122,7 @@ class PersonDetailAction(Action):
        else: 
           # Wenn ein Objekttyp nicht explizit beruecksichtigt wurde, dann wird die Liste an Objekten einfach so ausgegeben
           dispatcher.utter_message(text=f""+ GeneralMethods.liste_ausgeben(objects))
-       return [SlotSet(Constants.slot_semantic_search_result, False), SlotSet(Constants.slot_shall_explain_add_entity, False), SlotSet(Constants.slot_object_type, None)]
+       return [SlotSet(Constants.slot_semantic_search_result, False), SlotSet(Constants.slot_shall_explain_add_entity, False), SlotSet(Constants.slot_object_type)]
 
   def searchForEntityWithAttribut(self, dispatcher: CollectingDispatcher, tracker: Tracker, name, attribute) -> List[EventType]:
       """
@@ -202,17 +204,15 @@ class PersonDetailAction(Action):
           dispatcher.utter_message(text=f""+x)
       # Wenn kein passendes Attribut gefunden werden konnte, 
       # dann wird eine semantische Suche mit dem Attribut und der Person ausgefuehrt
+      return_events = []
       if (return_ok == False):
         return_search = SemanticSearch.searchSemanticSearchAttribute(dispatcher, tracker, name, attribute, Constants.person)
-        return_events = []
         # Wenn das Attribut nicht Biographie ist, dann wird zusaetzlich gesagt, dass das Attribut im Graphen fehlt
         # und der Slot wird gesetzt, dass erklaert werden soll, wie eine Entitaet hinzugefuegt werden soll
         if (attribute != Constants.biographie):
           dispatcher.utter_message(template="utter_entity_is_missing")
-          return_events = return_events + [SlotSet(Constants.slot_shall_explain_add_entity, True)]
-        return_events = return_events + return_search.events
-        print(return_events)
-        return return_events
+          return_events.append(SlotSet(Constants.slot_shall_explain_add_entity, True))
+        return_events.extend(return_search.events)
       else:
         # Wenn alle Daten gefunden werden, werden die Slots zum erklaeren der Entitaet und 
         # zur Frage ob die Ergebnisse hilfreich waren vorsichtshalber auf False gesetzt
@@ -229,7 +229,10 @@ class PersonDetailAction(Action):
             node = node_title
             break
         link = GeneralMethods.linkErstellen(dispatcher, node)
-        return [shall_explain_add_entity, semantic_search_result] + GeneralMethods.linkAusgeben(dispatcher, tracker, link)
+        return_events = GeneralMethods.linkAusgeben(dispatcher, tracker, link)
+        return_events.extend([shall_explain_add_entity, semantic_search_result])
+      print(return_events)
+      return return_events
 
   def utter_birth(self, dispatcher: CollectingDispatcher, tracker: Tracker, name, entities) -> bool:
       """

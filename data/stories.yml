@@ -7,29 +7,31 @@ stories:
   - intent: greet
   - action: utter_welcome
   - action: action_initial_explained_entitites
+  - slot_was_set:
+    - shall_explain_add_entity: false
+    - shall_explain_add_person: false
+    - explained_add_entity: false
+    - explained_add_person: false
+    - semantic_search_result: false
   - action: utter_explain_need_of_information
   - action: utter_ask_for_gender
-  - intent: add_gender
+  - intent: add_information
   - action: utter_ask_for_age
-  - intent: add_age
-  - action: action_set_age
+  - intent: add_information
   - action: utter_ask_for_expert
   - action: utter_meaning_if_expertskale
-  - intent: add_expert_value
-  - action: action_set_expert_value
+  - intent: add_information
   - action: utter_thank_you
   - intent: answer_thank_you
 
 - story: add_user_data
   steps:
-  - intent: add_gender
+  - intent: add_information
   - action: utter_ask_for_age
-  - intent: add_age
-  - action: action_set_age
+  - intent: add_information
   - action: utter_ask_for_expert
   - action: utter_meaning_if_expertskale
-  - intent: add_expert_value
-  - action: action_set_expert_value
+  - intent: add_information
   - action: utter_thank_you
   - intent: answer_thank_you
 
@@ -139,10 +141,10 @@ stories:
 
 - story: use maps
   steps:
-  - intent:  use_map
+  - intent: use_map
   - action: utter_introduce_maps
   - action: utter_ask_for_maptype
-  - intent:  choose_map
+  - intent: choose_map
     entities:
     - maptype: "activity map"
   - action: utter_explain_activity_map
@@ -301,6 +303,7 @@ stories:
   - action: action_organization_details
   - slot_was_set:
     - semantic_search_result: true
+    - last_link: last_link
   - action: utter_results_are_helpful
   - or:
     - intent: agree
@@ -321,6 +324,7 @@ stories:
   - action: action_yes_no_questions_organization
   - slot_was_set:
     - semantic_search_result: true
+    - last_link: last_link
   - action: utter_results_are_helpful
   - or:
     - intent: agree
@@ -396,7 +400,7 @@ stories:
   - intent: thanks
   - action: utter_answer_thanks
 
-- story: questions person and all fine
+- story: questions person and all fine + new link + nothing was explained
   steps:
   - intent: questions_detail_person
   - action: action_person_detail
@@ -404,6 +408,43 @@ stories:
     - shall_explain_add_entity: false
     - shall_explain_add_person: false
     - explained_add_entity: false
+    - explained_add_person: false
+    - semantic_search_result: false
+    - last_link: last_link
+
+- story: questions person and all fine + new link + both was explained
+  steps:
+  - intent: questions_detail_person
+  - action: action_person_detail
+  - slot_was_set:
+    - shall_explain_add_entity: false
+    - shall_explain_add_person: false
+    - explained_add_entity: true
+    - explained_add_person: true
+    - semantic_search_result: false
+    - last_link: last_link
+
+- story: questions person and all fine + new link + add entity was explained
+  steps:
+  - intent: questions_detail_person
+  - action: action_person_detail
+  - slot_was_set:
+    - shall_explain_add_entity: false
+    - shall_explain_add_person: false
+    - explained_add_entity: true
+    - explained_add_person: false
+    - semantic_search_result: false
+    - last_link: last_link
+
+- story: questions person and all fine + new link + add person was explained
+  steps:
+  - intent: questions_detail_person
+  - action: action_person_detail
+  - slot_was_set:
+    - shall_explain_add_entity: false
+    - shall_explain_add_person: false
+    - explained_add_entity: false
+    - explained_add_person: true
     - semantic_search_result: false
     - last_link: last_link
 
@@ -849,6 +890,7 @@ stories:
   - action: action_yes_no_questions_person
   - slot_was_set:
     - semantic_search_result: true
+    - last_link: last_link
   - action: utter_results_are_helpful
   - or:
     - intent: agree
