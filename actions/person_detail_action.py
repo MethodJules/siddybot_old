@@ -103,7 +103,10 @@ class PersonDetailAction(Action):
         intent = tracker.latest_message["text"]
         search_return = SemanticSearch.searchSemanticSearchIntent(dispatcher, tracker, intent, Constants.person)
         dispatcher.utter_message(text=f"The correct answer is missing in the graph. Maybe you could add the entity.")
-        return[SlotSet(Constants.slot_shall_explain_add_entity, True)].extend(search_return.events)
+        if (tracker.get_slot(Constants.slot_explained_add_entity) == True):
+          return[SlotSet(Constants.slot_shall_explain_add_entity, False)].extend(search_return.events)
+        else: 
+          return[SlotSet(Constants.slot_shall_explain_add_entity, True)].extend(search_return.events)
     else:
        # Wenn Objekte gefunden wurden, dann sollen die Ergebnisse mit einem passenden Text zu dem Objekttyp
        # ausgegeben werden.
@@ -211,7 +214,12 @@ class PersonDetailAction(Action):
         # und der Slot wird gesetzt, dass erklaert werden soll, wie eine Entitaet hinzugefuegt werden soll
         if (attribute != Constants.biographie):
           dispatcher.utter_message(template="utter_entity_is_missing")
-          return_events.append(SlotSet(Constants.slot_shall_explain_add_entity, True))
+          if (tracker.get_slot(Constants.slot_explained_add_entity) == True):
+            return_events.append(SlotSet(Constants.slot_shall_explain_add_entity, False))
+          else: 
+            return_events.append(SlotSet(Constants.slot_shall_explain_add_entity, True))
+        else:
+          return_events.append(SlotSet(Constants.slot_shall_explain_add_entity, False))
         return_events.extend(return_search.events)
       else:
         # Wenn alle Daten gefunden werden, werden die Slots zum erklaeren der Entitaet und 

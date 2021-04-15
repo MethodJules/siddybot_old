@@ -41,6 +41,7 @@ intents:
   - requirements_site_to_author
   - ask_for_access_type_for_facilities
   - list_of
+  - successfully_login
   - questions_detail_person
   - search_with_chatbot
   - details_of_organizations
@@ -271,6 +272,14 @@ responses:
   utter_explain_need_of_information:
   - text: "Because of I'm a prototype, I would like to know some information from yourself for analysis."
   - text: "I like to know some information from yourself for analysis"
+
+  utter_start:
+  - text: "Now you can start!"
+  - text: "Now you can start asking questions"
+
+  utter_restart_me:
+  - text: "If you think that I have a problem, you can say \"restart\" and I will restart myself."
+  - text: "Sometimes I'll get stuck. If you notice this you can say \"restart\""
 
   utter_ask_username:
   - text: "Please tell me your name."

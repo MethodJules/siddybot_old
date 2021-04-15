@@ -22,6 +22,8 @@ stories:
   - action: utter_meaning_if_expertskale
   - intent: add_information
   - action: utter_thank_you
+  - action: utter_start
+  - action: utter_restart_me
   - intent: answer_thank_you
 
 - story: add_user_data
@@ -33,6 +35,8 @@ stories:
   - action: utter_meaning_if_expertskale
   - intent: add_information
   - action: utter_thank_you
+  - action: utter_start
+  - action: utter_restart_me
   - intent: answer_thank_you
 
 - story: thanks
@@ -348,7 +352,6 @@ stories:
   - slot_was_set:
     - shall_explain_add_entity: true
     - shall_explain_add_person: false
-    - explained_add_entity: false
     - semantic_search_result: true
     - last_link: last_link
   - action: utter_results_are_helpful
@@ -373,6 +376,24 @@ stories:
   - intent: thanks
   - action: utter_answer_thanks
 
+- story: questions person + add entity + semantic_search_result + no explain
+  steps:
+  - intent: questions_detail_person
+  - action: action_person_detail
+  - slot_was_set:
+    - shall_explain_add_entity: true
+    - shall_explain_add_person: false
+    - semantic_search_result: true
+    - last_link: last_link
+  - action: utter_results_are_helpful
+  - or:
+    - intent: agree
+    - intent: dnied
+  - action: utter_ok
+  - action: utter_shall_explain_add_entity
+  - intent: denied
+  - action: utter_ok
+
 - story: questions person + add entity + create account
   steps:
   - intent: questions_detail_person
@@ -380,7 +401,6 @@ stories:
   - slot_was_set:
     - shall_explain_add_entity: true
     - shall_explain_add_person: false
-    - explained_add_entity: false
     - semantic_search_result: false
     - last_link: last_link
   - action: utter_shall_explain_add_entity
@@ -400,51 +420,26 @@ stories:
   - intent: thanks
   - action: utter_answer_thanks
 
-- story: questions person and all fine + new link + nothing was explained
+- story: questions person + add entity + but should not explain
   steps:
   - intent: questions_detail_person
   - action: action_person_detail
   - slot_was_set:
-    - shall_explain_add_entity: false
+    - shall_explain_add_entity: true
     - shall_explain_add_person: false
-    - explained_add_entity: false
-    - explained_add_person: false
     - semantic_search_result: false
     - last_link: last_link
+  - action: utter_shall_explain_add_entity
+  - intent: denied
+  - action: utter_ok
 
-- story: questions person and all fine + new link + both was explained
+- story: questions person and all fine
   steps:
   - intent: questions_detail_person
   - action: action_person_detail
   - slot_was_set:
     - shall_explain_add_entity: false
     - shall_explain_add_person: false
-    - explained_add_entity: true
-    - explained_add_person: true
-    - semantic_search_result: false
-    - last_link: last_link
-
-- story: questions person and all fine + new link + add entity was explained
-  steps:
-  - intent: questions_detail_person
-  - action: action_person_detail
-  - slot_was_set:
-    - shall_explain_add_entity: false
-    - shall_explain_add_person: false
-    - explained_add_entity: true
-    - explained_add_person: false
-    - semantic_search_result: false
-    - last_link: last_link
-
-- story: questions person and all fine + new link + add person was explained
-  steps:
-  - intent: questions_detail_person
-  - action: action_person_detail
-  - slot_was_set:
-    - shall_explain_add_entity: false
-    - shall_explain_add_person: false
-    - explained_add_entity: false
-    - explained_add_person: true
     - semantic_search_result: false
     - last_link: last_link
 
@@ -455,7 +450,6 @@ stories:
   - slot_was_set:
     - shall_explain_add_entity: true
     - shall_explain_add_person: false
-    - explained_add_entity: false
     - semantic_search_result: true
     - last_link: last_link
   - action: utter_results_are_helpful
@@ -485,7 +479,6 @@ stories:
   - slot_was_set:
     - shall_explain_add_entity: true
     - shall_explain_add_person: false
-    - explained_add_entity: false
     - semantic_search_result: false
     - last_link: last_link
   - action: utter_shall_explain_add_entity
@@ -519,17 +512,6 @@ stories:
   - intent: thanks
   - action: utter_answer_thanks
 
-- story: questions person + explained entity
-  steps:
-  - intent: questions_detail_person
-  - action: action_person_detail
-  - slot_was_set:
-    - shall_explain_add_entity: true
-    - shall_explain_add_person: false
-    - explained_add_entity: true
-    - semantic_search_result: false
-    - last_link: last_link
-
 - story: questions persons + explain add missing person + create account + semantic_search_result
   steps:
   - intent: questions_detail_person
@@ -537,7 +519,6 @@ stories:
   - slot_was_set:
     - shall_explain_add_entity: false
     - shall_explain_add_person: true
-    - explained_add_person: false
     - semantic_search_result: true
     - last_link: last_link
   - action: utter_results_are_helpful
@@ -595,7 +576,6 @@ stories:
   - slot_was_set:
     - shall_explain_add_entity: false
     - shall_explain_add_person: true
-    - explained_add_person: false
     - semantic_search_result: false
     - last_link: last_link
   - action: utter_shall_explain_add_person
@@ -649,7 +629,6 @@ stories:
   - slot_was_set:
     - shall_explain_add_person: true
     - shall_explain_add_entity: false
-    - explained_add_person: false
     - semantic_search_result: true
     - last_link: last_link
   - action: utter_results_are_helpful
@@ -703,7 +682,6 @@ stories:
   - slot_was_set:
     - shall_explain_add_entity: false
     - shall_explain_add_person: true
-    - explained_add_person: false
     - semantic_search_result: false
     - last_link: last_link
   - action: utter_shall_explain_add_person
@@ -745,82 +723,44 @@ stories:
     - intent:  save_created_person
   - action: utter_answer_thanks
 
-- story: questions persons + person or entity not found but explained + semantic_search_result
+- story: questions persons + explain add missing person + semantic_search_result + no explain
   steps:
-  - intent: list_of
-  - action: action_list_of
   - intent: questions_detail_person
   - action: action_person_detail
   - slot_was_set:
     - shall_explain_add_person: true
     - shall_explain_add_entity: false
-    - explained_add_person: true
     - semantic_search_result: true
     - last_link: last_link
   - action: utter_results_are_helpful
   - or:
     - intent: agree
-    - intent: denied
-  - action: utter_ok
-
-- story: questions persons + person or entity not found but explained
-  steps:
-  - intent: list_of
-  - action: action_list_of
-  - intent: questions_detail_person
-  - action: action_person_detail
-  - slot_was_set:
-    - shall_explain_add_person: true
-    - shall_explain_add_entity: false
-    - explained_add_person: true
-    - semantic_search_result: false
-    - last_link: last_link
-
-- story: questions persons + person not found + not explain + semantic_search_result
-  steps:
-  - intent: list_of
-  - action: action_list_of
-  - intent: questions_detail_person
-  - action: action_person_detail
-  - slot_was_set:
-    - shall_explain_add_person: true
-    - shall_explain_add_entity: false
-    - explained_add_person: false
-    - semantic_search_result: true
-    - last_link: last_link
-  - action: utter_results_are_helpful
-  - or:
-    - intent: agree
-    - intent: denied
+    - intent: dnied
   - action: utter_ok
   - action: utter_shall_explain_add_person
   - intent: denied
   - action: utter_ok
 
-- story: questions persons + person not found + not explain
+- story: questions persons + explain add missing person + no explain
   steps:
-  - intent: list_of
-  - action: action_list_of
   - intent: questions_detail_person
   - action: action_person_detail
   - slot_was_set:
-    - shall_explain_add_person: true
     - shall_explain_add_entity: false
-    - explained_add_person: false
+    - shall_explain_add_person: true
     - semantic_search_result: false
     - last_link: last_link
   - action: utter_shall_explain_add_person
   - intent: denied
   - action: utter_ok
 
-- story: questions persons + Entity not found + not explain + semantic_search_result
+- story: questions persons + semantic_search_result
   steps:
   - intent: questions_detail_person
   - action: action_person_detail
   - slot_was_set:
-    - shall_explain_add_entity: true
+    - shall_explain_add_entity: false
     - shall_explain_add_person: false
-    - explained_add_entity: false
     - semantic_search_result: true
     - last_link: last_link
   - action: utter_results_are_helpful
@@ -828,50 +768,6 @@ stories:
     - intent: agree
     - intent: denied
   - action: utter_ok
-  - action: utter_shall_how_add_entity
-  - intent: denied
-  - action: utter_ok
-
-- story: questions persons + Entity not found + not explain
-  steps:
-  - intent: questions_detail_person
-  - action: action_person_detail
-  - slot_was_set:
-    - shall_explain_add_entity: true
-    - shall_explain_add_person: false
-    - explained_add_entity: false
-    - semantic_search_result: false
-    - last_link: last_link
-  - action: utter_shall_how_add_entity
-  - intent: denied
-  - action: utter_ok
-
-- story: questions persons + Entity not found + explained add entity + semantic_search_result
-  steps:
-  - intent: questions_detail_person
-  - action: action_person_detail
-  - slot_was_set:
-    - shall_explain_add_entity: true
-    - shall_explain_add_person: false
-    - explained_add_entity: true
-    - semantic_search_result: true
-    - last_link: last_link
-  - action: utter_results_are_helpful
-  - or:
-    - intent: agree
-    - intent: denied
-  - action: utter_ok
-
-- story: questions persons + Entity not found + explained add entity
-  steps:
-  - intent: questions_detail_person
-  - action: action_person_detail
-  - slot_was_set:
-    - shall_explain_add_person: false
-    - shall_explain_add_entity: true
-    - explained_add_entity: true
-    - semantic_search_result: false
-    - last_link: last_link
 
 - story: count + list objects
   steps: 

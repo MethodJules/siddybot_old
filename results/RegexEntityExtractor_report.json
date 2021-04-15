@@ -1,4 +1,67 @@
 {
+  "gender": {
+    "precision": 1.0,
+    "recall": 0.5714285714285714,
+    "f1-score": 0.7272727272727273,
+    "support": 7,
+    "confused_with": {}
+  },
+  "PERSON": {
+    "precision": 0.9775280898876404,
+    "recall": 0.498567335243553,
+    "f1-score": 0.6603415559772297,
+    "support": 349,
+    "confused_with": {
+      "object_type": 2
+    }
+  },
+  "informationtype": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 27,
+    "confused_with": {
+      "object_type": 4,
+      "searchtype": 3
+    }
+  },
+  "year": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 4,
+    "confused_with": {}
+  },
+  "RELIGION": {
+    "precision": 0.375,
+    "recall": 0.8181818181818182,
+    "f1-score": 0.5142857142857142,
+    "support": 11,
+    "confused_with": {}
+  },
+  "contacttype": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 5,
+    "confused_with": {}
+  },
+  "attribute": {
+    "precision": 0.8909090909090909,
+    "recall": 0.13136729222520108,
+    "f1-score": 0.22897196261682243,
+    "support": 373,
+    "confused_with": {
+      "object_type": 37
+    }
+  },
+  "object_type": {
+    "precision": 0.1506849315068493,
+    "recall": 0.10091743119266056,
+    "f1-score": 0.12087912087912088,
+    "support": 109,
+    "confused_with": {}
+  },
   "GPE": {
     "precision": 0.0,
     "recall": 0.0,
@@ -16,81 +79,11 @@
       "PERSON": 4
     }
   },
-  "object_type": {
-    "precision": 0.1506849315068493,
-    "recall": 0.10091743119266056,
-    "f1-score": 0.12087912087912088,
-    "support": 109,
-    "confused_with": {}
-  },
-  "CARDINAL": {
-    "precision": 0.0,
-    "recall": 0.0,
-    "f1-score": 0.0,
-    "support": 19,
-    "confused_with": {}
-  },
-  "informationtype": {
-    "precision": 0.0,
-    "recall": 0.0,
-    "f1-score": 0.0,
-    "support": 27,
-    "confused_with": {
-      "object_type": 4,
-      "searchtype": 3
-    }
-  },
-  "PERSON": {
-    "precision": 0.9775280898876404,
-    "recall": 0.498567335243553,
-    "f1-score": 0.6603415559772297,
-    "support": 349,
-    "confused_with": {
-      "object_type": 2
-    }
-  },
-  "contacttype": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 5,
-    "confused_with": {}
-  },
-  "year": {
-    "precision": 0.0,
-    "recall": 0.0,
-    "f1-score": 0.0,
-    "support": 4,
-    "confused_with": {}
-  },
-  "gender": {
-    "precision": 1.0,
-    "recall": 0.5714285714285714,
-    "f1-score": 0.7272727272727273,
-    "support": 7,
-    "confused_with": {}
-  },
   "searchtype": {
     "precision": 0.2222222222222222,
     "recall": 1.0,
     "f1-score": 0.3636363636363636,
     "support": 2,
-    "confused_with": {}
-  },
-  "attribute": {
-    "precision": 0.8909090909090909,
-    "recall": 0.13136729222520108,
-    "f1-score": 0.22897196261682243,
-    "support": 373,
-    "confused_with": {
-      "object_type": 37
-    }
-  },
-  "RELIGION": {
-    "precision": 0.375,
-    "recall": 0.8181818181818182,
-    "f1-score": 0.5142857142857142,
-    "support": 11,
     "confused_with": {}
   },
   "maptype": {
@@ -100,22 +93,29 @@
     "support": 19,
     "confused_with": {}
   },
+  "CARDINAL": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 21,
+    "confused_with": {}
+  },
   "micro avg": {
     "precision": 0.8240740740740741,
-    "recall": 0.38830715532286214,
-    "f1-score": 0.527876631079478,
-    "support": 1146
+    "recall": 0.3876306620209059,
+    "f1-score": 0.5272511848341233,
+    "support": 1148
   },
   "macro avg": {
-    "precision": 0.5085049221311533,
+    "precision": 0.5085049221311534,
     "recall": 0.4603680043316927,
-    "f1-score": 0.4261629713433598,
-    "support": 1146
+    "f1-score": 0.42616297134335973,
+    "support": 1148
   },
   "weighted avg": {
-    "precision": 0.8056808091110186,
-    "recall": 0.38830715532286214,
-    "f1-score": 0.4786547987082206,
-    "support": 1146
+    "precision": 0.8042771840080378,
+    "recall": 0.3876306620209059,
+    "f1-score": 0.4778209053306801,
+    "support": 1148
   }
 }

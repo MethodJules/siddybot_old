@@ -186,4 +186,7 @@ class SemanticSearch():
     # Ausgabe, dass die Person nicht gefunden werden konnte 
     dispatcher.utter_message(template="utter_person_is_missing")
     # Ausgabe, dass erklaert werden sollte, wie eine Person angelegt wird
-    return[SlotSet(Constants.slot_shall_explain_add_person, True)]
+    if (tracker.get_slot(Constants.slot_explained_add_person) == True):
+      return[SlotSet(Constants.slot_shall_explain_add_person, False)]
+    else: 
+      return[SlotSet(Constants.slot_shall_explain_add_person, True)]
