@@ -46,6 +46,42 @@ nlu:
     - Call me [Franziska](PERSON)
     - Hey, please call me [Peter](PERSON)
 
+- intent: gender_female
+
+- intent: gender_male
+
+- intent: gender_divers
+
+- intent: younger_than_10
+
+- intent: between11_20
+
+- intent: between21_30
+
+- intent: between31_40
+
+- intent: between41_50
+
+- intent: between51_60
+
+- intent: between61_70
+
+- intent: older_than_71
+
+- intent: expertlevel_1
+
+- intent: expertlevel_2
+
+- intent: expertlevel_3
+
+- intent: expertlevel_4
+
+- intent: expertlevel_5
+
+- intent: expertlevel_6
+
+- intent: expertlevel_7
+
 - intent: add_information
   examples: |
     - My age is [45](CARDINAL)

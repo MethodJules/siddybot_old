@@ -15,12 +15,30 @@ stories:
     - semantic_search_result: false
   - action: utter_explain_need_of_information
   - action: utter_ask_for_gender
-  - intent: add_information
+  - or:
+    - intent: gender_female
+    - intent: gender_male
+    - intent: gender_divers
   - action: utter_ask_for_age
-  - intent: add_information
+  - or:
+    - intent: younger_than_10
+    - intent: between11_20
+    - intent: between21_30
+    - intent: between31_40
+    - intent: between41_50
+    - intent: between51_60
+    - intent: between61_70
+    - intent: older_than_71
   - action: utter_ask_for_expert
   - action: utter_meaning_if_expertskale
-  - intent: add_information
+  - or:
+    - intent: expertlevel_1
+    - intent: expertlevel_2
+    - intent: expertlevel_3
+    - intent: expertlevel_4
+    - intent: expertlevel_5
+    - intent: expertlevel_6
+    - intent: expertlevel_7
   - action: utter_thank_you
   - action: utter_start
   - action: utter_restart_me
@@ -28,12 +46,25 @@ stories:
 
 - story: add_user_data
   steps:
-  - intent: add_information
-  - action: utter_ask_for_age
-  - intent: add_information
+  - or:
+    - intent: younger_than_10
+    - intent: between11_20
+    - intent: between21_30
+    - intent: between31_40
+    - intent: between41_50
+    - intent: between51_60
+    - intent: between61_70
+    - intent: older_than_71
   - action: utter_ask_for_expert
   - action: utter_meaning_if_expertskale
-  - intent: add_information
+  - or:
+    - intent: expertlevel_1
+    - intent: expertlevel_2
+    - intent: expertlevel_3
+    - intent: expertlevel_4
+    - intent: expertlevel_5
+    - intent: expertlevel_6
+    - intent: expertlevel_7
   - action: utter_thank_you
   - action: utter_start
   - action: utter_restart_me
