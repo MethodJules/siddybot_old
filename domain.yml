@@ -302,7 +302,7 @@ slots:
 responses:
   utter_welcome:
   - text: "Hi! I'm Siddy and you can ask me FAQ-Questions or something about persons at this websites."
-  - text: "Hi! My name is Siddy. I can help you if you have some FAQ-Questions or if you want to know something about persons from these website."
+  - text: "Hi! My name is Siddy. I can help you if you have some FAQ-Questions or if you want to know something about persons or organizations from these website."
 
   utter_explain_need_of_information:
   - text: "Because of I'm a prototype, I would like to know some information from yourself for analysis."
