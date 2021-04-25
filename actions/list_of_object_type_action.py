@@ -8,6 +8,8 @@ from actions.db_call import DbCall
 from actions.constants import Constants
 from rasa_sdk.events import SlotSet, EventType
 from actions.search_return import Search_return
+from actions.general_methods import GeneralMethods
+import random
 #import base64,cv2
 
 # Action zum Auflisten von Objekten eines bestimmten Objekttyps
@@ -27,27 +29,30 @@ class ListOfObjecttype(Action):
     object_type = tracker.get_slot(Constants.slot_object_type)
     # Initialisierung der Rueckgabe der Suche
     return_search = Search_return.__init__(Search_return, False)
-    if (object_type == Constants.organization):
-      # Da fuer einen Test bereits mehr Funktionen fuer Organisationen implementiert wurden,
-      # gibt es hierfuer eine zusaetzliche Funktion
-      # Diese werden doch aktuell nicht genutzt
-      self.searchOrganizations(dispatcher, tracker)
-    else: 
-      # Zunaechst wird geprueft ob ein Objekttyp gefunden wurde und 
-      # ob dieser ein Objekttyp der Webseite ist
-      if (not(object_type is None) & (object_type in Constants.object_types)):
-        # Suchen von allen Objekten der Jigsaw-Webseite
-        answer =  DbCall.searchForEntitiy()
-        objects = []
-        # Filtern der Objekte auf den Objekttyp
-        objects = answer[object_type]
-        # Ausgabe der Objekte
-        self.utter_objects(dispatcher, tracker, objects)
+    try:
+      if (object_type == Constants.organization):
+        # Da fuer einen Test bereits mehr Funktionen fuer Organisationen implementiert wurden,
+        # gibt es hierfuer eine zusaetzliche Funktion
+        # Diese werden doch aktuell nicht genutzt
+        self.searchOrganizations(dispatcher, tracker)
       else: 
-        # Wenn kein passender Objekttyp gefunden wurde, 
-        # dann wird mit dem gesamten Text eine semantische Suche durchgefuehrt
-        intent = tracker.latest_message["text"]
-        return_search = SemanticSearch.searchSemanticSearchIntent(dispatcher, tracker, intent)
+        # Zunaechst wird geprueft ob ein Objekttyp gefunden wurde und 
+        # ob dieser ein Objekttyp der Webseite ist
+        if (not(object_type is None) & (object_type in Constants.object_types)):
+          # Suchen von allen Objekten der Jigsaw-Webseite
+          answer =  DbCall.searchForEntitiy()
+          objects = []
+          # Filtern der Objekte auf den Objekttyp
+          objects = answer[object_type]
+          # Ausgabe der Objekte
+          self.utter_objects(dispatcher, tracker, objects)
+        else: 
+          # Wenn kein passender Objekttyp gefunden wurde, 
+          # dann wird mit dem gesamten Text eine semantische Suche durchgefuehrt
+          intent = tracker.latest_message["text"]
+          return_search = SemanticSearch.searchSemanticSearchIntent(dispatcher, tracker, intent)
+    except:
+      return_search.events.append(GeneralMethods.saveMistakes(tracker))    
     # Rueckgabe der Events aus der semantischen Suche und setzen des Slots Cardinal auf None
     return_events = return_search.events
     return_events.append(SlotSet(Constants.slot_cardinal))
@@ -97,17 +102,26 @@ class ListOfObjecttype(Action):
       # Wenn keine Kardinaliaet gefunden wurde, 
       # dann werden alle Objekte ausgegeben
       if (count is None):
-        for x in objects:
-          dispatcher.utter_message(text=f""+x)
+        dispatcher.utter_message(text=f""+ GeneralMethods.liste_ausgeben(objects))
+        dispatcher.utter_message(template="utter_info_for_output_list_all")
       else:
         try:   
           # Es wird geprueft ob es sich bei der Kardinalitaet um eine Zahl handelt
           count = int(count)
-          # Ausgabe aller Objekte die bis count = 0 
+          # Liste mit random Werten zum ausgeben
+          output = []
+          # Waehlt so lange random Elemente einer Liste aus, 
+          # bis die vom Anwender gewuenschte Anzahl an Objekten erreicht ist
           while int(count) > 0:
-            dispatcher.utter_message(text=f""+objects[0])
-            objects.remove(objects[0])
+            object = random.choice(objects)
+            print(object)
+            output.append(object)
+            objects.remove(object)
             count = count - 1
+          # Ausgabe der Objekte
+          print(output)
+          dispatcher.utter_message(text=f"" + GeneralMethods.liste_ausgeben(output))
+          dispatcher.utter_message(template="utter_info_for_output_list_some")
         except ValueError: 
             # Wenn die gefundene Kardinalitaet nicht numerisch ist, 
             # dann wird gefragt ob der Anwender seine Anfrage wiederholen kann mit einer numerischen Version der Anzahl 

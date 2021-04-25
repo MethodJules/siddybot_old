@@ -1,43 +1,20 @@
 {
-  "gender": {
-    "precision": 1.0,
-    "recall": 0.5714285714285714,
-    "f1-score": 0.7272727272727273,
-    "support": 7,
-    "confused_with": {}
-  },
-  "PERSON": {
-    "precision": 0.9775280898876404,
-    "recall": 0.498567335243553,
-    "f1-score": 0.6603415559772297,
-    "support": 349,
-    "confused_with": {
-      "object_type": 2
-    }
-  },
-  "informationtype": {
-    "precision": 0.0,
-    "recall": 0.0,
-    "f1-score": 0.0,
-    "support": 27,
-    "confused_with": {
-      "object_type": 4,
-      "searchtype": 3
-    }
-  },
-  "year": {
-    "precision": 0.0,
-    "recall": 0.0,
-    "f1-score": 0.0,
-    "support": 4,
-    "confused_with": {}
-  },
   "RELIGION": {
     "precision": 0.375,
     "recall": 0.8181818181818182,
     "f1-score": 0.5142857142857142,
     "support": 11,
     "confused_with": {}
+  },
+  "informationtype": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 33,
+    "confused_with": {
+      "object_type": 4,
+      "searchtype": 3
+    }
   },
   "contacttype": {
     "precision": 1.0,
@@ -46,27 +23,11 @@
     "support": 5,
     "confused_with": {}
   },
-  "attribute": {
-    "precision": 0.8909090909090909,
-    "recall": 0.13136729222520108,
-    "f1-score": 0.22897196261682243,
-    "support": 373,
-    "confused_with": {
-      "object_type": 37
-    }
-  },
-  "object_type": {
-    "precision": 0.1506849315068493,
-    "recall": 0.10091743119266056,
-    "f1-score": 0.12087912087912088,
-    "support": 109,
-    "confused_with": {}
-  },
-  "GPE": {
-    "precision": 0.0,
-    "recall": 0.0,
-    "f1-score": 0.0,
-    "support": 22,
+  "maptype": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 19,
     "confused_with": {}
   },
   "ORG": {
@@ -79,43 +40,82 @@
       "PERSON": 4
     }
   },
-  "searchtype": {
-    "precision": 0.2222222222222222,
-    "recall": 1.0,
-    "f1-score": 0.3636363636363636,
-    "support": 2,
-    "confused_with": {}
-  },
-  "maptype": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 19,
-    "confused_with": {}
-  },
   "CARDINAL": {
     "precision": 0.0,
     "recall": 0.0,
     "f1-score": 0.0,
-    "support": 21,
+    "support": 23,
+    "confused_with": {}
+  },
+  "object_type": {
+    "precision": 0.14102564102564102,
+    "recall": 0.0990990990990991,
+    "f1-score": 0.11640211640211641,
+    "support": 111,
+    "confused_with": {}
+  },
+  "PERSON": {
+    "precision": 0.9775280898876404,
+    "recall": 0.498567335243553,
+    "f1-score": 0.6603415559772297,
+    "support": 349,
+    "confused_with": {
+      "object_type": 2
+    }
+  },
+  "gender": {
+    "precision": 1.0,
+    "recall": 0.5714285714285714,
+    "f1-score": 0.7272727272727273,
+    "support": 7,
+    "confused_with": {}
+  },
+  "year": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 4,
+    "confused_with": {}
+  },
+  "GPE": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 22,
+    "confused_with": {}
+  },
+  "attribute": {
+    "precision": 0.8909090909090909,
+    "recall": 0.13136729222520108,
+    "f1-score": 0.22897196261682243,
+    "support": 373,
+    "confused_with": {
+      "object_type": 37
+    }
+  },
+  "searchtype": {
+    "precision": 0.1111111111111111,
+    "recall": 1.0,
+    "f1-score": 0.19999999999999998,
+    "support": 2,
     "confused_with": {}
   },
   "micro avg": {
-    "precision": 0.8240740740740741,
-    "recall": 0.3876306620209059,
-    "f1-score": 0.5272511848341233,
-    "support": 1148
+    "precision": 0.8032490974729242,
+    "recall": 0.3842832469775475,
+    "f1-score": 0.5198598130841121,
+    "support": 1158
   },
   "macro avg": {
-    "precision": 0.5085049221311534,
-    "recall": 0.4603680043316927,
-    "f1-score": 0.42616297134335973,
-    "support": 1148
+    "precision": 0.4992148912394364,
+    "recall": 0.460228132632188,
+    "f1-score": 0.41323117379617763,
+    "support": 1158
   },
   "weighted avg": {
-    "precision": 0.8042771840080378,
-    "recall": 0.3876306620209059,
-    "f1-score": 0.4778209053306801,
-    "support": 1148
+    "precision": 0.7964742432112302,
+    "recall": 0.3842832469775475,
+    "f1-score": 0.47319165573157057,
+    "support": 1158
   }
 }

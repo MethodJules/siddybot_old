@@ -6,9 +6,10 @@ rules:
   - action: action_semantic_search
 
 - rule: welcome user
+  conversation_start: true
   steps:
   - intent: greet
-  - action: utter_welcome
+  - action: utter_explain_need_of_information
   - action: action_initial_explained_entitites
   - slot_was_set:
     - shall_explain_add_entity: false
@@ -16,15 +17,54 @@ rules:
     - explained_add_entity: false
     - explained_add_person: false
     - semantic_search_result: false
-  - action: utter_explain_need_of_information
   - action: utter_ask_for_gender
+
+- rule: greet user
+  steps:
+  - intent: greet
+  - action: utter_welcome
 
 - rule: chatbot name
   steps: 
   - intent: chatbot_name
   - action: utter_name_of_chatbot
 
+- rule: chatbot or person
+  steps: 
+  - intent: chatbot_or_person
+  - action: utter_answer_bot
+
+- rule: question chatbot
+  steps: 
+  - intent: chatbot_question
+  - action: utter_are_you_a_bot
+
 - rule: restart
   steps:
   - intent: restart_chatbot
   - action: action_restart
+
+- rule: answer user age
+  steps:
+  - intent: user_age
+  - action: utter_user_age
+
+- rule: answer user ever speaked to chatbot
+  steps: 
+  - intent: user_speaked_with_chatbot
+  - action: action_utter_user_speaked_with_chatbot
+
+- rule: answer user gender
+  steps: 
+  - intent: user_gender
+  - action: action_utter_user_gender
+
+- rule: answer user expert value
+  steps: 
+  - intent: user_expert_value
+  - action: utter_expert_value_of_user
+
+- rule: fallback
+  steps:
+  - intent: nlu_fallback
+  - action: action_semantic_search

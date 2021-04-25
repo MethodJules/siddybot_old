@@ -30,7 +30,7 @@ class PersonDetailAction(Action):
       abfrage_attribute = tracker.get_slot(Constants.slot_attribute)
       # Initialisierung von Suchergebnis
       return_search = Search_return.__init__(Search_return, False)
-      events = [SlotSet(Constants.slot_attribute), SlotSet(Constants.slot_object_type)]
+      events = [SlotSet(Constants.slot_attribute), SlotSet(Constants.slot_object_type), SlotSet("latest_question",  tracker.latest_message["text"])]
       # Pruefung ob eine Person in der Eingabe gefunden werden konnte
       if ((entity_person is None)):
           # Wenn keine Person gefunden wurde, dann wir mit allen Entitaeten der letzten Nachricht eine semantische Suche durchgefuehrt

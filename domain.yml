@@ -81,6 +81,12 @@ intents:
   - expertlevel_5
   - expertlevel_6
   - expertlevel_7
+  - chatbot_or_person
+  - chatbot_question
+  - user_age
+  - user_speaked_with_chatbot
+  - user_expert_value
+  - user_gender
 
 entities:
   - maptype
@@ -117,6 +123,7 @@ entities:
   - gender
   - expert_value
   - semantic_search_result
+  - user_speaked_with_chatbot
 
 slots:
   maptype:
@@ -270,18 +277,28 @@ slots:
     influence_conversation: false
   age:
     type: text
-    influence_conversation: true
+    influence_conversation: false
   gender:
     type: categorical
     values: 
       - female
       - male
       - divers
-    influence_conversation: true
+    influence_conversation: false
   expert_value:
+    type: float
+    influence_conversation: false
+  user_speaked_with_chatbot:
+    type: bool
+    influence_conversation: false
+  mistakes:
     type: text
-    influence_conversation: true
-  
+    influence_conversation: false
+    initial_value: ""
+  latest_question:
+    type: text
+    influence_conversation: false
+
 responses:
   utter_welcome:
   - text: "Hi! I'm Siddy and you can ask me FAQ-Questions or something about persons at this websites."
@@ -293,11 +310,15 @@ responses:
 
   utter_start:
   - text: "Now you can start!"
-  - text: "Now you can start asking questions"
+  - text: "Now you can start asking questions."
 
   utter_restart_me:
   - text: "If you think that I have a problem, you can say \"restart\" and I will restart myself."
   - text: "Sometimes I'll get stuck. If you notice this you can say \"restart\""
+
+  utter_question_examples:
+  - text: "You can write something like \"Please show 10 orgas\", \"Could you show me the birthday of Beate Berger?\" or \"Who was a member of Jewish National Party?\""
+  - text: "Some examples of questions are: \"List 10 persons of your website\", \" When was Beate Berger born?\" or \"Did Benjamin Jonas had a spouse?\""
 
   utter_ask_username:
   - text: "Please tell me your name."
@@ -415,9 +436,30 @@ responses:
     - title: "7"
       payload: "/expertlevel_7"
 
+  utter_ask_chatting_with_chatbot_before:
+  - text: "Did you ever speak to a chatbot?"
+    buttons:
+    - title: "Yes"
+      payload: "/agree"
+    - title: "No"
+      payload: "/denied"
+  - text: "Did you ever chat with a bot?"
+    buttons:
+    - title: "Yes"
+      payload: "/agree"
+    - title: "No"
+      payload: "/denied"
+
   utter_name_of_chatbot:
   - text: "My name is Siddy."
   - text: "I'm Siddy!"
+
+  utter_are_you_a_bot:
+  - text: "Yes, I am a chatbot and my name is Siddy."
+  - text: "Yes, I'm a chatbot."
+
+  utter_answer_bot:
+  - text: "I am a chatbot and my name is Siddy."
 
   utter_chatbot_functions:
   - text: "You can ask me FAQ-Questions or something to persons on this websites"
@@ -446,12 +488,27 @@ responses:
 
   utter_shall_how_add_entity:
   - text: "Shall I show you how you can add the missing entity?"
+    buttons:
+    - title: "Yes"
+      payload: "/agree"
+    - title: "No"
+      payload: "/denied"
   
   utter_add_person_check_account:
   - text: "If you have an account, you have the option to add a person. Do you have an account?"
+    buttons:
+    - title: "Yes"
+      payload: "/agree"
+    - title: "No"
+      payload: "/denied"
 
   utter_add_entity_check_account:
   - text: "If you have an account, you have the option to add a entity at the website of the specific person. Do you have an account?"
+    buttons:
+    - title: "Yes"
+      payload: "/agree"
+    - title: "No"
+      payload: "/denied"
 
   utter_add_entity_text_and_NER:
   - text: "Now you can set the text of the new entity and choose the type (NER). After these you can press the button save and you can the new entity in the graph."
@@ -461,15 +518,28 @@ responses:
   
   utter_user_account_menu:
   - text: "Please create an account in the User Account Menu. Did you found the Menu?"
+    buttons:
+    - title: "Yes"
+      payload: "/agree"
+    - title: "No"
+      payload: "/denied"
+
+  utter_place_user_account_menu:
+  - text: "It's at the right side of every page."
   
   utter_create_account:
-  - text: "Great. Please type in an email address and username. If you like, add a photo of yourself. If you like other users to contact you, check the control box."
+  - text: "Please type in an email address and username. If you like, add a photo of yourself. If you like other users to contact you, check the control box."
   
   utter_confirm_creation:
   - text: "Did you successfully create your account?"
+    buttons:
+    - title: "Yes"
+      payload: "/agree"
+    - title: "No"
+      payload: "/denied"
   
   utter_please_login:
-  - text: "Great. Please login in to your account."
+  - text: "After creating, please log in."
   
   utter_add_person:
   - text: "Now you can see and click the link [ Add person ] ( http://www.jigsaw-navi.net/ )at the main page."
@@ -624,13 +694,33 @@ responses:
 
   utter_know_people:
   - text: "Do you know some people on our website?"
+    buttons:
+    - title: "Yes"
+      payload: "/agree"
+    - title: "No"
+      payload: "/denied"
   - text: "Do you search for sepcific people?"
+    buttons:
+    - title: "Yes"
+      payload: "/agree"
+    - title: "No"
+      payload: "/denied"
 
   utter_specific_person:
   - text: "Do you search for a specific person?"
+    buttons:
+    - title: "Yes"
+      payload: "/agree"
+    - title: "No"
+      payload: "/denied"
 
   utter_attribute_to_person:
   - text: "Do you want to hear specific information about people?"
+    buttons:
+    - title: "Yes"
+      payload: "/agree"
+    - title: "No"
+      payload: "/denied"
 
   utter_ask_peoplelist:
   - text: "You can ask 'List some people' or 'Show me some people'"
@@ -646,7 +736,7 @@ responses:
   - text: "You can ask something like: 'What was the hebrew name of Esther Apfelberg?'"
 
   utter_ask_for_attributes_peoplelist:
-  - text: "When you have a list with people you can ask something like: 'When was the birth day of the first one?'"
+  - text: "When you have a list with people you can ask something like: 'When was the birthday of the first one?'"
 
   utter_contact_for_support:
   - text: "For support you can contact Max Mustermann"
@@ -666,12 +756,22 @@ responses:
 
   utter_should_show_entity:
   - text: "Shall I show you how to create entities?"
+    buttons:
+    - title: "Yes"
+      payload: "/agree"
+    - title: "No"
+      payload: "/denied"
 
   utter_data_not_found:
   - text: "I'm sorry but I don't have a answer for your question. Maybe the mistake is that the person is missing."
 
   utter_shall_explain_add_entity:
   - text: "Shall I tell you how to create the entity?"
+    buttons:
+    - title: "Yes"
+      payload: "/agree"
+    - title: "No"
+      payload: "/denied"
 
   utter_person_is_missing:
   - text: "Sorry, but I cannot find any data to these person."
@@ -679,7 +779,17 @@ responses:
 
   utter_shall_explain_add_person:
   - text: "Shall I tell you how to create a page for these person?"
+    buttons:
+    - title: "Yes"
+      payload: "/agree"
+    - title: "No"
+      payload: "/denied"
   - text: "Do you want that I explain you how to add a person?"
+    buttons:
+    - title: "Yes"
+      payload: "/agree"
+    - title: "No"
+      payload: "/denied"
 
   utter_information_of_website:
   - text: "I can give you informations about the persons and the organizations which are saved at these website."
@@ -689,9 +799,19 @@ responses:
 
   utter_ask_person_is_known:
   - text: "Do you know a person you would like information about?"
+    buttons:
+    - title: "Yes"
+      payload: "/agree"
+    - title: "No"
+      payload: "/denied"
 
   utter_ask_organization_is_known:
   - text: "Do you know a organization you would like information about?"
+    buttons:
+    - title: "Yes"
+      payload: "/agree"
+    - title: "No"
+      payload: "/denied"
 
   utter_ask_for_a_list_of_person:
   - text: "First ask \"List 10 persons of your website\" to get a selection of people"
@@ -708,12 +828,69 @@ responses:
   utter_explain_ask_for_list_of_object_type:
   - text: "You can ask something like \"Show me a list of people of your website\" or \"Could you tell me 10 organizations?\""
 
-  utter_results_are_helpful:
+  utter_results_are_helpful_question:
   - text: "Is the result helpful?"
+    buttons:
+    - title: "Yes"
+      payload: "/agree"
+    - title: "No"
+      payload: "/denied"
   - text: "Could I help you with these information?"
+    buttons:
+    - title: "Yes"
+      payload: "/agree"
+    - title: "No"
+      payload: "/denied"
 
   utter_entity_is_missing:
   - text: "The correct answer is missing in the graph. Maybe you could add the entity."
+
+  utter_results_are_helpful:
+  - text: "That's nice!"
+  - text: "Okay :-)"
+  - text: "Great!"
+
+  utter_results_are_not_helpful:
+  - text: "That's a pity. I will text my master and maybe i can help you in a few days."
+
+  utter_results_are_not_helpful_add_data:
+  - text: "That's a pity. Maybe you can add the correct data."
+  - text: "That's too bad. If you want you can add the missing data."
+
+  utter_info_for_output_list_all:
+  - text: "These are all objects with the type {object_type} of the graphdatabase. Please be careful with these data. I haven't checked it out."
+
+  utter_info_for_output_list_some:
+  - text: "These are {CARDINAL} random objects of the graphdatabase  with the type {object_type}. Please be careful with these data. I haven't checked it out."
+
+  utter_user_speaked_with_bot_before:
+  - text: "You said you've talked to a bot before."
+
+  utter_user_donot_speaked_with_bot_before:
+  - text: "You said, that you didn't talk to a bot before."
+
+  utter_do_not_know_the_answer:
+  - text: "Sorry, I don't remember."
+  - text: "I don't remember ..."
+
+  utter_user_age:
+  - text: "You told me, that you are {age}."
+  - text: "{age}"
+
+  utter_expert_value_of_user:
+  - text: "You said your level is a {expert_value}"
+  - text: "In your opinion it is a {expert_value} on a scale from 1 to 7."
+
+  utter_user_gender_is_female:
+  - text: "You are a woman."
+  - text: "You said your gender is female"
+
+  utter_user_gender_is_male:
+  - text: "Your gender is male."
+  - text: "I think that you are male."
+
+  utter_user_gender_is_divers:
+  - text: "You told me you are divers."
 
 actions:
   - action_person_detail
@@ -727,8 +904,13 @@ actions:
   - action_set_exlpained_add_entity
   - action_set_username
   - action_set_expert_value
+  - action_set_user_gender
   - action_set_age
   - action_initial_explained_entitites
+  - action_utter_user_speaked_with_chatbot
+  - action_utter_user_gender
+  - action_collect_mistakes
+  - action_set_user_told_with_chatbot
 
 session_config:
   session_expiration_time: 60

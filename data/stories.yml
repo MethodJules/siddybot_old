@@ -5,7 +5,7 @@ stories:
 - story: get_information_about_user
   steps: 
   - intent: greet
-  - action: utter_welcome
+  - action: utter_explain_need_of_information
   - action: action_initial_explained_entitites
   - slot_was_set:
     - shall_explain_add_entity: false
@@ -13,12 +13,12 @@ stories:
     - explained_add_entity: false
     - explained_add_person: false
     - semantic_search_result: false
-  - action: utter_explain_need_of_information
   - action: utter_ask_for_gender
   - or:
     - intent: gender_female
     - intent: gender_male
     - intent: gender_divers
+  - action: action_set_user_gender
   - action: utter_ask_for_age
   - or:
     - intent: younger_than_10
@@ -29,6 +29,7 @@ stories:
     - intent: between51_60
     - intent: between61_70
     - intent: older_than_71
+  - action: action_set_age
   - action: utter_ask_for_expert
   - action: utter_meaning_if_expertskale
   - or:
@@ -39,8 +40,15 @@ stories:
     - intent: expertlevel_5
     - intent: expertlevel_6
     - intent: expertlevel_7
+  - action: action_set_expert_value
+  - action: utter_ask_chatting_with_chatbot_before
+  - or:
+    - intent: agree
+    - intent: denied
+  - action: action_set_user_told_with_chatbot
   - action: utter_thank_you
   - action: utter_start
+  - action: utter_question_examples
   - action: utter_restart_me
   - intent: answer_thank_you
 
@@ -55,6 +63,7 @@ stories:
     - intent: between51_60
     - intent: between61_70
     - intent: older_than_71
+  - action: action_set_age
   - action: utter_ask_for_expert
   - action: utter_meaning_if_expertskale
   - or:
@@ -65,8 +74,15 @@ stories:
     - intent: expertlevel_5
     - intent: expertlevel_6
     - intent: expertlevel_7
+  - action: action_set_expert_value
+  - action: utter_ask_chatting_with_chatbot_before
+  - or:
+    - intent: agree
+    - intent: denied
+  - action: action_set_user_told_with_chatbot
   - action: utter_thank_you
   - action: utter_start
+  - action: utter_question_examples
   - action: utter_restart_me
   - intent: answer_thank_you
 
@@ -82,7 +98,14 @@ stories:
   - intent: agree
   - action: utter_create_account
   - intent: agree
-  - action: utter_confirm_creation
+
+- story: create account + user account menu
+  steps:
+  - intent: create_account
+  - action: utter_user_account_menu
+  - intent: denied
+  - action: utter_place_user_account_menu
+  - action: utter_create_account
   - intent: agree
    
 - story: website information
@@ -91,6 +114,50 @@ stories:
   - action: utter_website_information
   - intent: thanks
   - action: utter_answer_thanks
+  
+- story: add missing person + create account + explain user account menu
+  steps:
+  - intent: add_person
+  - action: utter_add_person_check_account
+  - intent:  denied
+  - action: utter_user_account_menu
+  - intent: denied
+  - action: utter_place_user_account_menu
+  - action: utter_create_account
+  - intent: agree
+  - action: utter_please_login
+  - or:
+    - intent: agree
+    - intent: successfully_login
+  - action: utter_add_person
+  - action: action_set_exlpained_add_person
+  - intent: agree
+  - action: utter_add_person_name
+  - intent: agree
+  - action: utter_add_person_biography
+  - intent: agree
+  - action: utter_add_person_family
+  - intent: agree
+  - action: utter_add_person_chronic
+  - intent: agree
+  - action: utter_add_person_network
+  - intent: agree
+  - action: utter_add_person_domicil
+  - intent: agree
+  - action: utter_add_person_bibliography
+  - intent: agree 
+  - action: utter_add_person_picture
+  - intent: agree
+  - action: utter_add_person_data
+  - intent: agree 
+  - action: utter_show_person_preview
+  - or: 
+    - intent: agree
+    - intent: save_created_person
+  - action:  utter_view_created_person
+  - intent: thanks
+  - action: utter_answer_thanks
+
 
 - story: add missing person + create account
   steps:
@@ -100,8 +167,6 @@ stories:
   - action: utter_user_account_menu
   - intent: agree
   - action: utter_create_account
-  - intent: agree
-  - action: utter_confirm_creation
   - intent: agree
   - action: utter_please_login
   - or:
@@ -332,25 +397,35 @@ stories:
   - slot_was_set:
     - semantic_search_result: false
 
-- story: details of organizations with semantic_search_result
+- story: details of organizations with semantic_search_result and results are not helpful
   steps:
   - intent: details_of_organizations
   - action: action_organization_details
   - slot_was_set:
     - semantic_search_result: true
     - last_link: last_link
+  - action: utter_results_are_helpful_question
+  - intent: denied
+  - action: utter_results_are_not_helpful
+  - action: action_collect_mistakes
+
+- story: details of organizations with semantic_search_result and results helpful
+  steps:
+  - intent: details_of_organizations
+  - action: action_organization_details
+  - slot_was_set:
+    - semantic_search_result: true
+    - last_link: last_link
+  - action: utter_results_are_helpful_question
+  - intent: agree
   - action: utter_results_are_helpful
-  - or:
-    - intent: agree
-    - intent: dnied
-  - action: utter_ok
 
 - story: list of organizations  
   steps:
   - intent: list_of
   - action: action_list_of
 
-- story: yes or no questions for organizations with semantic_search_result
+- story: yes or no questions for organizations with semantic_search_result and results helpful
   steps:
   - or:
     - intent: questionsYesNoOrganization_attributes
@@ -360,11 +435,24 @@ stories:
   - slot_was_set:
     - semantic_search_result: true
     - last_link: last_link
+  - action: utter_results_are_helpful_question
+  - intent: agree
   - action: utter_results_are_helpful
+
+- story: yes or no questions for organizations with semantic_search_result and results not helpful
+  steps:
   - or:
-    - intent: agree
-    - intent: dnied
-  - action: utter_ok
+    - intent: questionsYesNoOrganization_attributes
+    - intent: questionsYesNoOrganization_connection_to_GPE
+    - intent: questionsYesNoOrganization_connection_to_RELIGION
+  - action: action_yes_no_questions_organization
+  - slot_was_set:
+    - semantic_search_result: true
+    - last_link: last_link
+  - action: utter_results_are_helpful_question
+  - intent: denied
+  - action: utter_results_are_not_helpful
+  - action: action_collect_mistakes
 
 - story: yes or no questions for organizations
   steps:
@@ -376,7 +464,7 @@ stories:
   - slot_was_set:
     - semantic_search_result: false
 
-- story: questions person + add entity + create account + semantic_search_result
+- story: questions person + add entity + create account + semantic_search_result  + not helpful
   steps:
   - intent: questions_detail_person
   - action: action_person_detail
@@ -385,11 +473,10 @@ stories:
     - shall_explain_add_person: false
     - semantic_search_result: true
     - last_link: last_link
-  - action: utter_results_are_helpful
-  - or:
-    - intent: agree
-    - intent: dnied
-  - action: utter_ok
+  - action: utter_results_are_helpful_question
+  - intent: denied
+  - action: utter_results_are_not_helpful_add_data
+  - action: action_collect_mistakes
   - action: utter_shall_explain_add_entity
   - intent: agree
   - action: utter_add_entity_check_account
@@ -407,7 +494,7 @@ stories:
   - intent: thanks
   - action: utter_answer_thanks
 
-- story: questions person + add entity + semantic_search_result + no explain
+- story: questions person + add entity + create account + semantic_search_result  + not helpful + user account menu
   steps:
   - intent: questions_detail_person
   - action: action_person_detail
@@ -416,11 +503,116 @@ stories:
     - shall_explain_add_person: false
     - semantic_search_result: true
     - last_link: last_link
+  - action: utter_results_are_helpful_question
+  - intent: denied
+  - action: utter_results_are_not_helpful_add_data
+  - action: action_collect_mistakes
+  - action: utter_shall_explain_add_entity
+  - intent: agree
+  - action: utter_add_entity_check_account
+  - intent: denied
+  - action: utter_user_account_menu
+  - intent: denied
+  - action: utter_place_user_account_menu
+  - action: utter_create_account
+  - intent: agree
+  - action: utter_please_login
+  - intent: agree
+  - action: utter_add_entity
+  - intent: agree
+  - action: utter_add_entity_text_and_NER
+  - action: action_set_exlpained_add_entity
+  - intent: thanks
+  - action: utter_answer_thanks  
+
+- story: questions person + add entity + create account + semantic_search_result + helpful
+  steps:
+  - intent: questions_detail_person
+  - action: action_person_detail
+  - slot_was_set:
+    - shall_explain_add_entity: true
+    - shall_explain_add_person: false
+    - semantic_search_result: true
+    - last_link: last_link
+  - action: utter_results_are_helpful_question
+  - intent: agree
   - action: utter_results_are_helpful
-  - or:
-    - intent: agree
-    - intent: dnied
+  - action: utter_shall_explain_add_entity
+  - intent: agree
+  - action: utter_add_entity_check_account
+  - intent: denied
+  - action: utter_user_account_menu
+  - intent: agree
+  - action: utter_create_account
+  - intent: agree
+  - action: utter_please_login
+  - intent: agree
+  - action: utter_add_entity
+  - intent: agree
+  - action: utter_add_entity_text_and_NER
+  - action: action_set_exlpained_add_entity
+  - intent: thanks
+  - action: utter_answer_thanks
+
+- story: questions person + add entity + create account + semantic_search_result + helpful
+  steps:
+  - intent: questions_detail_person
+  - action: action_person_detail
+  - slot_was_set:
+    - shall_explain_add_entity: true
+    - shall_explain_add_person: false
+    - semantic_search_result: true
+    - last_link: last_link
+  - action: utter_results_are_helpful_question
+  - intent: agree
+  - action: utter_results_are_helpful
+  - action: utter_shall_explain_add_entity
+  - intent: agree
+  - action: utter_add_entity_check_account
+  - intent: denied
+  - action: utter_user_account_menu
+  - intent: denied
+  - action: utter_place_user_account_menu
+  - action: utter_create_account
+  - intent: agree
+  - action: utter_please_login
+  - intent: agree
+  - action: utter_add_entity
+  - intent: agree
+  - action: utter_add_entity_text_and_NER
+  - action: action_set_exlpained_add_entity
+  - intent: thanks
+  - action: utter_answer_thanks
+
+- story: questions person + add entity + semantic_search_result + no explain + helpful
+  steps:
+  - intent: questions_detail_person
+  - action: action_person_detail
+  - slot_was_set:
+    - shall_explain_add_entity: true
+    - shall_explain_add_person: false
+    - semantic_search_result: true
+    - last_link: last_link
+  - action: utter_results_are_helpful_question
+  - intent: agree
+  - action: utter_results_are_helpful
+  - action: utter_shall_explain_add_entity
+  - intent: denied
   - action: utter_ok
+
+- story: questions person + add entity + semantic_search_result + no explain + not helpful
+  steps:
+  - intent: questions_detail_person
+  - action: action_person_detail
+  - slot_was_set:
+    - shall_explain_add_entity: true
+    - shall_explain_add_person: false
+    - semantic_search_result: true
+    - last_link: last_link
+  - action: utter_results_are_helpful_question
+  - intent: denied
+  - action: utter_results_are_not_helpful_add_data
+  - action: action_collect_mistakes
   - action: utter_shall_explain_add_entity
   - intent: denied
   - action: utter_ok
@@ -440,6 +632,33 @@ stories:
   - intent: denied
   - action: utter_user_account_menu
   - intent: agree
+  - action: utter_create_account
+  - intent: agree
+  - action: utter_please_login
+  - intent: agree
+  - action: utter_add_entity
+  - intent: agree
+  - action: utter_add_entity_text_and_NER
+  - action: action_set_exlpained_add_entity
+  - intent: thanks
+  - action: utter_answer_thanks
+
+- story: questions person + add entity + create account + place account menu
+  steps:
+  - intent: questions_detail_person
+  - action: action_person_detail
+  - slot_was_set:
+    - shall_explain_add_entity: true
+    - shall_explain_add_person: false
+    - semantic_search_result: false
+    - last_link: last_link
+  - action: utter_shall_explain_add_entity
+  - intent: agree
+  - action: utter_add_entity_check_account
+  - intent: denied
+  - action: utter_user_account_menu
+  - intent: denied
+  - action: utter_place_user_account_menu
   - action: utter_create_account
   - intent: agree
   - action: utter_please_login
@@ -474,7 +693,7 @@ stories:
     - semantic_search_result: false
     - last_link: last_link
 
-- story: questions person + add entity + semantic_search_result
+- story: questions person + add entity + semantic_search_result + helpful
   steps:
   - intent: questions_detail_person
   - action: action_person_detail
@@ -483,11 +702,37 @@ stories:
     - shall_explain_add_person: false
     - semantic_search_result: true
     - last_link: last_link
+  - action: utter_results_are_helpful_question
+  - intent: agree
   - action: utter_results_are_helpful
+  - action: utter_shall_explain_add_entity
+  - intent: agree
+  - action: utter_add_entity_check_account
+  - intent: agree
+  - action: utter_please_login
   - or:
-    - intent: agree
-    - intent: dnied
-  - action: utter_ok
+    - intent: agree 
+    - intent: successfully_login
+  - action: utter_add_entity
+  - intent: agree
+  - action: utter_add_entity_text_and_NER
+  - action: action_set_exlpained_add_entity
+  - intent: thanks
+  - action: utter_answer_thanks
+
+- story: questions person + add entity + semantic_search_result + not helpful
+  steps:
+  - intent: questions_detail_person
+  - action: action_person_detail
+  - slot_was_set:
+    - shall_explain_add_entity: true
+    - shall_explain_add_person: false
+    - semantic_search_result: true
+    - last_link: last_link
+  - action: utter_results_are_helpful_question
+  - intent: denied
+  - action: utter_results_are_not_helpful_add_data
+  - action: action_collect_mistakes
   - action: utter_shall_explain_add_entity
   - intent: agree
   - action: utter_add_entity_check_account
@@ -542,8 +787,8 @@ stories:
   - action: action_set_exlpained_add_entity
   - intent: thanks
   - action: utter_answer_thanks
-
-- story: questions persons + explain add missing person + create account + semantic_search_result
+  
+- story: questions persons + explain add missing person + create account + semantic_search_result + helpful + user account menu
   steps:
   - intent: questions_detail_person
   - action: action_person_detail
@@ -552,11 +797,64 @@ stories:
     - shall_explain_add_person: true
     - semantic_search_result: true
     - last_link: last_link
+  - action: utter_results_are_helpful_question
+  - intent: agree
   - action: utter_results_are_helpful
+  - action: utter_shall_explain_add_person
+  - intent: agree
+  - action: utter_add_person_check_account
+  - intent:  denied
+  - action: utter_user_account_menu
+  - intent: dnied
+  - action: utter_place_user_account_menu
+  - action: utter_create_account
+  - intent: agree
+  - action: utter_please_login
   - or:
+    - intent: agree 
+    - intent: successfully_login
+  - action: utter_add_person
+  - action: action_set_exlpained_add_person
+  - intent: agree
+  - action: utter_add_person_name
+  - intent: agree
+  - action: utter_add_person_biography
+  - intent: agree
+  - action: utter_add_person_family
+  - intent: agree
+  - action: utter_add_person_chronic
+  - intent: agree
+  - action: utter_add_person_network
+  - intent: agree
+  - action: utter_add_person_domicil
+  - intent: agree
+  - action: utter_add_person_bibliography
+  - intent: agree
+  - action: utter_add_person_picture
+  - intent: agree
+  - action: utter_add_person_data
+  - intent: agree
+  - action: utter_show_person_preview
+  - or: 
     - intent: agree
-    - intent: dnied
-  - action: utter_ok
+    - intent:  save_created_person
+  - action:  utter_view_created_person
+  - intent: thanks
+
+  - action: utter_answer_thanks
+
+- story: questions persons + explain add missing person + create account + semantic_search_result + helpful
+  steps:
+  - intent: questions_detail_person
+  - action: action_person_detail
+  - slot_was_set:
+    - shall_explain_add_entity: false
+    - shall_explain_add_person: true
+    - semantic_search_result: true
+    - last_link: last_link
+  - action: utter_results_are_helpful_question
+  - intent: agree
+  - action: utter_results_are_helpful
   - action: utter_shall_explain_add_person
   - intent: agree
   - action: utter_add_person_check_account
@@ -564,8 +862,6 @@ stories:
   - action: utter_user_account_menu
   - intent: agree
   - action: utter_create_account
-  - intent: agree
-  - action: utter_confirm_creation
   - intent: agree
   - action: utter_please_login
   - or:
@@ -600,6 +896,116 @@ stories:
   - intent: thanks
   - action: utter_answer_thanks
 
+- story: questions persons + explain add missing person + create account + semantic_search_result + not helpful
+  steps:
+  - intent: questions_detail_person
+  - action: action_person_detail
+  - slot_was_set:
+    - shall_explain_add_entity: false
+    - shall_explain_add_person: true
+    - semantic_search_result: true
+    - last_link: last_link
+  - action: utter_results_are_helpful_question
+  - intent: denied
+  - action: utter_results_are_not_helpful_add_data
+  - action: action_collect_mistakes
+  - action: utter_shall_explain_add_person
+  - intent: agree
+  - action: utter_add_person_check_account
+  - intent:  denied
+  - action: utter_user_account_menu
+  - intent: agree
+  - action: utter_create_account
+  - intent: agree
+  - action: utter_please_login
+  - or:
+    - intent: agree 
+    - intent: successfully_login
+  - action: utter_add_person
+  - action: action_set_exlpained_add_person
+  - intent: agree
+  - action: utter_add_person_name
+  - intent: agree
+  - action: utter_add_person_biography
+  - intent: agree
+  - action: utter_add_person_family
+  - intent: agree
+  - action: utter_add_person_chronic
+  - intent: agree
+  - action: utter_add_person_network
+  - intent: agree
+  - action: utter_add_person_domicil
+  - intent: agree
+  - action: utter_add_person_bibliography
+  - intent: agree
+  - action: utter_add_person_picture
+  - intent: agree
+  - action: utter_add_person_data
+  - intent: agree
+  - action: utter_show_person_preview
+  - or: 
+    - intent: agree
+    - intent:  save_created_person
+  - action:  utter_view_created_person
+  - intent: thanks
+  - action: utter_answer_thanks
+
+- story: questions persons + explain add missing person + create account + semantic_search_result + not helpful + user account menu
+  steps:
+  - intent: questions_detail_person
+  - action: action_person_detail
+  - slot_was_set:
+    - shall_explain_add_entity: false
+    - shall_explain_add_person: true
+    - semantic_search_result: true
+    - last_link: last_link
+  - action: utter_results_are_helpful_question
+  - intent: denied
+  - action: utter_results_are_not_helpful_add_data
+  - action: action_collect_mistakes
+  - action: utter_shall_explain_add_person
+  - intent: agree
+  - action: utter_add_person_check_account
+  - intent:  denied
+  - action: utter_user_account_menu
+  - intent: denied
+  - action: utter_place_user_account_menu
+  - action: utter_create_account
+  - intent: agree
+  - action: utter_please_login
+  - or:
+    - intent: agree 
+    - intent: successfully_login
+  - action: utter_add_person
+  - action: action_set_exlpained_add_person
+  - intent: agree
+  - action: utter_add_person_name
+  - intent: agree
+  - action: utter_add_person_biography
+  - intent: agree
+  - action: utter_add_person_family
+  - intent: agree
+  - action: utter_add_person_chronic
+  - intent: agree
+  - action: utter_add_person_network
+  - intent: agree
+  - action: utter_add_person_domicil
+  - intent: agree
+  - action: utter_add_person_bibliography
+  - intent: agree
+  - action: utter_add_person_picture
+  - intent: agree
+  - action: utter_add_person_data
+  - intent: agree
+  - action: utter_show_person_preview
+  - or: 
+    - intent: agree
+    - intent:  save_created_person
+  - action:  utter_view_created_person
+  - intent: thanks
+  - action: utter_answer_thanks
+
+
 - story: questions persons + explain add missing person + create account
   steps:
   - intent: questions_detail_person
@@ -616,8 +1022,6 @@ stories:
   - action: utter_user_account_menu
   - intent: agree
   - action: utter_create_account
-  - intent: agree
-  - action: utter_confirm_creation
   - intent: agree
   - action: utter_please_login
   - or:
@@ -652,8 +1056,58 @@ stories:
   - intent: thanks
   - action: utter_answer_thanks
     
+- story: questions persons + explain add missing person + create account + user account menu
+  steps:
+  - intent: questions_detail_person
+  - action: action_person_detail
+  - slot_was_set:
+    - shall_explain_add_entity: false
+    - shall_explain_add_person: true
+    - semantic_search_result: false
+    - last_link: last_link
+  - action: utter_shall_explain_add_person
+  - intent: agree
+  - action: utter_add_person_check_account
+  - intent:  denied
+  - action: utter_user_account_menu
+  - intent: denied
+  - action: utter_place_user_account_menu
+  - action: utter_create_account
+  - intent: agree
+  - action: utter_please_login
+  - or:
+    - intent: agree 
+    - intent: successfully_login
+  - action: utter_add_person
+  - action: action_set_exlpained_add_person
+  - intent: agree
+  - action: utter_add_person_name
+  - intent: agree
+  - action: utter_add_person_biography
+  - intent: agree
+  - action: utter_add_person_family
+  - intent: agree
+  - action: utter_add_person_chronic
+  - intent: agree
+  - action: utter_add_person_network
+  - intent: agree
+  - action: utter_add_person_domicil
+  - intent: agree
+  - action: utter_add_person_bibliography
+  - intent: agree
+  - action: utter_add_person_picture
+  - intent: agree
+  - action: utter_add_person_data
+  - intent: agree
+  - action: utter_show_person_preview
+  - or: 
+    - intent: agree
+    - intent:  save_created_person
+  - action:  utter_view_created_person
+  - intent: thanks
+  - action: utter_answer_thanks
 
-- story: questions persons + explain add missing person + semantic_search_result
+- story: questions persons + explain add missing person + semantic_search_result + helpful
   steps:
   - intent: questions_detail_person
   - action: action_person_detail
@@ -662,11 +1116,9 @@ stories:
     - shall_explain_add_entity: false
     - semantic_search_result: true
     - last_link: last_link
+  - action: utter_results_are_helpful_question
+  - intent: agree
   - action: utter_results_are_helpful
-  - or:
-    - intent: agree
-    - intent: dnied
-  - action: utter_ok
   - action: utter_shall_explain_add_person
   - intent: agree
   - action: utter_add_person_check_account
@@ -705,6 +1157,54 @@ stories:
     - intent: thanks
     - intent:  save_created_person
   - action: utter_answer_thanks
+
+- story: questions persons + explain add missing person + semantic_search_result + not helpful
+  steps:
+  - intent: questions_detail_person
+  - action: action_person_detail
+  - slot_was_set:
+    - shall_explain_add_person: true
+    - shall_explain_add_entity: false
+    - semantic_search_result: true
+    - last_link: last_link
+  - action: utter_results_are_helpful_question
+  - intent: denied
+  - action: utter_results_are_not_helpful_add_data
+  - action: action_collect_mistakes
+  - action: utter_shall_explain_add_person
+  - intent: agree
+  - action: utter_add_person_check_account
+  - intent: agree
+  - action: utter_please_login
+  - or:
+    - intent: agree 
+    - intent: successfully_login
+  - action: utter_add_person
+  - action: action_set_exlpained_add_person
+  - intent: agree
+  - action: utter_add_person_name
+  - intent: agree
+  - action: utter_add_person_biography
+  - intent: agree
+  - action: utter_add_person_family
+  - intent: agree
+  - action: utter_add_person_chronic
+  - intent: agree 
+  - action: utter_add_person_network
+  - intent: agree
+  - action: utter_add_person_domicil
+  - intent: agree
+  - action: utter_add_person_bibliography
+  - intent: agree
+  - action: utter_add_person_picture
+  - intent: agree
+  - action: utter_add_person_data
+  - intent: agree   
+  - action: utter_show_person_preview
+  - or: 
+    - intent: agree
+    - intent: save_created_person
+  - action:  utter_view_created_person
 
 - story: questions persons + explain add missing person
   steps:
@@ -754,7 +1254,7 @@ stories:
     - intent:  save_created_person
   - action: utter_answer_thanks
 
-- story: questions persons + explain add missing person + semantic_search_result + no explain
+- story: questions persons + explain add missing person + semantic_search_result + no explain + helpful
   steps:
   - intent: questions_detail_person
   - action: action_person_detail
@@ -763,11 +1263,26 @@ stories:
     - shall_explain_add_entity: false
     - semantic_search_result: true
     - last_link: last_link
+  - action: utter_results_are_helpful_question
+  - intent: agree
   - action: utter_results_are_helpful
-  - or:
-    - intent: agree
-    - intent: dnied
+  - action: utter_shall_explain_add_person
+  - intent: denied
   - action: utter_ok
+
+- story: questions persons + explain add missing person + semantic_search_result + no explain + not helpful
+  steps:
+  - intent: questions_detail_person
+  - action: action_person_detail
+  - slot_was_set:
+    - shall_explain_add_person: true
+    - shall_explain_add_entity: false
+    - semantic_search_result: true
+    - last_link: last_link
+  - action: utter_results_are_helpful_question
+  - intent: denied
+  - action: utter_results_are_not_helpful_add_data
+  - action: action_collect_mistakes
   - action: utter_shall_explain_add_person
   - intent: denied
   - action: utter_ok
@@ -785,7 +1300,7 @@ stories:
   - intent: denied
   - action: utter_ok
 
-- story: questions persons + semantic_search_result
+- story: questions persons + semantic_search_result + helpful
   steps:
   - intent: questions_detail_person
   - action: action_person_detail
@@ -794,11 +1309,23 @@ stories:
     - shall_explain_add_person: false
     - semantic_search_result: true
     - last_link: last_link
+  - action: utter_results_are_helpful_question
+  - intent: agree
   - action: utter_results_are_helpful
-  - or:
-    - intent: agree
-    - intent: denied
-  - action: utter_ok
+
+- story: questions persons + semantic_search_result + not helpful
+  steps:
+  - intent: questions_detail_person
+  - action: action_person_detail
+  - slot_was_set:
+    - shall_explain_add_entity: false
+    - shall_explain_add_person: false
+    - semantic_search_result: true
+    - last_link: last_link
+  - action: utter_results_are_helpful_question
+  - intent: denied
+  - action: utter_results_are_not_helpful_add_data
+  - action: action_collect_mistakes
 
 - story: count + list objects
   steps: 
@@ -807,7 +1334,7 @@ stories:
   - intent: list_of
   - action: action_list_of
 
-- story: yes or no questions persons + semantic_search_result
+- story: yes or no questions persons + semantic_search_result + helpful
   steps:
   - or:
     - intent: questionsYesNoPerson_connection_to_RELIGION
@@ -818,11 +1345,25 @@ stories:
   - slot_was_set:
     - semantic_search_result: true
     - last_link: last_link
+  - action: utter_results_are_helpful_question
+  - intent: agree
   - action: utter_results_are_helpful
+
+- story: yes or no questions persons + semantic_search_result + not helpful
+  steps:
   - or:
-    - intent: agree
-    - intent: denied
-  - action: utter_ok
+    - intent: questionsYesNoPerson_connection_to_RELIGION
+    - intent: questionsYesNoPerson_connection_to_ORG
+    - intent: questionsYesNoPerson_connection_to_GPE
+    - intent: questionsYesNoPerson_attributes
+  - action: action_yes_no_questions_person
+  - slot_was_set:
+    - semantic_search_result: true
+    - last_link: last_link
+  - action: utter_results_are_helpful_question
+  - intent: denied
+  - action: utter_results_are_not_helpful_add_data
+  - action: action_collect_mistakes
 
 - story: yes or no questions persons
   steps:
@@ -834,7 +1375,6 @@ stories:
   - action: action_yes_no_questions_person
   - slot_was_set:
     - semantic_search_result: false
-
 
 - story: search with chatbots person details without list
   steps: 
@@ -861,7 +1401,6 @@ stories:
   - action: utter_ask_person_is_known
   - intent: denied
   - action: utter_ask_for_a_list_of_person
-  - intent: accept
   - intent: list_of
   - action: action_list_of
   - action: utter_explain_ask_for_person_details
@@ -891,7 +1430,6 @@ stories:
   - action: utter_ask_organization_is_known
   - intent: denied
   - action: utter_ask_for_a_list_of_organization
-  - intent: accept
   - intent: list_of
   - action: action_list_of
   - action: utter_explain_ask_for_organization_details
@@ -919,5 +1457,3 @@ stories:
   - intent: chatbot_general
   - action: utter_name_of_chatbot
   - action: utter_chatbot_functions
-
-

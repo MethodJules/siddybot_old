@@ -23,6 +23,7 @@ class OrganizationDetailsAction(Action):
         tracker: Tracker,
         domain: Dict[Text, Any]) -> List[EventType]:
     print("start action_organization_details")
+    print(tracker.latest_message["text"])
     # Auslesen von allen benoetigten Informationen
     organization = tracker.get_slot(Constants.slot_org)
     attribute = tracker.get_slot(Constants.slot_attribute)
@@ -30,7 +31,9 @@ class OrganizationDetailsAction(Action):
     # dann wir mit allen gefundenen Entitaeten eine semantische Suche durchgefuehrt
     if ((organization is None)):
       entities = tracker.latest_message[Constants.entities] 
-      return SemanticSearch.searchSemanticSearchListOfEntities(dispatcher, entities, tracker).events
+      events = SemanticSearch.searchSemanticSearchListOfEntities(dispatcher, entities, tracker).events
+      events.append(SlotSet("latest_question",  tracker.latest_message["text"]))
+      return events
     else:
       # Wenn kein Attribut gefunden wurde oder wenn das gefundene Attribut 
       # nicht zu den Attributen fuer Organisationen gehoert, dann wird eine 
@@ -43,11 +46,17 @@ class OrganizationDetailsAction(Action):
         # dann wird darum gebeten die Frage neu zu stellen
         if (return_search.successfull == False):
           dispatcher.utter_message(template="utter_ask_rephrase")
-        return return_search.events      
+        events = return_search.events
+        events.append(SlotSet("latest_question",  tracker.latest_message["text"]))
+        print(events)
+        return events
       else:
         # Wenn eine Organisation und ein Attribut gefunden wurden, 
         # dann werdem die Daten und die passende Ausgabemethode fuer das Attribut gesucht
-        return self.searchSepcificDetailsToOrganization(tracker, dispatcher, organization, attribute)
+        events = self.searchSepcificDetailsToOrganization(tracker, dispatcher, organization, attribute)
+        events.append(SlotSet("latest_question",  tracker.latest_message["text"]))
+        print(events)
+        return events
 
   def searchSepcificDetailsToOrganization(self, tracker: Tracker, dispatcher: CollectingDispatcher, name, attribute) -> List[EventType]:
       """

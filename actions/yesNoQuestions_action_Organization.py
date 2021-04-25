@@ -43,7 +43,7 @@ class YesNoQuestionsOrganizationAction(Action):
         # Wenn die noetigen Informationen nicht gefunden werden koennen, 
         # dann wird eine semantische Suche mit den gefundenen Eingaben durchgefuehrt
         intent = tracker.latest_message["text"]
-        return SemanticSearch.searchSemanticSearchIntent(dispatcher, tracker, intent).events
+        return SemanticSearch.searchSemanticSearchIntent(dispatcher, tracker, intent).events.append(SlotSet("latest_question",  tracker.latest_message["text"]))
     # Funktionen wenn spezifische Objekte gesucht werden in dem Graph des Objektes
     # Dabei kann es sich entweder um Orte oder Religionen handeln
     # Personen werden hier nicht beruecksichtigt, 

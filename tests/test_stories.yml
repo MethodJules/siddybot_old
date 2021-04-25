@@ -1,0 +1,371 @@
+version: "2.0"
+
+stories:
+- story: A test where a custom action returns events
+  steps:
+  - user: |
+      Please show me some [orgas]{"entity": "object_type", "value": "ORGANIZATION"}
+    intent: list_of
+  - action: action_list_of
+
+- story: yes or no questions for organizations
+  steps:
+  - user: | 
+      Did the [Jewish National Party]{"entity": "ORG", "value": "Jewish National Party"} had a [leader]{"entity": "attribtue", "value": "top_members_employees"}?
+    intent: questionsYesNoOrganization_attributes
+  - action: action_yes_no_questions_organization
+
+- story: details of organizations
+  steps:
+  - user: |
+      Who was the [boss]{"entity": "attribtue", "value": "top_members_employees"} of the [Jewish National Party]{"entity": "ORG", "value": "Jewish National Party"}?
+    intent: details_of_organizations
+  - action: action_organization_details
+
+- story: details of organizations
+  steps:
+  - user: |
+      Please show me the [leader]{"entity": "attribtue", "value": "top_members_employees"} of the [Jewish National Party]{"entity": "ORG", "value": "Jewish National Party"}?
+    intent: details_of_organizations
+  - action: action_organization_details
+
+- story: questions person birthday
+  steps:
+  - user: |
+      When was the [birthday]{"entity": "attribtue", "value": "date_of_birth"} of the [Esther Apfelbaum]{"entity": "PERSON", "value": "Esther Apfelbaum"}?
+    intent: questions_detail_person
+  - action: action_person_detail
+
+- story: yes or no questions persons + semantic_search_result + helpful
+  steps:
+  - user: |
+      Did [Beate Berger]{"entity": "PERSON", "value": "Beate Berger"} had a [husband]{"entity": "attribtue", "value": "spouse"}
+    intent: questionsYesNoPerson_attributes
+  - action: action_yes_no_questions_person
+
+- story: add person
+  steps:
+  - user: |
+      How can I add a person?
+    intent: add_person
+  - action: utter_add_person_check_account
+  - user: |
+      No
+    intent:  denied
+  - action: utter_user_account_menu
+  - user: |
+      No
+    intent: denied
+  - action: utter_place_user_account_menu
+  - action: utter_create_account
+  - user: |
+      Ok
+    intent: agree
+  - action: utter_please_login
+  - user: |
+      Ok
+    intent: agree
+  - action: utter_add_person
+  - action: action_set_exlpained_add_person
+  - user: |
+      Ok
+    intent: agree
+  - action: utter_add_person_name
+  - user: |
+      Ok
+    intent: agree
+  - action: utter_add_person_biography
+  - user: |
+      Ok
+    intent: agree
+  - action: utter_add_person_family
+  - user: |
+      Ok
+    intent: agree
+  - action: utter_add_person_chronic
+  - user: |
+      Ok
+    intent: agree
+  - action: utter_add_person_network
+  - user: |
+      Ok
+    intent: agree
+  - action: utter_add_person_domicil
+  - user: |
+      Ok
+    intent: agree
+  - action: utter_add_person_bibliography
+  - user: |
+      Ok
+    intent: agree
+  - action: utter_add_person_picture
+  - user: |
+      Ok
+    intent: agree
+  - action: utter_add_person_data
+  - user: |
+      Ok
+    intent: agree
+  - action: utter_show_person_preview
+  - user: |
+      Ok
+    intent: agree
+  - action:  utter_view_created_person
+  - user: |
+      Ok
+    intent: agree
+  - action: utter_answer_thanks
+
+- story: search with chatbots person details without list
+  steps: 
+  - user: |
+      Could you show me which information you can give me? 
+    intent: information_search_with_chatbot
+  - action: utter_information_of_website
+  - user: |
+      How can I search for these information?
+    intent: how_search_with_chatbot
+  - action: utter_types_of_information
+  - user: |
+      I like to know [something about people]{"entity": "informationtype", "value": "person-detail"}
+    intent: ask_for_information_type
+  - action: utter_ask_person_is_known
+  - user: |
+      Ok
+    intent: agree
+  - action: utter_explain_ask_for_person_details
+
+- story: search with chatbots person details with list
+  steps: 
+  - user: |
+      Can you tell me what information I can look for you with you
+    intent: information_search_with_chatbot
+  - action: utter_information_of_website
+  - user: |
+      Please show me, how I can search with you
+    intent: how_search_with_chatbot
+  - action: utter_types_of_information
+  - user: |
+      I like to know [something about person]{"entity": "informationtype", "value": "person-detail"}
+    intent: ask_for_information_type
+  - action: utter_ask_person_is_known
+  - user: |
+      No
+    intent: denied
+  - action: utter_ask_for_a_list_of_person
+  - user: |
+      Please show me [35]{"entity": "CARDINAL", "value": "35"} [orgas]{"entity": "object_type", "value": "ORGANIZATION"}
+    intent: list_of
+  - action: action_list_of
+  - action: utter_explain_ask_for_person_details
+
+- story: search with chatbots organizations details without list
+  steps: 
+  - user: |
+      Which information can u search?
+    intent: information_search_with_chatbot
+  - action: utter_information_of_website
+  - user: |
+      And how can I search?
+    intent: how_search_with_chatbot
+  - action: utter_types_of_information
+  - user: |
+      How can I find [informations about orgas]{"entity": "informationtype", "value": "organization-detail"}
+    intent: ask_for_information_type
+  - action: utter_ask_organization_is_known
+  - user: |
+      Ok
+    intent: agree
+  - action: utter_explain_ask_for_organization_details
+
+- story: search with chatbots organizations details with list
+  steps: 
+  - user: |
+      Could you tell me which infos can I get about you?
+    intent: information_search_with_chatbot
+  - action: utter_information_of_website
+  - user: |
+      How can I get these informations?
+    intent: how_search_with_chatbot
+  - action: utter_types_of_information
+  - user: |
+      [informations about orgas]{"entity": "informationtype", "value": "organization-detail"}
+    intent: ask_for_information_type
+  - action: utter_ask_organization_is_known
+  - user: |
+      No
+    intent: denied
+  - action: utter_ask_for_a_list_of_organization
+  - user: |
+      I want to see a list of [15]{"entity": "CARDINAL", "value": "15"} [orgas]{"entity": "object_type", "value": "ORGANIZATION"}
+    intent: list_of
+  - action: action_list_of
+  - action: utter_explain_ask_for_organization_details
+
+- story: questions persons + explain add missing person + semantic_search_result + not helpful
+  steps:
+  - user: |
+      Who are the names of the [siblings]{"entity": "attribute", "value": "sibling"} of [Beate Berger]{"entity": "PERSON", "value": "Beate Berger"}
+    intent: questions_detail_person
+  - action: action_person_detail
+  - slot_was_set:
+    - shall_explain_add_person: true
+    - shall_explain_add_entity: false
+    - semantic_search_result: true
+    - last_link: last_link
+  - action: utter_results_are_helpful_question
+  - user: |
+      No
+    intent: denied
+  - action: utter_results_are_not_helpful_add_data
+  - action: action_collect_mistakes
+  - action: utter_shall_explain_add_person
+  - user: |
+      Yes
+    intent: agree
+  - action: utter_add_person_check_account
+  - user: |
+      Ok
+    intent: agree
+  - action: utter_please_login
+  - user: |
+      Ok
+    intent: agree
+  - action: utter_add_person
+  - action: action_set_exlpained_add_person
+  - user: |
+      Ok
+    intent: agree
+  - action: utter_add_person_name
+  - user: |
+      Ok
+    intent: agree
+  - action: utter_add_person_biography
+  - user: |
+      Ok
+    intent: agree
+  - action: utter_add_person_family
+  - user: |
+      Ok
+    intent: agree
+  - action: utter_add_person_chronic
+  - user: |
+      Ok
+    intent: agree 
+  - action: utter_add_person_network
+  - user: |
+      Ok
+    intent: agree
+  - action: utter_add_person_domicil
+  - user: |
+      Ok
+    intent: agree
+  - action: utter_add_person_bibliography
+  - user: |
+      Ok
+    intent: agree
+  - action: utter_add_person_picture
+  - user: |
+      Ok
+    intent: agree
+  - action: utter_add_person_data
+  - user: |
+      Ok
+    intent: agree   
+  - action: utter_show_person_preview
+  - user: |
+      I saved the person
+    intent: save_created_person
+  - action:  utter_view_created_person
+  - user: |
+      Thank you
+    intent: thanks
+  - action: utter_answer_thanks
+
+- story: questions person + add entity + create account + semantic_search_result  + not helpful + user account menu
+  steps:
+  - user: |
+      Please show me the [date of birth]{"entity": "attribute", "value": "date_of_birth"} of [Benjamin Jonas]{"entity": "PERSON", "value": "Benjamin Jonas"}
+    intent: questions_detail_person 
+  - action: action_person_detail
+  - slot_was_set:
+    - shall_explain_add_entity: true
+    - shall_explain_add_person: false
+    - semantic_search_result: true
+    - last_link: last_link
+  - action: utter_results_are_helpful_question
+  - user: |
+      No
+    intent: denied 
+  - action: utter_results_are_not_helpful_add_data
+  - action: action_collect_mistakes
+  - action: utter_shall_explain_add_entity
+  - user: |
+      Ok
+    intent: agree 
+  - action: utter_add_entity_check_account
+  - user: |
+      No
+    intent: denied 
+  - action: utter_user_account_menu
+  - user: |
+      No
+    intent: denied 
+  - action: utter_place_user_account_menu
+  - action: utter_create_account
+  - user: |
+      Ok
+    intent: agree 
+  - action: utter_please_login
+  - user: |
+      Ok
+    intent: agree 
+  - action: utter_add_entity
+  - user: |
+      Ok
+    intent: agree 
+  - action: utter_add_entity_text_and_NER
+  - action: action_set_exlpained_add_entity
+  - user: |
+      Thank u
+    intent: thanks
+  - action: utter_answer_thanks 
+
+- story: questions person + add entity + semantic_search_result + helpful
+  steps:
+  - user: |
+      Who were the [mother]{"entity": "attribute", "value": "parents"} of her?
+    intent: questions_detail_person
+  - action: action_person_detail
+  - slot_was_set:
+    - shall_explain_add_entity: true
+    - shall_explain_add_person: false
+    - semantic_search_result: true
+    - last_link: last_link
+  - action: utter_results_are_helpful_question
+  - user: |
+      Ok
+    intent: agree 
+  - action: utter_results_are_helpful
+  - action: utter_shall_explain_add_entity
+  - user: |
+      Ok
+    intent: agree 
+  - action: utter_add_entity_check_account
+  - user: |
+      Ok
+    intent: agree 
+  - action: utter_please_login
+  - user: |
+      Ok
+    intent: agree 
+  - action: utter_add_entity
+  - user: |
+      Ok
+    intent: agree 
+  - action: utter_add_entity_text_and_NER
+  - action: action_set_exlpained_add_entity
+  - user: |
+      Thank you!!
+    intent: thanks 
+  - action: utter_answer_thanks

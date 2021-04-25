@@ -22,12 +22,59 @@ nlu:
     - See you later
     - Ciao
 
+- intent: user_age
+  examples: |
+    - What's my age?
+    - Could you told my how old I am?
+    - How old I am?
+    - Could you repeat my age?
+    - Tell me my age!
+
+- intent: user_speaked_with_chatbot
+  examples: |
+    - Did I ever speaked with a chatbot?
+    - Could you told me if I ever speaked with a chatbot?
+    - Show me my answer for the question Did I ever speaked to a chatbot?
+
+- intent: user_expert_value
+  examples: |
+    - What is my expert level for these topic?
+    - Show me my expert level!
+    - Could you repeat my expert level?
+
+- intent: user_gender
+  examples: |
+    - What is my gender?
+    - Show me my gender
+    - Repeat my gender!
+    - Could you tell me my own gender?
+
 - intent: restart_chatbot
   examples: |
     - Restart!
     - Please restart
     - Could you restart yourself, please?
     - You should restart yourself
+
+- intent: chatbot_or_person
+  examples: |
+    - Are you a chatbot or a person?
+    - What are you?
+    - Could you tell me if you are a chatbot or a person?
+    - Chatbot or person?
+    - Tell me if you are a chabot or a person!
+
+- intent: chatbot_question
+  examples: |
+    - Are you a chatbot?
+    - Please tell me if you are a chatbot!
+    - Could you tell if you are a chatbot?
+
+- synonym: chatbot
+  examples: |
+    - bot
+    - conversation agent
+    - chatterbot
 
 - intent: thanks
   examples: |
@@ -422,6 +469,7 @@ nlu:
     - About [who]{"entity": "object_type", "value": "PERSON"} did you have information?
     - Can you name some [people]{"entity": "object_type", "value": "PERSON"}
     - Can you say the names of a few [people]{"entity": "object_type", "value": "PERSON"} you have information about
+    - I want to see a list of [15](CARDINAL) [people]{"entity": "object_type", "value": "PERSON"}
 
 - intent: list_of/organizations
   examples: |
@@ -438,7 +486,7 @@ nlu:
     - Could you show me some? 
     - List [five](CARDINAL)
     - List [30](CARDINAL) from your website
-
+    - I want to see a list of [15](CARDINAL) [orgas]{"entity": "object_type", "value": "ORGANIZATION"}
 
 - intent: questions_detail_person/birthday
   examples: |
@@ -761,10 +809,10 @@ nlu:
 - intent: details_of_organizations/members
   examples: |
     - Could you show me some [members]{"entity": "attribute", "value": "member"} of [Jewish National Party](ORG)?
-    - Who was a [member]{"entity": "attribute", "value": "members"} of [Childrens Service](ORG)? 
-    - Show me [members]{"entity": "attribute", "value": "members"} of the [Zentralwohlfahrtsstelle](ORG)
-    - Show me some [members]{"entity": "attribute", "value": "members"} 
-    - I like to know some [members]{"entity": "attribute", "value": "members"} 
+    - Who was a [member]{"entity": "attribute", "value": "member"} of [Childrens Service](ORG)? 
+    - Show me [members]{"entity": "attribute", "value": "member"} of the [Zentralwohlfahrtsstelle](ORG)
+    - Show me some [members]{"entity": "attribute", "value": "member"} 
+    - I like to know some [members]{"entity": "attribute", "value": "member"} 
 
 - intent: details_of_organizations/employee_members
   examples: |
@@ -904,6 +952,7 @@ nlu:
     - What can you give me information for?
     - Could you tell me what kind of information you can give me for?
     - What kind of information are you searching?
+    - Could you tell me which infos can I get about you?
 
 - intent: how_search_with_chatbot
   examples: |
@@ -917,6 +966,7 @@ nlu:
     - How can I serach for those information?
     - How can I search for informations with you?
     - How can I ask you questions?
+    - How can I get these informations?
 
 - intent: ask_for_information_type
   examples: |
@@ -930,6 +980,9 @@ nlu:
     - I am looking for [person detail]{"entity": "informationtype", "value": "person-detail"}
     - Could you show me some [person detail]{"entity": "informationtype", "value": "person-detail"}?
     - [to a person]{"entity": "informationtype", "value": "person-detail"}
+    - How can I find [information about persons]]{"entity": "informationtype", "value": "person-detail"}?
+    - How can I find [informations about orgas]{"entity": "informationtype", "value": "organization-detail"} 
+    - [informations about orgas]{"entity": "informationtype", "value": "organization-detail"} 
 
 - intent: add_missing_entity
   examples: |
@@ -1144,6 +1197,12 @@ nlu:
     - brothers and sisters
     - sisters and brothers
 
+- synonym: top_members_employees
+  examples: |
+    - leader
+    - boss
+    - chef
+
 - synonym: title
   examples: |
     - jobs
@@ -1198,27 +1257,46 @@ nlu:
   examples: |
     - organization
     - orga 
+    - orgas
     - organizations 
     - group
+    - groups
     - company
+    - companies
     - party
+    - parties
     - body
+    - bodies
     - concern
+    - concerns
     - league
+    - leagues
     - association
+    - associations
     - band
+    - bands
     - institution
+    - institutions
     - gathering
+    - gatherings
     - circle
+    - circles
     - corporation
+    - corporations
     - federation
-    - outfit (informal)
+    - federations
     - faction
+    - factions
     - consortium
+    - consortiums
     - syndicate
+    - syndicates
     - combine
+    - combines
     - congregation
+    - congregations
     - confederation
+    - confederations
     - organisation
     - organisations
 

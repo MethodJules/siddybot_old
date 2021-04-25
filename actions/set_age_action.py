@@ -15,13 +15,24 @@ class SetAgeAction(Action):
       """
       return "action_set_age"
 
-
   def run(self, dispatcher: CollectingDispatcher,
         tracker: Tracker,
         domain: Dict[Text, Any]) -> List[EventType]:
       print("action_set_age")
-      # Auslesen des Slots der Kardinalitaet
-      age = tracker.get_slot(Constants.slot_cardinal)
-      # Setzt den Wert des Alters in den passenden Slot 
-      # der Wert des Slots fuer die Kardinalitaeten wird wieder auf None gesetzt
-      return [SlotSet(Constants.slot_age, age), SlotSet(Constants.slot_cardinal)]
+      intent = tracker.get_intent_of_latest_message()
+      if (intent == "younger_than_10"):
+           return [SlotSet(Constants.slot_age, "younger than 10")]
+      elif (intent == "between11_20"):
+           return [SlotSet(Constants.slot_age, "between 11 and 20")]
+      elif (intent == "between21_30"):
+           return [SlotSet(Constants.slot_age, "between 21 and 30")]
+      elif (intent == "between31_40"):
+           return [SlotSet(Constants.slot_age, "between 31 and 40")]
+      elif (intent == "between41_50"):
+           return [SlotSet(Constants.slot_age, "between 41 and 50")]
+      elif (intent == "between51_60"):
+           return [SlotSet(Constants.slot_age, "between 51 and 60")]
+      elif (intent == "between61_70"):
+           return [SlotSet(Constants.slot_age, "between 61 and 70")]
+      elif (intent == "older_than_71"):
+           return [SlotSet(Constants.slot_age, "older than 70")]

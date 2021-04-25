@@ -37,7 +37,7 @@ class YesNoQuestionsPersonAction(Action):
       # Wenn keine passende Entitaet zu einer Person gefunden wurde, 
       # dann wird eine semantische Suche mit den gefundenden Daten aus der Eingabe
       # durchgefuehrt
-      return SemanticSearch.returnPersonNotExist(dispatcher, tracker)
+      return SemanticSearch.returnPersonNotExist(dispatcher, tracker).appned(SlotSet("latest_question",  tracker.latest_message["text"]))
     # Wenn eine Entitaet zu der Person gefunden werden konnte, 
     # dann wird abhaengig von dem gefundenen Intent die weiter fortgefahren
     if (tracker.get_intent_of_latest_message() == "questionsYesNoPerson_attributes"):
@@ -58,8 +58,8 @@ class YesNoQuestionsPersonAction(Action):
       else:
         # Konnte kein Attribut oder kein fuer Personen relevantes Attribut in der Nachricht identifiziert werden
         # dann wird eine semantische Suche mit der ganzen Nachricht durchgefuehrt
-        return SemanticSearch.searchSemanticSearchIntent(dispatcher, tracker, tracker.latest_message["text"]).events     
-    # In den folgenden elif-Bloecken wird jewweils geprueft ob ein konkretes Objekt
+        return SemanticSearch.searchSemanticSearchIntent(dispatcher, tracker, tracker.latest_message["text"]).events.append(SlotSet("latest_question",  tracker.latest_message["text"]))    
+    # In den folgenden elif-Bloecken wird jeweils geprueft ob ein konkretes Objekt
     # in dem Graphen der Person vorhanden ist
     # Dafuer wird abhaengig ob ein Attribut in der Eingabe gefunden wurde geprueft ob die Entitaet mit
     # dem jeweiligen Attribut im Graph vor kommt oder ob nur die Entitaet vor kommt
@@ -108,4 +108,4 @@ class YesNoQuestionsPersonAction(Action):
       dispatcher.utter_message(text=f"Yes")
     else: 
       dispatcher.utter_message(text=f"No")
-    return events
+    return events.append(SlotSet("latest_question",  tracker.latest_message["text"]))

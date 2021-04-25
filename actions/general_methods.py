@@ -8,6 +8,15 @@ from rasa_sdk import Action, Tracker
 # Klasse in denen Methoden gesammelt werden, die an verschiednenen Stellen genutzt werden
 class GeneralMethods():
 
+
+  def saveMistakes(tracker: Tracker) -> List[EventType]:
+      mistake = tracker.latest_message["text"]
+      mistakes = tracker.get_slot("mistakes")
+      print(mistake)
+      mistakes = tracker.get_slot("mistakes") + mistake + " ,"
+      print(mistakes)
+      return SlotSet("mistakes",mistakes)
+
   def liste_ausgeben(liste) -> str:
     """
     Methode zum ausgeben einer Liste in einer Zeile

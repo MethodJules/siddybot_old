@@ -3,9 +3,9 @@
     "",
     "\\actions",
     "\\data",
-    "\\docker",
-    "\\results"
+    "\\results",
+    "\\tests"
   ],
-  "SelectedNode": "\\endpoints.yml",
+  "SelectedNode": "\\tests",
   "PreviewInSolutionExplorer": false
 }

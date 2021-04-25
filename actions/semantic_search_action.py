@@ -5,6 +5,7 @@ from typing import Any, Text, Dict, List
 from actions.semantic_search import SemanticSearch
 from actions.constants import Constants
 from rasa_sdk.events import SlotSet, EventType
+from actions.general_methods import GeneralMethods
 
 # Action zum durchfuehren der semantischen Suche wenn keine passende Aktion gefunden wurde
 class SemanticSearchAction(Action):
@@ -35,5 +36,7 @@ class SemanticSearchAction(Action):
         # Wenn keine Daten ueber die semantische Suche ermittelt werden konnten, 
         # dann wird der Anwender darum gebeten die Frage neu zu formulieren
         dispatcher.utter_message(template="utter_ask_rephrase")
+    # Sammeln der Frage in der Fehlerliste
+    search_return.events.append(GeneralMethods.saveMistakes(tracker))
     # Rueckgabe aller Events die ueber die semantische Suche ermittelt werden konnten
     return search_return.events

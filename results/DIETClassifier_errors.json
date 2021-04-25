@@ -20,7 +20,7 @@
         "entity": "object_type",
         "start": 0,
         "end": 4,
-        "confidence_entity": 0.5379207134246826,
+        "confidence_entity": 0.8754845857620239,
         "value": "DATE",
         "extractor": "DIETClassifier",
         "processors": [
@@ -31,7 +31,7 @@
         "entity": "attribute",
         "start": 13,
         "end": 21,
-        "confidence_entity": 0.999950647354126,
+        "confidence_entity": 0.9999535083770752,
         "value": "date_of_death",
         "extractor": "DIETClassifier",
         "processors": [
@@ -42,67 +42,50 @@
         "entity": "PERSON",
         "start": 25,
         "end": 41,
-        "confidence_entity": 0.999774158000946,
+        "confidence_entity": 0.9998469352722168,
         "value": "Esther Apfelberg",
         "extractor": "DIETClassifier"
       }
     ]
   },
   {
-    "text": "I would like to know in which city [Esther Apfelberg was born]{\"entity\":\"attribute\",\"value\":\"city_of_birth\"}",
+    "text": "Can you give me some information about about Ruth Barak",
     "entities": [
       {
-        "start": 24,
-        "end": 52,
-        "value": "which city [Esther Apfelberg",
+        "start": 16,
+        "end": 38,
+        "value": "biographie",
+        "entity": "attribute"
+      },
+      {
+        "start": 45,
+        "end": 55,
+        "value": "Ruth Barak",
         "entity": "PERSON"
       }
     ],
     "predicted_entities": [
       {
-        "entity": "PERSON",
-        "start": 2,
-        "end": 7,
-        "confidence_entity": 0.940493643283844,
-        "value": "would",
-        "extractor": "DIETClassifier"
-      },
-      {
-        "entity": "object_type",
-        "start": 13,
-        "end": 15,
-        "confidence_entity": 0.48070698976516724,
-        "value": "to",
-        "extractor": "DIETClassifier"
-      },
-      {
         "entity": "attribute",
-        "start": 21,
-        "end": 23,
-        "confidence_entity": 0.3123806118965149,
-        "value": "in",
+        "start": 16,
+        "end": 44,
+        "confidence_entity": 0.7475723624229431,
+        "value": "some information about about",
         "extractor": "DIETClassifier"
       },
       {
         "entity": "PERSON",
-        "start": 24,
-        "end": 52,
-        "confidence_entity": 0.972537100315094,
-        "value": "which city [Esther Apfelberg",
+        "start": 45,
+        "end": 55,
+        "confidence_entity": 0.9997242093086243,
+        "value": "Ruth Barak",
         "extractor": "DIETClassifier"
       },
       {
-        "entity": "object_type",
-        "start": 30,
-        "end": 34,
-        "value": "city",
-        "extractor": "RegexEntityExtractor"
-      },
-      {
-        "entity": "attribute",
-        "start": 93,
-        "end": 106,
-        "value": "city_of_birth",
+        "entity": "PERSON",
+        "start": 45,
+        "end": 55,
+        "value": "Ruth Barak",
         "extractor": "RegexEntityExtractor"
       }
     ]

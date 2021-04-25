@@ -23,8 +23,18 @@ class SetExpertValueAction(Action):
       Setzt den Slot fuer den Wert des Expertenwissens des Anwenders
       """
       print("action_set_expert_value")
-      # Liest den Slot der Kardinalitaet aus
-      expert_value = tracker.get_slot(Constants.slot_cardinal)
-      # Setzt den Wert des Expertenwissens in den passenden Slot 
-      # der Wert des Slots fuer die Kardinalitaeten wird wieder auf None gesetzt
-      return [SlotSet(Constants.slot_expert_value, expert_value), SlotSet(Constants.slot_cardinal)]
+      intent = tracker.get_intent_of_latest_message()
+      if (intent == "expertlevel_1"):
+           return [SlotSet(Constants.slot_expert_value, "1")]
+      elif (intent == "expertlevel_2"):
+           return [SlotSet(Constants.slot_expert_value, "2")]
+      elif (intent == "expertlevel_3"):
+           return [SlotSet(Constants.slot_expert_value, "3")]
+      elif (intent == "expertlevel_4"):
+           return [SlotSet(Constants.slot_expert_value, "4")]
+      elif (intent == "expertlevel_5"):
+           return [SlotSet(Constants.slot_expert_value, "5")]
+      elif (intent == "expertlevel_6"):
+           return [SlotSet(Constants.slot_expert_value, "6")]
+      elif (intent == "expertlevel_7"):
+           return [SlotSet(Constants.slot_expert_value, "7")]
