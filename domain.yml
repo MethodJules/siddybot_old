@@ -87,6 +87,10 @@ intents:
   - user_speaked_with_chatbot
   - user_expert_value
   - user_gender
+  - get_developer_information
+  - age_chatbot
+  - commands_example
+  - who_is_siddybot
 
 entities:
   - maptype
@@ -453,6 +457,9 @@ responses:
   utter_name_of_chatbot:
   - text: "My name is Siddy."
   - text: "I'm Siddy!"
+  
+  utter_developer:
+  - text: "The website was developed by Julien Hofer and his team."
 
   utter_are_you_a_bot:
   - text: "Yes, I am a chatbot and my name is Siddy."
@@ -461,13 +468,24 @@ responses:
   utter_answer_bot:
   - text: "I am a chatbot and my name is Siddy."
 
+  utter_who_is_siddybot:
+  - text: "It's me!"
+  - text: "I'm Siddybot!'"
+
   utter_chatbot_functions:
   - text: "You can ask me FAQ-Questions or something to persons on this websites"
   - text: "I can show you some informations about persons or organizations and you can ask me FAQ-Questions."
   - text: "I can help to find informations about persons or organizations or the answer for FAQ-Questions."
 
+  utter_after_restart:
+  - text: "Hi! My name is SiddyBot I can help you with frequently asked questions (FAQ) or if you want to know something about persons (like my role model Siddy Wronsky) or organizations. To start, say \"Hi!\""
+
   utter_greet:
   - text: "Welcome, how can i help you?"
+
+  utter_greet_in_conversation:
+  - text: "Hi!"
+  - text: "Hello :-)"
   
   utter_goodbye:
   - text: "Goodbye."
@@ -475,6 +493,9 @@ responses:
   utter_ok:
   - text: "Ok"
   - text: "Okay"
+
+  utter_age_chatbot:
+  - text: "I'm very young! Only a few month. Because of these I have to learn very much ;-)"
 
   utter_thank_you:
   - text: "Thank you!"

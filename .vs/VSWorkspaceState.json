@@ -1,11 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\actions",
     "\\data",
     "\\results",
     "\\tests"
   ],
-  "SelectedNode": "\\tests",
+  "SelectedNode": "\\tests\\test_stories.yml",
   "PreviewInSolutionExplorer": false
 }

@@ -1,6 +1,104 @@
 version: "2.0"
 stories:
-- story: search with chatbots organizations details with list (C:\Users\Franzi\AppData\Local\Temp\tmpayp6scza\3071c3e3047146beaff62c34f646597d_test_stories.yml)
+- story: age chatbot (C:\Users\Franzi\AppData\Local\Temp\tmp8umxl7hm\452b24eae92a4cbfb08e854a0f165a84_test_stories.yml)
+  steps:
+  - intent: who_is_siddybot  # predicted: who_is_siddybot: How is [SiddyBot](ORG)?
+  - action: utter_who_is_siddybot
+  - intent: age_chatbot  # predicted: nlu_fallback: What's your age?
+  - action: utter_age_chatbot
+  - intent: commands_example
+  - action: utter_question_examples
+- story: add person (C:\Users\Franzi\AppData\Local\Temp\tmp8umxl7hm\452b24eae92a4cbfb08e854a0f165a84_test_stories.yml)
+  steps:
+  - intent: add_person  # predicted: add_person: How can I add a [person](object_type)?
+  - action: utter_add_person_check_account
+  - intent: denied
+  - action: utter_user_account_menu
+  - intent: denied
+  - action: utter_place_user_account_menu
+  - action: utter_create_account
+  - intent: agree
+  - action: utter_please_login  # predicted: action_listen
+  - intent: agree
+  - action: utter_add_person
+  - action: action_set_exlpained_add_person
+  - intent: agree
+  - action: utter_add_person_name
+  - intent: agree
+  - action: utter_add_person_biography
+  - intent: agree
+  - action: utter_add_person_family
+  - intent: agree
+  - action: utter_add_person_chronic
+  - intent: agree
+  - action: utter_add_person_network
+  - intent: agree
+  - action: utter_add_person_domicil
+  - intent: agree
+  - action: utter_add_person_bibliography
+  - intent: agree
+  - action: utter_add_person_picture
+  - intent: agree
+  - action: utter_add_person_data
+  - intent: agree
+  - action: utter_show_person_preview
+  - intent: agree
+  - action: utter_view_created_person
+  - intent: agree
+  - action: utter_answer_thanks  # predicted: action_semantic_search
+- story: search with chatbots person details without list (C:\Users\Franzi\AppData\Local\Temp\tmp8umxl7hm\452b24eae92a4cbfb08e854a0f165a84_test_stories.yml)
+  steps:
+  - intent: information_search_with_chatbot
+  - action: utter_information_of_website
+  - intent: how_search_with_chatbot
+  - action: utter_types_of_information
+  - intent: ask_for_information_type  # predicted: ask_for_information_type: I like to know [something about people](informationtype)
+    entities:
+    - informationtype: person-detail
+  - slot_was_set:
+    - informationtype: person-detail
+  - action: utter_ask_person_is_known
+  - intent: agree
+  - action: utter_explain_ask_for_person_details
+- story: search with chatbots person details with list (C:\Users\Franzi\AppData\Local\Temp\tmp8umxl7hm\452b24eae92a4cbfb08e854a0f165a84_test_stories.yml)
+  steps:
+  - intent: information_search_with_chatbot
+  - action: utter_information_of_website
+  - intent: how_search_with_chatbot
+  - action: utter_types_of_information
+  - intent: ask_for_information_type  # predicted: ask_for_information_type: I like to know [something about person](informationtype)[person](object_type)
+    entities:
+    - informationtype: person-detail
+  - slot_was_set:
+    - informationtype: person-detail
+  - action: utter_ask_person_is_known
+  - intent: denied
+  - action: utter_ask_for_a_list_of_person
+  - intent: list_of  # predicted: list_of: Please show me [35](CARDINAL)[35](CARDINAL) [orgas]{"entity": "object_type", "value": "ORGANIZATION"}
+    entities:
+    - CARDINAL: '35'
+    - object_type: ORGANIZATION
+  - slot_was_set:
+    - CARDINAL: '35'
+  - slot_was_set:
+    - object_type: ORGANIZATION
+  - action: action_list_of
+  - action: utter_explain_ask_for_person_details
+- story: search with chatbots organizations details without list (C:\Users\Franzi\AppData\Local\Temp\tmp8umxl7hm\452b24eae92a4cbfb08e854a0f165a84_test_stories.yml)
+  steps:
+  - intent: information_search_with_chatbot
+  - action: utter_information_of_website
+  - intent: how_search_with_chatbot  # predicted: nlu_fallback: And how can I search?
+  - action: utter_types_of_information
+  - intent: ask_for_information_type
+    entities:
+    - informationtype: organization-detail
+  - slot_was_set:
+    - informationtype: organization-detail
+  - action: utter_ask_organization_is_known
+  - intent: agree
+  - action: utter_explain_ask_for_organization_details
+- story: search with chatbots organizations details with list (C:\Users\Franzi\AppData\Local\Temp\tmp8umxl7hm\452b24eae92a4cbfb08e854a0f165a84_test_stories.yml)
   steps:
   - intent: information_search_with_chatbot
   - action: utter_information_of_website
@@ -24,7 +122,7 @@ stories:
     - object_type: ORGANIZATION
   - action: action_list_of
   - action: utter_explain_ask_for_organization_details
-- story: questions persons + explain add missing person + semantic_search_result + not helpful (C:\Users\Franzi\AppData\Local\Temp\tmpayp6scza\3071c3e3047146beaff62c34f646597d_test_stories.yml)
+- story: questions persons + explain add missing person + semantic_search_result + not helpful (C:\Users\Franzi\AppData\Local\Temp\tmp8umxl7hm\452b24eae92a4cbfb08e854a0f165a84_test_stories.yml)
   steps:
   - intent: questions_detail_person  # predicted: questions_detail_person: Who are the names of the [siblings](attribute)[siblings](attribute) of [Beate Berger](PERSON)[Beate Berger](PERSON)[Beate Berger](PERSON)
     entities:
@@ -79,7 +177,7 @@ stories:
   - action: utter_view_created_person
   - intent: thanks
   - action: utter_answer_thanks
-- story: questions person + add entity + create account + semantic_search_result  + not helpful + user account menu (C:\Users\Franzi\AppData\Local\Temp\tmpayp6scza\3071c3e3047146beaff62c34f646597d_test_stories.yml)
+- story: questions person + add entity + create account + semantic_search_result  + not helpful + user account menu (C:\Users\Franzi\AppData\Local\Temp\tmp8umxl7hm\452b24eae92a4cbfb08e854a0f165a84_test_stories.yml)
   steps:
   - intent: questions_detail_person  # predicted: questions_detail_person: Please show me the [date](attribute)[date](object_type) of [birth](attribute) of [Benjamin Jonas](PERSON)[Benjamin Jonas](PERSON)[Benjamin Jonas](PERSON)
     entities:
@@ -119,9 +217,9 @@ stories:
   - action: action_set_exlpained_add_entity
   - intent: thanks
   - action: utter_answer_thanks
-- story: questions person + add entity + semantic_search_result + helpful (C:\Users\Franzi\AppData\Local\Temp\tmpayp6scza\3071c3e3047146beaff62c34f646597d_test_stories.yml)
+- story: questions person + add entity + semantic_search_result + helpful (C:\Users\Franzi\AppData\Local\Temp\tmp8umxl7hm\452b24eae92a4cbfb08e854a0f165a84_test_stories.yml)
   steps:
-  - intent: questions_detail_person  # predicted: questions_detail_person: [Who]{"entity": "object_type", "value": "PERSON"} were the [mother]{"entity": "attribute", "value": "parents"} of her?
+  - intent: questions_detail_person  # predicted: questions_detail_person: Who were the mother of her?
     entities:
     - attribute: parents
   - slot_was_set:
@@ -150,15 +248,26 @@ stories:
   - action: action_set_exlpained_add_entity
   - intent: thanks
   - action: utter_answer_thanks
-- story: A test where a custom action returns events (C:\Users\Franzi\AppData\Local\Temp\tmpayp6scza\3071c3e3047146beaff62c34f646597d_test_stories.yml)
+- story: A test where a custom action returns events (C:\Users\Franzi\AppData\Local\Temp\tmp8umxl7hm\452b24eae92a4cbfb08e854a0f165a84_test_stories.yml)
   steps:
-  - intent: list_of  # predicted: ask_for_information_type: Please show me some [orgas]{"entity": "informationtype", "value": "ORGANIZATION"}
+  - intent: list_of  # predicted: nlu_fallback: Please show me some [orgas]{"entity": "object_type", "value": "ORGANIZATION"}
     entities:
     - object_type: ORGANIZATION
   - slot_was_set:
     - object_type: ORGANIZATION
   - action: action_list_of
-- story: yes or no questions for organizations (C:\Users\Franzi\AppData\Local\Temp\tmpayp6scza\3071c3e3047146beaff62c34f646597d_test_stories.yml)
+- story: list of test 1 (C:\Users\Franzi\AppData\Local\Temp\tmp8umxl7hm\452b24eae92a4cbfb08e854a0f165a84_test_stories.yml)
+  steps:
+  - intent: list_of  # predicted: list_of: List [10](CARDINAL)[10](CARDINAL) [persons]{"entity": "object_type", "value": "PERSON"} of your website
+    entities:
+    - CARDINAL: '10'
+    - object_type: PERSON
+  - slot_was_set:
+    - CARDINAL: '10'
+  - slot_was_set:
+    - object_type: PERSON
+  - action: action_list_of
+- story: yes or no questions for organizations (C:\Users\Franzi\AppData\Local\Temp\tmp8umxl7hm\452b24eae92a4cbfb08e854a0f165a84_test_stories.yml)
   steps:
   - intent: questionsYesNoOrganization_attributes  # predicted: details_of_organizations: Did [the Jewish National Party](ORG)[Jewish National Party](ORG)[Jewish](RELIGION)[Jewish National Party](ORG) had a [leader]{"entity": "attribute", "value": "top_members_employees"}?
     entities:
@@ -167,7 +276,7 @@ stories:
   - slot_was_set:
     - ORG: Jewish National Party
   - action: action_yes_no_questions_organization
-- story: details of organizations (C:\Users\Franzi\AppData\Local\Temp\tmpayp6scza\3071c3e3047146beaff62c34f646597d_test_stories.yml)
+- story: details of organizations (C:\Users\Franzi\AppData\Local\Temp\tmp8umxl7hm\452b24eae92a4cbfb08e854a0f165a84_test_stories.yml)
   steps:
   - intent: details_of_organizations  # predicted: details_of_organizations: Who was the [boss]{"entity": "attribute", "value": "top_members_employees"} of [the Jewish National Party](ORG)[Jewish National Party](ORG)[Jewish](RELIGION)[Jewish National Party](ORG)?
     entities:
@@ -176,7 +285,16 @@ stories:
   - slot_was_set:
     - ORG: Jewish National Party
   - action: action_organization_details
-- story: details of organizations (C:\Users\Franzi\AppData\Local\Temp\tmpayp6scza\3071c3e3047146beaff62c34f646597d_test_stories.yml)
+- story: details of organizations (C:\Users\Franzi\AppData\Local\Temp\tmp8umxl7hm\452b24eae92a4cbfb08e854a0f165a84_test_stories.yml)
+  steps:
+  - intent: details_of_organizations  # predicted: details_of_organizations: Who were the [member](attribute)[member](attribute) of [the Jewish National Party](ORG)[Jewish National Party](ORG)[Jewish](RELIGION)[Jewish National Party](ORG)?
+    entities:
+    - attribtue: member
+    - ORG: Jewish National Party
+  - slot_was_set:
+    - ORG: Jewish National Party
+  - action: action_organization_details
+- story: details of organizations (C:\Users\Franzi\AppData\Local\Temp\tmp8umxl7hm\452b24eae92a4cbfb08e854a0f165a84_test_stories.yml)
   steps:
   - intent: details_of_organizations  # predicted: details_of_organizations: Please show me the [leader]{"entity": "attribute", "value": "top_members_employees"} of [the Jewish National Party](ORG)[Jewish National Party](ORG)[Jewish](RELIGION)[Jewish National Party](ORG)?
     entities:
@@ -185,7 +303,7 @@ stories:
   - slot_was_set:
     - ORG: Jewish National Party
   - action: action_organization_details
-- story: questions person birthday (C:\Users\Franzi\AppData\Local\Temp\tmpayp6scza\3071c3e3047146beaff62c34f646597d_test_stories.yml)
+- story: questions person birthday (C:\Users\Franzi\AppData\Local\Temp\tmp8umxl7hm\452b24eae92a4cbfb08e854a0f165a84_test_stories.yml)
   steps:
   - intent: questions_detail_person  # predicted: questions_detail_person: When was the [birthday]{"entity": "attribute", "value": "date_of_birth"} of [the Esther Apfelbaum](ORG)[Esther Apfelbaum](PERSON)?
     entities:
@@ -194,8 +312,7 @@ stories:
   - slot_was_set:
     - PERSON: Esther Apfelbaum
   - action: action_person_detail
-  - action: action_listen  # predicted: utter_results_are_helpful_question
-- story: yes or no questions persons + semantic_search_result + helpful (C:\Users\Franzi\AppData\Local\Temp\tmpayp6scza\3071c3e3047146beaff62c34f646597d_test_stories.yml)
+- story: yes or no questions persons + semantic_search_result + helpful (C:\Users\Franzi\AppData\Local\Temp\tmp8umxl7hm\452b24eae92a4cbfb08e854a0f165a84_test_stories.yml)
   steps:
   - intent: questionsYesNoPerson_attributes  # predicted: questionsYesNoPerson_attributes: Did [Beate Berger](PERSON)[Beate Berger](PERSON)[Beate Berger](PERSON) had a [husband]{"entity": "attribute", "value": "spouse"}
     entities:
@@ -204,79 +321,3 @@ stories:
   - slot_was_set:
     - PERSON: Beate Berger
   - action: action_yes_no_questions_person
-- story: add person (C:\Users\Franzi\AppData\Local\Temp\tmpayp6scza\3071c3e3047146beaff62c34f646597d_test_stories.yml)
-  steps:
-  - intent: add_person  # predicted: add_person: How can I add a [person](object_type)?
-  - action: utter_add_person_check_account
-  - intent: denied
-  - action: utter_user_account_menu
-  - intent: denied
-  - action: utter_place_user_account_menu
-  - action: utter_create_account
-  - intent: agree
-  - action: utter_please_login  # predicted: action_listen
-  - intent: agree
-  - action: utter_add_person
-  - action: action_set_exlpained_add_person
-  - intent: agree
-  - action: utter_add_person_name
-  - intent: agree
-  - action: utter_add_person_biography
-  - intent: agree
-  - action: utter_add_person_family
-  - intent: agree
-  - action: utter_add_person_chronic
-  - intent: agree
-  - action: utter_add_person_network
-  - intent: agree
-  - action: utter_add_person_domicil
-  - intent: agree
-  - action: utter_add_person_bibliography
-  - intent: agree
-  - action: utter_add_person_picture
-  - intent: agree
-  - action: utter_add_person_data
-  - intent: agree
-  - action: utter_show_person_preview
-  - intent: agree
-  - action: utter_view_created_person
-  - intent: agree
-  - action: utter_answer_thanks  # predicted: utter_add_person_family
-- story: search with chatbots person details without list (C:\Users\Franzi\AppData\Local\Temp\tmpayp6scza\3071c3e3047146beaff62c34f646597d_test_stories.yml)
-  steps:
-  - intent: information_search_with_chatbot
-  - action: utter_information_of_website
-  - intent: how_search_with_chatbot
-  - action: utter_types_of_information
-  - intent: ask_for_information_type  # predicted: ask_for_information_type: I like to know [something about people](informationtype)
-    entities:
-    - informationtype: person-detail
-  - slot_was_set:
-    - informationtype: person-detail
-  - action: utter_ask_person_is_known
-  - intent: agree
-  - action: utter_explain_ask_for_person_details
-- story: search with chatbots person details with list (C:\Users\Franzi\AppData\Local\Temp\tmpayp6scza\3071c3e3047146beaff62c34f646597d_test_stories.yml)
-  steps:
-  - intent: information_search_with_chatbot
-  - action: utter_information_of_website
-  - intent: how_search_with_chatbot
-  - action: utter_types_of_information
-  - intent: ask_for_information_type  # predicted: ask_for_information_type: I like to know [something about](informationtype) [person]{"entity": "informationtype", "value": "PERSON"}[person](object_type)
-    entities:
-    - informationtype: person-detail
-  - slot_was_set:
-    - informationtype: person-detail
-  - action: utter_ask_person_is_known
-  - intent: denied
-  - action: utter_ask_for_a_list_of_person
-  - intent: list_of  # predicted: list_of: Please show me [35](CARDINAL)[35](CARDINAL) [orgas]{"entity": "object_type", "value": "ORGANIZATION"}
-    entities:
-    - CARDINAL: '35'
-    - object_type: ORGANIZATION
-  - slot_was_set:
-    - CARDINAL: '35'
-  - slot_was_set:
-    - object_type: ORGANIZATION
-  - action: action_list_of
-  - action: utter_explain_ask_for_person_details

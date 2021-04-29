@@ -8,6 +8,14 @@ stories:
     intent: list_of
   - action: action_list_of
 
+- story: list of test 1
+  steps:
+  - user: |
+      List [10]{"entity": "CARDINAL", "value": "10"} [persons]{"entity": "object_type", "value": "PERSON"} of your website
+    intent: list_of
+  - action: action_list_of
+
+
 - story: yes or no questions for organizations
   steps:
   - user: | 
@@ -19,6 +27,13 @@ stories:
   steps:
   - user: |
       Who was the [boss]{"entity": "attribtue", "value": "top_members_employees"} of the [Jewish National Party]{"entity": "ORG", "value": "Jewish National Party"}?
+    intent: details_of_organizations
+  - action: action_organization_details
+
+- story: details of organizations
+  steps:
+  - user: |
+      Who were the [member]{"entity": "attribtue", "value": "member"} of the [Jewish National Party]{"entity": "ORG", "value": "Jewish National Party"}?
     intent: details_of_organizations
   - action: action_organization_details
 
@@ -42,6 +57,32 @@ stories:
       Did [Beate Berger]{"entity": "PERSON", "value": "Beate Berger"} had a [husband]{"entity": "attribtue", "value": "spouse"}
     intent: questionsYesNoPerson_attributes
   - action: action_yes_no_questions_person
+
+- story: developer information
+  steps: 
+  - user: |
+      Who is your father?
+    intent: get_developer_information
+  - action: utter_developer
+  - user: |
+      Thanks!
+    intent: thanks
+  - action: utter_answer_thanks
+
+- story: age chatbot
+  steps: 
+  - user: 
+      How is SiddyBot?
+    intent: who_is_siddybot
+  - action: utter_who_is_siddybot
+  - user: 
+      What's your age?
+    intent: age_chatbot
+  - action: utter_age_chatbot
+  - user:
+      Commands
+    intent: commands_example
+  - action: utter_question_examples
 
 - story: add person
   steps:

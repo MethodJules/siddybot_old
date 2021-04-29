@@ -22,7 +22,12 @@ rules:
 - rule: greet user
   steps:
   - intent: greet
-  - action: utter_welcome
+  - action: utter_greet_in_conversation
+
+- rule: age chatbot
+  steps: 
+  - intent: age_chatbot
+  - action: utter_age_chatbot
 
 - rule: chatbot name
   steps: 
@@ -43,11 +48,22 @@ rules:
   steps:
   - intent: restart_chatbot
   - action: action_restart
+  - action: utter_after_restart
+
+- rule: commands_example
+  steps: 
+  - intent: commands_example
+  - action: utter_question_examples
 
 - rule: answer user age
   steps:
   - intent: user_age
   - action: utter_user_age
+
+- rule: who is siddybot
+  steps:
+  - intent: who_is_siddybot
+  - action: utter_who_is_siddybot
 
 - rule: answer user ever speaked to chatbot
   steps: 
@@ -63,8 +79,3 @@ rules:
   steps: 
   - intent: user_expert_value
   - action: utter_expert_value_of_user
-
-- rule: fallback
-  steps:
-  - intent: nlu_fallback
-  - action: action_semantic_search

@@ -22,6 +22,15 @@ nlu:
     - See you later
     - Ciao
 
+- intent: age_chatbot
+  examples: |
+    - How old are you?
+    - Please tell me your age
+    - Could you tell me how old are you?
+    - What is your age?
+    - What' s your age? 
+    - Do you want to tell me your name?
+
 - intent: user_age
   examples: |
     - What's my age?
@@ -157,6 +166,14 @@ nlu:
     - No problem!
     - Your welcome
 
+- intent: commands_example
+  examples: |
+    - What can I ask you about?
+    - commands
+    - Commands!
+    - Please show me some commands!
+    - Could you show me some examples for examples?
+
 - intent: agree
   examples: |
     - oh yeah
@@ -207,6 +224,12 @@ nlu:
   examples: |
     - u
 
+- intent: who_is_siddybot
+  examples: |
+    - Who is Siddybot?
+    - Siddybot?
+    - Could you show me Siddy Bot?
+
 - intent: chatbot_functions
   examples: |
     - What can I do with you?
@@ -216,6 +239,7 @@ nlu:
     - How can you help me?
     - How can I use you?
     - How can I do this?
+    - What is your purpose?
 
 - intent: add_person
   examples: |
@@ -270,6 +294,18 @@ nlu:
     - How can I create an account?
     - Please show me, how I can create a new account.
     - I want to create a new account.
+
+- intent: get_developer_information
+  examples: |
+    - Who developed this page?
+    - Who built this website?
+    - Call me the developer off these website!
+    - Could you show me the developer of the website?
+    - Who is your father?
+    - Who developed you? 
+    - Who is your mother?
+    - Could you show me your developer?
+    - your developer!
 
 - intent: found_error
   examples: |
@@ -470,6 +506,8 @@ nlu:
     - Can you name some [people]{"entity": "object_type", "value": "PERSON"}
     - Can you say the names of a few [people]{"entity": "object_type", "value": "PERSON"} you have information about
     - I want to see a list of [15](CARDINAL) [people]{"entity": "object_type", "value": "PERSON"}
+    - List [10](CARDINAL) [persons]{"entity": "object_type", "value": "PERSON"}
+    - List [19](CARDINAL) [people]{"entity": "object_type", "value": "PERSON"}
 
 - intent: list_of/organizations
   examples: |

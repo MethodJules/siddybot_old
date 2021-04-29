@@ -114,6 +114,13 @@ stories:
   - action: utter_website_information
   - intent: thanks
   - action: utter_answer_thanks
+
+- story: developer information
+  steps: 
+  - intent: get_developer_information
+  - action: utter_developer
+  - intent: thanks
+  - action: utter_answer_thanks
   
 - story: add missing person + create account + explain user account menu
   steps:
