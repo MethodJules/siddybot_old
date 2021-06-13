@@ -6,7 +6,7 @@ from actions.constants import Constants
 from rasa_sdk.events import SlotSet, EventType
 #import base64,cv2
 
-# Action zum setzen des Usernames
+# Action zur Ausgabe des Geschlechts des Anwenders
 class UtterUserGenderAction(Action):
 
   def name(self) -> Text:
@@ -19,6 +19,10 @@ class UtterUserGenderAction(Action):
   def run(self, dispatcher: CollectingDispatcher,
         tracker: Tracker,
         domain: Dict[Text, Any]) -> List[EventType]:
+        """
+        Methode zur Ausgabe des Geschlechts des Anwenders
+        Die Information für diese Ausgabe bezieht er aus den zuvor getätigten Eingaben des Anwenders
+        """
         if (tracker.get_slot("gender") == "female"):
             dispatcher.utter_message(template="utter_user_gender_is_female")
         elif (tracker.get_slot("gender") == "male"):

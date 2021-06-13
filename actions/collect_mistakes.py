@@ -18,6 +18,11 @@ class CollectMistakesAction(Action):
   def run(self, dispatcher: CollectingDispatcher,
         tracker: Tracker,
         domain: Dict[Text, Any]) -> List[EventType]:
+      """
+        Methode zu sammeln aller erkannten Intents, welche als nicht hilfreich 
+        eingestuft wurden.
+        Sie speichert diese in dem Slot "mistaktes"
+      """
       print("action_collect_mistakes")
       mistake = tracker.get_slot("latest_question")
       print(tracker.get_slot("latest_question"))

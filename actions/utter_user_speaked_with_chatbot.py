@@ -6,7 +6,7 @@ from actions.constants import Constants
 from rasa_sdk.events import SlotSet, EventType
 #import base64,cv2
 
-# Action zum setzen des Usernames
+# Action zur Ausgabe ob ein Anwender schonmal mit einem Bot gesprochen hat
 class UtterUserSpeakedWithChatbotAction(Action):
 
   def name(self) -> Text:
@@ -19,6 +19,10 @@ class UtterUserSpeakedWithChatbotAction(Action):
   def run(self, dispatcher: CollectingDispatcher,
         tracker: Tracker,
         domain: Dict[Text, Any]) -> List[EventType]:
+        """
+        Methode für die Auswahl der Antwort, ob ein Anwender schonmal mit einem Bot gesprochen hat.
+        Bezieht seine Antwort aus den zuvor getätigten Eingaben
+        """
         print(tracker.get_slot("user_speaked_with_chatbot"))
         if (tracker.get_slot("user_speaked_with_chatbot") == True):
             dispatcher.utter_message(template="utter_user_speaked_with_bot_before")

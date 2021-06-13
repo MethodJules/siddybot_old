@@ -10,6 +10,10 @@ class GeneralMethods():
 
 
   def saveMistakes(tracker: Tracker) -> List[EventType]:
+      """
+      Speichert Intents, welche vom Anwender als nicht hilfreich eingestuft wurden
+      in dem Slot "mistakes"
+      """
       mistake = tracker.latest_message["text"]
       mistakes = tracker.get_slot("mistakes")
       print(mistake)
