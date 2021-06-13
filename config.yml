@@ -37,6 +37,3 @@ policies:
      max_history: 5
      epochs: 200
    - name: RulePolicy
-     core_fallback_action_name: action_semantic_search
-     core_fallback_threshold: 0.3
-     enable_fallback_prediction: True
